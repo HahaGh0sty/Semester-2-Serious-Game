@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Gridmanager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private int width;
+    [SerializeField] private int height;
+
+    [SerializeField] private GameObject gridspace;
+
+
     void Start()
     {
-        
+        GenerateGrid();
     }
 
-    // Update is called once per frame
-    void Update()
+    void GenerateGrid()
     {
-        
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                var spawnedGridspace = Instantiate(gridspace,new Vector3(x,y),Quaternion.identity);
+                spawnedGridspace.name = $"GridSpace {x} {y}";
+            }
+        }
     }
+
 }
