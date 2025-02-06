@@ -6,25 +6,39 @@ using UnityEngine.Tilemaps;
 
 public class Gridmanager : MonoBehaviour
 {
-    [SerializeField] private int width;
-    [SerializeField] private int height;
 
-    [SerializeField] private GameObject gridspace;
+    [SerializeField] private float TileStartX;
+    [SerializeField] private float TileStartY;
+    [SerializeField] private float TileEndX;
+    [SerializeField] private float TileEndY;
 
+    [SerializeField] public GameObject StartPosition;
+    [SerializeField] public GameObject EndPosition;
+
+    [SerializeField] private GameObject Tile;
 
     void Start()
     {
+        StartPosition = transform.GetChild(0).gameObject; 
+        EndPosition = transform.GetChild(1).gameObject;
+
+        TileStartX = StartPosition.transform.position.x;
+        TileStartY = StartPosition.transform.position.y;
+
+        TileEndX = EndPosition.transform.position.x;
+        TileEndY = EndPosition.transform.position.y;
+
         GenerateGrid();
     }
 
     void GenerateGrid()
     {
-        for (int x = 0; x < width; x++)
+        for (float x = TileStartX; x < TileEndX; x++)
         {
-            for (int y = 0; y < height; y++)
+            for (float y = TileStartY; y < TileEndY; y++)
             {
-                var spawnedGridspace = Instantiate(gridspace,new Vector3(x,y),Quaternion.identity);
-                spawnedGridspace.name = $"GridSpace {x} {y}";
+                var spawnedGridspace = Instantiate(Tile,new Vector3(x,y),Quaternion.identity);
+                spawnedGridspace.name = "GridSpace {x} {y}";
             }
         }
     }
