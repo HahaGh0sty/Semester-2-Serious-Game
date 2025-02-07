@@ -38,7 +38,7 @@ public class Gridmanager : MonoBehaviour
             for (float y = TileStartY; y < TileEndY; y++)
             {
                 var spawnedGridspace = Instantiate(Tile,new Vector3(x,y),Quaternion.identity);
-                spawnedGridspace.name = "GridSpace {x} {y}";
+                spawnedGridspace.name = $"GridSpace {x} {y}";
             }
         }
     }
