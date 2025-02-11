@@ -122,6 +122,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1289753051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289753053}
+  - component: {fileID: 1289753052}
+  m_Layer: 0
+  m_Name: Tilemanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1289753052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289753051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10842b9ff650f0f42acc5f4ed2e649e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles: []
+  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
+  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
+  waterTile: {fileID: 2126010704038738844, guid: 1d53db8923e34144daf1e60a16b459fc, type: 3}
+  grassTile: {fileID: 7588471662412415733, guid: 6ea4e9713936231438b04623e185380e, type: 3}
+  separatingTile: {fileID: 4561051010620007041, guid: 7616ca71c4008e740b8914f6da750b64, type: 3}
+  gridSize: 5
+  mainCamera: {fileID: 2132452181}
+--- !u!4 &1289753053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289753051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.874423, y: -2.7850776, z: 0.022408107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703604283
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,9 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af78c45e148c164fac24d114ccf712d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementspeed: 3
-  rb: {fileID: 0}
-  movementdirection: {x: 0, y: 0}
 --- !u!4 &1703604285
 Transform:
   m_ObjectHideFlags: 0
@@ -312,12 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0e10a9a6010b04ba0ebfc6ba355810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0, z: -10}
-  smoothTime: 0.25
-  velocity: {x: 0, y: 0, z: 0}
-  ScrollSpeed: 10
-  ZoomCamera: {fileID: 2132452181}
-  Target: {fileID: 1703604285}
 --- !u!81 &2132452180
 AudioListener:
   m_ObjectHideFlags: 0
@@ -399,3 +442,4 @@ SceneRoots:
   - {fileID: 2132452182}
   - {fileID: 1703604285}
   - {fileID: 1736465052}
+  - {fileID: 1289753053}
