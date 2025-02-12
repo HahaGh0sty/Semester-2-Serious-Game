@@ -191,10 +191,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092231322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2af78c45e148c164fac24d114ccf712d, type: 3}
+  m_Script: {fileID: 11500000, guid: e991996cdbe73134b9397af425285fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementspeed: 25
+  movementspeed: 2
 --- !u!1 &1857704024
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857704024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0e10a9a6010b04ba0ebfc6ba355810, type: 3}
+  m_Script: {fileID: 11500000, guid: a1302d51bc6d0884a82ef7a2be67ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollSpeed: 10
@@ -311,6 +311,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228066530383693517, guid: 7fe2ba09abbc23a42a53a3e0e11abb9a, type: 3}
+      propertyPath: Tile
+      value: 
+      objectReference: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
     - target: {fileID: 4426501955657753398, guid: 7fe2ba09abbc23a42a53a3e0e11abb9a, type: 3}
       propertyPath: m_Name
       value: GridManager (test)
