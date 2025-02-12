@@ -13,25 +13,28 @@ public class MapGenerator : MonoBehaviour
     public Camera mainCamera; // Reference to the camera
     private float tileSize;
     private Dictionary<Vector2Int, GameObject> placedTiles = new Dictionary<Vector2Int, GameObject>();
+    private int maxWaterTiles;
+    private int waterTileCount = 0;
 
     void Start()
     {
-        if (tiles.Length == 0 || specialTile == null || borderTile == null || mainCamera == null || waterTile == null || grassTile == null || separatingTile == null) return;
+        if (tiles.Length == 0 || specialTile == null || borderTile == null || mainCamera == null || waterTile == null || grassTile == null) return;
 
         tileSize = GetTileSize(tiles[0]);
+        maxWaterTiles = Mathf.FloorToInt((gridSize * gridSize) * 0.1f); // Limit water tiles to 10%
         GenerateMap();
     }
 
     void GenerateMap()
     {
         List<GameObject> tileList = new List<GameObject>(tiles);
-        tileList.Add(waterTile);
-        tileList.Add(grassTile);
         Shuffle(tileList); // Randomize the normal tiles
 
         Vector3 specialTilePosition = Vector3.zero;
         Vector2Int specialTileGridPos = Vector2Int.zero;
         placedTiles[specialTileGridPos] = Instantiate(specialTile, specialTilePosition, Quaternion.identity);
+
+        GenerateBordersAroundSpecialTile(specialTileGridPos);
 
         float gridOffset = (gridSize / 2) * tileSize;
         List<Vector2Int> allPositions = new List<Vector2Int>();
@@ -41,7 +44,7 @@ public class MapGenerator : MonoBehaviour
             for (int y = 0; y < gridSize; y++)
             {
                 Vector2Int position = new Vector2Int(x - gridSize / 2, y - gridSize / 2);
-                if (position == specialTileGridPos) continue;
+                if (position == specialTileGridPos || placedTiles.ContainsKey(position)) continue;
                 allPositions.Add(position);
             }
         }
@@ -54,12 +57,13 @@ public class MapGenerator : MonoBehaviour
 
             GameObject selectedTile = tileList[Random.Range(0, tileList.Count)];
 
-            if (selectedTile == waterTile)
+            if (selectedTile == waterTile && waterTileCount >= maxWaterTiles)
             {
-                if (!HasEnoughWaterNeighbors(position))
-                {
-                    selectedTile = grassTile;
-                }
+                selectedTile = grassTile; // Replace excess water tiles with grass
+            }
+            else if (selectedTile == waterTile)
+            {
+                waterTileCount++;
             }
 
             Vector3 worldPosition = new Vector3(position.x * tileSize, -position.y * tileSize, 0);
@@ -67,53 +71,17 @@ public class MapGenerator : MonoBehaviour
         }
 
         EnsureSeparation();
-        GenerateBorders();
         SetCameraPosition(specialTilePosition);
     }
 
-    bool HasEnoughWaterNeighbors(Vector2Int position)
+    void GenerateBordersAroundSpecialTile(Vector2Int specialTilePos)
     {
-        int waterCount = 0;
-        Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0) };
+        Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0),
+                                    new Vector2Int(1, 1), new Vector2Int(1, -1), new Vector2Int(-1, 1), new Vector2Int(-1, -1)};
 
         foreach (Vector2Int dir in directions)
         {
-            Vector2Int neighborPos = position + dir;
-            if (placedTiles.ContainsKey(neighborPos) && placedTiles[neighborPos] == waterTile)
-            {
-                waterCount++;
-            }
-        }
-        return waterCount >= 2;
-    }
-
-    void EnsureSeparation()
-    {
-        foreach (var pos in new List<Vector2Int>(placedTiles.Keys))
-        {
-            if (placedTiles[pos] == waterTile)
-            {
-                Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0) };
-                foreach (Vector2Int dir in directions)
-                {
-                    Vector2Int neighborPos = pos + dir;
-                    if (placedTiles.ContainsKey(neighborPos) && placedTiles[neighborPos] == grassTile)
-                    {
-                        Vector3 worldPos = new Vector3(neighborPos.x * tileSize, -neighborPos.y * tileSize, 0);
-                        GameObject separator = Instantiate(separatingTile, worldPos, GetCorrectRotation(dir));
-                        placedTiles[neighborPos] = separator;
-                    }
-                }
-            }
-        }
-    }
-
-    void GenerateBorders()
-    {
-        Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0) };
-        foreach (Vector2Int dir in directions)
-        {
-            Vector2Int borderPos = dir;
+            Vector2Int borderPos = specialTilePos + dir;
             if (!placedTiles.ContainsKey(borderPos))
             {
                 Vector3 worldPos = new Vector3(borderPos.x * tileSize, -borderPos.y * tileSize, 0);
@@ -122,12 +90,39 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    void EnsureSeparation()
+    {
+        List<Vector2Int> waterPositions = new List<Vector2Int>();
+        foreach (var pos in placedTiles.Keys)
+        {
+            if (placedTiles[pos].name.Contains("Water"))
+            {
+                waterPositions.Add(pos);
+            }
+        }
+
+        foreach (var pos in waterPositions)
+        {
+            Vector2Int[] directions = { new Vector2Int(1, 0), new Vector2Int(0, 1), new Vector2Int(-1, 0), new Vector2Int(0, -1) };
+            foreach (Vector2Int dir in directions)
+            {
+                Vector2Int neighborPos = pos + dir;
+                if (!placedTiles.ContainsKey(neighborPos) || placedTiles[neighborPos] == grassTile)
+                {
+                    Vector3 worldPos = new Vector3(neighborPos.x * tileSize, -neighborPos.y * tileSize, 0);
+                    GameObject separator = Instantiate(separatingTile, worldPos, GetCorrectRotation(dir));
+                    placedTiles[neighborPos] = separator;
+                }
+            }
+        }
+    }
+
     Quaternion GetCorrectRotation(Vector2Int dir)
     {
-        if (dir == new Vector2Int(1, 0)) return Quaternion.Euler(0, 0, 90); // Water on the right
-        if (dir == new Vector2Int(0, 1)) return Quaternion.Euler(0, 0, 0);  // Water on the top
-        if (dir == new Vector2Int(-1, 0)) return Quaternion.Euler(0, 0, -90); // Water on the left
-        if (dir == new Vector2Int(0, -1)) return Quaternion.Euler(0, 0, 180); // Water on the bottom
+        if (dir == new Vector2Int(1, 0)) return Quaternion.Euler(0, 0, -90); // Water on the right
+        if (dir == new Vector2Int(0, 1)) return Quaternion.Euler(0, 0, 180);  // Water on the top
+        if (dir == new Vector2Int(-1, 0)) return Quaternion.Euler(0, 0, 90); // Water on the left
+        if (dir == new Vector2Int(0, -1)) return Quaternion.Euler(0, 0, 0); // Water on the bottom
         return Quaternion.identity;
     }
 
