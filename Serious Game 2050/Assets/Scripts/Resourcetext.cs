@@ -3,16 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Resourcetext : MonoBehaviour
+public class Resourcetext : MonoBehaviour, IDataPersistence
 {
-    private int moneycount = 0;
+    private int money = 0;
 
-    private TextMeshProUGUI Resourcecounttext;
+    private TextMeshProUGUI ResourcecountText;
    
     private void awake()
     {
-        Resourcecounttext = this.GetComponent<TextMeshProUGUI>();
+        ResourcecountText = this.GetComponent<TextMeshProUGUI>();
 
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.money = data.money;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.money = this.money;
     }
 
    
@@ -20,12 +30,12 @@ public class Resourcetext : MonoBehaviour
    
     private void update()
     {
-        Resourcecounttext.text = "" + moneycount;
+        ResourcecountText.text = "" + money;
     }
 
 
     public void OnMoneyGet()
     {
-        moneycount++;
+        money++;
     }
 }
