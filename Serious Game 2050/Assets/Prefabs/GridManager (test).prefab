@@ -92,7 +92,7 @@ MonoBehaviour:
   TileEndY: 0
   StartPosition: {fileID: 7648624773467383634}
   EndPosition: {fileID: 3910854816097495057}
-  Tile: {fileID: 6269301335469067141, guid: fb16456a54f61e744a693d7fb54f74e1, type: 3}
+  Tile: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
 --- !u!212 &4478954792488817083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2810681556793319451
