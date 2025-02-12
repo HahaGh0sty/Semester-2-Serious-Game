@@ -22,7 +22,7 @@ public class Resourcetext : MonoBehaviour
     }
 
 
-    void OnMoneyGet()
+    public void OnMoneyGet()
     {
         moneycount++;
     }
