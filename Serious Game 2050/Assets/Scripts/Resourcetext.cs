@@ -16,6 +16,8 @@ public class Resourcetext : MonoBehaviour
     }
 
    
+
+   
     private void update()
     {
         Resourcecounttext.text = "" + moneycount;

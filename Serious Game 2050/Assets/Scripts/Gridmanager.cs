@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -6,7 +7,7 @@ using UnityEngine.Tilemaps;
 
 public class Gridmanager : MonoBehaviour
 {
-
+    [SerializeField] GameObject GridParent;
     [SerializeField] private float TileStartX;
     [SerializeField] private float TileStartY;
     [SerializeField] private float TileEndX;
@@ -19,7 +20,8 @@ public class Gridmanager : MonoBehaviour
 
     void Start()
     {
-        StartPosition = transform.GetChild(0).gameObject; 
+        GridParent = transform.gameObject;
+        StartPosition = transform.GetChild(0).gameObject;
         EndPosition = transform.GetChild(1).gameObject;
 
         TileStartX = StartPosition.transform.position.x;
@@ -29,6 +31,12 @@ public class Gridmanager : MonoBehaviour
         TileEndY = EndPosition.transform.position.y;
 
         GenerateGrid();
+       
+    }
+
+    private GameObject GetGridParent()
+    {
+        return GridParent;
     }
 
     void GenerateGrid()
@@ -37,10 +45,11 @@ public class Gridmanager : MonoBehaviour
         {
             for (float y = TileStartY; y < TileEndY; y++)
             {
-                var spawnedGridspace = Instantiate(Tile,new Vector3(x,y),Quaternion.identity);
+                GameObject spawnedGridspace = Instantiate(Tile, new Vector3(x, y), Quaternion.identity);
+                spawnedGridspace.transform.SetParent(transform);
                 spawnedGridspace.name = $"GridSpace {x} {y}";
             }
         }
     }
-
 }
+
