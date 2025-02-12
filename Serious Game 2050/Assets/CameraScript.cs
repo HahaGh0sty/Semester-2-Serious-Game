@@ -27,12 +27,13 @@ public class CameraFollow : MonoBehaviour
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
         {
             //wheel goes up
-            
         }
         else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0)
         {
             //wheel goes down
         }
+
+        ZoomCamera.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
     }
 
     
