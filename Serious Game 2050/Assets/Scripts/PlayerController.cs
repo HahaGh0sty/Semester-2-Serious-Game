@@ -25,4 +25,4 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = movementdirection * movementspeed;
     }
-}
+}   
