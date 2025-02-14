@@ -28,14 +28,38 @@ public class MapGenerator : MonoBehaviour
 
     void GenerateMap()
     {
+
+        // Find center region
+        int halfSize = gridSize / 2;
+        List<Vector2Int> centerTiles = new List<Vector2Int>
+{
+    new Vector2Int(halfSize, halfSize),
+    new Vector2Int(halfSize - 1, halfSize),
+    new Vector2Int(halfSize, halfSize - 1),
+    new Vector2Int(halfSize - 1, halfSize - 1)
+};
+
+        // Pick a random center tile for the special tile
+        Vector2Int specialTileGridPos = centerTiles[Random.Range(0, centerTiles.Count)];
+        Vector3 specialTilePosition = new Vector3(specialTileGridPos.x * tileSize, -specialTileGridPos.y * tileSize, 0);
+        placedTiles[specialTileGridPos] = Instantiate(specialTile, specialTilePosition, Quaternion.identity);
+
+        // Generate border around the special tile
+        GenerateBordersAroundSpecialTile(specialTileGridPos);
+
         List<GameObject> tileList = new List<GameObject>(tiles);
         Shuffle(tileList); // Randomize the normal tiles
 
-        Vector3 specialTilePosition = Vector3.zero;
-        Vector2Int specialTileGridPos = Vector2Int.zero;
+
         placedTiles[specialTileGridPos] = Instantiate(specialTile, specialTilePosition, Quaternion.identity);
 
         GenerateBordersAroundSpecialTile(specialTileGridPos);
+
+        Vector3 waterTilePosition = Vector3.zero;
+        Vector2Int waterTileGridPos = Vector2Int.zero;
+        placedTiles[waterTileGridPos] = Instantiate(waterTile, waterTilePosition, Quaternion.identity);
+
+        GenerateBordersAroundWaterTile(waterTileGridPos);
 
         float gridOffset = (gridSize / 2) * tileSize;
         List<Vector2Int> allPositions = new List<Vector2Int>();
@@ -75,6 +99,22 @@ public class MapGenerator : MonoBehaviour
         SetCameraPosition(specialTilePosition);
     }
 
+    void GenerateBordersAroundWaterTile(Vector2Int waterTilePos)
+    {
+        Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0),
+                                    new Vector2Int(1, 1), new Vector2Int(1, -1), new Vector2Int(-1, 1), new Vector2Int(-1, -1)};
+
+        foreach (Vector2Int dir in directions)
+        {
+            Vector2Int borderPos = waterTilePos + dir;
+            if (!placedTiles.ContainsKey(borderPos))
+            {
+                Vector3 worldPos = new Vector3(borderPos.x * tileSize, -borderPos.y * tileSize, 0);
+                placedTiles[borderPos] = Instantiate(separatingTile, worldPos, Quaternion.identity);
+            }
+        }
+    }
+
     void GenerateBordersAroundSpecialTile(Vector2Int specialTilePos)
     {
         Vector2Int[] directions = { new Vector2Int(0, 1), new Vector2Int(1, 0), new Vector2Int(0, -1), new Vector2Int(-1, 0),
@@ -91,9 +131,12 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+
+
     void EnsureSeparation()
     {
         List<Vector2Int> waterPositions = new List<Vector2Int>();
+
         foreach (var pos in placedTiles.Keys)
         {
             if (placedTiles[pos].name.Contains("Water"))
@@ -105,10 +148,20 @@ public class MapGenerator : MonoBehaviour
         foreach (var pos in waterPositions)
         {
             Vector2Int[] directions = { new Vector2Int(1, 0), new Vector2Int(0, 1), new Vector2Int(-1, 0), new Vector2Int(0, -1) };
+
             foreach (Vector2Int dir in directions)
             {
                 Vector2Int neighborPos = pos + dir;
-                if (!placedTiles.ContainsKey(neighborPos) || placedTiles[neighborPos] == grassTile)
+
+                // Ensure it's inside the map bounds
+                if (neighborPos.x < -gridSize / 2 || neighborPos.x >= gridSize / 2 ||
+                    neighborPos.y < -gridSize / 2 || neighborPos.y >= gridSize / 2)
+                {
+                    continue;
+                }
+
+                // Check if it's a Grass tile and place a separator
+                if (!placedTiles.ContainsKey(neighborPos) || placedTiles[neighborPos].name.Contains("Grass"))
                 {
                     Vector3 worldPos = new Vector3(neighborPos.x * tileSize, -neighborPos.y * tileSize, 0);
                     GameObject separator = Instantiate(separatingTile, worldPos, GetCorrectRotation(dir));
@@ -117,6 +170,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
     }
+
 
     Quaternion GetCorrectRotation(Vector2Int dir)
     {

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -645,7 +644,7 @@ MonoBehaviour:
   waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
   grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
   separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
-  gridSize: 25
+  gridSize: 10
   mainCamera: {fileID: 872144681}
 --- !u!4 &1637988046
 Transform:
