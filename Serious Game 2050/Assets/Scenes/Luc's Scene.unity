@@ -1206,15 +1206,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2020645592}
-  waterTile: {fileID: 11400000, guid: 06d0b748fe6665d4d9f6fc0556ae3b6c, type: 2}
-  grassTile: {fileID: 11400000, guid: a8117999105f6f24c80ec7f7a16b6b0b, type: 2}
-  grassWaterTile: {fileID: 11400000, guid: 55c452908a281c040819b2d6b755d4ec, type: 2}
-  forestTile: {fileID: 11400000, guid: 191689387fb41ac4a9fb60e74d0ba25f, type: 2}
+  waterTile: {fileID: 11400000, guid: e2cc08b8cfcd5a0428ec2ff10c499e08, type: 2}
+  grassTile: {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
+  grassTile1: {fileID: 0}
+  grassTile2: {fileID: 0}
+  grassWaterTile: {fileID: 11400000, guid: 84a78c3a2dfee2a4790b2e111224ed66, type: 2}
+  grasswatercornerTile: {fileID: 11400000, guid: e4692bc3a8878bf41a374212b42e4f13, type: 2}
+  forestTile: {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: cb5772aeba36ab247a02d88e3e08a850, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: b965e4da12400354fae750b98d157670, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: d605e086aade7234488805cf9cfa847a, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: c28b896c41dfb70499fd8189f63c1a88, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: 1de92e40a3123f64fb4bbfc019b7ef2c, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: b163efb85cbbbeb45bb094f60abe0f52, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 4213a1cf0a5abf64085657215317feb7, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: f65763b794a8b9c4788ab019c4b209f0, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: b35634a52905c66419de52cf1bff3476, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: d3685f5433779404194b46f2ba088b17, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: 0c6007aa0c61c8b4a90b7834f263b0c8, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 19f601a84627dad47bf6d25ed052e720, type: 2}
   width: 50
   height: 50
-  initialWaterChance: 0.35
-  initialForestChance: 0.3
-  smoothingIterations: 3
+  initialWaterChance: 0.15
+  initialForestChance: 0.25
+  smoothingIterations: 1
+  waterClusterSize: 4
+  forestClusterSize: 4
 --- !u!1 &2072845789
 GameObject:
   m_ObjectHideFlags: 0
