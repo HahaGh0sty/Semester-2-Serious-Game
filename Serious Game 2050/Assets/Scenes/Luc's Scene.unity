@@ -408,22 +408,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 771626837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aacaf35c7626974e8ce54608c5b1f34, type: 3}
+  m_Script: {fileID: 11500000, guid: a04fdd6100dc04e64883bfd591cc8cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
-  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
-  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
-  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
-  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
-  gridSize: 10
-  mainCamera: {fileID: 872144681}
 --- !u!4 &771626839
 Transform:
   m_ObjectHideFlags: 0
@@ -544,6 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1302d51bc6d0884a82ef7a2be67ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScrollSpeed: 10
+  ZoomCamera: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!1 &1211271277
 GameObject:
   m_ObjectHideFlags: 0
