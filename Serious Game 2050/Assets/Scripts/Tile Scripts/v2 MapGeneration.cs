@@ -22,10 +22,10 @@ public class MapGeneratorv2 : MonoBehaviour
 
         tileSize = GetTileSize(tiles[0]);
         maxWaterTiles = Mathf.FloorToInt((gridSize * gridSize) * 0.1f); // Limit water tiles to 10%
-        GenerateMap();
+        
     }
 
-    void GenerateMap()
+    public void GenerateMap()
     {
         List<GameObject> tileList = new List<GameObject>(tiles);
         Shuffle(tileList); // Randomize the normal tiles

@@ -234,12 +234,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04fdd6100dc04e64883bfd591cc8cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles: []
-  specialTile: {fileID: 0}
-  borderTile: {fileID: 0}
-  waterTile: {fileID: 0}
-  grassTile: {fileID: 0}
-  separatingTile: {fileID: 0}
+  tiles:
+  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
+  - {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
+  - {fileID: 713575508120973117, guid: c489d20d69e682b46a21ca0f84410ead, type: 3}
+  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  - {fileID: 1225869624794326690, guid: cbd9f93fa8bb0fe4390af5ef00c7fa7a, type: 3}
+  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
+  - {fileID: 448715350969112201, guid: 60535b52d762fbb40a75115740566cd3, type: 3}
+  - {fileID: 7854125337513653485, guid: c807827373f970f4da0cefcb96115569, type: 3}
+  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
+  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
+  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
   gridSize: 5
   mainCamera: {fileID: 2132452181}
 --- !u!1 &1298908627
@@ -728,6 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: hi
+  mapgeneratorV2: {fileID: 1289753054}
 --- !u!4 &1949823834
 Transform:
   m_ObjectHideFlags: 0

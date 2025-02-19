@@ -5,9 +5,9 @@ using System;
 using System.IO;
 public class FileDataHandler 
 {
-    private string dataDirPath = "";
+    private string dataDirPath = "1";
 
-    private string dataFileName = "";
+    private string dataFileName = "1";
 
     public FileDataHandler(string dataDirPath, string dataFileName)
     {

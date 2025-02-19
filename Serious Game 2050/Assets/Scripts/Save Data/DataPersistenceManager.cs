@@ -12,6 +12,8 @@ public class DataPersistenceManager : MonoBehaviour
    private GameData gameData;
    private List<IDataPersistence> dataPersistenceObjects;
 
+   public MapGeneratorv2 mapgeneratorV2;
+
    private FileDataHandler dataHandler;
 
    private void Awake()
@@ -33,6 +35,7 @@ public class DataPersistenceManager : MonoBehaviour
    public void NewGame()
    {
     this.gameData = new GameData();
+    mapgeneratorV2.GenerateMap();
    }
 //saves current game data
    public void SaveGame()
@@ -41,8 +44,6 @@ public class DataPersistenceManager : MonoBehaviour
     {
         dataPersistenceObj.SaveData(ref gameData);
     }
-
-    
 
     // Save the data
     dataHandler.Save(gameData);
