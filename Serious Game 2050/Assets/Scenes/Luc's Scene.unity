@@ -544,6 +544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1302d51bc6d0884a82ef7a2be67ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScrollSpeed: 10
+  ZoomCamera: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!1 &1211271277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,36 +1147,48 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 0
+      e00: -2.0994564e-33
       e01: 0
-      e02: 6.917536e+19
-      e03: 6.917536e+19
-      e10: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
       e11: 0
-      e12: 5.47e-43
-      e13: 5.47e-43
-      e20: 1.3822718e+22
-      e21: 2.8701718e-26
-      e22: -2.6801417e-19
-      e23: 2.0336647
-      e30: 4.5904e-41
-      e31: 5.51e-43
-      e32: 5.47e-43
-      e33: 5.5e-43
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -7, y: -4, z: 0}
-  m_Size: {x: 18, y: 10, z: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1210,13 +1225,14 @@ MonoBehaviour:
   grassTile: {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
   grassTile1: {fileID: 0}
   grassTile2: {fileID: 0}
-  grassWaterTile: {fileID: 11400000, guid: 84a78c3a2dfee2a4790b2e111224ed66, type: 2}
-  grasswatercornerTile: {fileID: 11400000, guid: e4692bc3a8878bf41a374212b42e4f13, type: 2}
+  grassTile3: {fileID: 0}
+  grassTile4: {fileID: 0}
+  grassTile5: {fileID: 0}
   forestTile: {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
-  grasswaternorthTile: {fileID: 11400000, guid: cb5772aeba36ab247a02d88e3e08a850, type: 2}
-  grasswatereastTile: {fileID: 11400000, guid: b965e4da12400354fae750b98d157670, type: 2}
-  grasswatersouthTile: {fileID: 11400000, guid: d605e086aade7234488805cf9cfa847a, type: 2}
-  grasswaterwestTile: {fileID: 11400000, guid: c28b896c41dfb70499fd8189f63c1a88, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: d605e086aade7234488805cf9cfa847a, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: c28b896c41dfb70499fd8189f63c1a88, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: cb5772aeba36ab247a02d88e3e08a850, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: b965e4da12400354fae750b98d157670, type: 2}
   grasswatercornerNWTile: {fileID: 11400000, guid: 1de92e40a3123f64fb4bbfc019b7ef2c, type: 2}
   grasswatercornerNETile: {fileID: 11400000, guid: b163efb85cbbbeb45bb094f60abe0f52, type: 2}
   grasswatercornerSWTile: {fileID: 11400000, guid: 4213a1cf0a5abf64085657215317feb7, type: 2}
@@ -1225,11 +1241,16 @@ MonoBehaviour:
   grasswatertouchNWTile: {fileID: 11400000, guid: d3685f5433779404194b46f2ba088b17, type: 2}
   grasswatertouchSETile: {fileID: 11400000, guid: 0c6007aa0c61c8b4a90b7834f263b0c8, type: 2}
   grasswatertouchSWTile: {fileID: 11400000, guid: 19f601a84627dad47bf6d25ed052e720, type: 2}
+  grasswaterclosenorth: {fileID: 11400000, guid: f0162fa4f2aee9146a09e258d5e486ad, type: 2}
+  grasswatercloseeast: {fileID: 11400000, guid: 59821b84013459e40bacbdfae5f78182, type: 2}
+  grasswaterclosesouth: {fileID: 11400000, guid: b04de837d19b1874aa902079d30ca2d5, type: 2}
+  grasswaterclosewest: {fileID: 11400000, guid: 6cbb719b946c05a4183e4e0cf35f6694, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: a2ca1bc987d8e0e4695b2465f49d2a82, type: 2}
   width: 50
   height: 50
-  initialWaterChance: 0.15
+  initialWaterChance: 0.25
   initialForestChance: 0.25
-  smoothingIterations: 1
+  smoothingIterations: 4
   waterClusterSize: 4
   forestClusterSize: 4
 --- !u!1 &2072845789
