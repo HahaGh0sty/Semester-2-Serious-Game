@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moneybutton : MonoBehaviour
+public class moneybutton : MonoBehaviour, IDataPersistence
 {
-    // Start is called before the first frame update
-    void Start()
+    public int money;
+
+    public void OnButtonPress()
     {
-        
+      this.money += 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadData(GameData data)
     {
-        
+      this.money = data.money;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+      data.money = this.money;
     }
 }

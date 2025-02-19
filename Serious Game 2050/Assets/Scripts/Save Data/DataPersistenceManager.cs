@@ -5,10 +5,13 @@ using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
 {
+   [SerializeField] private string fileName;
    public static DataPersistenceManager instance { get; private set;}
 
    private GameData gameData;
    private List<IDataPersistence> dataPersistenceObjects;
+
+   private FileDataHandler dataHandler;
 
    private void awake()
    {
@@ -20,6 +23,7 @@ public class DataPersistenceManager : MonoBehaviour
    }
    public void start()
    {
+      this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
       this.dataPersistenceObjects = FindAllDataPersistenceObjects();
       LoadGame();
    }
@@ -32,19 +36,21 @@ public class DataPersistenceManager : MonoBehaviour
 //saves current game data
    public void SaveGame()
    {
-    // pass data to other scripts so they can use it
 
     //save the data using data handler
     foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
          dataPersistenceObj.SaveData(ref gameData);
         }
+
+        //saves the data
+        dataHandler.Save(gameData);
    }
 //loads existing game data
    public void LoadGame()
    {
     // MAKE THE DATA HANDLER PULL THE DATA AND USE IT HERE IAN U IDIOT
-    
+   this.gameData = dataHandler.Load();
     // if no data exists... run new game instead
     if(this.gameData == null)
     {
@@ -57,6 +63,11 @@ public class DataPersistenceManager : MonoBehaviour
         }
     }
    }
+   
+    private void OnApplicationQuit()
+   {
+      SaveGame();
+   }
 
    private List<IDataPersistence> FindAllDataPersistenceObjects()
    {
@@ -64,4 +75,6 @@ public class DataPersistenceManager : MonoBehaviour
 
       return new List<IDataPersistence>(dataPersistenceObjects);
    }
+
+  
 }
