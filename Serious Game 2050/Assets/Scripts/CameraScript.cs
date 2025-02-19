@@ -36,5 +36,5 @@ public class CameraFollow : MonoBehaviour
         ZoomCamera.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
     }
 
-    
+
 }

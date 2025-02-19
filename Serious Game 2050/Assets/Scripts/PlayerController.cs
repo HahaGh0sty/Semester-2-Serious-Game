@@ -25,4 +25,8 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = movementdirection * movementspeed;
     }
+<<<<<<< HEAD
 }
+=======
+}   
+>>>>>>> Randomizing-Tiles
