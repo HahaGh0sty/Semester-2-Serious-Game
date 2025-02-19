@@ -12,7 +12,7 @@ public class DataPersistenceManager : MonoBehaviour
    private GameData gameData;
    private List<IDataPersistence> dataPersistenceObjects;
 
-   public MapGeneratorv2 mapgeneratorV2;
+   public  MapGeneratorv2 mapgeneratorV2;
 
    private FileDataHandler dataHandler;
 
@@ -28,6 +28,7 @@ public class DataPersistenceManager : MonoBehaviour
    {
       this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
       this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+      Debug.Log(Application.persistentDataPath);
       LoadGame();
    }
 

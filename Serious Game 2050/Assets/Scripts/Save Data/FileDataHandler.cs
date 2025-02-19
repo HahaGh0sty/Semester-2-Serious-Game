@@ -5,9 +5,9 @@ using System;
 using System.IO;
 public class FileDataHandler 
 {
-    private string dataDirPath = "1";
+    private string dataDirPath = "";
 
-    private string dataFileName = "1";
+    private string dataFileName = "";
 
     public FileDataHandler(string dataDirPath, string dataFileName)
     {
@@ -19,6 +19,8 @@ public class FileDataHandler
     {
         //uses path.combine to make sure this shit runs on different OS
         string fullPath = Path.Combine(dataDirPath, dataFileName);
+         Debug.Log(Path.Combine(dataDirPath, dataFileName));
+         Debug.Log("Saving file at: " + fullPath);
         GameData loadedData = null;
         if(File.Exists(fullPath))
         {
