@@ -20,4 +20,8 @@ public class moneybutton : MonoBehaviour, IDataPersistence
     {
       data.money = this.money;
     }
+  public void Start()
+  {
+      
+  }
 }

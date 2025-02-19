@@ -5,6 +5,7 @@ using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
 {
+   [Header("File Storage Config")]
    [SerializeField] private string fileName;
    public static DataPersistenceManager instance { get; private set;}
 
@@ -13,7 +14,7 @@ public class DataPersistenceManager : MonoBehaviour
 
    private FileDataHandler dataHandler;
 
-   private void awake()
+   private void Awake()
    {
      if ( instance != null)
      {
@@ -21,7 +22,7 @@ public class DataPersistenceManager : MonoBehaviour
      }
      instance = this;
    }
-   public void start()
+   public void Start()
    {
       this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
       this.dataPersistenceObjects = FindAllDataPersistenceObjects();
@@ -35,17 +36,18 @@ public class DataPersistenceManager : MonoBehaviour
    }
 //saves current game data
    public void SaveGame()
-   {
+{
+   foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+    {
+        dataPersistenceObj.SaveData(ref gameData);
+    }
 
-    //save the data using data handler
-    foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
-        {
-         dataPersistenceObj.SaveData(ref gameData);
-        }
+    
 
-        //saves the data
-        dataHandler.Save(gameData);
-   }
+    // Save the data
+    dataHandler.Save(gameData);
+}
+
 //loads existing game data
    public void LoadGame()
    {
@@ -56,13 +58,13 @@ public class DataPersistenceManager : MonoBehaviour
     {
         Debug.Log("no data therefore nothing to load, starting new game");
         NewGame();
-        // make it send all loaded data to all other scripts that need it
+   }
+   // make it send all loaded data to all other scripts that need it
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
          dataPersistenceObj.LoadData(gameData);
         }
     }
-   }
    
     private void OnApplicationQuit()
    {
