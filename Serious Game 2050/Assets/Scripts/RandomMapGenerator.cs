@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -25,14 +26,10 @@ public class RandomTilemapGenerator : MonoBehaviour
     public TileBase grasswatertouchNWTile;
     public TileBase grasswatertouchSETile;
     public TileBase grasswatertouchSWTile;
-    public TileBase grasswaterclosenorth;
-    public TileBase grasswatercloseeast;
-    public TileBase grasswaterclosesouth;
-    public TileBase grasswaterclosewest;
     public TileBase grasswaterisland;
 
-    public int width = 50;
-    public int height = 50;
+    public int width = 200;
+    public int height = 200;
     public float initialWaterChance = 0.25f;
     public float initialForestChance = 0.25f;
     public int smoothingIterations = 4;
@@ -201,14 +198,13 @@ public class RandomTilemapGenerator : MonoBehaviour
 
     bool HasNearbyWaterCluster(int x, int y)
     {
-        int nearbyWaterCount = 0;
-        int minSeparation = 3; // Increase this to require more spacing
+        int minSeparation = 4;
 
         for (int dx = -minSeparation; dx <= minSeparation; dx++)
         {
             for (int dy = -minSeparation; dy <= minSeparation; dy++)
             {
-                if (dx == 0 && dy == 0) continue; // Skip the tile itself
+                if (dx == 0 && dy == 0) continue; // Skip current tile
 
                 int nx = x + dx;
                 int ny = y + dy;
@@ -217,8 +213,7 @@ public class RandomTilemapGenerator : MonoBehaviour
                 {
                     if (mapData[nx, ny] == waterTile)
                     {
-                        nearbyWaterCount++;
-                        if (nearbyWaterCount >= 10) return true; // Only break up water clusters if too large
+                        return true; // To close to watercluster
                     }
                 }
             }
@@ -226,6 +221,7 @@ public class RandomTilemapGenerator : MonoBehaviour
 
         return false;
     }
+
 
     void PlaceForestClusters()
     {
@@ -482,15 +478,6 @@ public class RandomTilemapGenerator : MonoBehaviour
             if (hasWaterWest) return grasswaterwestTile;
         }
 
-        // **Step 4: Place Locked Tiles (if touching exactly 3 NESW water tile)**
-        if (neswCount == 3)
-        {
-            if (hasWaterEast && hasWaterSouth && hasWaterWest) return grasswaterclosenorth;
-            if (hasWaterNorth && hasWaterSouth && hasWaterWest) return grasswatercloseeast;
-            if (hasWaterNorth && hasWaterEast && hasWaterWest) return grasswaterclosesouth;
-            if (hasWaterNorth && hasWaterEast && hasWaterSouth) return grasswaterclosewest;
-        }
-
         // **Step 4: Place Island Tiles (if touching exactly 4 NESW water tile)**
         if (neswCount == 4)
         {
@@ -498,7 +485,7 @@ public class RandomTilemapGenerator : MonoBehaviour
 
         }
 
-        // **Step 6: Default to Normal Grass Tile**
+        // **Final Step: Default to Normal Grass Tile**
         return grassTile;
     }
 

@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &693515017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +558,7 @@ GameObject:
   - component: {fileID: 1211271280}
   - component: {fileID: 1211271279}
   - component: {fileID: 1211271278}
+  - component: {fileID: 1211271281}
   m_Layer: 0
   m_Name: Camera v2
   m_TagString: Untagged
@@ -607,7 +608,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 50
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -639,6 +640,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211271281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211271277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88f36241827ba54cb407795938b5ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 20
+  zoomSpeed: 5
+  minZoom: 1
+  maxZoom: 1000
+  smoothTime: 0.01
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1448972938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1530238485
 Rigidbody2D:
   serializedVersion: 4
@@ -1241,13 +1259,9 @@ MonoBehaviour:
   grasswatertouchNWTile: {fileID: 11400000, guid: d3685f5433779404194b46f2ba088b17, type: 2}
   grasswatertouchSETile: {fileID: 11400000, guid: 0c6007aa0c61c8b4a90b7834f263b0c8, type: 2}
   grasswatertouchSWTile: {fileID: 11400000, guid: 19f601a84627dad47bf6d25ed052e720, type: 2}
-  grasswaterclosenorth: {fileID: 11400000, guid: f0162fa4f2aee9146a09e258d5e486ad, type: 2}
-  grasswatercloseeast: {fileID: 11400000, guid: 59821b84013459e40bacbdfae5f78182, type: 2}
-  grasswaterclosesouth: {fileID: 11400000, guid: b04de837d19b1874aa902079d30ca2d5, type: 2}
-  grasswaterclosewest: {fileID: 11400000, guid: 6cbb719b946c05a4183e4e0cf35f6694, type: 2}
   grasswaterisland: {fileID: 11400000, guid: a2ca1bc987d8e0e4695b2465f49d2a82, type: 2}
-  width: 50
-  height: 50
+  width: 200
+  height: 200
   initialWaterChance: 0.25
   initialForestChance: 0.25
   smoothingIterations: 4
