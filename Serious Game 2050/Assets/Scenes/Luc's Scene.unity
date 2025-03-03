@@ -725,79 +725,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1497015307
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1497015308}
-  - component: {fileID: 1497015309}
-  m_Layer: 0
-  m_Name: Tilemap 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1497015308
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497015307}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: 10}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1497015309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497015307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1a84a5733416e44877e64019f41d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 2020645592}
-  waterTile: {fileID: 11400000, guid: 5be379b24c29f4e4c8e69070b5663e29, type: 2}
-  grassTile: {fileID: 0}
-  grassTile1: {fileID: 0}
-  grassTile2: {fileID: 0}
-  grassTile3: {fileID: 0}
-  grassTile4: {fileID: 0}
-  grassTile5: {fileID: 0}
-  forestTile: {fileID: 0}
-  grasswaternorthTile: {fileID: 0}
-  grasswatereastTile: {fileID: 0}
-  grasswatersouthTile: {fileID: 0}
-  grasswaterwestTile: {fileID: 0}
-  grasswatercornerNWTile: {fileID: 0}
-  grasswatercornerNETile: {fileID: 0}
-  grasswatercornerSWTile: {fileID: 0}
-  grasswatercornerSETile: {fileID: 0}
-  grasswatertouchNETile: {fileID: 0}
-  grasswatertouchNWTile: {fileID: 0}
-  grasswatertouchSETile: {fileID: 0}
-  grasswatertouchSWTile: {fileID: 0}
-  grasswaterisland: {fileID: 0}
-  width: 200
-  height: 200
-  initialWaterChance: 0.25
-  initialForestChance: 0.25
-  smoothingIterations: 4
-  waterClusterSize: 4
-  forestClusterSize: 4
 --- !u!1 &1530238483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,27 +1240,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2020645592}
-  waterTile: {fileID: 11400000, guid: 1665cb789743eba42982d15bdc27e235, type: 2}
-  grassTile: {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
-  grassTile1: {fileID: 0}
-  grassTile2: {fileID: 0}
-  grassTile3: {fileID: 0}
-  grassTile4: {fileID: 0}
-  grassTile5: {fileID: 0}
-  forestTile: {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
-  grasswaternorthTile: {fileID: 11400000, guid: 10e1b52dc066ba44a98942166b4b2e40, type: 2}
-  grasswatereastTile: {fileID: 11400000, guid: c28b896c41dfb70499fd8189f63c1a88, type: 2}
-  grasswatersouthTile: {fileID: 11400000, guid: f22be92c1901bbd48af020f39a682277, type: 2}
-  grasswaterwestTile: {fileID: 11400000, guid: b965e4da12400354fae750b98d157670, type: 2}
-  grasswatercornerNWTile: {fileID: 11400000, guid: 1de92e40a3123f64fb4bbfc019b7ef2c, type: 2}
-  grasswatercornerNETile: {fileID: 11400000, guid: b163efb85cbbbeb45bb094f60abe0f52, type: 2}
-  grasswatercornerSWTile: {fileID: 11400000, guid: 4213a1cf0a5abf64085657215317feb7, type: 2}
-  grasswatercornerSETile: {fileID: 11400000, guid: f65763b794a8b9c4788ab019c4b209f0, type: 2}
-  grasswatertouchNETile: {fileID: 11400000, guid: b35634a52905c66419de52cf1bff3476, type: 2}
-  grasswatertouchNWTile: {fileID: 11400000, guid: d3685f5433779404194b46f2ba088b17, type: 2}
-  grasswatertouchSETile: {fileID: 11400000, guid: 0c6007aa0c61c8b4a90b7834f263b0c8, type: 2}
-  grasswatertouchSWTile: {fileID: 11400000, guid: 19f601a84627dad47bf6d25ed052e720, type: 2}
-  grasswaterisland: {fileID: 11400000, guid: a2ca1bc987d8e0e4695b2465f49d2a82, type: 2}
+  waterTile: {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  waterTilelillypad: {fileID: 0}
+  grassTile: {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  grassTile1: {fileID: 11400000, guid: 03b1116ef674f7c4ea55436004cf33fc, type: 2}
+  grassTile2: {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  grassTile3: {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  grassTile4: {fileID: 11400000, guid: 27f5a68340ebc6c4e853a0b3c5403b31, type: 2}
+  forestTile: {fileID: 11400000, guid: 57270a4bd3f1e324aba944022ddb49ef, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   width: 50
   height: 50
   initialWaterChance: 0.25
@@ -1351,7 +1278,7 @@ Animator:
   m_GameObject: {fileID: 2020645589}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a7c9e83571da9a6478548ec031b6febd, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1420,4 +1347,3 @@ SceneRoots:
   - {fileID: 771626839}
   - {fileID: 2072845791}
   - {fileID: 1211271280}
-  - {fileID: 1497015308}
