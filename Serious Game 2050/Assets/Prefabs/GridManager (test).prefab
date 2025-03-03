@@ -136,16 +136,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8645268100077905876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ed11713429d4b4eb53ec7b1a590736, type: 3}
+  m_Script: {fileID: 11500000, guid: a44fa02246faf274aa46bea3c3a40ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileStartX: 0
-  TileStartY: 0
-  TileEndX: 0
-  TileEndY: 0
-  StartPosition: {fileID: 8739670069484639522}
-  EndPosition: {fileID: 2778350719230169428}
-  Tile: {fileID: 6269301335469067141, guid: fb16456a54f61e744a693d7fb54f74e1, type: 3}
+  grids: []
+  classicGrid: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+  gridMaxSize: 5
+  mainCamera: {fileID: 0}
 --- !u!212 &6432500159508303174
 SpriteRenderer:
   m_ObjectHideFlags: 0
