@@ -1240,14 +1240,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2020645592}
-  waterTile: {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
-  waterTilelillypad: {fileID: 0}
-  grassTile: {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  grassTile1: {fileID: 11400000, guid: 03b1116ef674f7c4ea55436004cf33fc, type: 2}
-  grassTile2: {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
-  grassTile3: {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
-  grassTile4: {fileID: 11400000, guid: 27f5a68340ebc6c4e853a0b3c5403b31, type: 2}
-  forestTile: {fileID: 11400000, guid: 57270a4bd3f1e324aba944022ddb49ef, type: 2}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  allforestTiles:
+  - {fileID: 11400000, guid: 0f6e9a572ef25134780c485e036f625e, type: 2}
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -1261,8 +1267,8 @@ MonoBehaviour:
   grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
   grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
-  width: 50
-  height: 50
+  width: 200
+  height: 200
   initialWaterChance: 0.25
   initialForestChance: 0.25
   smoothingIterations: 4
