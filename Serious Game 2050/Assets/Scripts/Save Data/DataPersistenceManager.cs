@@ -12,7 +12,7 @@ public class DataPersistenceManager : MonoBehaviour
    private GameData gameData;
    private List<IDataPersistence> dataPersistenceObjects;
 
-   public  MapGeneratorv2 mapgeneratorV2;
+   public  RandomTilemapGenerator mapgeneratorV2;
 
    private FileDataHandler dataHandler;
 

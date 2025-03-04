@@ -101,10 +101,10 @@ public class RandomTilemapGenerator : MonoBehaviour
         allowedGrassTiles = new List<TileBase> { grassTile, grassTile1, grassTile2, grassTile3, grassTile4 };
         allowedWaterTiles = new List<TileBase> { waterTile, waterTilelillypad};
 
-        GenerateMap();
+        
     }
 
-    void GenerateMap()
+    public void GenerateMap()
     {
         tilemap.ClearAllTiles();
         mapData = new TileBase[width, height];
