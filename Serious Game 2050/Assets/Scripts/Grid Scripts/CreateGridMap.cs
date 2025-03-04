@@ -1,53 +1,18 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
-public class CreateGridMap : MonoBehaviour
+public class TilemapInteraction : MonoBehaviour
 {
-    public Tilemap tilemap;
-    public TileBase waterTile;
+    public Tilemap tilemap;  // Reference to your Tilemap
     public TileBase grassTile;
-    public TileBase grassTile1;
-    public TileBase grassTile2;
-    public TileBase grassTile3;
-    public TileBase grassTile4;
-    public TileBase grassTile5;
-    public TileBase forestTile;
-    public TileBase grasswaternorthTile;
-    public TileBase grasswatereastTile;
-    public TileBase grasswatersouthTile;
-    public TileBase grasswaterwestTile;
-    public TileBase grasswatercornerNWTile;
-    public TileBase grasswatercornerNETile;
-    public TileBase grasswatercornerSWTile;
-    public TileBase grasswatercornerSETile;
-    public TileBase grasswatertouchNETile;
-    public TileBase grasswatertouchNWTile;
-    public TileBase grasswatertouchSETile;
-    public TileBase grasswatertouchSWTile;
-    public TileBase grasswaterisland;
+    public Camera mainCamera; // Camera used to detect mouse position
 
     public int width = 200;
     public int height = 200;
-    public float initialWaterChance = 0.25f;
-    public float initialForestChance = 0.25f;
-    public int smoothingIterations = 4;
-    public int waterClusterSize = 4;
-    public int forestClusterSize = 4;
-
-
 
     private TileBase[,] mapData;
-
-    Vector2Int[] directions =
-{
-    new Vector2Int(1, 0),   // Right
-    new Vector2Int(-1, 0),  // Left
-    new Vector2Int(0, 1),   // Up
-    new Vector2Int(0, -1)   // Down
-};
-
 
     void Start()
     {
@@ -68,4 +33,29 @@ public class CreateGridMap : MonoBehaviour
             }
         }
     }
+        void Update()
+    {
+        if (Input.GetMouseButtonDown(0))  // Left mouse button click
+        {
+            Vector3 worldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition); // Convert mouse position to world space
+            Vector3Int cellPos = tilemap.WorldToCell(worldPos); // Convert world position to tilemap cell position
+
+            TileBase clickedTile = tilemap.GetTile(cellPos); // Get the tile at that position
+
+            if (clickedTile != null)
+            {
+                InteractWithTile(cellPos, clickedTile);  // Call the interaction function
+            }
+        }
+    }
+
+    // A custom interaction function for your tiles
+    void InteractWithTile(Vector3Int cellPos, TileBase tile)
+    {
+        // Example of a simple interaction
+        Debug.Log("Interacted with tile at position: " + cellPos);
+
+
+    }
+
 }
