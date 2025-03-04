@@ -267,6 +267,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10842b9ff650f0f42acc5f4ed2e649e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
+  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
+  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
+  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
+  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
+  gridSize: 10
+  mainCamera: {fileID: 872144681}
 --- !u!1 &693515016
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &693515017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &771626838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,17 +408,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 771626837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04fdd6100dc04e64883bfd591cc8cfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9aacaf35c7626974e8ce54608c5b1f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles: []
-  specialTile: {fileID: 0}
-  borderTile: {fileID: 0}
-  waterTile: {fileID: 0}
-  grassTile: {fileID: 0}
-  separatingTile: {fileID: 0}
-  gridSize: 5
-  mainCamera: {fileID: 1211271279}
+  tiles:
+  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
+  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
+  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
+  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
+  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
+  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
+  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
+  gridSize: 10
+  mainCamera: {fileID: 872144681}
 --- !u!4 &771626839
 Transform:
   m_ObjectHideFlags: 0
@@ -540,6 +558,7 @@ GameObject:
   - component: {fileID: 1211271280}
   - component: {fileID: 1211271279}
   - component: {fileID: 1211271278}
+  - component: {fileID: 1211271281}
   m_Layer: 0
   m_Name: Camera v2
   m_TagString: Untagged
@@ -589,7 +608,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 50
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -621,6 +640,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211271281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211271277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88f36241827ba54cb407795938b5ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 20
+  zoomSpeed: 5
+  minZoom: 1
+  maxZoom: 1000
+  smoothTime: 0.01
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1448972938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1530238485
 Rigidbody2D:
   serializedVersion: 4
@@ -948,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1413e6573330ee4b9cc8237f9f7471c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GridAccessButton: {fileID: 1835506986}
+  GridAccessButton: {fileID: 0}
   GridEnabled: 0
   Grids: []
 --- !u!114 &1835506986
@@ -1045,6 +1081,7 @@ GameObject:
   - component: {fileID: 2020645592}
   - component: {fileID: 2020645591}
   - component: {fileID: 2020645593}
+  - component: {fileID: 2020645594}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1199,9 +1236,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 2020645589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8ac0ccc96e9441cb5a66e07e2f346b, type: 3}
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 2020645592}
+  waterTile: {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  waterTilelillypad: {fileID: 0}
+  grassTile: {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  grassTile1: {fileID: 11400000, guid: 03b1116ef674f7c4ea55436004cf33fc, type: 2}
+  grassTile2: {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  grassTile3: {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  grassTile4: {fileID: 11400000, guid: 27f5a68340ebc6c4e853a0b3c5403b31, type: 2}
+  forestTile: {fileID: 11400000, guid: 57270a4bd3f1e324aba944022ddb49ef, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!95 &2020645594
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020645589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2072845789
 GameObject:
   m_ObjectHideFlags: 0

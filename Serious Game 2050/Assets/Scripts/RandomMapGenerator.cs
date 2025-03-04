@@ -1,17 +1,19 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEngine.Tilemaps.Tilemap;
 
 public class RandomTilemapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
     public TileBase waterTile;
+    public TileBase waterTilelillypad;
     public TileBase grassTile;
     public TileBase grassTile1;
     public TileBase grassTile2;
     public TileBase grassTile3;
     public TileBase grassTile4;
-    public TileBase grassTile5;
     public TileBase forestTile;
     public TileBase grasswaternorthTile;
     public TileBase grasswatereastTile;
@@ -25,19 +27,35 @@ public class RandomTilemapGenerator : MonoBehaviour
     public TileBase grasswatertouchNWTile;
     public TileBase grasswatertouchSETile;
     public TileBase grasswatertouchSWTile;
-    public TileBase grasswaterclosenorth;
-    public TileBase grasswatercloseeast;
-    public TileBase grasswaterclosesouth;
-    public TileBase grasswaterclosewest;
     public TileBase grasswaterisland;
 
-    public int width = 50;
-    public int height = 50;
+    public int width = 200;
+    public int height = 200;
     public float initialWaterChance = 0.25f;
     public float initialForestChance = 0.25f;
     public int smoothingIterations = 4;
     public int waterClusterSize = 4;
     public int forestClusterSize = 4;
+
+
+    private Dictionary<TileBase, float> GrassTileChances;
+    private Dictionary<TileBase, float> WaterTileChances;
+    
+    List<TileBase> allowedGrassTiles;
+    List<TileBase> allowedWaterTiles;
+
+
+    void Awake()
+    {
+        GrassTileChances = new Dictionary<TileBase, float>
+        {
+            { grassTile, 0.45f },
+            { grassTile1, 0.4f },
+            { grassTile2, 0.05f },
+            { grassTile3, 0.05f },
+            { grassTile4, 0.05f }
+        };
+    }
 
 
 
@@ -62,9 +80,27 @@ public class RandomTilemapGenerator : MonoBehaviour
         }
     }
 
+    TileBase GetRandomTile()
+    {
+        float roll = Random.value; // Random float between 0 and 1
+        float cumulative = 0f;
 
+        foreach (var tileEntry in GrassTileChances)
+        {
+            cumulative += tileEntry.Value;
+            if (roll < cumulative)
+            {
+                return tileEntry.Key;
+            }
+        }
+
+        return grassTile; // Default fallback
+    }
     void Start()
     {
+        allowedGrassTiles = new List<TileBase> { grassTile, grassTile1, grassTile2, grassTile3, grassTile4 };
+        allowedWaterTiles = new List<TileBase> { waterTile, waterTilelillypad};
+
         GenerateMap();
     }
 
@@ -78,7 +114,7 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                mapData[x, y] = grassTile;
+                mapData[x, y] = GetRandomTile();
             }
         }
 
@@ -90,9 +126,9 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                if (mapData[x, y] == grassTile && IsNextToTile(x, y, waterTile))
-                {
-                    mapData[x, y] = GetCorrectGrassWaterTile(x, y);
+                if (mapData[x, y] == (allowedGrassTiles.Contains(mapData[x, y]) && IsNextToTile(x, y, waterTile)))
+                    {
+                        mapData[x, y] = GetCorrectGrassWaterTile(x, y);
                 }
             }
         }
@@ -103,7 +139,6 @@ public class RandomTilemapGenerator : MonoBehaviour
         // Step 5: Apply final tiles to tilemap
         ApplyTilesToTilemap();
     }
-
 
     void PlaceWaterClusters()
     {
@@ -148,7 +183,7 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             Vector2Int current = openList.Dequeue();
 
-            if (mapData[current.x, current.y] == grassTile) // Only replace grass
+            if (new List<TileBase> { grassTile, grassTile1, grassTile2, grassTile3, grassTile4 }.Contains(mapData[current.x, current.y])) // Replaces grasstiles
             {
                 mapData[current.x, current.y] = waterTile;
                 placedTiles++;
@@ -201,14 +236,13 @@ public class RandomTilemapGenerator : MonoBehaviour
 
     bool HasNearbyWaterCluster(int x, int y)
     {
-        int nearbyWaterCount = 0;
-        int minSeparation = 3; // Increase this to require more spacing
+        int minSeparation = 4;
 
         for (int dx = -minSeparation; dx <= minSeparation; dx++)
         {
             for (int dy = -minSeparation; dy <= minSeparation; dy++)
             {
-                if (dx == 0 && dy == 0) continue; // Skip the tile itself
+                if (dx == 0 && dy == 0) continue; // Skip current tile
 
                 int nx = x + dx;
                 int ny = y + dy;
@@ -217,8 +251,7 @@ public class RandomTilemapGenerator : MonoBehaviour
                 {
                     if (mapData[nx, ny] == waterTile)
                     {
-                        nearbyWaterCount++;
-                        if (nearbyWaterCount >= 10) return true; // Only break up water clusters if too large
+                        return true; // To close to watercluster
                     }
                 }
             }
@@ -226,6 +259,7 @@ public class RandomTilemapGenerator : MonoBehaviour
 
         return false;
     }
+
 
     void PlaceForestClusters()
     {
@@ -298,9 +332,10 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             Vector2Int current = openList.Dequeue();
 
-            if (mapData[current.x, current.y] == grassTile) // Only replace grass
-            {
-                mapData[current.x, current.y] = forestTile;
+            if (mapData[current.x, current.y] == (allowedGrassTiles.Contains(mapData[current.x, current.y]) && IsNextToTile(current.x, current.y, waterTile)))
+
+                {
+                    mapData[current.x, current.y] = forestTile;
                 placedTiles++;
 
                 // Add random adjacent tiles to continue growing the cluster
@@ -482,23 +517,13 @@ public class RandomTilemapGenerator : MonoBehaviour
             if (hasWaterWest) return grasswaterwestTile;
         }
 
-        // **Step 4: Place Locked Tiles (if touching exactly 3 NESW water tile)**
-        if (neswCount == 3)
-        {
-            if (hasWaterEast && hasWaterSouth && hasWaterWest) return grasswaterclosenorth;
-            if (hasWaterNorth && hasWaterSouth && hasWaterWest) return grasswatercloseeast;
-            if (hasWaterNorth && hasWaterEast && hasWaterWest) return grasswaterclosesouth;
-            if (hasWaterNorth && hasWaterEast && hasWaterSouth) return grasswaterclosewest;
-        }
-
         // **Step 4: Place Island Tiles (if touching exactly 4 NESW water tile)**
         if (neswCount == 4)
         {
             if (hasWaterNorth && hasWaterEast && hasWaterSouth && hasWaterWest) return grasswaterisland;
-
         }
 
-        // **Step 6: Default to Normal Grass Tile**
+        // **Final Step: Default to Normal Grass Tile**
         return grassTile;
     }
 
