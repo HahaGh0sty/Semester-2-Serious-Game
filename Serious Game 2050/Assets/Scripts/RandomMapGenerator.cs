@@ -58,7 +58,6 @@ public class RandomTilemapGenerator : MonoBehaviour
         // Ensure allgrassTiles is not null and has at least one element
         if (allgrassTiles == null || allgrassTiles.Length == 0)
         {
-            Debug.LogError("allgrassTiles is not initialized or empty!");
             return null;  // Return a default value or handle the case as needed
         }
 
@@ -253,8 +252,8 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
     void PlaceForestClusters()
     {
         int numClusters = width / 5 * 2; // Controls total number of forest clusters
-        int minClusterSize = 4;
-        int maxClusterSize = 15;
+        int minClusterSize = 8;
+        int maxClusterSize = 20;
         int maxAttempts = 100; // Prevent infinite loops
 
         for (int i = 0; i < numClusters; i++)
@@ -341,23 +340,6 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
                 }
             }
         }
-    }
-
-    void DebugPrintTileCounts()
-    {
-        int waterCount = 0, forestCount = 0, grassCount = 0;
-
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                if (mapData[x, y] == waterTile) waterCount++;
-                else if (mapData[x, y] == forestTile) forestCount++;
-                else if (mapData[x, y] == grassTile) grassCount++;
-            }
-        }
-
-        Debug.Log($"Initial Water: {waterCount}, Forest: {forestCount}, Grass: {grassCount}");
     }
 
     void ApplyTilesToTilemap()
@@ -464,39 +446,25 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
 
     TileBase GetCorrectGrassWaterTile(int x, int y)
     {
-        Debug.Log($"Tile at ({x},{y}) is {mapData[x, y]?.name}");
 
-        bool IsWaterLike(TileBase tile)
-        {
-            if (tile == null) return false;
-
-            bool result = (tile == waterTile);
-            Debug.Log($"Checking if {tile.name} is water-like: {result}");
-            return result;
-        }
         // Check direct adjacent water-like tiles (NESW)
-        bool hasWaterNorth = (y + 1 < height) && IsWaterLike(mapData[x, y + 1]);
-        bool hasWaterEast = (x + 1 < width) && IsWaterLike(mapData[x + 1, y]);
-        bool hasWaterSouth = (y - 1 >= 0) && IsWaterLike(mapData[x, y - 1]);
-        bool hasWaterWest = (x - 1 >= 0) && IsWaterLike(mapData[x - 1, y]);
+        bool hasWaterNorth = (y + 1 < height);
+        bool hasWaterEast = (x + 1 < width);
+        bool hasWaterSouth = (y - 1 >= 0);
+        bool hasWaterWest = (x - 1 >= 0);
 
         // Check diagonal water-like tiles (NE, NW, SE, SW)
-        bool hasWaterNE = (x + 1 < width && y + 1 < height) && IsWaterLike(mapData[x + 1, y + 1]);
-        bool hasWaterNW = (x - 1 >= 0 && y + 1 < height) && IsWaterLike(mapData[x - 1, y + 1]);
-        bool hasWaterSE = (x + 1 < width && y - 1 >= 0) && IsWaterLike(mapData[x + 1, y - 1]);
-        bool hasWaterSW = (x - 1 >= 0 && y - 1 >= 0) && IsWaterLike(mapData[x - 1, y - 1]);
+        bool hasWaterNE = (x + 1 < width && y + 1 < height);
+        bool hasWaterNW = (x - 1 >= 0 && y + 1 < height);
+        bool hasWaterSE = (x + 1 < width && y - 1 >= 0);
+        bool hasWaterSW = (x - 1 >= 0 && y - 1 >= 0);
 
         int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) + (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
         int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) + (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
-        // DEBUG LOGGING
-        Vector3 worldPos = tilemap.CellToWorld(new Vector3Int(x, y, 0));
-        Debug.Log($"Tile ({x},{y}) at {worldPos} - NESW: {neswCount}, Diagonal: {diagonalCount}");
-
         // **Step 1: Place GrassWaterCorner (if touching exactly 1 diagonal water-like tile)**
         if (diagonalCount == 1 && neswCount == 0)
         {
-            Debug.Log($"Tile ({x},{y}) - Placing CORNER grasswater");
             if (hasWaterNE) return grasswatercornerNETile;
             if (hasWaterNW) return grasswatercornerNWTile;
             if (hasWaterSE) return grasswatercornerSETile;
@@ -506,7 +474,6 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
         // **Step 2: Place GrassWaterTouch (if touching exactly 2 NESW water-like tiles)**
         if (neswCount == 2)
         {
-            Debug.Log($"Tile ({x},{y}) - Placing TOUCHING grasswater");
             if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
             if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
             if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
@@ -516,7 +483,6 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
         // **Step 3: Place Edge Tiles (if touching at least 1 NESW water-like tile)**
         if (neswCount >= 1)
         {
-            Debug.Log($"Tile ({x},{y}) - Placing EDGE grasswater");
             if (hasWaterNorth) return grasswaternorthTile;
             if (hasWaterEast) return grasswatereastTile;
             if (hasWaterSouth) return grasswatersouthTile;
@@ -526,12 +492,10 @@ void GenerateWaterCluster(int startX, int startY, int clusterSize)
         // **Step 4: Place Island Tiles (if touching exactly 4 NESW water-like tiles)**
         if (diagonalCount >= 3 && neswCount >= 3)
         {
-            Debug.Log($"Tile ({x},{y}) - Placing ISLAND grasswater (relaxed condition)");
             return grasswaterisland;
         }
 
         // **Final Step: Default to Normal Grass Tile**
-        Debug.Log($"Tile ({x},{y}) - No water nearby, defaulting to normal grass.");
         return grassTile;
     }
 

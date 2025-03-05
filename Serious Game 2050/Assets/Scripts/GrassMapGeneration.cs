@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEngine.Tilemaps.Tilemap;
 
-public class ANewRandomMapGenerator : MonoBehaviour
+public class GrassMapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
     public TileBase[] allgrassTiles; // Array for grass tiles
@@ -15,8 +15,8 @@ public class ANewRandomMapGenerator : MonoBehaviour
     private TileBase waterTile; // Default water tile
     private TileBase forestTile; // Default forest tile
 
-    public int width = 200;
-    public int height = 200;
+    public int width = 50;
+    public int height = 50;
     public float initialWaterChance = 0.25f;
     public float initialForestChance = 0.25f;
     public int smoothingIterations = 4;
@@ -79,12 +79,6 @@ public class ANewRandomMapGenerator : MonoBehaviour
                 mapData[x, y] = GetRandomTile();
             }
         }
-
-        // Step 2: Place water clusters
-        PlaceWaterClusters();
-
-        // Step 4: Place forest tiles
-        PlaceForestClusters();
 
         // Step 5: Apply final tiles to tilemap
         ApplyTilesToTilemap();
@@ -156,6 +150,8 @@ public class ANewRandomMapGenerator : MonoBehaviour
         }
     }
 
+
+
     void EnsureWaterClusterSeparation()
     {
         List<Vector2Int> tilesToReplace = new List<Vector2Int>();
@@ -181,6 +177,9 @@ public class ANewRandomMapGenerator : MonoBehaviour
             mapData[tilePos.x, tilePos.y] = grassTile; // Replace with grassTile
         }
     }
+
+
+
 
     bool HasNearbyWaterCluster(int x, int y)
     {
@@ -409,5 +408,4 @@ public class ANewRandomMapGenerator : MonoBehaviour
 
         return false; // Return false if no adjacent tile matches
     }
-
 }

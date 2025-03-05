@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEngine.Tilemaps.Tilemap;
 
-public class ANewRandomMapGenerator : MonoBehaviour
+public class WaterMapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
     public TileBase[] allgrassTiles; // Array for grass tiles
@@ -15,8 +15,22 @@ public class ANewRandomMapGenerator : MonoBehaviour
     private TileBase waterTile; // Default water tile
     private TileBase forestTile; // Default forest tile
 
-    public int width = 200;
-    public int height = 200;
+    public TileBase grasswaternorthTile;
+    public TileBase grasswatereastTile;
+    public TileBase grasswatersouthTile;
+    public TileBase grasswaterwestTile;
+    public TileBase grasswatercornerNWTile;
+    public TileBase grasswatercornerNETile;
+    public TileBase grasswatercornerSWTile;
+    public TileBase grasswatercornerSETile;
+    public TileBase grasswatertouchNETile;
+    public TileBase grasswatertouchNWTile;
+    public TileBase grasswatertouchSETile;
+    public TileBase grasswatertouchSWTile;
+    public TileBase grasswaterisland;
+
+    public int width = 50;
+    public int height = 50;
     public float initialWaterChance = 0.25f;
     public float initialForestChance = 0.25f;
     public int smoothingIterations = 4;
@@ -71,23 +85,57 @@ public class ANewRandomMapGenerator : MonoBehaviour
         tilemap.ClearAllTiles();
         mapData = new TileBase[width, height];
 
+        // Calculate the center offset
+        int offsetX = width / 2;
+        int offsetY = height / 2;
+
         // Step 1: Start with all grass tiles
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                mapData[x, y] = GetRandomTile();
+                mapData[x, y] = grassTile;  // Initially, set everything to grass
             }
         }
 
-        // Step 2: Place water clusters
+        // Step 2: Replace grass tiles with Grass/Water tiles where appropriate
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (IsNextToTile(x, y, waterTile))  // Check if the tile is next to water
+                {
+                    mapData[x, y] = GetCorrectGrassWaterTile(x, y);  // Replace with Grass/Water
+                }
+            }
+        }
+
+        // Step 3: Place water clusters
         PlaceWaterClusters();
 
-        // Step 4: Place forest tiles
+        // Step 4: Place forest clusters
         PlaceForestClusters();
 
-        // Step 5: Apply final tiles to tilemap
-        ApplyTilesToTilemap();
+        // Step 5: Remove any remaining grass tiles
+        RemoveGrassTiles();
+
+        // Step 6: Apply the final map to the Tilemap (centered)
+        ApplyTilesToTilemap(offsetX, offsetY);
+    }
+
+
+    void RemoveGrassTiles()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (mapData[x, y] == grassTile)  // Check for any remaining grass tiles
+                {
+                    mapData[x, y] = null;  // Remove the grass tile by setting to null
+                }
+            }
+        }
     }
 
 
@@ -181,6 +229,9 @@ public class ANewRandomMapGenerator : MonoBehaviour
             mapData[tilePos.x, tilePos.y] = grassTile; // Replace with grassTile
         }
     }
+
+
+
 
     bool HasNearbyWaterCluster(int x, int y)
     {
@@ -311,21 +362,26 @@ public class ANewRandomMapGenerator : MonoBehaviour
         }
     }
 
-    void ApplyTilesToTilemap()
+    void ApplyTilesToTilemap(int offsetX, int offsetY)
     {
-        tilemap.ClearAllTiles(); // Clears existing tiles
-
-        int offsetX = width / 2;
-        int offsetY = height / 2;
-
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                tilemap.SetTile(new Vector3Int(x - offsetX, y - offsetY, 0), mapData[x, y]);
+                if (mapData[x, y] != null)
+                {
+                    // Adjust tile position to center it
+                    Vector3Int tilePosition = new Vector3Int(x - offsetX, y - offsetY, 0);
+
+                    // Apply the tile to the Tilemap at the calculated position
+                    tilemap.SetTile(tilePosition, mapData[x, y]);
+                }
             }
         }
     }
+
+
+
 
     void SmoothTiles(TileBase targetTile, int clusterSize)
     {
@@ -378,36 +434,104 @@ public class ANewRandomMapGenerator : MonoBehaviour
         return count; //Ensure the function always returns a value
     }
 
-    bool IsNextToTile(int x, int y, TileBase targetTile)
+    bool IsNextToTile(int x, int y, TileBase tile)
     {
-        // Define all eight possible directions (including diagonals)
-        Vector2Int[] directions = new Vector2Int[]
-        {
-        new Vector2Int(1, 0),    // Right
-        new Vector2Int(-1, 0),   // Left
-        new Vector2Int(0, 1),    // Up
-        new Vector2Int(0, -1),   // Down
-        new Vector2Int(1, 1),    // Top-right (Diagonal)
-        new Vector2Int(-1, 1),   // Top-left (Diagonal)
-        new Vector2Int(1, -1),   // Bottom-right (Diagonal)
-        new Vector2Int(-1, -1)   // Bottom-left (Diagonal)
-        };
-
-        // Check all directions
+        // Check adjacent tiles for the given tile type (e.g., waterTile)
+        Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
         foreach (var direction in directions)
         {
-            int nx = x + direction.x;
-            int ny = y + direction.y;
+            int nx = x + (int)direction.x;
+            int ny = y + (int)direction.y;
 
-            // Make sure we are within bounds
             if (nx >= 0 && nx < width && ny >= 0 && ny < height)
             {
-                if (mapData[nx, ny] == targetTile)
+                if (mapData[nx, ny] == tile)  // Check if adjacent tile matches the specified type
+                {
                     return true;
+                }
             }
         }
+        return false;
+    }
 
-        return false; // Return false if no adjacent tile matches
+
+
+
+    TileBase GetCorrectGrassWaterTile(int x, int y)
+    {
+        bool IsWaterLike(TileBase tile)
+        {
+            if (tile == null) return false;
+
+            bool result = (tile == waterTile);
+            return result;
+        }
+        // Check direct adjacent water-like tiles (NESW)
+        bool hasWaterNorth = (y + 1 < height) && IsWaterLike(mapData[x, y + 1]);
+        bool hasWaterEast = (x + 1 < width) && IsWaterLike(mapData[x + 1, y]);
+        bool hasWaterSouth = (y - 1 >= 0) && IsWaterLike(mapData[x, y - 1]);
+        bool hasWaterWest = (x - 1 >= 0) && IsWaterLike(mapData[x - 1, y]);
+
+        // Check diagonal water-like tiles (NE, NW, SE, SW)
+        bool hasWaterNE = (x + 1 < width && y + 1 < height) && IsWaterLike(mapData[x + 1, y + 1]);
+        bool hasWaterNW = (x - 1 >= 0 && y + 1 < height) && IsWaterLike(mapData[x - 1, y + 1]);
+        bool hasWaterSE = (x + 1 < width && y - 1 >= 0) && IsWaterLike(mapData[x + 1, y - 1]);
+        bool hasWaterSW = (x - 1 >= 0 && y - 1 >= 0) && IsWaterLike(mapData[x - 1, y - 1]);
+
+        int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) + (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
+        int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) + (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
+
+        // **Step 1: Place GrassWaterCorner (if touching exactly 1 diagonal water-like tile)**
+        if (diagonalCount == 1 && neswCount == 0)
+        {
+            if (hasWaterNE) return grasswatercornerNETile;
+            if (hasWaterNW) return grasswatercornerNWTile;
+            if (hasWaterSE) return grasswatercornerSETile;
+            if (hasWaterSW) return grasswatercornerSWTile;
+        }
+
+        // **Step 2: Place GrassWaterTouch (if touching exactly 2 NESW water-like tiles)**
+        if (neswCount == 2)
+        {
+            if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
+            if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
+            if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
+            if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
+        }
+
+        // **Step 3: Place Edge Tiles (if touching at least 1 NESW water-like tile)**
+        if (neswCount >= 1)
+        {
+            if (hasWaterNorth) return grasswaternorthTile;
+            if (hasWaterEast) return grasswatereastTile;
+            if (hasWaterSouth) return grasswatersouthTile;
+            if (hasWaterWest) return grasswaterwestTile;
+        }
+
+        // **Step 4: Place Island Tiles (if touching exactly 4 NESW water-like tiles)**
+        if (diagonalCount >= 3 && neswCount >= 3)
+        {
+            return grasswaterisland;
+        }
+        return grassTile;
+    }
+
+    void EnsureGrassWaterTiles()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (mapData[x, y] == (allowedGrassTiles.Contains(mapData[x, y])))
+                {
+                    TileBase correctTile = GetCorrectGrassWaterTile(x, y);
+                    if (correctTile != grassTile) // If a Grass/Water tile is needed, place it
+                    {
+                        mapData[x, y] = correctTile;
+                    }
+                }
+            }
+        }
     }
 
 }
