@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class moneybutton : MonoBehaviour, IDataPersistence
 {
-    public int money;
+    public int GildedBanana;
     public int energy;
 
     void Start()
@@ -14,19 +14,19 @@ public class moneybutton : MonoBehaviour, IDataPersistence
 
     public void moneygain()
     {
-      this.money += 1;
+      this.GildedBanana += 1;
       this.energy -= 1;
     }
 
     public void LoadData(GameData data)
     {
-      this.money = data.money;
+      this.GildedBanana = data.GildedBanana;
       this.energy = data.energy;
     }
 
     public void SaveData(ref GameData data)
     {
-      data.money = this.money;
+      data.GildedBanana = this.GildedBanana;
       data.energy = this.energy;
     }
  

@@ -3,7 +3,7 @@ public class GameData
 {
     
     
-        public int money;
+        public int GildedBanana;
         public int wood;
         public int stone;
         public int energy;
@@ -16,7 +16,7 @@ public class GameData
         //game starts like this when no save data is available or you create a new save file
         public GameData()
         {
-            this.money = 0;
+            this.GildedBanana = 0;
             this.wood = 0;
             this.stone = 0;
             this.energy = 0;
