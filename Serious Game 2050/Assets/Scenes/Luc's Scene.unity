@@ -122,6 +122,249 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &201372135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201372136}
+  - component: {fileID: 201372141}
+  - component: {fileID: 201372140}
+  - component: {fileID: 201372139}
+  - component: {fileID: 201372138}
+  - component: {fileID: 201372137}
+  m_Layer: 0
+  m_Name: Tilemap Forest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201372136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2072845791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201372137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ef871ed11c81499a54c61ffc0c42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 201372141}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
+  allforestTiles:
+  - {fileID: 11400000, guid: de3488fda6daadc41ab120c5ce17621e, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!95 &201372138
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &201372139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 201372141}
+  allgrassTiles:
+  - {fileID: 0}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  allforestTiles:
+  - {fileID: 0}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!483693784 &201372140
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1493898311
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 1
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &201372141
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201372135}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: -2.0994564e-33
+      e01: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
+      e11: 0
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &254864464
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,8 +1150,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1493898311
-  m_SortingLayer: 2
+  m_SortingLayerID: 1547273703
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1006,12 +1249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1114197066}
   allgrassTiles:
-  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
-  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
+  - {fileID: 0}
   allwaterTiles:
   - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
-  allforestTiles:
-  - {fileID: 0}
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -1025,13 +1265,11 @@ MonoBehaviour:
   grasswatertouchSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
   grasswatertouchSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  airtile: {fileID: 0}
   width: 50
   height: 50
-  initialWaterChance: 0.25
-  initialForestChance: 0.25
-  smoothingIterations: 4
-  waterClusterSize: 4
-  forestClusterSize: 4
+  minWaterClusterSize: 5
+  maxWaterClusterSize: 15
 --- !u!1 &1211271277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1822,7 @@ Transform:
   m_GameObject: {fileID: 2020645589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1802,10 +2040,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
   - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
   - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
-  allwaterTiles:
-  - {fileID: 0}
-  allforestTiles:
-  - {fileID: 0}
   width: 50
   height: 50
   initialWaterChance: 0.25
@@ -1857,6 +2091,7 @@ Transform:
   m_Children:
   - {fileID: 254864465}
   - {fileID: 1114197062}
+  - {fileID: 201372136}
   - {fileID: 2020645590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
