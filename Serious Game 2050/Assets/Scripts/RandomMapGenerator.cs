@@ -29,6 +29,8 @@ public class RandomTilemapGenerator : MonoBehaviour
     public TileBase grasswatertouchSWTile;
     public TileBase grasswaterisland;
 
+    private List<TileBase> availableTiles;
+
     public int width = 200;
     public int height = 200;
     public float initialWaterChance = 0.25f;
@@ -100,6 +102,15 @@ public class RandomTilemapGenerator : MonoBehaviour
     {
         allowedGrassTiles = new List<TileBase> { grassTile, grassTile1, grassTile2, grassTile3, grassTile4 };
         allowedWaterTiles = new List<TileBase> { waterTile, waterTilelillypad};
+
+         availableTiles = new List<TileBase>
+    {
+        waterTile, waterTilelillypad, grassTile, grassTile1, grassTile2, grassTile3, grassTile4, 
+        forestTile, grasswaternorthTile, grasswatereastTile, grasswatersouthTile, grasswaterwestTile,
+        grasswatercornerNWTile, grasswatercornerNETile, grasswatercornerSWTile, grasswatercornerSETile,
+        grasswatertouchNETile, grasswatertouchNWTile, grasswatertouchSETile, grasswatertouchSWTile,
+        grasswaterisland
+    };
 
         
     }
@@ -526,6 +537,18 @@ public class RandomTilemapGenerator : MonoBehaviour
         // **Final Step: Default to Normal Grass Tile**
         return grassTile;
     }
+    public Dictionary<string, TileBase> GetTileLookup()
+{
+
+    Dictionary<string, TileBase> tileLookup = new Dictionary<string, TileBase>();
+
+    foreach (TileBase tile in availableTiles)
+    {
+        tileLookup[tile.name] = tile;
+    }
+
+    return tileLookup;
+}
 
 
 

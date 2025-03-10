@@ -2,83 +2,163 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Tilemaps;
+using System.IO;
 
 public class DataPersistenceManager : MonoBehaviour
 {
-   [Header("File Storage Config")]
-   [SerializeField] private string fileName;
-   public static DataPersistenceManager instance { get; private set;}
+    [Header("File Storage Config")]
+    [SerializeField] private string fileName;
+    public static DataPersistenceManager instance { get; private set; }
 
-   private GameData gameData;
-   private List<IDataPersistence> dataPersistenceObjects;
+    private GameData gameData;
+    private List<IDataPersistence> dataPersistenceObjects;
+    private FileDataHandler dataHandler;
 
-   public  RandomTilemapGenerator mapgeneratorV2;
+    public RandomTilemapGenerator mapgeneratorV2;
+    public Tilemap tilemap;  // Assign in Inspector
 
-   private FileDataHandler dataHandler;
+    private string tilemapSavePath => Application.persistentDataPath + "/tilemapData.json";
 
-   private void Awake()
-   {
-     if ( instance != null)
-     {
-        Debug.LogError("more then one Data Persistence Manager instance found, fix it");
-     }
-     instance = this;
-   }
-   public void Start()
-   {
-      this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
-      this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-      Debug.Log(Application.persistentDataPath);
-      LoadGame();
-   }
-
-//makes new game data if u press new game
-   public void NewGame()
-   {
-    this.gameData = new GameData();
-    mapgeneratorV2.GenerateMap();
-   }
-//saves current game data
-   public void SaveGame()
-{
-   foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+    private void Awake()
     {
-        dataPersistenceObj.SaveData(ref gameData);
+        if (instance != null)
+        {
+            Debug.LogError("More than one Data Persistence Manager instance found, fix it!");
+        }
+        instance = this;
     }
 
-    // Save the data
-    dataHandler.Save(gameData);
-}
-
-//loads existing game data
-   public void LoadGame()
-   {
-    // MAKE THE DATA HANDLER PULL THE DATA AND USE IT HERE IAN U IDIOT
-   this.gameData = dataHandler.Load();
-    // if no data exists... run new game instead
-    if(this.gameData == null)
+    public void Start()
     {
-        Debug.Log("no data therefore nothing to load, starting new game");
-        NewGame();
-   }
-   // make it send all loaded data to all other scripts that need it
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+        Debug.Log(Application.persistentDataPath);
+        LoadGame();
+    }
+
+    // Creates a new game and generates a new tilemap
+    public void NewGame()
+    {
+        this.gameData = new GameData();
+        mapgeneratorV2.GenerateMap();
+        SaveTilemap();
+    }
+
+    // Saves game data and the tilemap
+    public void SaveGame()
+    {
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
-         dataPersistenceObj.LoadData(gameData);
+            dataPersistenceObj.SaveData(ref gameData);
         }
+
+        // Save the game data
+        dataHandler.Save(gameData);
+        SaveTilemap();
     }
-   
+
+    // Loads game data and the tilemap
+    public void LoadGame()
+    {
+        this.gameData = dataHandler.Load();
+
+        // If no data exists, start a new game
+        if (this.gameData == null)
+        {
+            Debug.Log("No data found, starting a new game.");
+            NewGame();
+        }
+
+        // Load other persistent data
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        {
+            dataPersistenceObj.LoadData(gameData);
+        }
+
+        // Load tilemap
+        LoadTilemap();
+    }
+
     private void OnApplicationQuit()
-   {
-      SaveGame();
-   }
+    {
+        SaveGame();
+    }
 
-   private List<IDataPersistence> FindAllDataPersistenceObjects()
-   {
-      IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+    private List<IDataPersistence> FindAllDataPersistenceObjects()
+    {
+        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+        return new List<IDataPersistence>(dataPersistenceObjects);
+    }
 
-      return new List<IDataPersistence>(dataPersistenceObjects);
-   }
+    // Saves the tilemap's tiles and their positions
+    private void SaveTilemap()
+    {
+        if (tilemap == null)
+        {
+            Debug.LogError("Tilemap reference is missing!");
+            return;
+        }
 
-  
+        TilemapSaveData saveData = new TilemapSaveData();
+        BoundsInt bounds = tilemap.cellBounds;
+
+        foreach (Vector3Int position in bounds.allPositionsWithin)
+        {
+            TileBase tile = tilemap.GetTile(position);
+            if (tile != null)
+            {
+                saveData.tiles.Add(new TileData { position = position, tileName = tile.name });
+            }
+        }
+
+        string json = JsonUtility.ToJson(saveData, true);
+        File.WriteAllText(tilemapSavePath, json);
+        Debug.Log("Tilemap saved to: " + tilemapSavePath);
+    }
+
+    // Loads the tilemap from saved data
+    private void LoadTilemap()
+    {
+        if (!File.Exists(tilemapSavePath))
+        {
+            Debug.LogWarning("No tilemap save file found.");
+            return;
+        }
+
+        string json = File.ReadAllText(tilemapSavePath);
+        TilemapSaveData saveData = JsonUtility.FromJson<TilemapSaveData>(json);
+
+        // Dictionary to map tile names to actual TileBase objects (you need to set this up in Unity)
+        Dictionary<string, TileBase> tileLookup = mapgeneratorV2.GetTileLookup();
+
+        tilemap.ClearAllTiles();
+        foreach (TileData tileData in saveData.tiles)
+        {
+            if (tileLookup.TryGetValue(tileData.tileName, out TileBase tile))
+            {
+                tilemap.SetTile(tileData.position, tile);
+            }
+            else
+            {
+                Debug.LogWarning("Tile not found in lookup: " + tileData.tileName);
+            }
+        }
+
+        Debug.Log("Tilemap loaded successfully.");
+    }
+}
+
+// Data structure to store tile information
+[System.Serializable]
+public class TileData
+{
+    public Vector3Int position;
+    public string tileName;
+}
+
+[System.Serializable]
+public class TilemapSaveData
+{
+    public List<TileData> tiles = new List<TileData>();
 }
