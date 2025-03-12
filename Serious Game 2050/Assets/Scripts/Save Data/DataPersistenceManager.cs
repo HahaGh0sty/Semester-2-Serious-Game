@@ -40,9 +40,9 @@ public class DataPersistenceManager : MonoBehaviour
     // Creates a new game and generates a new tilemap
     public void NewGame()
     {
-        this.gameData = new GameData();
-        mapgeneratorV2.GenerateMap();
-        
+        int randomSeed = Random.Range(0, 100000); // Generate random seed during runtime
+        gameData = new GameData(randomSeed); // Pass it to GameData
+        Debug.Log("Generated Map Seed: " + gameData.mapseed);
     }
 
     // Saves game data and the tilemap
@@ -55,7 +55,6 @@ public class DataPersistenceManager : MonoBehaviour
 
         // Save the game data
         dataHandler.Save(gameData);
-        
     }
 
     // Loads game data and the tilemap
@@ -75,8 +74,6 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
-
-        
     }
 
     private void OnApplicationQuit()
@@ -89,5 +86,4 @@ public class DataPersistenceManager : MonoBehaviour
         IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
-
 }

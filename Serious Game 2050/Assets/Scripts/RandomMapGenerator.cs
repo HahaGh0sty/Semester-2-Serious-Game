@@ -76,11 +76,11 @@ public class RandomTilemapGenerator : MonoBehaviour
         waterTile = allwaterTiles[0];  // Assuming the first water tile is the default
         forestTile = allforestTiles[0]; // Assuming the first forest tile is the default
 
-       
+        GenerateMap();
     }
 
 
-    public void GenerateMap()
+    void GenerateMap()
     {
         tilemap.ClearAllTiles();
         mapData = new TileBase[width, height];
