@@ -9,6 +9,7 @@ public class GameData
         public int energy;
         public int water;
         public int vervuiling;
+        public int mapseed;
         
 
 
@@ -22,6 +23,7 @@ public class GameData
             this.energy = 0;
             this.water = 0;
             this.vervuiling = 0;
+            this.mapseed = 0;
             
 
         }

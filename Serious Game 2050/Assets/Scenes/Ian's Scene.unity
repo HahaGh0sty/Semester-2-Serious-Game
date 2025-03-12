@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 288942251}
   - component: {fileID: 288942250}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Tilemap grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16822e5106e14479fa535f07903c65a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  GildedBanana: 0
   energy: 0
 --- !u!212 &979334148
 SpriteRenderer:
@@ -513,6 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: hi
   mapgeneratorV2: {fileID: 1289753054}
+  tilemap: {fileID: 288942251}
 --- !u!4 &1949823834
 Transform:
   m_ObjectHideFlags: 0
