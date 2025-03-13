@@ -346,7 +346,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -5, z: 0}
   m_Size: {x: 28, y: 11, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -572,7 +572,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -5, z: 0}
   m_Size: {x: 28, y: 11, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -591,6 +591,308 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &357607810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357607811}
+  - component: {fileID: 357607816}
+  - component: {fileID: 357607815}
+  - component: {fileID: 357607814}
+  - component: {fileID: 357607813}
+  - component: {fileID: 357607812}
+  m_Layer: 0
+  m_Name: Tilemap Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &357607811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130972856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &357607812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008aab34a0b1c80448e42028a932c25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 357607816}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 6f130da254443aa40a9003bb1542e5f7, type: 2}
+  - {fileID: 11400000, guid: 6f130da254443aa40a9003bb1542e5f7, type: 2}
+  - {fileID: 11400000, guid: 6f130da254443aa40a9003bb1542e5f7, type: 2}
+  - {fileID: 11400000, guid: 976484d429cb8e1419e25290e77f1914, type: 2}
+  - {fileID: 11400000, guid: 976484d429cb8e1419e25290e77f1914, type: 2}
+  - {fileID: 11400000, guid: 976484d429cb8e1419e25290e77f1914, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
+  width: 100
+  height: 100
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!95 &357607813
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &357607814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 357607816}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  - {fileID: 11400000, guid: 27f5a68340ebc6c4e853a0b3c5403b31, type: 2}
+  allwaterTiles:
+  - {fileID: 0}
+  allforestTiles:
+  - {fileID: 0}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!483693784 &357607815
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1062441047
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &357607816
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357607810}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: -2.0994564e-33
+      e01: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
+      e11: 0
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!1 &391932788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391932790}
+  - component: {fileID: 391932789}
+  m_Layer: 5
+  m_Name: GridManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &391932789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391932788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acbc6efdeff32144b7007aba0af4d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+  gridWidth: 100
+  gridHeight: 100
+--- !u!4 &391932790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391932788}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2072845791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &522458942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,7 +1518,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -5, z: 0}
   m_Size: {x: 28, y: 11, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -1280,6 +1582,319 @@ MonoBehaviour:
   height: 100
   minWaterClusterSize: 5
   maxWaterClusterSize: 15
+--- !u!1 &1130972854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130972856}
+  - component: {fileID: 1130972855}
+  m_Layer: 0
+  m_Name: Grid 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!156049354 &1130972855
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130972854}
+  m_Enabled: 1
+  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
+--- !u!4 &1130972856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130972854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -107.32, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1513773385}
+  - {fileID: 1245111606}
+  - {fileID: 1138968330}
+  - {fileID: 1262691164}
+  - {fileID: 357607811}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1138968329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138968330}
+  - component: {fileID: 1138968335}
+  - component: {fileID: 1138968334}
+  - component: {fileID: 1138968333}
+  - component: {fileID: 1138968332}
+  - component: {fileID: 1138968331}
+  m_Layer: 0
+  m_Name: Tilemap Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138968330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130972856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138968331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56254037541b0674a87d445f3eb05d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1138968335}
+  allgrassTiles:
+  - {fileID: 0}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterdoubleNorthSE: {fileID: 11400000, guid: d30e045951d36e54eb5dbc884cdba691, type: 2}
+  grasswaterdoubleNorthSW: {fileID: 11400000, guid: 8eb12f30bb4a13449a6c81d8a571bedb, type: 2}
+  grasswaterdoubleSouthNE: {fileID: 11400000, guid: b65bb34c9e2c9224881c79b0fa9ee8f1, type: 2}
+  grasswaterdoubleSouthNW: {fileID: 11400000, guid: c62c3c6d1220a1340abb2a962ffea430, type: 2}
+  grasswaterdoubleEastNW: {fileID: 11400000, guid: 4f4edc3d6ba050046b489df83ce4bb8a, type: 2}
+  grasswaterdoubleEastSW: {fileID: 11400000, guid: a3d3d41c0d6886e438d41473bb2c37e6, type: 2}
+  grasswaterdoubleWestNE: {fileID: 11400000, guid: 4f2fd91b67eb69149a2c9dd9cee61450, type: 2}
+  grasswaterdoubleWestSE: {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
+  grasswaterdoubleNESW: {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
+  grasswaterdoubleNWSE: {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  airtile: {fileID: 0}
+  width: 100
+  height: 100
+  minWaterClusterSize: 5
+  maxWaterClusterSize: 15
+--- !u!95 &1138968332
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1138968333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1138968335}
+  allgrassTiles:
+  - {fileID: 0}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  allforestTiles:
+  - {fileID: 0}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!483693784 &1138968334
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1547273703
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &1138968335
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138968329}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: -2.0994564e-33
+      e01: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
+      e11: 0
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1211271277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,10 +2001,479 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  zoomSpeed: 5
+  zoomSpeed: 25
   minZoom: 1
   maxZoom: 1000
   smoothTime: 0.01
+--- !u!1 &1245111605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245111606}
+  - component: {fileID: 1245111610}
+  - component: {fileID: 1245111609}
+  - component: {fileID: 1245111608}
+  - component: {fileID: 1245111607}
+  m_Layer: 0
+  m_Name: Tilemap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1245111606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245111605}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130972856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1245111607
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245111605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1245111608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245111605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1245111610}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  allforestTiles:
+  - {fileID: 11400000, guid: 0f6e9a572ef25134780c485e036f625e, type: 2}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!483693784 &1245111609
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245111605}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1062441047
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 1
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &1245111610
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245111605}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: -2.0994564e-33
+      e01: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
+      e11: 0
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!1 &1262691163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262691164}
+  - component: {fileID: 1262691169}
+  - component: {fileID: 1262691168}
+  - component: {fileID: 1262691167}
+  - component: {fileID: 1262691166}
+  - component: {fileID: 1262691165}
+  m_Layer: 0
+  m_Name: Tilemap Forest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262691164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130972856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262691165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ef871ed11c81499a54c61ffc0c42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1262691169}
+  allgrassTiles:
+  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
+  allforestTiles:
+  - {fileID: 11400000, guid: de3488fda6daadc41ab120c5ce17621e, type: 2}
+  width: 100
+  height: 100
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!95 &1262691166
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1262691167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1262691169}
+  allgrassTiles:
+  - {fileID: 0}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  allforestTiles:
+  - {fileID: 0}
+  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  width: 50
+  height: 50
+  initialWaterChance: 0.25
+  initialForestChance: 0.25
+  smoothingIterations: 4
+  waterClusterSize: 4
+  forestClusterSize: 4
+--- !u!483693784 &1262691168
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1493898311
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &1262691169
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262691163}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: -2.0994564e-33
+      e01: 0
+      e02: 3.7500038
+      e03: 3.7500038
+      e10: 4.26e-43
+      e11: 0
+      e12: 4.23e-43
+      e13: 4.23e-43
+      e20: -14.270798
+      e21: -4.8991196e-33
+      e22: -4.794064e-18
+      e23: 2.0091248
+      e30: 4.5905e-41
+      e31: 4.26e-43
+      e32: 4.23e-43
+      e33: 4.26e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.4716e-41, g: 3.4716e-41, b: 3.4716e-41, a: 3.4716e-41}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -17, y: -5, z: 0}
+  m_Size: {x: 28, y: 11, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +2542,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1513773384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513773385}
+  - component: {fileID: 1513773386}
+  m_Layer: 5
+  m_Name: GridManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513773385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513773384}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130972856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1513773386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513773384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acbc6efdeff32144b7007aba0af4d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+  gridWidth: 100
+  gridHeight: 100
 --- !u!1 &1530238483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +3073,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -5, z: 0}
   m_Size: {x: 28, y: 11, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -2068,7 +3199,7 @@ GameObject:
   - component: {fileID: 2072845791}
   - component: {fileID: 2072845790}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Grid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2099,6 +3230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 391932790}
   - {fileID: 254864465}
   - {fileID: 1114197062}
   - {fileID: 201372136}
@@ -2117,4 +3249,5 @@ SceneRoots:
   - {fileID: 1448972940}
   - {fileID: 771626839}
   - {fileID: 2072845791}
+  - {fileID: 1130972856}
   - {fileID: 1211271280}
