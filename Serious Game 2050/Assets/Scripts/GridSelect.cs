@@ -16,7 +16,7 @@ public class GridSelect : MonoBehaviour
     {
 
         ThisGrid = transform.gameObject;
-        s_MouseOverColor = new Color(0, 1, 0.3949249f, 0.7f);
+        s_MouseOverColor = new Color(1, 0, 0, 0.9f);
         s_Renderer = GetComponent<SpriteRenderer>();
         s_OriginalColor = s_Renderer.material.color;
     }
