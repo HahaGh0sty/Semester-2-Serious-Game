@@ -34,6 +34,16 @@ public class WaterMapGenerator : MonoBehaviour
     public TileBase grasswaterdoubleWestSE;
     public TileBase grasswaterdoubleNESW;
     public TileBase grasswaterdoubleNWSE;
+    public TileBase grasswaterdoubleNWNE;
+    public TileBase grasswaterdoubleSWSE;
+    public TileBase grasswaterdoubleNESE;
+    public TileBase grasswaterdoubleNWSW;
+    public TileBase grasswatercornertouchNETile;
+    public TileBase grasswatercornertouchNWTile;
+    public TileBase grasswatercornertouchSETile;
+    public TileBase grasswatercornertouchSWTile;
+
+
     public TileBase grasswaterisland;
     public TileBase airtile;
 
@@ -210,66 +220,79 @@ public class WaterMapGenerator : MonoBehaviour
         int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) +
                             (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
-        // **Step 1: GrassWaterIsland**
-        if (neswCount >= 4)
+
+        if (neswCount == 4)
         {
-            if (Random.value < 0.5f)
+            return waterTile;
+        }
+
+        else
+        {
+            // **Step 1: GrassWaterIsland**
+            if (neswCount == 4 && diagonalCount == 4)
             {
                 return grasswaterisland;
             }
-        }
 
-        // **Step 2: GrassWaterTouch**
-        if (neswCount == 2)
-        {
-            if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
-            if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
-            if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
-            if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
-        }
-
-        // **Step 3: Edge Tiles**
-        if (neswCount == 1)
-        {
-            if (hasWaterNorth) return grasswaternorthTile;
-            if (hasWaterEast) return grasswatereastTile;
-            if (hasWaterSouth) return grasswatersouthTile;
-            if (hasWaterWest) return grasswaterwestTile;
-        }
-
-        // **Step 4: Corner Tiles**
-        if (diagonalCount == 1 && neswCount == 0)
-        {
-            TileBase cornerTile = null;
-            if (hasWaterNE) cornerTile = grasswatercornerNETile;
-            if (hasWaterNW) cornerTile = grasswatercornerNWTile;
-            if (hasWaterSE) cornerTile = grasswatercornerSETile;
-            if (hasWaterSW) cornerTile = grasswatercornerSWTile;
-
-            if (cornerTile != null)
+            // **Step 2: GrassWaterTouch**
+            if (neswCount == 2)
             {
-                return cornerTile;
+                if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
+                if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
+                if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
+                if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
             }
-        }
-        // **Step 5: Double Tile**
-        if (diagonalCount >= 1 && neswCount == 1)
-        {
-            if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
-            if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-            if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
-            if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
-            if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
-            if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
-            if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
-            if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+
+            // **Step 3: Edge Tiles**
+            if (neswCount == 1)
+            {
+                if (hasWaterNorth) return grasswaternorthTile;
+                if (hasWaterEast) return grasswatereastTile;
+                if (hasWaterSouth) return grasswatersouthTile;
+                if (hasWaterWest) return grasswaterwestTile;
+
+
+                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
+                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
+                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
+                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
+                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+            }
+
+            // **Step 4: Corner Tiles**
+            if (diagonalCount == 1 && neswCount == 0)
+            {
+                TileBase cornerTile = null;
+                if (hasWaterNE) cornerTile = grasswatercornerNETile;
+                if (hasWaterNW) cornerTile = grasswatercornerNWTile;
+                if (hasWaterSE) cornerTile = grasswatercornerSETile;
+                if (hasWaterSW) cornerTile = grasswatercornerSWTile;
+
+                if (cornerTile != null)
+                {
+                    return cornerTile;
+                }
+            }
+            // **Step 5: Double Tile**
+            if (diagonalCount == 1 && neswCount == 1)
+            {
+
+            }
+
+            if (diagonalCount == 2 && neswCount == 0)
+            {
+                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
+                if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
+                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNWNE;
+                if (hasWaterNW && hasWaterSE) return grasswaterdoubleSWSE;
+                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESE;
+                if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSW;
+            }
+            return waterTile; // Default fallback instead of returning null
         }
 
-        if (diagonalCount == 2 && neswCount == 0)
-        {
-            if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
-            if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
-        }
-         return grassTile; // Default fallback instead of returning null
     }
 
     void ApplyTilesToTilemap()
