@@ -250,6 +250,15 @@ public class WaterMapGenerator : MonoBehaviour
                 if (hasWaterEast) return grasswatereastTile;
                 if (hasWaterSouth) return grasswatersouthTile;
                 if (hasWaterWest) return grasswaterwestTile;
+
+
+                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
+                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
+                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
+                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
+                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
 
             // **Step 4: Corner Tiles**
@@ -269,14 +278,7 @@ public class WaterMapGenerator : MonoBehaviour
             // **Step 5: Double Tile**
             if (diagonalCount == 1 && neswCount == 1)
             {
-                if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
-                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
-                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
-                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
-                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
-                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
-                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+
             }
 
             if (diagonalCount == 2 && neswCount == 0)
