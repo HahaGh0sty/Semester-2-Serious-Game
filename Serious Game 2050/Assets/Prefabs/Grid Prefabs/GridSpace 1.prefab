@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4918891757806186868}
   - component: {fileID: 5368492072905913449}
   - component: {fileID: 6298856412815871447}
+  - component: {fileID: 1928386889724738354}
   m_Layer: 5
   m_Name: GridSpace 1
   m_TagString: GridSpace
@@ -149,3 +150,22 @@ MonoBehaviour:
   s_MouseOverColor: {r: 1, g: 0, b: 0, a: 0.5882353}
   s_OriginalColor: {r: 0, g: 0, b: 0, a: 0}
   s_Renderer: {fileID: 0}
+--- !u!114 &1928386889724738354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392127449164957119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35ee0c2978f09645a517e4cc42e4289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMapGrass: {fileID: 1072467251791983857, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
+  tileMapForest: {fileID: 8781776240386534352, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
+  tileMapWater: {fileID: 7632717968246825617, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
+  tileMapGrassActive: 0
+  tileMapForestActive: 0
+  tileMapWaterActive: 0
+  tile: {fileID: 0}
