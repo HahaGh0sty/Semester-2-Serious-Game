@@ -2,18 +2,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEngine.Tilemaps.Tilemap;
 
 public class RandomTilemapGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
-    public TileBase waterTile;
-    public TileBase grassTile;
-    public TileBase grassTile1;
-    public TileBase grassTile2;
-    public TileBase grassTile3;
-    public TileBase grassTile4;
-    public TileBase grassTile5;
-    public TileBase forestTile;
+    public TileBase[] allgrassTiles; // Array for grass tiles
+    public TileBase[] allwaterTiles; // Array for water tiles
+    public TileBase[] allforestTiles; // Array for forest tiles
+
+    private TileBase grassTile; // Default grass tile
+    private TileBase waterTile; // Default water tile
+    private TileBase forestTile; // Default forest tile
+
     public TileBase grasswaternorthTile;
     public TileBase grasswatereastTile;
     public TileBase grasswatersouthTile;
@@ -36,9 +37,10 @@ public class RandomTilemapGenerator : MonoBehaviour
     public int waterClusterSize = 4;
     public int forestClusterSize = 4;
 
-
-
     private TileBase[,] mapData;
+
+    private List<TileBase> allowedGrassTiles;
+    private List<TileBase> allowedWaterTiles;
 
     Vector2Int[] directions =
 {
@@ -46,24 +48,37 @@ public class RandomTilemapGenerator : MonoBehaviour
     new Vector2Int(-1, 0),  // Left
     new Vector2Int(0, 1),   // Up
     new Vector2Int(0, -1)   // Down
-};
+    };
 
-    void ShuffleDirections()
+    private Dictionary<TileBase, float> GrassTileChances;
+    private Dictionary<TileBase, float> WaterTileChances;
+
+    TileBase GetRandomTile()
     {
-        for (int i = 0; i < directions.Length; i++)
+        // Ensure allgrassTiles is not null and has at least one element
+        if (allgrassTiles == null || allgrassTiles.Length == 0)
         {
-            int randIndex = Random.Range(i, directions.Length);
-            Vector2Int temp = directions[i];
-            directions[i] = directions[randIndex];
-            directions[randIndex] = temp;
+            return null;  // Return a default value or handle the case as needed
         }
+
+        // Return a random tile from allgrassTiles
+        return allgrassTiles[Random.Range(0, allgrassTiles.Length)];
     }
+
+
 
 
     void Start()
     {
+        allowedGrassTiles = new List<TileBase>(allgrassTiles);
+        allowedWaterTiles = new List<TileBase>(allwaterTiles);
+        grassTile = allgrassTiles[0];  // Initialize grassTile with the first tile in the grassTiles array
+        waterTile = allwaterTiles[0];  // Assuming the first water tile is the default
+        forestTile = allforestTiles[0]; // Assuming the first forest tile is the default
+
         GenerateMap();
     }
+
 
     void GenerateMap()
     {
@@ -75,7 +90,7 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                mapData[x, y] = grassTile;
+                mapData[x, y] = GetRandomTile();
             }
         }
 
@@ -87,7 +102,7 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                if (mapData[x, y] == grassTile && IsNextToTile(x, y, waterTile))
+                if (mapData[x, y] == (allowedGrassTiles.Contains(mapData[x, y]) && IsNextToTile(x, y, waterTile)))
                 {
                     mapData[x, y] = GetCorrectGrassWaterTile(x, y);
                 }
@@ -134,37 +149,39 @@ public class RandomTilemapGenerator : MonoBehaviour
         }
     }
 
-    void GenerateWaterCluster(int startX, int startY, int clusterSize)
+void GenerateWaterCluster(int startX, int startY, int clusterSize)
+{
+    Queue<Vector2Int> openList = new Queue<Vector2Int>();
+    openList.Enqueue(new Vector2Int(startX, startY));
+
+    int placedTiles = 0;
+
+    while (openList.Count > 0 && placedTiles < clusterSize)
     {
-        Queue<Vector2Int> openList = new Queue<Vector2Int>();
-        openList.Enqueue(new Vector2Int(startX, startY));
+        Vector2Int current = openList.Dequeue();
 
-        int placedTiles = 0;
-
-        while (openList.Count > 0 && placedTiles < clusterSize)
+        // Ensure this condition checks correctly if the tile is a grass tile
+        if (allowedGrassTiles.Contains(mapData[current.x, current.y]))
         {
-            Vector2Int current = openList.Dequeue();
+            mapData[current.x, current.y] = waterTile;
+            placedTiles++;
 
-            if (mapData[current.x, current.y] == grassTile) // Only replace grass
+            // Add random adjacent tiles to continue growing the cluster
+            ShuffleDirections();
+
+            foreach (Vector2Int dir in directions)
             {
-                mapData[current.x, current.y] = waterTile;
-                placedTiles++;
+                Vector2Int next = new Vector2Int(current.x + dir.x, current.y + dir.y);
 
-                // Add random adjacent tiles to continue growing the cluster
-                ShuffleDirections();
-
-                foreach (Vector2Int dir in directions)
+                if (next.x >= 0 && next.x < width && next.y >= 0 && next.y < height) // Fix bounds check
                 {
-                    Vector2Int next = new Vector2Int(current.x + dir.x, current.y + dir.y);
-
-                    if (next.x > 0 && next.x < width - 1 && next.y > 0 && next.y < height - 1)
-                    {
-                        openList.Enqueue(next);
-                    }
+                    openList.Enqueue(next);
                 }
             }
         }
     }
+}
+
 
 
     void EnsureWaterClusterSeparation()
@@ -222,12 +239,21 @@ public class RandomTilemapGenerator : MonoBehaviour
         return false;
     }
 
-
+    void ShuffleDirections()
+    {
+        for (int i = 0; i < directions.Length; i++)
+        {
+            int randIndex = Random.Range(i, directions.Length);
+            Vector2Int temp = directions[i];
+            directions[i] = directions[randIndex];
+            directions[randIndex] = temp;
+        }
+    }
     void PlaceForestClusters()
     {
         int numClusters = width / 5 * 2; // Controls total number of forest clusters
-        int minClusterSize = 4;
-        int maxClusterSize = 15;
+        int minClusterSize = 8;
+        int maxClusterSize = 20;
         int maxAttempts = 100; // Prevent infinite loops
 
         for (int i = 0; i < numClusters; i++)
@@ -294,7 +320,8 @@ public class RandomTilemapGenerator : MonoBehaviour
         {
             Vector2Int current = openList.Dequeue();
 
-            if (mapData[current.x, current.y] == grassTile) // Only replace grass
+            if (mapData[current.x, current.y] == (allowedGrassTiles.Contains(mapData[current.x, current.y])))
+
             {
                 mapData[current.x, current.y] = forestTile;
                 placedTiles++;
@@ -313,23 +340,6 @@ public class RandomTilemapGenerator : MonoBehaviour
                 }
             }
         }
-    }
-
-    void DebugPrintTileCounts()
-    {
-        int waterCount = 0, forestCount = 0, grassCount = 0;
-
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                if (mapData[x, y] == waterTile) waterCount++;
-                else if (mapData[x, y] == forestTile) forestCount++;
-                else if (mapData[x, y] == grassTile) grassCount++;
-            }
-        }
-
-        Debug.Log($"Initial Water: {waterCount}, Forest: {forestCount}, Grass: {grassCount}");
     }
 
     void ApplyTilesToTilemap()
@@ -436,22 +446,23 @@ public class RandomTilemapGenerator : MonoBehaviour
 
     TileBase GetCorrectGrassWaterTile(int x, int y)
     {
-        // Check direct adjacent water tiles (NESW)
-        bool hasWaterNorth = (y + 1 < height) && mapData[x, y + 1] == waterTile;
-        bool hasWaterEast = (x + 1 < width) && mapData[x + 1, y] == waterTile;
-        bool hasWaterSouth = (y - 1 >= 0) && mapData[x, y - 1] == waterTile;
-        bool hasWaterWest = (x - 1 >= 0) && mapData[x - 1, y] == waterTile;
 
-        // Check diagonal water tiles (NE, NW, SE, SW)
-        bool hasWaterNE = (x + 1 < width && y + 1 < height) && mapData[x + 1, y + 1] == waterTile;
-        bool hasWaterNW = (x - 1 >= 0 && y + 1 < height) && mapData[x - 1, y + 1] == waterTile;
-        bool hasWaterSE = (x + 1 < width && y - 1 >= 0) && mapData[x + 1, y - 1] == waterTile;
-        bool hasWaterSW = (x - 1 >= 0 && y - 1 >= 0) && mapData[x - 1, y - 1] == waterTile;
+        // Check direct adjacent water-like tiles (NESW)
+        bool hasWaterNorth = (y + 1 < height);
+        bool hasWaterEast = (x + 1 < width);
+        bool hasWaterSouth = (y - 1 >= 0);
+        bool hasWaterWest = (x - 1 >= 0);
+
+        // Check diagonal water-like tiles (NE, NW, SE, SW)
+        bool hasWaterNE = (x + 1 < width && y + 1 < height);
+        bool hasWaterNW = (x - 1 >= 0 && y + 1 < height);
+        bool hasWaterSE = (x + 1 < width && y - 1 >= 0);
+        bool hasWaterSW = (x - 1 >= 0 && y - 1 >= 0);
 
         int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) + (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
         int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) + (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
-        // **Step 1: Place GrassWaterCorner (if touching exactly 1 diagonal water tile)**
+        // **Step 1: Place GrassWaterCorner (if touching exactly 1 diagonal water-like tile)**
         if (diagonalCount == 1 && neswCount == 0)
         {
             if (hasWaterNE) return grasswatercornerNETile;
@@ -460,7 +471,7 @@ public class RandomTilemapGenerator : MonoBehaviour
             if (hasWaterSW) return grasswatercornerSWTile;
         }
 
-        // **Step 2: Place GrassWaterTouch (if touching exactly 2 NESW water tiles)**
+        // **Step 2: Place GrassWaterTouch (if touching exactly 2 NESW water-like tiles)**
         if (neswCount == 2)
         {
             if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
@@ -469,8 +480,8 @@ public class RandomTilemapGenerator : MonoBehaviour
             if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
         }
 
-        // **Step 3: Place Edge Tiles (if touching exactly 1 NESW water tile)**
-        if (neswCount == 1)
+        // **Step 3: Place Edge Tiles (if touching at least 1 NESW water-like tile)**
+        if (neswCount >= 1)
         {
             if (hasWaterNorth) return grasswaternorthTile;
             if (hasWaterEast) return grasswatereastTile;
@@ -478,11 +489,10 @@ public class RandomTilemapGenerator : MonoBehaviour
             if (hasWaterWest) return grasswaterwestTile;
         }
 
-        // **Step 4: Place Island Tiles (if touching exactly 4 NESW water tile)**
-        if (neswCount == 4)
+        // **Step 4: Place Island Tiles (if touching exactly 4 NESW water-like tiles)**
+        if (diagonalCount >= 3 && neswCount >= 3)
         {
-            if (hasWaterNorth && hasWaterEast && hasWaterSouth && hasWaterWest) return grasswaterisland;
-
+            return grasswaterisland;
         }
 
         // **Final Step: Default to Normal Grass Tile**
@@ -490,5 +500,23 @@ public class RandomTilemapGenerator : MonoBehaviour
     }
 
 
+
+    void EnsureGrassWaterTiles()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (mapData[x, y] == (allowedGrassTiles.Contains(mapData[x, y])))
+                {
+                    TileBase correctTile = GetCorrectGrassWaterTile(x, y);
+                    if (correctTile != grassTile) // If a Grass/Water tile is needed, place it
+                    {
+                        mapData[x, y] = correctTile;
+                    }
+                }
+            }
+        }
+    }
 
 }
