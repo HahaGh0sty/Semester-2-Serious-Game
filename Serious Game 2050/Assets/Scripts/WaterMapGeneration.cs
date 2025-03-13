@@ -34,10 +34,6 @@ public class WaterMapGenerator : MonoBehaviour
     public TileBase grasswaterdoubleWestSE;
     public TileBase grasswaterdoubleNESW;
     public TileBase grasswaterdoubleNWSE;
-    public TileBase grasswaterdoubleNWNE;
-    public TileBase grasswaterdoubleSWSE;
-    public TileBase grasswaterdoubleNESE;
-    public TileBase grasswaterdoubleNWSW;
     public TileBase grasswatercornertouchNETile;
     public TileBase grasswatercornertouchNWTile;
     public TileBase grasswatercornertouchSETile;
@@ -183,13 +179,9 @@ public class WaterMapGenerator : MonoBehaviour
                 {
                     if (mapData[neighborPos.x, neighborPos.y] == grassTile)
                     {
-                        Debug.Log($"🔍 Before Placement: Tile at ({neighborPos.x}, {neighborPos.y}) = {mapData[neighborPos.x, neighborPos.y]}");
-
                         mapData[neighborPos.x, neighborPos.y] = GetCorrectGrassWaterTile(neighborPos.x, neighborPos.y);
 
                         RefreshTilemap(); // Force update to ensure the tile appears
-
-                        Debug.Log($"✅ After Placement: Tile at ({neighborPos.x}, {neighborPos.y}) = {mapData[neighborPos.x, neighborPos.y]}");
                     }
 
                     checkedPositions.Add(neighborPos);
@@ -221,11 +213,14 @@ public class WaterMapGenerator : MonoBehaviour
                             (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
 
+        if (neswCount == 3)
+        {
+            return waterTile;
+        }
         if (neswCount == 4)
         {
             return waterTile;
         }
-
         else
         {
             // **Step 1: GrassWaterIsland**
@@ -242,6 +237,14 @@ public class WaterMapGenerator : MonoBehaviour
                 if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
                 if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
             }
+            if (neswCount == 2 && diagonalCount == 1)
+            {
+                if (hasWaterWest && hasWaterNE) return grasswatercornertouchNETile;
+                if (hasWaterEast && hasWaterNW) return grasswatercornertouchNWTile;
+                if (hasWaterWest && hasWaterSE) return grasswatercornertouchSETile;
+                if (hasWaterEast && hasWaterSW) return grasswatercornertouchSWTile;
+            }
+
 
             // **Step 3: Edge Tiles**
             if (neswCount == 1)
@@ -250,16 +253,22 @@ public class WaterMapGenerator : MonoBehaviour
                 if (hasWaterEast) return grasswatereastTile;
                 if (hasWaterSouth) return grasswatersouthTile;
                 if (hasWaterWest) return grasswaterwestTile;
+            }
 
-
+            if (neswCount == 1 && diagonalCount == 1)
+            {
                 if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
                 if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
                 if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
                 if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
                 if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
                 if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
+
+
+
 
             // **Step 4: Corner Tiles**
             if (diagonalCount == 1 && neswCount == 0)
@@ -276,19 +285,10 @@ public class WaterMapGenerator : MonoBehaviour
                 }
             }
             // **Step 5: Double Tile**
-            if (diagonalCount == 1 && neswCount == 1)
-            {
-
-            }
-
             if (diagonalCount == 2 && neswCount == 0)
             {
                 if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
                 if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
-                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNWNE;
-                if (hasWaterNW && hasWaterSE) return grasswaterdoubleSWSE;
-                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESE;
-                if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSW;
             }
             return waterTile; // Default fallback instead of returning null
         }
