@@ -454,14 +454,159 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 288942251}
-  waterTile: {fileID: 11400000, guid: e2cc08b8cfcd5a0428ec2ff10c499e08, type: 2}
-  waterTilelillypad: {fileID: 11400000, guid: f37db84339d0d0f4a9fe6ececb3017fd, type: 2}
-  grassTile: {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
-  grassTile1: {fileID: 11400000, guid: da9d3048cb1d5904f976762d4c48b970, type: 2}
-  grassTile2: {fileID: 11400000, guid: 9881e4a09c67a904db706cdc45eab075, type: 2}
-  grassTile3: {fileID: 11400000, guid: 794509d8718b5f44e9e605c37b1f974c, type: 2}
-  grassTile4: {fileID: 11400000, guid: b1e2c7af9a2712245940861b4e3d5c3b, type: 2}
-  forestTile: {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
+  allgrassTiles:
+  - {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
+  - {fileID: 11400000, guid: 782c345c9d0f9d34ea95ee191a032bce, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: da9d3048cb1d5904f976762d4c48b970, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  allwaterTiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  allforestTiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   grasswaternorthTile: {fileID: 11400000, guid: d605e086aade7234488805cf9cfa847a, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: c28b896c41dfb70499fd8189f63c1a88, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: cb5772aeba36ab247a02d88e3e08a850, type: 2}
@@ -511,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c53ab44537964fa6ac8bc42aa9f99a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: hi
+  fileName: 2
   mapgeneratorV2: {fileID: 1289753054}
   tilemap: {fileID: 288942251}
 --- !u!4 &1949823834
