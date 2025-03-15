@@ -3,7 +3,6 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class GridGenerator : MonoBehaviour
 {
-    [Header("Grid Settings")]
     public GameObject cellPrefab; // Assign a tile prefab in Inspector
     public int gridWidth = 5;  // Grid width (X direction)
     public int gridHeight = 5; // Grid height (Y direction)
@@ -23,7 +22,7 @@ public class GridGenerator : MonoBehaviour
         {
             for (int y = -halfHeight; y < halfHeight; y++)
             {
-                Vector3 spawnPosition = new Vector3(center.x + x, center.y + y-1);
+                Vector3 spawnPosition = new Vector3(center.x + x, center.y + y);
                 Instantiate(cellPrefab, spawnPosition, Quaternion.identity, transform);
                 cellPrefab.name = (transform.parent.name + "'s Interactable Grid (" + x + " " + y + ")");
             }
