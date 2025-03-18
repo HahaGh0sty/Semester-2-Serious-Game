@@ -6,10 +6,22 @@ public class moneybutton : MonoBehaviour, IDataPersistence
 {
     public int GildedBanana;
     public int energy;
+    public int BuildingLevel;
 
     void Start()
     {
-      InvokeRepeating("moneygain", 2f, 1f);
+      BuildingLevel = 1;
+      Level1();
+    }
+
+    
+
+    void Level1()
+    {
+      if(BuildingLevel == 1)
+      {
+        InvokeRepeating("moneygain", 2f, 1f);
+      }
     }
 
     public void moneygain()
