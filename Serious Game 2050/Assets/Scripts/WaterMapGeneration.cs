@@ -107,7 +107,7 @@ public class WaterMapGenerator : MonoBehaviour
                 bool tooClose = false;
                 foreach (Vector2Int existingCluster in placedClusters)
                 {
-                    if (Vector2Int.Distance(existingCluster, newClusterPos) < 3)
+                    if (Vector2Int.Distance(existingCluster, newClusterPos) < 5)
                     {
                         tooClose = true;
                         break;
@@ -194,30 +194,20 @@ public class WaterMapGenerator : MonoBehaviour
     {
         bool IsWaterLike(TileBase tile) => tile != null && tile == waterTile;
 
-        // Check NESW neighbors
         bool hasWaterNorth = y + 1 < height && IsWaterLike(mapData[x, y + 1]);
         bool hasWaterEast = x + 1 < width && IsWaterLike(mapData[x + 1, y]);
         bool hasWaterSouth = y - 1 >= 0 && IsWaterLike(mapData[x, y - 1]);
         bool hasWaterWest = x - 1 >= 0 && IsWaterLike(mapData[x - 1, y]);
 
-        // Check diagonal neighbors
         bool hasWaterNE = x + 1 < width && y + 1 < height && IsWaterLike(mapData[x + 1, y + 1]);
         bool hasWaterNW = x - 1 >= 0 && y + 1 < height && IsWaterLike(mapData[x - 1, y + 1]);
         bool hasWaterSE = x + 1 < width && y - 1 >= 0 && IsWaterLike(mapData[x + 1, y - 1]);
         bool hasWaterSW = x - 1 >= 0 && y - 1 >= 0 && IsWaterLike(mapData[x - 1, y - 1]);
 
-        int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) +
-                        (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
+        int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) + (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
+        int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) + (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
-        int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) +
-                            (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
-
-
-        if (neswCount == 3)
-        {
-            return waterTile;
-        }
-        if (neswCount == 4)
+        if (neswCount >= 3)
         {
             return waterTile;
         }
@@ -237,14 +227,13 @@ public class WaterMapGenerator : MonoBehaviour
                 if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
                 if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
             }
-            if (neswCount == 2 && diagonalCount == 1)
+            if (neswCount == 2 && diagonalCount == 2)
             {
-                if (hasWaterWest && hasWaterNE) return grasswatercornertouchNETile;
-                if (hasWaterEast && hasWaterNW) return grasswatercornertouchNWTile;
-                if (hasWaterWest && hasWaterSE) return grasswatercornertouchSETile;
-                if (hasWaterEast && hasWaterSW) return grasswatercornertouchSWTile;
+                if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
+                if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
+                if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
+                if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
             }
-
 
             // **Step 3: Edge Tiles**
             if (neswCount == 1)
@@ -267,9 +256,6 @@ public class WaterMapGenerator : MonoBehaviour
                 if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
 
-
-
-
             // **Step 4: Corner Tiles**
             if (diagonalCount == 1 && neswCount == 0)
             {
@@ -284,6 +270,7 @@ public class WaterMapGenerator : MonoBehaviour
                     return cornerTile;
                 }
             }
+
             // **Step 5: Double Tile**
             if (diagonalCount == 2 && neswCount == 0)
             {
