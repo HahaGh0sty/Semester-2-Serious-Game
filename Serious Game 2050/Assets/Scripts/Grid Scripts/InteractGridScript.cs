@@ -22,7 +22,7 @@ public class GridGenerator : MonoBehaviour
         {
             for (int y = -halfHeight; y < halfHeight; y++)
             {
-                Vector3 spawnPosition = new Vector3(center.x + x, center.y + y);
+                Vector3 spawnPosition = new Vector3(center.x + x, center.y + y, -5f);
                 Instantiate(cellPrefab, spawnPosition, Quaternion.identity, transform);
                 cellPrefab.name = (transform.parent.name + "'s Interactable Grid (" + x + " " + y + ")");
             }

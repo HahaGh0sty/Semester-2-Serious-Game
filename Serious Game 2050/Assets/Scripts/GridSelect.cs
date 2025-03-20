@@ -10,6 +10,7 @@ public class GridSelect : MonoBehaviour
 
     [SerializeField] Color s_MouseOverColor;
     [SerializeField] Color s_OriginalColor;
+    [SerializeField] Color s_MouseOverColor2;
     [SerializeField] SpriteRenderer s_Renderer;
 
     void Start()
@@ -19,6 +20,7 @@ public class GridSelect : MonoBehaviour
         s_MouseOverColor = new Color(1, 0, 0, 0.5882353f);
         s_Renderer = GetComponent<SpriteRenderer>();
         s_OriginalColor = s_Renderer.material.color;
+        s_MouseOverColor2 = new Color(1, 0.5f, 0.5f, 0.5f);
     }
 
     // Update is called once per frame
@@ -28,6 +30,11 @@ public class GridSelect : MonoBehaviour
         {
             s_Renderer.material.color = s_MouseOverColor;   
         }
+
+        if (Selected == true)
+        {
+            s_Renderer.material.color = s_MouseOverColor2;
+        }
     }
 
     private void OnMouseExit()
@@ -35,6 +42,11 @@ public class GridSelect : MonoBehaviour
         if (Selected == false)
         {
             s_Renderer.material.color = s_OriginalColor;
+        }
+
+        if (Selected == true)
+        {
+            s_Renderer.material.color = s_MouseOverColor;
         }
     }
 

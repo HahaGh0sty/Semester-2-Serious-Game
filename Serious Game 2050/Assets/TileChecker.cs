@@ -1,6 +1,4 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class TileChecker : MonoBehaviour
 {
@@ -8,34 +6,37 @@ public class TileChecker : MonoBehaviour
     public bool tileMapGrassActive = false;
     public bool tileMapForestActive = false;
     public bool tileMapWaterActive = false;
-    
+
     void Start()
     {
-       if (tileMapForestActive || tileMapWaterActive || tileMapGrassActive == false)
+        // Ensure at least one tile type is active
+        if (!tileMapGrassActive && !tileMapForestActive && !tileMapWaterActive)
         {
-            
+            Debug.Log("No active tile maps detected at start.");
         }
     }
 
-   void checkTile(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "IsWaterTile")
+        CheckTile(collision.gameObject);
+    }
+
+    void CheckTile(GameObject obj)
+    {
+        if (obj.CompareTag("IsWaterTile"))
         {
             tileMapWaterActive = true;
-            Debug.Log("Water Tile under here!");
-            return;
+            Debug.Log("Water Tile detected!");
         }
-        else if (collision.gameObject.tag == "IsForestTile")
+        else if (obj.CompareTag("IsForestTile"))
         {
             tileMapForestActive = true;
-            Debug.Log("Forest Tile under here!");
-            return;
+            Debug.Log("Forest Tile detected!");
         }
-        else if (collision.gameObject.tag == "IsGrassTile")
+        else if (obj.CompareTag("IsGrassTile"))
         {
             tileMapGrassActive = true;
-            Debug.Log("Grass Tile under here!");
-            return;
-
+            Debug.Log("Grass Tile detected!");
         }
+    }
 }

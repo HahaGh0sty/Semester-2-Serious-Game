@@ -196,20 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 254864469}
-  allgrassTiles:
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
-  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
-  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
-  allwaterTiles:
-  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
-  allforestTiles:
-  - {fileID: 11400000, guid: 0f6e9a572ef25134780c485e036f625e, type: 2}
+  allgrassTiles: []
+  allwaterTiles: []
+  allforestTiles: []
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -747,12 +736,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1114197066}
-  allgrassTiles:
-  - {fileID: 0}
-  allwaterTiles:
-  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
-  allforestTiles:
-  - {fileID: 0}
+  allgrassTiles: []
+  allwaterTiles: []
+  allforestTiles: []
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -935,10 +921,10 @@ MonoBehaviour:
   grasswaterdoubleWestSE: {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
   grasswaterdoubleNESW: {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
   grasswaterdoubleNWSE: {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
-  grasswatercornertouchNETile: {fileID: 11400000, guid: 5ab74d99e72211e488e5dd7def8d4ebd, type: 2}
-  grasswatercornertouchNWTile: {fileID: 11400000, guid: fa56f78b6908d6b4b8989ac07fff4b5f, type: 2}
-  grasswatercornertouchSETile: {fileID: 11400000, guid: 4739892b16bbcec4f86209e6056f42cd, type: 2}
-  grasswatercornertouchSWTile: {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
+  grasswatercornertouchNETile: {fileID: 0}
+  grasswatercornertouchNWTile: {fileID: 0}
+  grasswatercornertouchSETile: {fileID: 0}
+  grasswatercornertouchSWTile: {fileID: 0}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   airtile: {fileID: 0}
   width: 100
@@ -1217,7 +1203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1624739868
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,7 +1213,7 @@ Transform:
   m_GameObject: {fileID: 1624739867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1649,20 +1635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2007247137}
-  allgrassTiles:
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: 66afd645118984c47932948997cba4c7, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: affdf001262ec454f9e26544727d5018, type: 2}
-  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
-  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
-  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
-  allwaterTiles:
-  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
-  allforestTiles:
-  - {fileID: 11400000, guid: 0f6e9a572ef25134780c485e036f625e, type: 2}
+  allgrassTiles: []
+  allwaterTiles: []
+  allforestTiles: []
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -1856,8 +1831,8 @@ Transform:
   - {fileID: 1624739868}
   - {fileID: 254864465}
   - {fileID: 1114197062}
-  - {fileID: 201372136}
   - {fileID: 2020645590}
+  - {fileID: 201372136}
   - {fileID: 1161368340}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1879,7 +1854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 972827932367818478, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 972827932367818478, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1909,6 +1884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7815405270838947121, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8919175507534795120, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
       propertyPath: m_Name
       value: Tilemap Water
@@ -1917,7 +1896,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7858649870151754232, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1940,7 +1920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118638366696935293, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5118638366696935293, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1974,6 +1954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap Forest
       objectReference: {fileID: 0}
+    - target: {fileID: 8557358576012554763, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5520069714542345770, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
     m_RemovedGameObjects: []
@@ -1988,6 +1972,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2072845791}
     m_Modifications:
+    - target: {fileID: 4466686442548696498, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015090776430495858, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
