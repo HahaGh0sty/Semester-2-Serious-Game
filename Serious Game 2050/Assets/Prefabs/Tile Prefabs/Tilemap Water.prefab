@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 3428792973340043523}
   - component: {fileID: 3698073462306831046}
   - component: {fileID: 82896969409262220}
+  - component: {fileID: 5908291059517724581}
+  - component: {fileID: 7858649870151754232}
   m_Layer: 0
   m_Name: Tilemap Water
-  m_TagString: Untagged
+  m_TagString: IsWaterTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,9 +260,76 @@ MonoBehaviour:
   grasswaterdoubleWestSE: {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
   grasswaterdoubleNESW: {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
   grasswaterdoubleNWSE: {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
+  grasswatercornertouchNETile: {fileID: 0}
+  grasswatercornertouchNWTile: {fileID: 0}
+  grasswatercornertouchSETile: {fileID: 0}
+  grasswatercornertouchSWTile: {fileID: 0}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   airtile: {fileID: 0}
   width: 100
   height: 100
   minWaterClusterSize: 5
   maxWaterClusterSize: 15
+--- !u!19719996 &5908291059517724581
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919175507534795120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!50 &7858649870151754232
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919175507534795120}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

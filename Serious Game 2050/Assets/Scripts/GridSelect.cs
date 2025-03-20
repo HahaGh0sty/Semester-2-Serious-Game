@@ -26,9 +26,7 @@ public class GridSelect : MonoBehaviour
     {
         if (Selected == false)
         {
-            s_Renderer.material.color = s_MouseOverColor;
-
-            Debug.Log("Mouse on grid");
+            s_Renderer.material.color = s_MouseOverColor;   
         }
     }
 
@@ -37,7 +35,6 @@ public class GridSelect : MonoBehaviour
         if (Selected == false)
         {
             s_Renderer.material.color = s_OriginalColor;
-            Debug.Log("Mouse off of");
         }
     }
 
