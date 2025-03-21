@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: WaterTile Corner Touch SouthWest
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 1241969473, guid: b10e5b193cdcb374cb777cc47e5c5703, type: 3}
+  - {fileID: 262009779, guid: b10e5b193cdcb374cb777cc47e5c5703, type: 3}
+  - {fileID: 1399657899, guid: b10e5b193cdcb374cb777cc47e5c5703, type: 3}
+  - {fileID: 129507512, guid: b10e5b193cdcb374cb777cc47e5c5703, type: 3}
+  - {fileID: 1701449463, guid: b10e5b193cdcb374cb777cc47e5c5703, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 2
+  m_TileAnimationFlags: 0

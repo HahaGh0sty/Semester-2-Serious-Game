@@ -34,6 +34,12 @@ public class WaterMapGenerator : MonoBehaviour
     public TileBase grasswaterdoubleWestSE;
     public TileBase grasswaterdoubleNESW;
     public TileBase grasswaterdoubleNWSE;
+    public TileBase grasswatercornertouchNETile;
+    public TileBase grasswatercornertouchNWTile;
+    public TileBase grasswatercornertouchSETile;
+    public TileBase grasswatercornertouchSWTile;
+
+
     public TileBase grasswaterisland;
     public TileBase airtile;
 
@@ -101,7 +107,7 @@ public class WaterMapGenerator : MonoBehaviour
                 bool tooClose = false;
                 foreach (Vector2Int existingCluster in placedClusters)
                 {
-                    if (Vector2Int.Distance(existingCluster, newClusterPos) < 3)
+                    if (Vector2Int.Distance(existingCluster, newClusterPos) < 5)
                     {
                         tooClose = true;
                         break;
@@ -173,13 +179,9 @@ public class WaterMapGenerator : MonoBehaviour
                 {
                     if (mapData[neighborPos.x, neighborPos.y] == grassTile)
                     {
-                        Debug.Log($"🔍 Before Placement: Tile at ({neighborPos.x}, {neighborPos.y}) = {mapData[neighborPos.x, neighborPos.y]}");
-
                         mapData[neighborPos.x, neighborPos.y] = GetCorrectGrassWaterTile(neighborPos.x, neighborPos.y);
 
                         RefreshTilemap(); // Force update to ensure the tile appears
-
-                        Debug.Log($"✅ After Placement: Tile at ({neighborPos.x}, {neighborPos.y}) = {mapData[neighborPos.x, neighborPos.y]}");
                     }
 
                     checkedPositions.Add(neighborPos);
@@ -192,84 +194,92 @@ public class WaterMapGenerator : MonoBehaviour
     {
         bool IsWaterLike(TileBase tile) => tile != null && tile == waterTile;
 
-        // Check NESW neighbors
         bool hasWaterNorth = y + 1 < height && IsWaterLike(mapData[x, y + 1]);
         bool hasWaterEast = x + 1 < width && IsWaterLike(mapData[x + 1, y]);
         bool hasWaterSouth = y - 1 >= 0 && IsWaterLike(mapData[x, y - 1]);
         bool hasWaterWest = x - 1 >= 0 && IsWaterLike(mapData[x - 1, y]);
 
-        // Check diagonal neighbors
         bool hasWaterNE = x + 1 < width && y + 1 < height && IsWaterLike(mapData[x + 1, y + 1]);
         bool hasWaterNW = x - 1 >= 0 && y + 1 < height && IsWaterLike(mapData[x - 1, y + 1]);
         bool hasWaterSE = x + 1 < width && y - 1 >= 0 && IsWaterLike(mapData[x + 1, y - 1]);
         bool hasWaterSW = x - 1 >= 0 && y - 1 >= 0 && IsWaterLike(mapData[x - 1, y - 1]);
 
-        int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) +
-                        (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
+        int neswCount = (hasWaterNorth ? 1 : 0) + (hasWaterEast ? 1 : 0) + (hasWaterSouth ? 1 : 0) + (hasWaterWest ? 1 : 0);
+        int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) + (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
 
-        int diagonalCount = (hasWaterNE ? 1 : 0) + (hasWaterNW ? 1 : 0) +
-                            (hasWaterSE ? 1 : 0) + (hasWaterSW ? 1 : 0);
-
-        // **Step 1: GrassWaterIsland**
-        if (neswCount >= 4)
+        if (neswCount >= 3)
         {
-            if (Random.value < 0.5f)
+            return waterTile;
+        }
+        else
+        {
+            // **Step 1: GrassWaterIsland**
+            if (neswCount == 4 && diagonalCount == 4)
             {
                 return grasswaterisland;
             }
-        }
 
-        // **Step 2: GrassWaterTouch**
-        if (neswCount == 2)
-        {
-            if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
-            if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
-            if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
-            if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
-        }
-
-        // **Step 3: Edge Tiles**
-        if (neswCount == 1)
-        {
-            if (hasWaterNorth) return grasswaternorthTile;
-            if (hasWaterEast) return grasswatereastTile;
-            if (hasWaterSouth) return grasswatersouthTile;
-            if (hasWaterWest) return grasswaterwestTile;
-        }
-
-        // **Step 4: Corner Tiles**
-        if (diagonalCount == 1 && neswCount == 0)
-        {
-            TileBase cornerTile = null;
-            if (hasWaterNE) cornerTile = grasswatercornerNETile;
-            if (hasWaterNW) cornerTile = grasswatercornerNWTile;
-            if (hasWaterSE) cornerTile = grasswatercornerSETile;
-            if (hasWaterSW) cornerTile = grasswatercornerSWTile;
-
-            if (cornerTile != null)
+            // **Step 2: GrassWaterTouch**
+            if (neswCount == 2)
             {
-                return cornerTile;
+                if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
+                if (hasWaterNorth && hasWaterWest) return grasswatertouchNWTile;
+                if (hasWaterSouth && hasWaterEast) return grasswatertouchSETile;
+                if (hasWaterSouth && hasWaterWest) return grasswatertouchSWTile;
             }
-        }
-        // **Step 5: Double Tile**
-        if (diagonalCount >= 1 && neswCount == 1)
-        {
-            if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
-            if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-            if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
-            if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
-            if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
-            if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
-            if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
-            if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+            if (neswCount == 2 && diagonalCount == 2)
+            {
+                if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
+                if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
+                if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
+                if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
+            }
+
+            // **Step 3: Edge Tiles**
+            if (neswCount == 1)
+            {
+                if (hasWaterNorth) return grasswaternorthTile;
+                if (hasWaterEast) return grasswatereastTile;
+                if (hasWaterSouth) return grasswatersouthTile;
+                if (hasWaterWest) return grasswaterwestTile;
+            }
+
+            if (neswCount == 1 && diagonalCount == 1)
+            {
+                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
+                if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
+                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
+                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
+                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
+                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+            }
+
+            // **Step 4: Corner Tiles**
+            if (diagonalCount == 1 && neswCount == 0)
+            {
+                TileBase cornerTile = null;
+                if (hasWaterNE) cornerTile = grasswatercornerNETile;
+                if (hasWaterNW) cornerTile = grasswatercornerNWTile;
+                if (hasWaterSE) cornerTile = grasswatercornerSETile;
+                if (hasWaterSW) cornerTile = grasswatercornerSWTile;
+
+                if (cornerTile != null)
+                {
+                    return cornerTile;
+                }
+            }
+
+            // **Step 5: Double Tile**
+            if (diagonalCount == 2 && neswCount == 0)
+            {
+                if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
+                if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
+            }
+            return waterTile; // Default fallback instead of returning null
         }
 
-        if (diagonalCount == 2 && neswCount == 0)
-        {
-            if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
-            if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
-        }
-         return grassTile; // Default fallback instead of returning null
     }
 
     void ApplyTilesToTilemap()
