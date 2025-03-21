@@ -146,7 +146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &254864465
 Transform:
   m_ObjectHideFlags: 0
@@ -196,9 +196,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 254864469}
-  allgrassTiles: []
-  allwaterTiles: []
-  allforestTiles: []
+  allgrassTiles:
+  - {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
+  allwaterTiles:
+  - {fileID: 11400000, guid: e2cc08b8cfcd5a0428ec2ff10c499e08, type: 2}
+  allforestTiles:
+  - {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
   grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
   grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
   grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
@@ -1902,7 +1905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8919175507534795120, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7858649870151754232, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
@@ -1961,6 +1964,10 @@ PrefabInstance:
     - target: {fileID: 7850686885038013728, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
       propertyPath: m_Name
       value: Tilemap Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850686885038013728, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8557358576012554763, guid: 1701f58af3ce6264ba656ca2fb7a07a0, type: 3}
       propertyPath: m_Mode
@@ -2027,6 +2034,10 @@ PrefabInstance:
     - target: {fileID: 8225553841800375955, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
       propertyPath: m_Name
       value: Tilemap Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225553841800375955, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2900382653906656444, guid: 07d188dbd01891d48af46b58a45f3792, type: 3}
