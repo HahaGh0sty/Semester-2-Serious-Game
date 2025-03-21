@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private Camera cam;
     private bool isSpeedDoubled = false;  // Track if speed is doubled
+    private Vector3 lastMousePosition;
 
     void Start()
     {
@@ -35,13 +36,25 @@ public class CameraController : MonoBehaviour
             moveSpeed *= 3f;
         }
 
-        // Smooth movement
+        // Smooth movement with WASD keys
         Vector3 targetPosition = transform.position;
 
         if (Input.GetKey(KeyCode.W)) targetPosition.y += moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.S)) targetPosition.y -= moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.A)) targetPosition.x -= moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D)) targetPosition.x += moveSpeed * Time.deltaTime;
+
+        // Right-click dragging to move the map
+        if (Input.GetMouseButtonDown(1)) // Right mouse button pressed
+        {
+            lastMousePosition = Input.mousePosition;
+        }
+        if (Input.GetMouseButton(1)) // Right mouse button held
+        {
+            Vector3 delta = Input.mousePosition - lastMousePosition;
+            targetPosition -= new Vector3(delta.x, delta.y, 0) * cam.orthographicSize * 0.002f; // Adjust sensitivity
+            lastMousePosition = Input.mousePosition;
+        }
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
@@ -50,6 +63,13 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift)) targetZoom -= zoomSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.LeftControl)) targetZoom += zoomSpeed * Time.deltaTime;
+
+        // Add scroll wheel zooming
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollInput != 0)
+        {
+            targetZoom -= scrollInput * zoomSpeed * 2f;
+        }
 
         cam.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
 

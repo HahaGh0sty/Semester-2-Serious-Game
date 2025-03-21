@@ -28,7 +28,7 @@ public class GridSelect : MonoBehaviour
     {
         if (Selected == false)
         {
-            s_Renderer.material.color = s_MouseOverColor;   
+            s_Renderer.material.color = s_MouseOverColor2;   
         }
 
         if (Selected == true)

@@ -1844,6 +1844,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2072845791}
     m_Modifications:
+    - target: {fileID: 82896969409262220, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
+      propertyPath: maxWaterClusterSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 82896969409262220, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
+      propertyPath: minWaterClusterSize
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 972827932367818478, guid: 83bc95cbe637bdf4ca6a8ca84dd89f8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
