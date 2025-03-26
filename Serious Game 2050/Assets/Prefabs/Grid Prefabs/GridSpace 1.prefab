@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c5d64c0bed1aead42bab966f9e8e0a29, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -205,3 +205,13 @@ MonoBehaviour:
   tileMapGrassActive: 0
   tileMapForestActive: 0
   tileMapWaterActive: 0
+  ThisGrid: {fileID: 0}
+  Selected: 0
+  Empty: 0
+  s_MouseOverColor: {r: 0, g: 0, b: 0, a: 0}
+  s_MouseOverColor2: {r: 0, g: 0, b: 0, a: 0}
+  s_IsCurrentOriginalColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsGrassTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsForestTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsWaterTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_Renderer: {fileID: 0}

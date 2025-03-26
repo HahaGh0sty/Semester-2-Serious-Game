@@ -17,11 +17,32 @@ public class TileChecker : MonoBehaviour
     public bool tileMapForestActive = false;
     public bool tileMapWaterActive = false;
 
+    [SerializeField] private GameObject ThisGrid;
+    [SerializeField] public bool Selected = false;
+    [SerializeField] public bool Empty = false;
+
+    [SerializeField] Color s_MouseOverColor;
+    [SerializeField] Color s_MouseOverColor2;
+    [SerializeField] Color s_IsCurrentOriginalColor;
+    [SerializeField] Color s_IsGrassTileColor;
+    [SerializeField] Color s_IsForestTileColor;
+    [SerializeField] Color s_IsWaterTileColor;
+    [SerializeField] SpriteRenderer s_Renderer;
+
     void Start()
     {
         grassTilesSet = new HashSet<TileBase>(grassTiles);
         waterTilesSet = new HashSet<TileBase>(waterTiles);
         forestTilesSet = new HashSet<TileBase>(forestTiles);
+
+        ThisGrid = transform.gameObject;
+        s_MouseOverColor = new Color(1, 0, 0, 0.5882353f);
+        s_IsGrassTileColor = new Color(0.5136409f, 1, 0, 1);
+        s_IsForestTileColor = new Color(0.06611012f, 0.6226415f, 0, 1f);
+        s_IsWaterTileColor = new Color(0, 0.184f, 1, 1);
+        s_Renderer = GetComponent<SpriteRenderer>();
+
+        s_MouseOverColor2 = new Color(1, 0.5f, 0.5f, 0.5f);
 
         if (tilemap == null)
         {
@@ -55,6 +76,8 @@ public class TileChecker : MonoBehaviour
             tileMapGrassActive = true;
             tileMapForestActive = false;
             tileMapWaterActive = false;
+            s_Renderer.material.color = s_IsGrassTileColor;
+            s_IsCurrentOriginalColor = s_IsGrassTileColor;
             Debug.Log("Grass Tile detected!");
         }
         else if (waterTiles.Contains(tile))
@@ -62,6 +85,8 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = true;
             tileMapGrassActive = false;
             tileMapForestActive = false;
+            s_Renderer.material.color = s_IsWaterTileColor;
+            s_IsCurrentOriginalColor = s_IsWaterTileColor;
             Debug.Log("Water Tile detected!");
         }
         else if (forestTiles.Contains(tile))
@@ -69,7 +94,49 @@ public class TileChecker : MonoBehaviour
             tileMapForestActive = true;
             tileMapGrassActive = false;
             tileMapWaterActive = false;
+            s_Renderer.material.color = s_IsForestTileColor;
+            s_IsCurrentOriginalColor = s_IsForestTileColor;
             Debug.Log("Forest Tile detected!");
+
+        }
+    }
+
+    //GridSelect script merge//
+    private void OnMouseOver()
+    {
+        if (Selected == false)
+        {
+            s_Renderer.material.color = s_MouseOverColor2;
+        }
+
+        if (Selected == true)
+        {
+            s_Renderer.material.color = s_MouseOverColor2;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (Selected == false)
+        {
+            s_Renderer.material.color = s_IsCurrentOriginalColor;
+        }
+
+        if (Selected == true)
+        {
+            s_Renderer.material.color = s_MouseOverColor;
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (Selected == false)
+        {
+            Selected = true;
+        }
+        else if (Selected == true)
+        {
+            Selected = false;
         }
     }
 }
