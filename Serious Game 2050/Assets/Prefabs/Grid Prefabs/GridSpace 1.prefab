@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 828196339148258322}
   - component: {fileID: 4918891757806186868}
-  - component: {fileID: 6298856412815871447}
   - component: {fileID: 3050836591360621753}
   - component: {fileID: -1517068014739099335}
   m_Layer: 0
@@ -76,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 1547273703
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: c5d64c0bed1aead42bab966f9e8e0a29, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_Sprite: {fileID: 21300000, guid: 8b07868ba592b614581dd152423b982e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6298856412815871447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6392127449164957119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d11fdf300884948aa7a07dd3c0bcbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisGrid: {fileID: 0}
-  Selected: 0
-  Empty: 0
-  s_MouseOverColor: {r: 1, g: 0, b: 0, a: 0.5882353}
-  s_OriginalColor: {r: 0, g: 0, b: 0, a: 0}
-  s_MouseOverColor2: {r: 0, g: 0, b: 0, a: 0}
-  s_Renderer: {fileID: 0}
 --- !u!61 &3050836591360621753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +185,7 @@ MonoBehaviour:
   tileMapGrassActive: 0
   tileMapForestActive: 0
   tileMapWaterActive: 0
-  ThisGrid: {fileID: 0}
+  ThisGrid: {fileID: 6392127449164957119}
   Selected: 0
   Empty: 0
   s_MouseOverColor: {r: 0, g: 0, b: 0, a: 0}
@@ -214,4 +194,4 @@ MonoBehaviour:
   s_IsGrassTileColor: {r: 0, g: 0, b: 0, a: 0}
   s_IsForestTileColor: {r: 0, g: 0, b: 0, a: 0}
   s_IsWaterTileColor: {r: 0, g: 0, b: 0, a: 0}
-  s_Renderer: {fileID: 0}
+  s_Renderer: {fileID: 4918891757806186868}

@@ -36,10 +36,10 @@ public class TileChecker : MonoBehaviour
         forestTilesSet = new HashSet<TileBase>(forestTiles);
 
         ThisGrid = transform.gameObject;
-        s_MouseOverColor = new Color(1, 0, 0, 0.5882353f);
-        s_IsGrassTileColor = new Color(0.5136409f, 1, 0, 1);
-        s_IsForestTileColor = new Color(0.06611012f, 0.6226415f, 0, 1f);
-        s_IsWaterTileColor = new Color(0, 0.184f, 1, 1);
+        s_MouseOverColor = new Color(1, 0, 0, 0.8f);
+        s_IsGrassTileColor = new Color(0.5136409f, 1, 0, 0.8f);
+        s_IsForestTileColor = new Color(0.06611012f, 0.6226415f, 0, 0.8f);
+        s_IsWaterTileColor = new Color(0, 0.184f, 1, 0.8f);
         s_Renderer = GetComponent<SpriteRenderer>();
 
         s_MouseOverColor2 = new Color(1, 0.5f, 0.5f, 0.5f);
@@ -53,6 +53,11 @@ public class TileChecker : MonoBehaviour
         {
             Debug.LogError("Tilemap not found! Make sure there is a Tilemap in the scene.");
         }
+        Vector3Int currentCell = tilemap.WorldToCell(transform.position);
+
+        lastCheckedPosition = currentCell;
+        CheckTile(currentCell);
+        
     }
 
     void Update()
@@ -78,7 +83,7 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = false;
             s_Renderer.material.color = s_IsGrassTileColor;
             s_IsCurrentOriginalColor = s_IsGrassTileColor;
-            Debug.Log("Grass Tile detected!");
+            Debug.Log("Grass Tile detected on " + transform.name +"!");
         }
         else if (waterTiles.Contains(tile))
         {
@@ -87,7 +92,7 @@ public class TileChecker : MonoBehaviour
             tileMapForestActive = false;
             s_Renderer.material.color = s_IsWaterTileColor;
             s_IsCurrentOriginalColor = s_IsWaterTileColor;
-            Debug.Log("Water Tile detected!");
+            Debug.Log("Water Tile detected on " + transform.name + "!");
         }
         else if (forestTiles.Contains(tile))
         {
@@ -96,8 +101,7 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = false;
             s_Renderer.material.color = s_IsForestTileColor;
             s_IsCurrentOriginalColor = s_IsForestTileColor;
-            Debug.Log("Forest Tile detected!");
-
+            Debug.Log("Forest Tile detected on " + transform.name + "!");
         }
     }
 

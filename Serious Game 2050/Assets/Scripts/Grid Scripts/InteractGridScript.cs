@@ -24,7 +24,7 @@ public class GridGenerator : MonoBehaviour
             {
                 Vector3 spawnPosition = new Vector3(center.x + x, center.y + y, -5f);
                 Instantiate(cellPrefab, spawnPosition, Quaternion.identity, transform);
-                cellPrefab.name = (transform.parent.name + "'s Interactable Grid (" + x + " " + y + ")");
+                cellPrefab.name = (transform.parent.name + "'s Grid (" + x + " " + y + ")");
             }
         }
     }
