@@ -6,16 +6,19 @@ using System.Linq;
 public class TileChecker : MonoBehaviour
 {
     public Tilemap tilemap;
-    public TileBase[] grassTiles, waterTiles, forestTiles;
+    public TileBase[] grassTiles, waterTiles, forestTiles, buildingTiles;
 
     private HashSet<TileBase> grassTilesSet;
     private HashSet<TileBase> waterTilesSet;
     private HashSet<TileBase> forestTilesSet;
+    private HashSet<TileBase> buildingTilesSet;
     private Vector3Int lastCheckedPosition;
 
     public bool tileMapGrassActive = false;
     public bool tileMapForestActive = false;
     public bool tileMapWaterActive = false;
+    public bool tileMapBuildingActive = false;
+
 
     [SerializeField] private GameObject ThisGrid;
     [SerializeField] public bool Selected = false;
@@ -34,6 +37,8 @@ public class TileChecker : MonoBehaviour
         grassTilesSet = new HashSet<TileBase>(grassTiles);
         waterTilesSet = new HashSet<TileBase>(waterTiles);
         forestTilesSet = new HashSet<TileBase>(forestTiles);
+        buildingTilesSet = new HashSet<TileBase>(buildingTiles);
+
 
         ThisGrid = transform.gameObject;
         s_MouseOverColor = new Color(1, 0, 0, 0.8f);
@@ -83,7 +88,7 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = false;
             s_Renderer.material.color = s_IsGrassTileColor;
             s_IsCurrentOriginalColor = s_IsGrassTileColor;
-            Debug.Log("Grass Tile detected on " + transform.name +"!");
+            Debug.Log("Grass Tile detected on " + transform.name + "!");
         }
         else if (waterTiles.Contains(tile))
         {
@@ -102,6 +107,10 @@ public class TileChecker : MonoBehaviour
             s_Renderer.material.color = s_IsForestTileColor;
             s_IsCurrentOriginalColor = s_IsForestTileColor;
             Debug.Log("Forest Tile detected on " + transform.name + "!");
+        }
+        else if (buildingTiles.Contains(tile))
+        {
+            
         }
     }
 

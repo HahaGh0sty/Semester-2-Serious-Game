@@ -27,20 +27,20 @@ public class NewMapGenerator : MonoBehaviour
     public TileBase grasswatertouchNWTile;
     public TileBase grasswatertouchSETile;
     public TileBase grasswatertouchSWTile;
-    public TileBase grasswaterdoubleNorthSE;
-    public TileBase grasswaterdoubleNorthSW;
-    public TileBase grasswaterdoubleSouthNE;
-    public TileBase grasswaterdoubleSouthNW;
-    public TileBase grasswaterdoubleEastNW;
-    public TileBase grasswaterdoubleEastSW;
-    public TileBase grasswaterdoubleWestNE;
-    public TileBase grasswaterdoubleWestSE;
+    //public TileBase grasswaterdoubleNorthSE;
+    //public TileBase grasswaterdoubleNorthSW;
+    //public TileBase grasswaterdoubleSouthNE;
+    //public TileBase grasswaterdoubleSouthNW;
+    //public TileBase grasswaterdoubleEastNW;
+    //public TileBase grasswaterdoubleEastSW;
+    //public TileBase grasswaterdoubleWestNE;
+    //public TileBase grasswaterdoubleWestSE;
     public TileBase grasswaterdoubleNESW;
     public TileBase grasswaterdoubleNWSE;
-    public TileBase grasswatercornertouchNETile;
-    public TileBase grasswatercornertouchNWTile;
-    public TileBase grasswatercornertouchSETile;
-    public TileBase grasswatercornertouchSWTile;
+    //public TileBase grasswatercornertouchNETile;
+    //public TileBase grasswatercornertouchNWTile;
+    //public TileBase grasswatercornertouchSETile;
+    //public TileBase grasswatercornertouchSWTile;
 
 
     public TileBase grasswaterisland;
@@ -277,10 +277,10 @@ public class NewMapGenerator : MonoBehaviour
             }
             if (neswCount == 2 && diagonalCount == 2)
             {
-                if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
-                if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
-                if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
-                if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
+                //if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
+                //if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
+                //if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
+                //if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
             }
 
             // **Step 3: Edge Tiles**
@@ -294,14 +294,14 @@ public class NewMapGenerator : MonoBehaviour
 
             if (neswCount == 1 && diagonalCount == 1)
             {
-                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-                if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
-                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
-                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
-                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
-                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
-                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
-                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+                //if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
+                //if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
+                //if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                //if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                //if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
+                //if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
+                //if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
+                //if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
 
             // **Step 4: Corner Tiles**
