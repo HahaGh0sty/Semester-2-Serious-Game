@@ -11,6 +11,7 @@ public class GridGenerator : MonoBehaviour
     void Start()
     {
         thisObject = transform.gameObject;
+        thisObject.SetActive(false);
         GenerateGrid();
     }
 
@@ -35,6 +36,7 @@ public class GridGenerator : MonoBehaviour
         if (thisObject.activeInHierarchy == true)
         {
             thisObject.SetActive(false);
+
         }
         else
         {

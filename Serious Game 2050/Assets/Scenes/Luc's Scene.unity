@@ -1629,7 +1629,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -5, y: 5}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1835506985
 MonoBehaviour:
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GridAccessButton: {fileID: 0}
-  GridEnabled: 0
+  GridEnabled: 1
   Grids: []
 --- !u!114 &1835506986
 MonoBehaviour:
