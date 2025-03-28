@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.Tilemaps;
-using System.IO;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -16,7 +13,7 @@ public class DataPersistenceManager : MonoBehaviour
     private FileDataHandler dataHandler;
 
     public RandomTilemapGenerator mapgeneratorV2;
-    public Tilemap tilemap;  // Assign in Inspector
+    
 
     private string tilemapSavePath => Application.persistentDataPath + "/tilemapData.json";
 
@@ -35,9 +32,9 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         Debug.Log(Application.persistentDataPath);
         LoadGame();
+        InvokeRepeating("SaveGame", 30f, 300f);
     }
 
-    // Creates a new game and generates a new tilemap
     public void NewGame()
     {
         int randomSeed = Random.Range(0, 100000); // Generate random seed during runtime
@@ -45,7 +42,7 @@ public class DataPersistenceManager : MonoBehaviour
         Debug.Log("Generated Map Seed: " + gameData.mapseed);
     }
 
-    // Saves game data and the tilemap
+    // Saves game data and updates building positions in the scene
     public void SaveGame()
     {
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
@@ -53,27 +50,28 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.SaveData(ref gameData);
         }
 
-        // Save the game data
+        SaveBuildingPositions();
         dataHandler.Save(gameData);
+        Debug.Log("Game saved");
     }
 
-    // Loads game data and the tilemap
+    // Loads game data and updates building positions in the scene
     public void LoadGame()
     {
         this.gameData = dataHandler.Load();
 
-        // If no data exists, start a new game
         if (this.gameData == null)
         {
             Debug.Log("No data found, starting a new game.");
             NewGame();
         }
 
-        // Load other persistent data
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.LoadData(gameData);
         }
+
+        LoadBuildingPositions();
     }
 
     private void OnApplicationQuit()
@@ -85,5 +83,16 @@ public class DataPersistenceManager : MonoBehaviour
     {
         IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
         return new List<IDataPersistence>(dataPersistenceObjects);
+    }
+
+    private void SaveBuildingPositions()
+    {
+        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+        gameData.SaveBuildingPositions(buildings);
+    }
+
+    private void LoadBuildingPositions()
+    {
+        gameData.LoadBuildingPositions();
     }
 }

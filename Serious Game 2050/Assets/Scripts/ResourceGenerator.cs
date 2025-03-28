@@ -5,6 +5,13 @@ using UnityEngine;
 public class ResourceGenerator : MonoBehaviour
 {
    private ResourceManager resourceManager;
+   public int MoneyGet;
+   public int EnergyGet;
+   public int WoodGet;
+   public int StoneGet;
+   public int WaterGet;
+   public int VervuilingGet;
+
 
     void Start()
     {
@@ -18,16 +25,20 @@ public class ResourceGenerator : MonoBehaviour
 
     void Level1()
     {
-        InvokeRepeating("moneygain", 2f, 1f);
+        InvokeRepeating("resourcegain", 2f, 1f);
     }
 
   
-     void moneygain()
+     void resourcegain()
     {
         if (resourceManager != null)
         {
-            resourceManager.GildedBanana += 1;
-            resourceManager.energy -= 1;
+            resourceManager.GildedBanana += this.MoneyGet;
+            resourceManager.energy += this.EnergyGet;
+            resourceManager.wood += this.WoodGet;
+            resourceManager.stone += this.StoneGet;
+            resourceManager.water += this.WaterGet;
+            resourceManager.vervuiling += this.VervuilingGet;
         }
     }
 }
