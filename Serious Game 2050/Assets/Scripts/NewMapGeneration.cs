@@ -27,20 +27,20 @@ public class NewMapGenerator : MonoBehaviour
     public TileBase grasswatertouchNWTile;
     public TileBase grasswatertouchSETile;
     public TileBase grasswatertouchSWTile;
-    //public TileBase grasswaterdoubleNorthSE;
-    //public TileBase grasswaterdoubleNorthSW;
-    //public TileBase grasswaterdoubleSouthNE;
-    //public TileBase grasswaterdoubleSouthNW;
-    //public TileBase grasswaterdoubleEastNW;
-    //public TileBase grasswaterdoubleEastSW;
-    //public TileBase grasswaterdoubleWestNE;
-    //public TileBase grasswaterdoubleWestSE;
+    public TileBase grasswaterdoubleNorthSE;
+    public TileBase grasswaterdoubleNorthSW;
+    public TileBase grasswaterdoubleSouthNE;
+    public TileBase grasswaterdoubleSouthNW;
+    public TileBase grasswaterdoubleEastNW;
+    public TileBase grasswaterdoubleEastSW;
+    public TileBase grasswaterdoubleWestNE;
+    public TileBase grasswaterdoubleWestSE;
     public TileBase grasswaterdoubleNESW;
     public TileBase grasswaterdoubleNWSE;
-    //public TileBase grasswatercornertouchNETile;
-    //public TileBase grasswatercornertouchNWTile;
-    //public TileBase grasswatercornertouchSETile;
-    //public TileBase grasswatercornertouchSWTile;
+    public TileBase grasswatercornertouchNETile;
+    public TileBase grasswatercornertouchNWTile;
+    public TileBase grasswatercornertouchSETile;
+    public TileBase grasswatercornertouchSWTile;
 
 
     public TileBase grasswaterisland;
@@ -140,15 +140,15 @@ public class NewMapGenerator : MonoBehaviour
 
     void PlaceWaterClusters()
     {
-        int numClusters = width / 7 * 2; // Keep original cluster count
-        int minClusterSize = 8; // Keep original cluster size
+        int numClusters = width / 7 * 2;
+        int minClusterSize = 8;
         int maxClusterSize = 18;
 
-        List<Vector2Int> placedClusters = new List<Vector2Int>(); // Store cluster positions
+        List<Vector2Int> placedClusters = new List<Vector2Int>();
 
         for (int i = 0; i < numClusters; i++)
         {
-            int attempts = 20; // Max attempts to find a valid spot
+            int attempts = 20;
             bool placed = false;
 
             while (attempts > 0 && !placed)
@@ -157,7 +157,6 @@ public class NewMapGenerator : MonoBehaviour
                 int startY = Random.Range(3, height - 3);
                 Vector2Int newClusterPos = new Vector2Int(startX, startY);
 
-                // Ensure the cluster is at least 3 tiles away from others
                 bool tooClose = false;
                 foreach (Vector2Int existingCluster in placedClusters)
                 {
@@ -178,6 +177,9 @@ public class NewMapGenerator : MonoBehaviour
                 attempts--;
             }
         }
+
+        // Ensure the map is refreshed after all water clusters are placed
+        RefreshTilemap();
     }
     void RefreshTilemap()
     {
@@ -208,14 +210,13 @@ public class NewMapGenerator : MonoBehaviour
                 }
             }
         }
-        RefreshTilemap();
     }
     void PlaceGrassWaterBorders()
     {
         Vector2Int[] directions = new Vector2Int[]
         {
-        Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right,  // NESW
-        new Vector2Int(1, 1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(-1, -1) // Diagonals
+        Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right,
+        new Vector2Int(1, 1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(-1, -1)
         };
 
         HashSet<Vector2Int> checkedPositions = new HashSet<Vector2Int>();
@@ -231,12 +232,13 @@ public class NewMapGenerator : MonoBehaviour
                     if (System.Array.Exists(allgrassTiles, tile => tile == mapData[neighborPos.x, neighborPos.y]))
                     {
                         mapData[neighborPos.x, neighborPos.y] = GetCorrectGrassWaterTile(neighborPos.x, neighborPos.y);
-                        RefreshTilemap(); // Force update to ensure the tile appears
                     }
                     checkedPositions.Add(neighborPos);
                 }
             }
         }
+
+        RefreshTilemap(); // Refresh map only once after placing all borders
     }
     TileBase GetCorrectGrassWaterTile(int x, int y)
     {
@@ -277,10 +279,10 @@ public class NewMapGenerator : MonoBehaviour
             }
             if (neswCount == 2 && diagonalCount == 2)
             {
-                //if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
-                //if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
-                //if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
-                //if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
+                if (hasWaterWest && hasWaterSouth && hasWaterNE && hasWaterSW) return grasswatercornertouchNETile;
+                if (hasWaterEast && hasWaterSouth && hasWaterNW && hasWaterSE) return grasswatercornertouchNWTile;
+                if (hasWaterWest && hasWaterNorth && hasWaterSE && hasWaterNW) return grasswatercornertouchSETile;
+                if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
             }
 
             // **Step 3: Edge Tiles**
@@ -292,16 +294,16 @@ public class NewMapGenerator : MonoBehaviour
                 if (hasWaterWest) return grasswaterwestTile;
             }
 
-            if (neswCount == 1 && diagonalCount == 1)
+            if (neswCount == 1 && diagonalCount >= 1)
             {
-                //if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
-                //if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
-                //if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
-                //if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
-                //if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
-                //if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
-                //if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
-                //if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
+                if (hasWaterNorth && hasWaterSW) return grasswaterdoubleNorthSW;
+                if (hasWaterNorth && hasWaterSE) return grasswaterdoubleNorthSE;
+                if (hasWaterSouth && hasWaterNW) return grasswaterdoubleSouthNW;
+                if (hasWaterSouth && hasWaterNE) return grasswaterdoubleSouthNE;
+                if (hasWaterEast && hasWaterNW) return grasswaterdoubleEastNW;
+                if (hasWaterEast && hasWaterSW) return grasswaterdoubleEastSW;
+                if (hasWaterWest && hasWaterNE) return grasswaterdoubleWestNE;
+                if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
 
             // **Step 4: Corner Tiles**
