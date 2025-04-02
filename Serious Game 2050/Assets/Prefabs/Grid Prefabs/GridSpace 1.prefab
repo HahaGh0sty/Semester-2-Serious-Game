@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 828196339148258322}
   - component: {fileID: 4918891757806186868}
-  - component: {fileID: 6298856412815871447}
-  - component: {fileID: 1928386889724738354}
   - component: {fileID: 3050836591360621753}
-  - component: {fileID: -3994970428007625231}
+  - component: {fileID: 8870600449581941558}
+  - component: {fileID: -1517068014739099335}
   m_Layer: 0
   m_Name: GridSpace 1
   m_TagString: GridSpace
@@ -77,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 1547273703
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: c5d64c0bed1aead42bab966f9e8e0a29, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Sprite: {fileID: 21300000, guid: 8b07868ba592b614581dd152423b982e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,41 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6298856412815871447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6392127449164957119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d11fdf300884948aa7a07dd3c0bcbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisGrid: {fileID: 0}
-  Selected: 0
-  Empty: 0
-  s_MouseOverColor: {r: 1, g: 0, b: 0, a: 0.5882353}
-  s_OriginalColor: {r: 0, g: 0, b: 0, a: 0}
-  s_MouseOverColor2: {r: 0, g: 0, b: 0, a: 0}
-  s_Renderer: {fileID: 0}
---- !u!114 &1928386889724738354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6392127449164957119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b35ee0c2978f09645a517e4cc42e4289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Grid: {fileID: 0}
-  tileMapGrassActive: 0
-  tileMapForestActive: 0
-  tileMapWaterActive: 0
 --- !u!61 &3050836591360621753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,30 +132,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!50 &-3994970428007625231
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &8870600449581941558
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6392127449164957119}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9376d4830e941be408c1e02b184b3248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisObject: {fileID: 0}
+  GildedBanana: 0
+  energy: 0
+--- !u!114 &-1517068014739099335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392127449164957119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35ee0c2978f09645a517e4cc42e4289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
+  grassTiles:
+  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
+  - {fileID: 11400000, guid: 543cc200301f67548a272687cfd94783, type: 2}
+  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  waterTiles:
+  - {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  - {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  - {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  - {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  - {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  - {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  - {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  - {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  - {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  - {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  - {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  - {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  - {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  - {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
+  - {fileID: 11400000, guid: 4739892b16bbcec4f86209e6056f42cd, type: 2}
+  - {fileID: 11400000, guid: fa56f78b6908d6b4b8989ac07fff4b5f, type: 2}
+  - {fileID: 11400000, guid: 5ab74d99e72211e488e5dd7def8d4ebd, type: 2}
+  - {fileID: 11400000, guid: 86f3fa1702d57e24989b51e1f676bd8a, type: 2}
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  - {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
+  - {fileID: 11400000, guid: 4f2fd91b67eb69149a2c9dd9cee61450, type: 2}
+  - {fileID: 11400000, guid: c62c3c6d1220a1340abb2a962ffea430, type: 2}
+  - {fileID: 11400000, guid: b65bb34c9e2c9224881c79b0fa9ee8f1, type: 2}
+  - {fileID: 11400000, guid: 4f4edc3d6ba050046b489df83ce4bb8a, type: 2}
+  - {fileID: 11400000, guid: 8eb12f30bb4a13449a6c81d8a571bedb, type: 2}
+  - {fileID: 11400000, guid: d30e045951d36e54eb5dbc884cdba691, type: 2}
+  - {fileID: 11400000, guid: a3d3d41c0d6886e438d41473bb2c37e6, type: 2}
+  - {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
+  - {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
+  forestTiles:
+  - {fileID: 11400000, guid: 86318d763881c3747bb158d380fc4752, type: 2}
+  buildingTiles: []
+  tileMapGrassActive: 0
+  tileMapForestActive: 0
+  tileMapWaterActive: 0
+  tileMapBuildingActive: 0
+  ThisGrid: {fileID: 6392127449164957119}
+  Selected: 0
+  Empty: 0
+  s_MouseOverColor: {r: 0, g: 0, b: 0, a: 0}
+  s_MouseOverColor2: {r: 0, g: 0, b: 0, a: 0}
+  s_IsCurrentOriginalColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsGrassTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsForestTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_IsWaterTileColor: {r: 0, g: 0, b: 0, a: 0}
+  s_Renderer: {fileID: 4918891757806186868}

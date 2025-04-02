@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private Camera cam;
     private bool isSpeedDoubled = false;  // Track if speed is doubled
+    private Vector3 lastMousePosition;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class CameraController : MonoBehaviour
             moveSpeed *= 3f;
         }
 
-        // Smooth movement
+        // Smooth movement with WASD keys
         Vector3 targetPosition = transform.position;
 
         if (Input.GetKey(KeyCode.W)) targetPosition.y += moveSpeed * Time.deltaTime;
@@ -43,20 +44,44 @@ public class CameraController : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) targetPosition.x -= moveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D)) targetPosition.x += moveSpeed * Time.deltaTime;
 
+        // Right-click dragging to move the map
+        if (Input.GetMouseButtonDown(1))
+        {
+            lastMousePosition = Input.mousePosition;
+        }
+        if (Input.GetMouseButton(1))
+        {
+            Vector3 delta = Input.mousePosition - lastMousePosition;
+            targetPosition -= new Vector3(delta.x, delta.y, 0) * cam.orthographicSize * 0.002f;
+            lastMousePosition = Input.mousePosition;
+        }
+
+        // ** Zooming based on mouse position **
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollInput != 0)
+        {
+            // Get the mouse position in world space before zooming
+            Vector3 mouseWorldBeforeZoom = cam.ScreenToWorldPoint(Input.mousePosition);
+
+            // Adjust zoom level
+            float targetZoom = cam.orthographicSize - (scrollInput * zoomSpeed * 10f);
+            cam.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
+
+            // Get the mouse position in world space after zooming
+            Vector3 mouseWorldAfterZoom = cam.ScreenToWorldPoint(Input.mousePosition);
+
+            // Calculate the difference and move the camera to keep mouse position fixed
+            Vector3 zoomOffset = mouseWorldBeforeZoom - mouseWorldAfterZoom;
+            targetPosition += zoomOffset;
+        }
+
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-
-        // Zoom control
-        float targetZoom = cam.orthographicSize;
-
-        if (Input.GetKey(KeyCode.LeftShift)) targetZoom -= zoomSpeed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.LeftControl)) targetZoom += zoomSpeed * Time.deltaTime;
-
-        cam.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
 
         // Toggle speed when "F" is pressed
         if (Input.GetKeyDown(KeyCode.F))
         {
-            isSpeedDoubled = !isSpeedDoubled;  // Toggle the speed
+            isSpeedDoubled = !isSpeedDoubled;
         }
     }
+
 }
