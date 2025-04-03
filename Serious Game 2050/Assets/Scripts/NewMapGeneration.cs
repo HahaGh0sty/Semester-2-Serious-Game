@@ -62,10 +62,10 @@ public class NewMapGenerator : MonoBehaviour
 
     Vector2Int[] directions =
 {
-    new Vector2Int(1, 0),   // Right
-    new Vector2Int(-1, 0),  // Left
-    new Vector2Int(0, 1),   // Up
-    new Vector2Int(0, -1)   // Down
+    new Vector2Int(1, 0),
+    new Vector2Int(-1, 0),
+    new Vector2Int(0, 1),
+    new Vector2Int(0, -1)
     };
 
     private Dictionary<TileBase, float> GrassTileChances;
@@ -73,13 +73,11 @@ public class NewMapGenerator : MonoBehaviour
 
     TileBase GetRandomTile()
     {
-        // Ensure allgrassTiles is not null and has at least one element
         if (allgrassTiles == null || allgrassTiles.Length == 0)
         {
-            return null;  // Return a default value or handle the case as needed
+            return null;
         }
 
-        // Return a random tile from allgrassTiles
         return allgrassTiles[Random.Range(0, allgrassTiles.Length)];
     }
     void Start()
@@ -87,10 +85,8 @@ public class NewMapGenerator : MonoBehaviour
         grassTile = allgrassTiles[0];
         waterTile = allwaterTiles[0];
 
-        // Ensure lists are initialized
         allowedGrassTiles = new List<TileBase>(allgrassTiles);
 
-        // Assign a default forest tile
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
 
@@ -100,7 +96,7 @@ public class NewMapGenerator : MonoBehaviour
 
     void GenerateMap(int seed)
     {
-        Random.InitState(System.Environment.TickCount); // Uses the current time as a seed
+        Random.InitState(System.Environment.TickCount);
         tilemap.ClearAllTiles();
         mapData = new TileBase[width, height];
 
@@ -112,16 +108,12 @@ public class NewMapGenerator : MonoBehaviour
             }
         }
 
-        // Place water clusters
         PlaceWaterClusters();
 
-        // Add Grass/Water borders
         PlaceGrassWaterBorders();
 
-        // Place forest clusters
         PlaceForestClusters();
 
-        // Apply to tilemap
         ApplyTilesToTilemap(width / 2, height / 2);
     }
 
@@ -178,12 +170,11 @@ public class NewMapGenerator : MonoBehaviour
             }
         }
 
-        // Ensure the map is refreshed after all water clusters are placed
         RefreshTilemap();
     }
     void RefreshTilemap()
     {
-        tilemap.RefreshAllTiles(); // Force the Tilemap to update visuals
+        tilemap.RefreshAllTiles();
     }
     void GenerateWaterCluster(int startX, int startY, int clusterSize)
     {
@@ -238,7 +229,7 @@ public class NewMapGenerator : MonoBehaviour
             }
         }
 
-        RefreshTilemap(); // Refresh map only once after placing all borders
+        RefreshTilemap();
     }
     TileBase GetCorrectGrassWaterTile(int x, int y)
     {
@@ -263,13 +254,11 @@ public class NewMapGenerator : MonoBehaviour
         }
         else
         {
-            // **Step 1: GrassWaterIsland**
             if (neswCount == 4 && diagonalCount == 4)
             {
                 return grasswaterisland;
             }
 
-            // **Step 2: GrassWaterTouch**
             if (neswCount == 2)
             {
                 if (hasWaterNorth && hasWaterEast) return grasswatertouchNETile;
@@ -285,7 +274,6 @@ public class NewMapGenerator : MonoBehaviour
                 if (hasWaterEast && hasWaterNorth && hasWaterSW && hasWaterNE) return grasswatercornertouchSWTile;
             }
 
-            // **Step 3: Edge Tiles**
             if (neswCount == 1)
             {
                 if (hasWaterNorth) return grasswaternorthTile;
@@ -306,7 +294,6 @@ public class NewMapGenerator : MonoBehaviour
                 if (hasWaterWest && hasWaterSE) return grasswaterdoubleWestSE;
             }
 
-            // **Step 4: Corner Tiles**
             if (diagonalCount == 1 && neswCount == 0)
             {
                 TileBase cornerTile = null;
@@ -321,13 +308,12 @@ public class NewMapGenerator : MonoBehaviour
                 }
             }
 
-            // **Step 5: Double Tile**
             if (diagonalCount == 2 && neswCount == 0)
             {
                 if (hasWaterNE && hasWaterSW) return grasswaterdoubleNESW;
                 if (hasWaterNW && hasWaterSE) return grasswaterdoubleNWSE;
             }
-            return waterTile; // Default fallback instead of returning null
+            return waterTile;
         }
 
     }
@@ -336,10 +322,10 @@ public class NewMapGenerator : MonoBehaviour
 
     void PlaceForestClusters()
     {
-        int numClusters = width / 5 * 2; // Controls total number of forest clusters
+        int numClusters = width / 5 * 2;
         int minForestClusterSize = 8;
         int maxForestClusterSize = 20;
-        int maxAttempts = 100; // Prevent infinite loops
+        int maxAttempts = 100;
 
         for (int i = 0; i < numClusters; i++)
         {
@@ -351,7 +337,6 @@ public class NewMapGenerator : MonoBehaviour
                 int startX = Random.Range(2, width - 2);
                 int startY = Random.Range(2, height - 2);
 
-                // Check if it's too close to existing water
                 if (HasNearbyForestCluster(startX, startY))
                 {
                     attempts++;
@@ -368,13 +353,13 @@ public class NewMapGenerator : MonoBehaviour
     bool HasNearbyForestCluster(int x, int y)
     {
         int nearbyForestCount = 0;
-        int minSeparation = 2; // Increase this to require more spacing
+        int minSeparation = 2;
 
         for (int dx = -minSeparation; dx <= minSeparation; dx++)
         {
             for (int dy = -minSeparation; dy <= minSeparation; dy++)
             {
-                if (dx == 0 && dy == 0) continue; // Skip the tile itself
+                if (dx == 0 && dy == 0) continue;
 
                 int nx = x + dx;
                 int ny = y + dy;
@@ -384,7 +369,7 @@ public class NewMapGenerator : MonoBehaviour
                     if (mapData[nx, ny] == forestTile)
                     {
                         nearbyForestCount++;
-                        if (nearbyForestCount >= 10) return true; // Only break up forest clusters if too large
+                        if (nearbyForestCount >= 10) return true;
                     }
                 }
             }
@@ -408,7 +393,6 @@ public class NewMapGenerator : MonoBehaviour
                 mapData[current.x, current.y] = forestTile;
                 placedTiles++;
 
-                // Add random adjacent tiles to continue growing the cluster
                 ShuffleDirections();
 
                 foreach (Vector2Int dir in directions)
@@ -431,10 +415,8 @@ public class NewMapGenerator : MonoBehaviour
             {
                 if (mapData[x, y] != null)
                 {
-                    // Adjust tile position to center it
                     Vector3Int tilePosition = new Vector3Int(x - offsetX, y - offsetY, 0);
 
-                    // Apply the tile to the Tilemap at the calculated position
                     tilemap.SetTile(tilePosition, mapData[x, y]);
                 }
             }
@@ -452,7 +434,7 @@ public class NewMapGenerator : MonoBehaviour
 
                 if (mapData[x, y] == targetTile)
                 {
-                    if (neighbors >= clusterSize) // Control cluster size
+                    if (neighbors >= clusterSize)
                         newMapData[x, y] = targetTile;
                     else if (neighbors == 0)
                         newMapData[x, y] = grassTile;
@@ -488,6 +470,6 @@ public class NewMapGenerator : MonoBehaviour
             }
         }
 
-        return count; //Ensure the function always returns a value
+        return count;
     }
 }
