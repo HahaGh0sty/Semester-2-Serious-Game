@@ -6,6 +6,7 @@ using static UnityEngine.Tilemaps.Tilemap;
 
 public class NewMapGenerator : MonoBehaviour
 {
+    private GameData gameData;
     public Tilemap tilemap;
     public TileBase[] allgrassTiles;
     public TileBase[] allwaterTiles;
@@ -53,6 +54,7 @@ public class NewMapGenerator : MonoBehaviour
     public int maxWaterClusterSize = 15;
     public int minForestClusterSize = 8;
     public int maxForestClusterSize = 20;
+    
 
     private TileBase[,] mapData;
     private List<Vector2Int> waterPositions = new List<Vector2Int>();
@@ -94,13 +96,13 @@ public class NewMapGenerator : MonoBehaviour
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
 
-        GenerateMap(0);
+        GenerateMap(gameData.generatedvalue);
     }
 
 
-    void GenerateMap(int seed)
+    void GenerateMap(int generatedvalue)
     {
-        Random.InitState(System.Environment.TickCount); // Uses the current time as a seed
+        
         tilemap.ClearAllTiles();
         mapData = new TileBase[width, height];
 

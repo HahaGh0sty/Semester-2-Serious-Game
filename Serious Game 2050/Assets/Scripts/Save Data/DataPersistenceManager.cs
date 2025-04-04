@@ -1,5 +1,6 @@
-using UnityEngine;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
@@ -12,7 +13,9 @@ public class DataPersistenceManager : MonoBehaviour
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
 
-    public RandomTilemapGenerator mapgeneratorV2;
+    public NewMapGenerator mapgeneratorV2;
+
+    public int generatedValue;
     
 
     private string tilemapSavePath => Application.persistentDataPath + "/tilemapData.json";
@@ -37,9 +40,19 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame()
     {
-        int randomSeed = Random.Range(0, 100000); // Generate random seed during runtime
-        gameData = new GameData(randomSeed); // Pass it to GameData
-        Debug.Log("Generated Map Seed: " + gameData.mapseed);
+        GenerateValueFromTime();
+        gameData = new GameData(generatedValue); // Pass it to GameData
+        Debug.Log("Generated Map Seed: " + gameData.generatedvalue);
+    }
+
+      public void GenerateValueFromTime()
+    {
+        DateTime now = DateTime.Now;
+
+        generatedValue = now.Hour * 10000000 +
+                         now.Minute * 100000 +
+                         now.Second * 1000 +
+                         now.Millisecond;
     }
 
     // Saves game data and updates building positions in the scene

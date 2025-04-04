@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c53ab44537964fa6ac8bc42aa9f99a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: building test
+  fileName: Evaluatie test showcase
   mapgeneratorV2: {fileID: 1289753054}
 --- !u!4 &1949823834
 Transform:
