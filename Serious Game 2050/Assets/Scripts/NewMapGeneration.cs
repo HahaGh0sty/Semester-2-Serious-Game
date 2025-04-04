@@ -165,11 +165,9 @@ public class NewMapGenerator : MonoBehaviour
                     placedClusters.Add(newClusterPos);
                     placed = true;
                 }
-
                 attempts--;
             }
         }
-
         RefreshTilemap();
     }
     void RefreshTilemap()
@@ -228,7 +226,6 @@ public class NewMapGenerator : MonoBehaviour
                 }
             }
         }
-
         RefreshTilemap();
     }
     TileBase GetCorrectGrassWaterTile(int x, int y)
@@ -315,7 +312,6 @@ public class NewMapGenerator : MonoBehaviour
             }
             return waterTile;
         }
-
     }
 
     //---------------------------------FOREST------------------------------------------
@@ -452,7 +448,6 @@ public class NewMapGenerator : MonoBehaviour
         }
         mapData = newMapData;
     }
-
 
     int CountNeighbors(int x, int y, TileBase targetTile)
     {
