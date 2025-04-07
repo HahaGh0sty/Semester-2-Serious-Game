@@ -2,70 +2,59 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class CrossfadeSlideshow : MonoBehaviour
+[RequireComponent(typeof(CanvasGroup))]
+public class Slideshow : MonoBehaviour
 {
     public Sprite[] slideshowImages;
-    public float slideDuration = 3f;
-    public float fadeDuration = 1f;
+    public float slideDuration = 5f;
+    public float fadeDuration = 0f;
 
-    public Image imageA;
-    public Image imageB;
-
-    private CanvasGroup groupA;
-    private CanvasGroup groupB;
-
+    private Image image;
+    private CanvasGroup canvasGroup;
     private int currentIndex = 0;
-    private bool showingA = true;
 
     void Start()
     {
-        groupA = imageA.GetComponent<CanvasGroup>();
-        groupB = imageB.GetComponent<CanvasGroup>();
+        image = GetComponent<Image>();
+        canvasGroup = GetComponent<CanvasGroup>();
 
-        imageA.sprite = slideshowImages[0];
-        groupA.alpha = 1;
-        groupB.alpha = 0;
-
-        StartCoroutine(PlaySlideshow());
+        if (slideshowImages.Length > 0)
+        {
+            StartCoroutine(PlaySlideshow());
+        }
     }
 
     IEnumerator PlaySlideshow()
     {
         while (true)
         {
+            // Set image and fade in
+            image.sprite = slideshowImages[currentIndex];
+            yield return StartCoroutine(Fade(0f, 1f));
+
+            // Wait with full opacity
             yield return new WaitForSeconds(slideDuration);
 
-            int nextIndex = (currentIndex + 1) % slideshowImages.Length;
+            // Fade out
+            yield return StartCoroutine(Fade(1f, 0f));
 
-            if (showingA)
-            {
-                imageB.sprite = slideshowImages[nextIndex];
-                yield return StartCoroutine(Crossfade(groupA, groupB));
-            }
-            else
-            {
-                imageA.sprite = slideshowImages[nextIndex];
-                yield return StartCoroutine(Crossfade(groupB, groupA));
-            }
-
-            currentIndex = nextIndex;
-            showingA = !showingA;
+            // Next slide
+            currentIndex = (currentIndex + 1) % slideshowImages.Length;
         }
     }
 
-    IEnumerator Crossfade(CanvasGroup from, CanvasGroup to)
+    IEnumerator Fade(float from, float to)
     {
         float timer = 0f;
-        while (timer < fadeDuration)
+
+        while (timer <= fadeDuration)
         {
             float t = timer / fadeDuration;
-            from.alpha = Mathf.Lerp(1f, 0f, t);
-            to.alpha = Mathf.Lerp(0f, 1f, t);
+            canvasGroup.alpha = Mathf.Lerp(from, to, t);
             timer += Time.deltaTime;
             yield return null;
         }
 
-        from.alpha = 0f;
-        to.alpha = 1f;
+        canvasGroup.alpha = to;
     }
 }

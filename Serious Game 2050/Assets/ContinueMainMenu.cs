@@ -5,11 +5,11 @@ using System.Collections;
 
 public class SplashScreenLoader : MonoBehaviour
 {
-    [SerializeField] float waitBeforeAllowingInput = 1.5f;
-    [SerializeField] string sceneToLoad = "MainMenu";
+    [SerializeField] float waitBeforeAllowingInput = 9f;
+    [SerializeField] string sceneToLoad = "Main Menu";
     [SerializeField] GameObject pressAnyKeyText;
     [SerializeField] Image fadeOverlay;
-    [SerializeField] float fadeDuration = 1.5f;
+    [SerializeField] float fadeDuration = 1f;
 
     bool canPressKey = false;
     bool hasPressedKey = false;
@@ -38,7 +38,7 @@ public class SplashScreenLoader : MonoBehaviour
     {
         if (fadeOverlay != null)
         {
-            float timer = 0;
+            float timer = 3;
             while (timer < fadeDuration)
             {
                 timer += Time.deltaTime;
@@ -69,6 +69,6 @@ public class SplashScreenLoader : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(1);
     }
 }
