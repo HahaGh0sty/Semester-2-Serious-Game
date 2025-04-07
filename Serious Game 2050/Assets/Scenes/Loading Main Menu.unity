@@ -157,6 +157,8 @@ MonoBehaviour:
   waitBeforeAllowingInput: 1.5
   sceneToLoad: Main Menu
   pressAnyKeyText: {fileID: 480176894}
+  fadeOverlay: {fileID: 0}
+  fadeDuration: 1.5
 --- !u!114 &456484493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +467,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1103373797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4860771534702402705, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809666651643562733, guid: 57059521c1052784aa9a4d1527228397, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57059521c1052784aa9a4d1527228397, type: 3}
 --- !u!1 &1168831034
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,8 +535,9 @@ GameObject:
   - component: {fileID: 1168831035}
   - component: {fileID: 1168831037}
   - component: {fileID: 1168831036}
+  - component: {fileID: 1168831038}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Loading Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -540,6 +600,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168831034}
   m_CullTransparentMesh: 1
+--- !u!114 &1168831038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168831034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d14f28e3c3fb0b46b5b714ccb91a8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideshowImages:
+  - {fileID: 21300000, guid: 835bb864f731e5e4f84a7c0a85869406, type: 3}
+  - {fileID: 21300000, guid: dd7963bf3407dab4da05b11f42f54568, type: 3}
+  - {fileID: 21300000, guid: 905164adb11813c4689b2cc2e8aa92f4, type: 3}
+  slideDuration: 5
+  fadeDuration: 2
+  imageA: {fileID: 1168831036}
+  imageB: {fileID: 1168831036}
 --- !u!1 &1683414126
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,3 +719,4 @@ SceneRoots:
   - {fileID: 1683414129}
   - {fileID: 456484496}
   - {fileID: 1081842008}
+  - {fileID: 1103373797}

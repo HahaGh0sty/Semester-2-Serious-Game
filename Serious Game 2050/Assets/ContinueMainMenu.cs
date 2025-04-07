@@ -20,7 +20,7 @@ public class SplashScreenLoader : MonoBehaviour
             pressAnyKeyText.SetActive(false);
 
         if (fadeOverlay != null)
-            fadeOverlay.color = new Color(0, 0, 0, 1); // Start fully black
+            fadeOverlay.color = new Color(0, 0, 0, 1);
 
         StartCoroutine(FadeInThenWait());
     }
@@ -36,7 +36,6 @@ public class SplashScreenLoader : MonoBehaviour
 
     IEnumerator FadeInThenWait()
     {
-        // Fade in (from black to transparent)
         if (fadeOverlay != null)
         {
             float timer = 0;
