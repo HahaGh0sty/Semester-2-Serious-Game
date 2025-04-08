@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+public static class GameSettings
+{
+    public static int MapWidth = 50;
+    public static int MapHeight = 50;
+}
+
 public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] AudioMixer audioMixer;

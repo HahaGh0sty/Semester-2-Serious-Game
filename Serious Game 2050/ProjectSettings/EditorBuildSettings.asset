@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Luc's Scene.unity
     guid: be5b221d4b335144989f432b40bffac9
+  - enabled: 1
+    path: Assets/Scenes/Game Loader.unity
+    guid: 32ad36cfb54537448923baf6ea9efe97
   m_configObjects: {}

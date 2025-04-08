@@ -71,6 +71,8 @@ public class NewMapGenerator : MonoBehaviour
     private Dictionary<TileBase, float> GrassTileChances;
     private Dictionary<TileBase, float> WaterTileChances;
 
+
+
     TileBase GetRandomTile()
     {
         if (allgrassTiles == null || allgrassTiles.Length == 0)
@@ -89,6 +91,12 @@ public class NewMapGenerator : MonoBehaviour
 
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
+
+        int width = GameSettings.MapWidth;
+        int height = GameSettings.MapHeight;
+
+        Debug.Log("Generating map with size: " + width + "x" + height);
+
 
         GenerateMap(0);
     }
