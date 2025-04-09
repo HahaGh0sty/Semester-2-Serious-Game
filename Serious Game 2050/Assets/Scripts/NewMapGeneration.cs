@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEngine.Tilemaps.Tilemap;
+using System;
 
 public class NewMapGenerator : MonoBehaviour, IDataPersistence
 {
@@ -54,7 +55,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
     public int maxWaterClusterSize = 15;
     public int minForestClusterSize = 8;
     public int maxForestClusterSize = 20;
-    public int MapSeed;
+    public int generatedValue;
     
 
     private TileBase[,] mapData;
@@ -83,7 +84,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         }
 
         // Return a random tile from allgrassTiles
-        return allgrassTiles[Random.Range(0, allgrassTiles.Length)];
+        return allgrassTiles[UnityEngine.Random.Range(0, allgrassTiles.Length)];
     }
     void Start()
     {
@@ -96,24 +97,49 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         // Assign a default forest tile
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
+        
+       
 
-        GenerateMap(this.MapSeed);
+        if(generatedValue == 0)
+        {
+         GenerateValueFromTime();
+         gameData = new GameData(generatedValue); // Pass it to GameData
+         Debug.Log("Generated Map Seed: " + gameData.generatedValue);   
+        }
+
+        GenerateMap();
+        
     }
+          public void GenerateValueFromTime()
+        {
+        DateTime now = DateTime.Now;
+
+        generatedValue = now.Hour * 10000000 +
+                         now.Minute * 100000 +
+                         now.Second * 1000 +
+                         now.Millisecond;
+        }
 
       public void LoadData(GameData data)
     {
-      this.MapSeed = data.generatedvalue;
+      this.generatedValue = data.generatedvalue;
     }
 
-    public void SaveData(ref GameData data)
-    {
-      data.generatedvalue = this.MapSeed;
-    }
-
-
-   void GenerateMap(int generatedvalue)
+   public void SaveData(ref GameData data)
 {
-    Random.InitState(generatedvalue); // Set the seed here
+    if (data == null)
+    {
+        data = new GameData(this.generatedValue); // Or however you want to initialize it
+    }
+
+    data.generatedvalue = this.generatedValue;
+}
+
+
+
+   void GenerateMap()
+{
+    UnityEngine.Random.InitState(this.generatedValue); // Set the seed here
 
     tilemap.ClearAllTiles();
     mapData = new TileBase[width, height];
@@ -122,7 +148,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         {
             for (int y = 0; y < height; y++)
             {
-                mapData[x, y] = allgrassTiles[Random.Range(0, allgrassTiles.Length)];
+                mapData[x, y] = allgrassTiles[UnityEngine.Random.Range(0, allgrassTiles.Length)];
             }
         }
 
@@ -143,7 +169,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
     {
         for (int i = 0; i < directions.Length; i++)
         {
-            int randIndex = Random.Range(i, directions.Length);
+            int randIndex = UnityEngine.Random.Range(i, directions.Length);
             Vector2Int temp = directions[i];
             directions[i] = directions[randIndex];
             directions[randIndex] = temp;
@@ -167,8 +193,8 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
 
             while (attempts > 0 && !placed)
             {
-                int startX = Random.Range(3, width - 3);
-                int startY = Random.Range(3, height - 3);
+                int startX = UnityEngine.Random.Range(3, width - 3);
+                int startY = UnityEngine.Random.Range(3, height - 3);
                 Vector2Int newClusterPos = new Vector2Int(startX, startY);
 
                 bool tooClose = false;
@@ -183,7 +209,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
 
                 if (!tooClose)
                 {
-                    GenerateWaterCluster(startX, startY, Random.Range(minClusterSize, maxClusterSize + 1));
+                    GenerateWaterCluster(startX, startY, UnityEngine.Random.Range(minClusterSize, maxClusterSize + 1));
                     placedClusters.Add(newClusterPos);
                     placed = true;
                 }
@@ -210,7 +236,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
             Vector2Int current = openList.Dequeue();
             if (System.Array.Exists(allgrassTiles, tile => tile == mapData[current.x, current.y]))
             {
-                mapData[current.x, current.y] = allwaterTiles[Random.Range(0, allwaterTiles.Length)];
+                mapData[current.x, current.y] = allwaterTiles[UnityEngine.Random.Range(0, allwaterTiles.Length)];
                 waterPositions.Add(current);
                 placedTiles++;
             }
@@ -362,8 +388,8 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
 
             while (!placed && attempts < maxAttempts)
             {
-                int startX = Random.Range(2, width - 2);
-                int startY = Random.Range(2, height - 2);
+                int startX = UnityEngine.Random.Range(2, width - 2);
+                int startY = UnityEngine.Random.Range(2, height - 2);
 
                 // Check if it's too close to existing water
                 if (HasNearbyForestCluster(startX, startY))
@@ -372,7 +398,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
                     continue;
                 }
 
-                int clusterSize = Random.Range(minForestClusterSize, maxForestClusterSize + 1);
+                int clusterSize = UnityEngine.Random.Range(minForestClusterSize, maxForestClusterSize + 1);
                 GenerateForestCluster(startX, startY, clusterSize);
 
                 placed = true;

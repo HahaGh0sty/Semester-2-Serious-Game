@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
@@ -13,9 +12,8 @@ public class DataPersistenceManager : MonoBehaviour
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
 
-    public NewMapGenerator mapgeneratorV2;
-
-    public int generatedValue;
+    public NewMapGenerator mapgenerator;
+    
     
 
     private string tilemapSavePath => Application.persistentDataPath + "/tilemapData.json";
@@ -40,19 +38,8 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame()
     {
-        GenerateValueFromTime();
-        gameData = new GameData(generatedValue); // Pass it to GameData
-        Debug.Log("Generated Map Seed: " + gameData.generatedvalue);
-    }
-
-      public void GenerateValueFromTime()
-    {
-        DateTime now = DateTime.Now;
-
-        generatedValue = now.Hour * 10000000 +
-                         now.Minute * 100000 +
-                         now.Second * 1000 +
-                         now.Millisecond;
+        this.gameData = new GameData(mapgenerator.generatedValue);
+        mapgenerator.GenerateValueFromTime();
     }
 
     // Saves game data and updates building positions in the scene
