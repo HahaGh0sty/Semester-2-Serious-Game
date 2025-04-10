@@ -11,7 +11,7 @@ public class ToggleBuildModeScript : MonoBehaviour
         thisObject = transform.gameObject;
         thisObject.SetActive(false);
     }
-    public void whenButtonClicked()
+    public void whenBuildButtonClicked()
     {
         if (thisObject.activeInHierarchy == true)
         {

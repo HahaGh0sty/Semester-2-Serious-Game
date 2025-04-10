@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &8870600449581941558
 MonoBehaviour:
@@ -204,6 +204,7 @@ MonoBehaviour:
   tileMapWaterActive: 0
   tileMapBuildingActive: 0
   ThisGrid: {fileID: 6392127449164957119}
+  SelectedMode: 0
   Selected: 0
   Empty: 0
   s_MouseOverColor: {r: 0, g: 0, b: 0, a: 0}

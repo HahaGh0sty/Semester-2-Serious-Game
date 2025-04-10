@@ -6,7 +6,6 @@ public class CreateBuildGhost : MonoBehaviour
 {
     [SerializeField] public GameObject BuildingType;
     [SerializeField] public GameObject ExistingGhostBuilding;
-    [SerializeField] public bool GhostBuildingExists;
 
     public void SpawnObject()
     {
@@ -14,8 +13,16 @@ public class CreateBuildGhost : MonoBehaviour
 
         if (ExistingGhostBuilding != null)
         {
-            Destroy(ExistingGhostBuilding);
-            Instantiate(BuildingType);
+            if (ExistingGhostBuilding != BuildingType)
+            {
+                Destroy(ExistingGhostBuilding);
+                Instantiate(BuildingType);
+                ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
+            }
+            else
+            {
+                return;
+            }
         }
 
         else if (ExistingGhostBuilding == null)
@@ -23,17 +30,5 @@ public class CreateBuildGhost : MonoBehaviour
             Instantiate(BuildingType);
         }
         ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
-    }
-
-    public void GhostBuildingExistsAlready()
-    {
-        if (GhostBuildingExists == false)
-        {
-            GhostBuildingExists = true;
-        }
-        else if (GhostBuildingExists == true)
-        {
-            GhostBuildingExists = false;
-        }
     }
 }
