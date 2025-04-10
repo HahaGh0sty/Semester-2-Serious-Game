@@ -1,0 +1,5394 @@
+fileFormatVersion: 2
+guid: f15401dcefc4d744bacdd40dfce58be4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e5d55e8c63f1b469bf138758504a9a
+      internalID: -933796707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c036615d2e9809e438547b74626f553c
+      internalID: 1656862471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88eff033ca2bed47b087a4f1d3ad7aa
+      internalID: -941996672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab73a8672ced2134fbb11903a7b8ebfc
+      internalID: -2052454407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f8c465d20ed5447a7c504b9153638c
+      internalID: -1543957004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 128
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab22adbf3f6df6441a32e9e3b537dd37
+      internalID: 946689767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10b5cd06d641e646bf00e142f1565a3
+      internalID: -931603691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 129
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b237922d15f9a48b1a2c5e27d4d41e
+      internalID: 1287282968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b573ac4cb35ab4ca7154143671d64b
+      internalID: -638723139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1290eae94f20c124c8e44cdd84fef6ca
+      internalID: 1116534461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f640ce1a36428642853bd85970f672f
+      internalID: 1854032673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc3012b60d287e4e83ac516084ec569
+      internalID: 425903067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd5db86af28eff41add3b7bdf7dd7c1
+      internalID: 277176306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 128
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27966b8f0d15d5e45bf0a8ce0b06020b
+      internalID: 1325862283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8455b147423954788a4c3b3f0fa5a5
+      internalID: -941820297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 129
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fbe95f38cf3114d929d4f5f72854a3
+      internalID: 2144237920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf7b312e6c88a54a847d4c3fb638faa
+      internalID: -963781503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2a6f2b6cb507d41bd889187b02c4af
+      internalID: -1458739456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec0430d3542aa342be3dbea37cc83e9
+      internalID: 911186834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e3c2626ef3b5f40be4ea465eefeb27
+      internalID: 1932430992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573e50a72a5044a4a93d834ad58558e9
+      internalID: 1999906580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 128
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ec37401fa353c4a823e0759f016158
+      internalID: -1201658776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efff8c3772536834eb84602f8bd74967
+      internalID: -949060241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 129
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02666c7ed623ad648bcef0f8a0cd022d
+      internalID: -1507605609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114a0fc2e48745241992321e275647ae
+      internalID: -1008981028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff99f2c698b6bb49a515777baac3e69
+      internalID: 646460332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dbb6a34a3f24945a15189755540623
+      internalID: -1382286862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2ec82f35bd4144f867745ee9fafd5b
+      internalID: -248747237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c232d4a9a1c9dc449a921c5ec7f7dc0
+      internalID: 2028495239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 128
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142ce77a20202fc479bf84b005fabfb6
+      internalID: -1850110764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8307dea18e8a3ca458da2b8f3d626741
+      internalID: -1645608414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 129
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ee7d04caf89b146b1c07c188f5e24b
+      internalID: 2052303140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037e4fddbbee41540906a252123163b9
+      internalID: -1103438990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253403fed117e1e4cbceb261f64fe585
+      internalID: 2087358308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e3a5393cb129947a2e05df433904df
+      internalID: -1821569203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c4da7f6ff22a84ea8b23bcaacb19e9
+      internalID: -1733259278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658e472eadcc8884e9add3f12addfb7d
+      internalID: -72469120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 128
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da68b5c48cff4114286a1954b1cebc94
+      internalID: -647148328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae35e08c969a604eb27453bc0d2a1c0
+      internalID: -319645046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 129
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb0de9fe27d514f8b6c5c581e8fa85
+      internalID: 1185743743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39afbb026e0bcfd488be0423c6f3a36e
+      internalID: -1150900931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6725d256a38d2ff4f9c3a0db3e44365e
+      internalID: 1585405964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1da2eebdaad80944a00c69076f97156
+      internalID: -506129539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6c3c29c73e6c242aead92e4121dae0
+      internalID: -1013861307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b666fbc0ad7e054ca86dfd353bdd9fd
+      internalID: 2110253448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415d86fb2adc4544dae7bae034ae82b9
+      internalID: -1861769180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c62b12720d8f0344b631353c0b1cf1e
+      internalID: 1221577988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8394763da952b48ba4115e6e877163
+      internalID: -1946203281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acb82260bd7e724db898e59aae183bc
+      internalID: -1009710114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb52ff1e52414e439d0b36e86dad38e
+      internalID: -876494517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f978c64c7d9cb364cb6b7faf7724d11c
+      internalID: 1401955167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf93f9ab6ddd23489852d41da796e38
+      internalID: 1106567071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6141aa14d8ea83c408e3ab95274f2248
+      internalID: 1794399737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be5daba99b6d42419f9c2b9e256634f
+      internalID: -116742249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef629b4fcf78d7b49a024311aff2925c
+      internalID: -241782075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0c2112737712c4e81ec31d3664f13e
+      internalID: 582855117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eedec75ea73204db2050d12d669610
+      internalID: -1746735250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa18e41af70dc944a2a6404fd092d42
+      internalID: 1645857606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1df3c3a9287864a8f9ba0914db2291
+      internalID: 2035701053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5520616b4e4888941a6f63a4628ab822
+      internalID: 257188982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996dbb0570014b94dbfc53eed5d56c28
+      internalID: 172160358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ebb80d2bd0a1b48862b7c0de1123ce
+      internalID: 814838682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd80e35566d53314db578ac7a7ec3734
+      internalID: 1671820780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae580623d340abb4bb8814317b6776a3
+      internalID: 1674982399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 126
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33111fa9c1229be4c928ddd41214ed76
+      internalID: -28629546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407dc871fb3f1d94db39038e7b03e1f8
+      internalID: 139917117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4ffef6c08645a4391d224e64b4c736
+      internalID: 249506745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ee67cd9436ab243a8a4e9f36e125fd
+      internalID: 1394427068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9ba77dbe7f5694aba13d186465c3ef
+      internalID: 832969391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4065e282d549174399bb72434bc94d5
+      internalID: 986132002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 94
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82102ae2a2c92f54281d3e66b1447078
+      internalID: 1779796163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 96
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09fa8cba11a3cd44a91f4553e270fc9
+      internalID: 1509161601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 95
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415be2064cac3b740b0b85b414f9e772
+      internalID: -1932270607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef96f2d9d7667349921b0a76ba9c304
+      internalID: 1469752898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1387e560f5491a44e8ba01bf706a84b6
+      internalID: 376358435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47783319cc5a8b44b1e015898e6ba8a
+      internalID: 114734418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff60dededd38ac459e2dfa0027fa9e1
+      internalID: 267028297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2d2183060b2e64a9b6e9270a77816f
+      internalID: -1431786527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 94
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b121c55c0e458dc478f1b19ca4247f64
+      internalID: -1475504658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 96
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15dd01bce8d05141be09a1648dcb7db
+      internalID: -422641826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 95
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c335d45f39201942b4f007dfae9b5a1
+      internalID: -536961535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dce47699081964baed6f81a8d5b8b7
+      internalID: 1581502096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f543bfa0e810edc429effefc12783b2c
+      internalID: 403481486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3f003bc810ef2448527c97a30d0491
+      internalID: -1158402479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15fa224eefc0814fb46929eb35d5e7b
+      internalID: 1533403455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed474d709bc72864f9e0301659e8637d
+      internalID: -1469816727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 94
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db250b81d2d408459d34d76df39e2da
+      internalID: 574002723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 96
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c079780094a6974aa06b5c481232e14
+      internalID: 1565098095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 95
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e0283f08fc15d4d807cb2e0c53b7d7
+      internalID: -319014999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17110d6cffd4e342ad9ea5aa5fb5fb9
+      internalID: -355790064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9f6201f5b23374e8bc7dea4a2b9d85
+      internalID: -1607448647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2549a551b3173744a71b546b02500b4
+      internalID: -659842127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e536d6da76b768046a2af6d77245cedb
+      internalID: -1235968216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ea962fa27c28048a69ce78fcdbfd9b
+      internalID: -585777986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 94
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa3408a61985374ebc7389df78b2ed5
+      internalID: 1191133492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 96
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcd9e86568715c44a5abec38980a1e0
+      internalID: 1262026565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 95
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07709cd027ea22046a30ff4e7195a60a
+      internalID: 1664539739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12994ec8e33854c4fb011ca01c630055
+      internalID: -808508183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1acadaf281f9b740a4c2db9355f2486
+      internalID: -1059870099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 108
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf8662f17ef5c342b56987d3bc8cc40
+      internalID: 671894569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bd5133e9e1774439a8f2c785efdad8
+      internalID: 477579912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 92
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7532cb4005ad589429a849428224f067
+      internalID: -275548895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 94
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d038c98011ffc45abe1fecf2d4ca8f
+      internalID: 1446230116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 96
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706e3bccf2dd77041b3ee4133b1319e2
+      internalID: -1955277854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 95
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dcc925c9b0e744c8e7541ceb169971
+      internalID: 1766588170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95064ff21b0e738408dc419a27e56bfc
+      internalID: 1828232230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ee1c3b9dfe73542997cc7334a5e91b
+      internalID: 681464109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a49df3a7232c8468824dfc7df4d452
+      internalID: 717946762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af850cb39e75504696c4f9f4f589c4e
+      internalID: 133738892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cd636810209ec4380cedcb3fbc4035
+      internalID: 26122554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88490f5b0511404b8c4388bdbc9c00c
+      internalID: -813063558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e124308cacc869f4b864cdf6dd610684
+      internalID: 691552054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 90
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29830bdfebca5e46832abc1efa3457e
+      internalID: -1684965904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3acdb5f9ef2e2429ef57c668229522
+      internalID: 1623940749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e585851f08d0ab549bb880822c661207
+      internalID: 1900896905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c89111e5541aa14baf3c775c9493874
+      internalID: -2021237064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ddd47c28d37224db8fa00eb4628680
+      internalID: -928104881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a7e58c2dab84f4f969b7c2d1c4cab7
+      internalID: 1642463743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4220432e2aeba45a69c25f44dfd1f0
+      internalID: -303514192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa134104efb7404f8547278550979b4
+      internalID: 1185800231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837655cf7fb3ded468aa82647f781b89
+      internalID: -916792490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f9a90ff0b1a594bb626c7082320d04
+      internalID: 2058211335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2315344b84ececf44b9288adb9d3c60e
+      internalID: 1151009293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdca52c1ac0f244c9b6830aee3dca8a
+      internalID: -354642168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5ad027b8e521e47bdb32faf903ec04
+      internalID: -1224607053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84aadb2f08051b94fb083cb73caf77fe
+      internalID: -2053025784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076a6ebd2c2d5d54b8fa3a00cdc14f7f
+      internalID: -677397999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7565bf6b4c68768489f591ba5639ba06
+      internalID: -2028985126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5d9422e5eadf74e9094d275f435625
+      internalID: 1221013651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cd32cac678f14459129bd3a26e97cc
+      internalID: 411117725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214d50e5dee53b54d987bd92aafe29d9
+      internalID: 1108041764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c13d8afb4b93744a4fdc08da87563f
+      internalID: -247735896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6a8992971f9f74f89722761c1411f8
+      internalID: 16617656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9a6486aa4ab884095c55fbee33d7fd
+      internalID: 2076010679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2ef483014354640a621e2f2551d08c
+      internalID: -1958341011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e92ea33dd9fb74ba2c0cb80b27def9
+      internalID: 39376469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7900446a2ad14f04cbe96d76494c732a
+      internalID: -221462495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aaaab1d1788734db1b0ece77f507ef
+      internalID: -232132647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_138
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b8281dbc127e04b89c3db985f024ed
+      internalID: 807594697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_139
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01bb30999211974bbbd81409f3e4af1
+      internalID: 647402422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_140
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cafa9c8ce98a3a429816829c5c78a8d
+      internalID: -1884218621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_141
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0114e3fbeb0697b4089ddc9068d0addc
+      internalID: 1951375768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_142
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec22e5a55c3ac41b66d12e33dfdf7b
+      internalID: -1638092234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_143
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad7d2b5fc05f2b42ab3acbe8f18f217
+      internalID: -2097417099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_144
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b0edd60e31cb44cb2f5025e53573b1
+      internalID: -6378554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_145
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5405bb2ddc3404e9410df48bc0c0e6
+      internalID: -157280404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_146
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153be1bbae67d21488b3f2bbc3966413
+      internalID: 847253659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_147
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0ccecc474d67242b4322dedcb76e79
+      internalID: 121636706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_148
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacf56388580a814f97c64ae7ff7997e
+      internalID: 245388258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_149
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72825f62f8aba4341800e80d8f72805d
+      internalID: -673684263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52fcc3280156b1428efa3ca15d623cf
+      internalID: -1846168792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_151
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5285e81416ec5fc419b67b1b20eceae7
+      internalID: 82728671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_152
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8e6d983956b994babc222988b634a3
+      internalID: 1578699808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_153
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80240c73190a8d6438d6b54f3a3f4eb9
+      internalID: 1605544397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_154
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e415afe2e0f10ee46be46aa88d59df75
+      internalID: -1330858354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_155
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94925c0d0e9fcab40913ae3fe2a58829
+      internalID: -1975181981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_156
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6078b340a4edf42b7ce1cf4d432cf1
+      internalID: 460986743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_157
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af3c3d73c4d10b47b7a8c2f6d44235b
+      internalID: -1880455947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_158
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018258d12f6725d4790e6e9f94247790
+      internalID: -1957802624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_159
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b0b75df2f705d4a92cca9c677c1f5c
+      internalID: 1068163093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_160
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19978a651768eef49aa8511f1a0ff8cf
+      internalID: -487952592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_161
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216cef73c53d4b046ae7380297665393
+      internalID: 809472961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_162
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eff162564277c4688458882526ad09
+      internalID: 792512082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_163
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6ceca690a3fdd4fab539453c209d40
+      internalID: 1562520434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_164
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413743e78a253e74e8a76cd62844a2cb
+      internalID: 382461192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_165
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3fc863b7c44794e948ab7e8e4909af
+      internalID: 126895725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_166
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f326bc464a13147acfbdbb8ce38505
+      internalID: -1600491904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_167
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a425d0cebc438409576eeb3c2e2776
+      internalID: 1205869358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_168
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23834e1448e118b48b2e0b1e07019556
+      internalID: 230228934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_169
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff72044bfdafc624d83e90f3c388c9d4
+      internalID: 720827585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_170
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0964504c7ef521043842f1b7e5246b36
+      internalID: -1233174794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_171
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b155528b5628a24c9ecfe6c63015b14
+      internalID: -1985209323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_172
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2259812eb087e9745b585a1100c82639
+      internalID: -1298202584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_173
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8acf3c1ea9e0554fad0c22ef5c1cdf7
+      internalID: -1702607931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_174
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3795d534c3a57c84eb570caa66498c10
+      internalID: 1785268475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_175
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48affe805c4a5d24eb775bf1f66b53d8
+      internalID: 545636168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_176
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad15396fd421ca4b87dbf3783950546
+      internalID: -1397847097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_177
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a271608f8177924d83c413877dedc0b
+      internalID: -14860933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_178
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ceff3e5fa046e4ba07ca19b31dd0a9
+      internalID: -97121272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_179
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9067bd6a32b47194da4ab4b4d7d1b17e
+      internalID: 392202282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053dc0364db2d2e43bf0779406203115
+      internalID: -605408133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_181
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ff9be946ec6ed458604064c2612aa8
+      internalID: -878789565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_182
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ffd86d89c6d3243848a347122a1ebf
+      internalID: -306803595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_183
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0ab6438dddaed468494f585b23d002
+      internalID: -1872818649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_184
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759f6c5a5bfdfd448bd6df78054c30ee
+      internalID: 576995126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_185
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e51a28c556a0114d9b184899b756c5d
+      internalID: -1974481875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_186
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8975d01f697a6d14e9ae5c01ab74d8bb
+      internalID: -1334932590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_187
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146b1cf5ee26aa14391d1ffab7075fed
+      internalID: 2092020671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_188
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f812e162b31a48b0802d7ce0fba14
+      internalID: 555051556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_189
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c43d98843d460459d644b57e747e0f
+      internalID: -1778912260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_190
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852b618b09899bb49895385ef270035f
+      internalID: -1823648798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_191
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f32d55aba8697f47bf362b6ae69026e
+      internalID: 386932223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_192
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae27c46ce9011a640b55b0e233df980c
+      internalID: -2106249473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_193
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54e3b39a223f454dbdfd848a281ffbe
+      internalID: -343499289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_194
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6d70330ace88e4c9ee90715b85c86d
+      internalID: -9680359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_195
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c724e688eb05340b2ad3925f9f4541
+      internalID: -39944110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_196
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcf4f774502ce148b8ecd2c20b68427
+      internalID: 130825169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_197
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758ee62cd79458e479bfa16002436cf6
+      internalID: -1105145387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_198
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a67b59bc2d9b64eb380327a0ecc944
+      internalID: -489356623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_199
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d161ebe666a0a7488f44a7d0b4c4b65
+      internalID: -1274451526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_200
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35617e3b294722c4f9671e24b84e3a47
+      internalID: -1048676755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_201
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5fa2cd061b12141aa232ed26a7e828
+      internalID: 1600025789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_202
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09d0f5e254527d46ad9cff26977647a
+      internalID: 31176198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_203
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c76c560bc6439c42a3a43eec9de47df
+      internalID: -308449568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_204
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73226fa7ef2dc1140a88c16e88d71e10
+      internalID: -1072078123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_205
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f86e3ceffe70f4a91eb82b3eee1362
+      internalID: 772499047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_206
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50ff9e98b0039e43be6f937fac5a0ae
+      internalID: -567208348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_207
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9423b16956c9f94ba1231cd80119e5a
+      internalID: -1939062950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_208
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bac8ea0bf434374280d649f6ed7bea1
+      internalID: -2049366362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_209
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3653b41622684a479d109e686a665cd
+      internalID: -1316339908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf734c00f98a41f47bb20209c5240f03
+      internalID: -1141298313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_211
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65db2e4b7b21b6640bc468948493f018
+      internalID: 1318986089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_212
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb0f5c9f99d06842aaa7ffa4abb6887
+      internalID: 1595930330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_213
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1891b0ee50df445b3c504a3ee23726
+      internalID: 1973445185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_214
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27146c84539802f4e88747bed8d66cfc
+      internalID: 968875732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_215
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ec3f938d1fcfc499bafe3904f53b0f
+      internalID: -1926504973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_216
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab309831c56a1c644ac9b32575315d37
+      internalID: -1598002147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_217
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1d1dd4127c85a488af41e588b0433a
+      internalID: -172768708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_218
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f487096bdc18f8e4089191b04d9d9d6b
+      internalID: 1983966506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_219
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc1aa510ac25dd439a2a74b66ef4f5f
+      internalID: 983424823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_220
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155f676e2fd463648ae1fd978ec74b6a
+      internalID: -991093657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_221
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f3390e68239be4783ddaa1348d706b
+      internalID: -125500836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_222
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f738b8721fcfce246b99f9b31c661d31
+      internalID: 1978479485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_223
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82cc51ee245d6241ba9667ea432266e
+      internalID: 1536402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_224
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0c7608355da4b4f9c62faa98caff31
+      internalID: -919448194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_225
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e78e9b9a3f300449647e295bacd4f2
+      internalID: 1060986444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_226
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4ea99c9a50bb64dac381987fb04deb
+      internalID: 173681091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_227
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd01032339f74c94caa76304268f2782
+      internalID: -1426156386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_228
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cb60a9c91c363429a751cd944adecd
+      internalID: -657291203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_229
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f50b76ae6279684a8e26064fbf1f1d6
+      internalID: -1193537437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_230
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613208b6305dda54bb66496d7e43cb5d
+      internalID: 1196071101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_231
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17172ae9974cbb41aeec75c8e7df8cc
+      internalID: 267742712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_232
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb7cc48b1cd67a438ab54aa95ed6e52
+      internalID: -2003052276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_233
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca415ed11f24744aa9f7d8d93366178
+      internalID: -1911530063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_234
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca0d5b1455abff46ad7609cbd516f33
+      internalID: 310285626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_235
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83747ec786b09c049a4d8a8653e9e1ab
+      internalID: -1514555856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_236
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0709debca28e64281792d86029c878
+      internalID: 385217288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_237
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc64ae25d8e1e9847925530656ff2dd5
+      internalID: -727918648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_238
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111f01d660c528d42a66bf418ec7a4fb
+      internalID: 434908145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalTileMap-Sheet_239
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a611fb4ee80974fbdb2bc5781db7c1
+      internalID: 1019796552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FinalTileMap-Sheet_0: -933796707
+      FinalTileMap-Sheet_1: 1656862471
+      FinalTileMap-Sheet_10: 1854032673
+      FinalTileMap-Sheet_100: 477579912
+      FinalTileMap-Sheet_101: -275548895
+      FinalTileMap-Sheet_102: 1446230116
+      FinalTileMap-Sheet_103: -1955277854
+      FinalTileMap-Sheet_104: 1766588170
+      FinalTileMap-Sheet_105: 1828232230
+      FinalTileMap-Sheet_106: 681464109
+      FinalTileMap-Sheet_107: 717946762
+      FinalTileMap-Sheet_108: 133738892
+      FinalTileMap-Sheet_109: 26122554
+      FinalTileMap-Sheet_11: 425903067
+      FinalTileMap-Sheet_110: -813063558
+      FinalTileMap-Sheet_111: 691552054
+      FinalTileMap-Sheet_112: -1684965904
+      FinalTileMap-Sheet_113: 1623940749
+      FinalTileMap-Sheet_114: 1900896905
+      FinalTileMap-Sheet_115: -2021237064
+      FinalTileMap-Sheet_116: -928104881
+      FinalTileMap-Sheet_117: 1642463743
+      FinalTileMap-Sheet_118: -303514192
+      FinalTileMap-Sheet_119: 1185800231
+      FinalTileMap-Sheet_12: 277176306
+      FinalTileMap-Sheet_120: -916792490
+      FinalTileMap-Sheet_121: 2058211335
+      FinalTileMap-Sheet_122: 1151009293
+      FinalTileMap-Sheet_123: -354642168
+      FinalTileMap-Sheet_124: -1224607053
+      FinalTileMap-Sheet_125: -2053025784
+      FinalTileMap-Sheet_126: -677397999
+      FinalTileMap-Sheet_127: -2028985126
+      FinalTileMap-Sheet_128: 1221013651
+      FinalTileMap-Sheet_129: 411117725
+      FinalTileMap-Sheet_13: 1325862283
+      FinalTileMap-Sheet_130: 1108041764
+      FinalTileMap-Sheet_131: -247735896
+      FinalTileMap-Sheet_132: 16617656
+      FinalTileMap-Sheet_133: 2076010679
+      FinalTileMap-Sheet_134: -1958341011
+      FinalTileMap-Sheet_135: 39376469
+      FinalTileMap-Sheet_136: -221462495
+      FinalTileMap-Sheet_137: -232132647
+      FinalTileMap-Sheet_138: 807594697
+      FinalTileMap-Sheet_139: 647402422
+      FinalTileMap-Sheet_14: -941820297
+      FinalTileMap-Sheet_140: -1884218621
+      FinalTileMap-Sheet_141: 1951375768
+      FinalTileMap-Sheet_142: -1638092234
+      FinalTileMap-Sheet_143: -2097417099
+      FinalTileMap-Sheet_144: -6378554
+      FinalTileMap-Sheet_145: -157280404
+      FinalTileMap-Sheet_146: 847253659
+      FinalTileMap-Sheet_147: 121636706
+      FinalTileMap-Sheet_148: 245388258
+      FinalTileMap-Sheet_149: -673684263
+      FinalTileMap-Sheet_15: 2144237920
+      FinalTileMap-Sheet_150: -1846168792
+      FinalTileMap-Sheet_151: 82728671
+      FinalTileMap-Sheet_152: 1578699808
+      FinalTileMap-Sheet_153: 1605544397
+      FinalTileMap-Sheet_154: -1330858354
+      FinalTileMap-Sheet_155: -1975181981
+      FinalTileMap-Sheet_156: 460986743
+      FinalTileMap-Sheet_157: -1880455947
+      FinalTileMap-Sheet_158: -1957802624
+      FinalTileMap-Sheet_159: 1068163093
+      FinalTileMap-Sheet_16: -963781503
+      FinalTileMap-Sheet_160: -487952592
+      FinalTileMap-Sheet_161: 809472961
+      FinalTileMap-Sheet_162: 792512082
+      FinalTileMap-Sheet_163: 1562520434
+      FinalTileMap-Sheet_164: 382461192
+      FinalTileMap-Sheet_165: 126895725
+      FinalTileMap-Sheet_166: -1600491904
+      FinalTileMap-Sheet_167: 1205869358
+      FinalTileMap-Sheet_168: 230228934
+      FinalTileMap-Sheet_169: 720827585
+      FinalTileMap-Sheet_17: -1458739456
+      FinalTileMap-Sheet_170: -1233174794
+      FinalTileMap-Sheet_171: -1985209323
+      FinalTileMap-Sheet_172: -1298202584
+      FinalTileMap-Sheet_173: -1702607931
+      FinalTileMap-Sheet_174: 1785268475
+      FinalTileMap-Sheet_175: 545636168
+      FinalTileMap-Sheet_176: -1397847097
+      FinalTileMap-Sheet_177: -14860933
+      FinalTileMap-Sheet_178: -97121272
+      FinalTileMap-Sheet_179: 392202282
+      FinalTileMap-Sheet_18: 911186834
+      FinalTileMap-Sheet_180: -605408133
+      FinalTileMap-Sheet_181: -878789565
+      FinalTileMap-Sheet_182: -306803595
+      FinalTileMap-Sheet_183: -1872818649
+      FinalTileMap-Sheet_184: 576995126
+      FinalTileMap-Sheet_185: -1974481875
+      FinalTileMap-Sheet_186: -1334932590
+      FinalTileMap-Sheet_187: 2092020671
+      FinalTileMap-Sheet_188: 555051556
+      FinalTileMap-Sheet_189: -1778912260
+      FinalTileMap-Sheet_19: 1932430992
+      FinalTileMap-Sheet_190: -1823648798
+      FinalTileMap-Sheet_191: 386932223
+      FinalTileMap-Sheet_192: -2106249473
+      FinalTileMap-Sheet_193: -343499289
+      FinalTileMap-Sheet_194: -9680359
+      FinalTileMap-Sheet_195: -39944110
+      FinalTileMap-Sheet_196: 130825169
+      FinalTileMap-Sheet_197: -1105145387
+      FinalTileMap-Sheet_198: -489356623
+      FinalTileMap-Sheet_199: -1274451526
+      FinalTileMap-Sheet_2: -941996672
+      FinalTileMap-Sheet_20: 1999906580
+      FinalTileMap-Sheet_200: -1048676755
+      FinalTileMap-Sheet_201: 1600025789
+      FinalTileMap-Sheet_202: 31176198
+      FinalTileMap-Sheet_203: -308449568
+      FinalTileMap-Sheet_204: -1072078123
+      FinalTileMap-Sheet_205: 772499047
+      FinalTileMap-Sheet_206: -567208348
+      FinalTileMap-Sheet_207: -1939062950
+      FinalTileMap-Sheet_208: -2049366362
+      FinalTileMap-Sheet_209: -1316339908
+      FinalTileMap-Sheet_21: -1201658776
+      FinalTileMap-Sheet_210: -1141298313
+      FinalTileMap-Sheet_211: 1318986089
+      FinalTileMap-Sheet_212: 1595930330
+      FinalTileMap-Sheet_213: 1973445185
+      FinalTileMap-Sheet_214: 968875732
+      FinalTileMap-Sheet_215: -1926504973
+      FinalTileMap-Sheet_216: -1598002147
+      FinalTileMap-Sheet_217: -172768708
+      FinalTileMap-Sheet_218: 1983966506
+      FinalTileMap-Sheet_219: 983424823
+      FinalTileMap-Sheet_22: -949060241
+      FinalTileMap-Sheet_220: -991093657
+      FinalTileMap-Sheet_221: -125500836
+      FinalTileMap-Sheet_222: 1978479485
+      FinalTileMap-Sheet_223: 1536402
+      FinalTileMap-Sheet_224: -919448194
+      FinalTileMap-Sheet_225: 1060986444
+      FinalTileMap-Sheet_226: 173681091
+      FinalTileMap-Sheet_227: -1426156386
+      FinalTileMap-Sheet_228: -657291203
+      FinalTileMap-Sheet_229: -1193537437
+      FinalTileMap-Sheet_23: -1507605609
+      FinalTileMap-Sheet_230: 1196071101
+      FinalTileMap-Sheet_231: 267742712
+      FinalTileMap-Sheet_232: -2003052276
+      FinalTileMap-Sheet_233: -1911530063
+      FinalTileMap-Sheet_234: 310285626
+      FinalTileMap-Sheet_235: -1514555856
+      FinalTileMap-Sheet_236: 385217288
+      FinalTileMap-Sheet_237: -727918648
+      FinalTileMap-Sheet_238: 434908145
+      FinalTileMap-Sheet_239: 1019796552
+      FinalTileMap-Sheet_24: -1008981028
+      FinalTileMap-Sheet_25: 646460332
+      FinalTileMap-Sheet_26: -1382286862
+      FinalTileMap-Sheet_27: -248747237
+      FinalTileMap-Sheet_28: 2028495239
+      FinalTileMap-Sheet_29: -1850110764
+      FinalTileMap-Sheet_3: -2052454407
+      FinalTileMap-Sheet_30: -1645608414
+      FinalTileMap-Sheet_31: 2052303140
+      FinalTileMap-Sheet_32: -1103438990
+      FinalTileMap-Sheet_33: 2087358308
+      FinalTileMap-Sheet_34: -1821569203
+      FinalTileMap-Sheet_35: -1733259278
+      FinalTileMap-Sheet_36: -72469120
+      FinalTileMap-Sheet_37: -647148328
+      FinalTileMap-Sheet_38: -319645046
+      FinalTileMap-Sheet_39: 1185743743
+      FinalTileMap-Sheet_4: -1543957004
+      FinalTileMap-Sheet_40: -1150900931
+      FinalTileMap-Sheet_41: 1585405964
+      FinalTileMap-Sheet_42: -506129539
+      FinalTileMap-Sheet_43: -1013861307
+      FinalTileMap-Sheet_44: 2110253448
+      FinalTileMap-Sheet_45: -1861769180
+      FinalTileMap-Sheet_46: 1221577988
+      FinalTileMap-Sheet_47: -1946203281
+      FinalTileMap-Sheet_48: -1009710114
+      FinalTileMap-Sheet_49: -876494517
+      FinalTileMap-Sheet_5: 946689767
+      FinalTileMap-Sheet_50: 1401955167
+      FinalTileMap-Sheet_51: 1106567071
+      FinalTileMap-Sheet_52: 1794399737
+      FinalTileMap-Sheet_53: -116742249
+      FinalTileMap-Sheet_54: -241782075
+      FinalTileMap-Sheet_55: 582855117
+      FinalTileMap-Sheet_56: -1746735250
+      FinalTileMap-Sheet_57: 1645857606
+      FinalTileMap-Sheet_58: 2035701053
+      FinalTileMap-Sheet_59: 257188982
+      FinalTileMap-Sheet_6: -931603691
+      FinalTileMap-Sheet_60: 172160358
+      FinalTileMap-Sheet_61: 814838682
+      FinalTileMap-Sheet_62: 1671820780
+      FinalTileMap-Sheet_63: 1674982399
+      FinalTileMap-Sheet_64: -28629546
+      FinalTileMap-Sheet_65: 139917117
+      FinalTileMap-Sheet_66: 249506745
+      FinalTileMap-Sheet_67: 1394427068
+      FinalTileMap-Sheet_68: 832969391
+      FinalTileMap-Sheet_69: 986132002
+      FinalTileMap-Sheet_7: 1287282968
+      FinalTileMap-Sheet_70: 1779796163
+      FinalTileMap-Sheet_71: 1509161601
+      FinalTileMap-Sheet_72: -1932270607
+      FinalTileMap-Sheet_73: 1469752898
+      FinalTileMap-Sheet_74: 376358435
+      FinalTileMap-Sheet_75: 114734418
+      FinalTileMap-Sheet_76: 267028297
+      FinalTileMap-Sheet_77: -1431786527
+      FinalTileMap-Sheet_78: -1475504658
+      FinalTileMap-Sheet_79: -422641826
+      FinalTileMap-Sheet_8: -638723139
+      FinalTileMap-Sheet_80: -536961535
+      FinalTileMap-Sheet_81: 1581502096
+      FinalTileMap-Sheet_82: 403481486
+      FinalTileMap-Sheet_83: -1158402479
+      FinalTileMap-Sheet_84: 1533403455
+      FinalTileMap-Sheet_85: -1469816727
+      FinalTileMap-Sheet_86: 574002723
+      FinalTileMap-Sheet_87: 1565098095
+      FinalTileMap-Sheet_88: -319014999
+      FinalTileMap-Sheet_89: -355790064
+      FinalTileMap-Sheet_9: 1116534461
+      FinalTileMap-Sheet_90: -1607448647
+      FinalTileMap-Sheet_91: -659842127
+      FinalTileMap-Sheet_92: -1235968216
+      FinalTileMap-Sheet_93: -585777986
+      FinalTileMap-Sheet_94: 1191133492
+      FinalTileMap-Sheet_95: 1262026565
+      FinalTileMap-Sheet_96: 1664539739
+      FinalTileMap-Sheet_97: -808508183
+      FinalTileMap-Sheet_98: -1059870099
+      FinalTileMap-Sheet_99: 671894569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
