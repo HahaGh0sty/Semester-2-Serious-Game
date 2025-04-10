@@ -98,8 +98,10 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
         
-       
+     }
 
+        public void NewMapMake()
+        {
         if(generatedValue == 0)
         {
          GenerateValueFromTime();
@@ -108,8 +110,9 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         }
 
         GenerateMap();
+        }
         
-    }
+    
           public void GenerateValueFromTime()
         {
         DateTime now = DateTime.Now;
@@ -122,7 +125,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
 
       public void LoadData(GameData data)
     {
-      this.generatedValue = data.generatedvalue;
+      this.generatedValue = data.generatedValue;
     }
 
    public void SaveData(ref GameData data)
@@ -132,13 +135,17 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         data = new GameData(this.generatedValue); // Or however you want to initialize it
     }
 
-    data.generatedvalue = this.generatedValue;
+    data.generatedValue = this.generatedValue;
 }
 
 
 
-   void GenerateMap()
+   public void GenerateMap()
 {
+    if(generatedValue == 0)
+    {
+        NewMapMake();
+    }
     UnityEngine.Random.InitState(this.generatedValue); // Set the seed here
 
     tilemap.ClearAllTiles();

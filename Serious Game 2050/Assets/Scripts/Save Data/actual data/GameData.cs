@@ -10,8 +10,9 @@ public class GameData
     public int energy;
     public int water;
     public int vervuiling;
-    public int generatedvalue;
+    public int generatedValue;
     public List<Vector3> buildingPositions;
+    
 
     // Constructor - initializes values when a new game is started
     public GameData(int generatedValue)
@@ -22,7 +23,7 @@ public class GameData
         this.energy = 0;
         this.water = 0;
         this.vervuiling = 0;
-        this.generatedvalue = generatedValue;
+        this.generatedValue = 0;
         this.buildingPositions = new List<Vector3>(); // List to store building positions
     }
 

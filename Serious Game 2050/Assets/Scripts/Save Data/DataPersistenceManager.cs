@@ -39,7 +39,8 @@ public class DataPersistenceManager : MonoBehaviour
     public void NewGame()
     {
         this.gameData = new GameData(mapgenerator.generatedValue);
-        mapgenerator.GenerateValueFromTime();
+        mapgenerator.NewMapMake();
+        SaveGame();
     }
 
     // Saves game data and updates building positions in the scene
@@ -64,6 +65,10 @@ public class DataPersistenceManager : MonoBehaviour
         {
             Debug.Log("No data found, starting a new game.");
             NewGame();
+        }
+        else
+        {
+            mapgenerator.GenerateMap();
         }
 
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)

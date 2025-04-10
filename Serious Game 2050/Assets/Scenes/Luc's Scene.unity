@@ -414,6 +414,7 @@ MonoBehaviour:
   maxWaterClusterSize: 15
   minForestClusterSize: 8
   maxForestClusterSize: 20
+  generatedValue: 0
 --- !u!1839735485 &297204661
 Tilemap:
   m_ObjectHideFlags: 0
@@ -585,6 +586,63 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &458900858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 433
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 714
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904336062552348833, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760639642839705653, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
+      propertyPath: m_Name
+      value: Square (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6517b8e4fab1f4d7eb4408ff02659ee7, type: 3}
 --- !u!1 &521067288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,7 +1879,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1207951889}
   - component: {fileID: 1207951888}
-  - component: {fileID: 1207951887}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1829,18 +1886,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1207951887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207951886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9376d4830e941be408c1e02b184b3248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1207951888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1922,7 +1967,7 @@ GameObject:
   - component: {fileID: 1211271281}
   m_Layer: 0
   m_Name: Camera v2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2029,7 +2074,7 @@ GameObject:
   - component: {fileID: 1281626681}
   - component: {fileID: 1281626680}
   m_Layer: 0
-  m_Name: DataPersistenceHandler
+  m_Name: DataPersistenceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2047,8 +2092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c53ab44537964fa6ac8bc42aa9f99a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: 
-  mapgeneratorV2: {fileID: 0}
+  fileName: a
+  mapgenerator: {fileID: 297204660}
 --- !u!4 &1281626681
 Transform:
   m_ObjectHideFlags: 0
@@ -3210,7 +3255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &2072845790
 Grid:
   m_ObjectHideFlags: 0
@@ -3468,3 +3513,4 @@ SceneRoots:
   - {fileID: 1207951889}
   - {fileID: 959543419}
   - {fileID: 1281626681}
+  - {fileID: 458900858}
