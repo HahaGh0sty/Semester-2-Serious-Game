@@ -10,6 +10,7 @@ public class EnterGridAccess : MonoBehaviour
     [SerializeField] bool GridEnabled = false;
     [SerializeField] List<GameObject> Grids = new List<GameObject>();
     private object unityGameObjects;
+    public Button btn;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class EnterGridAccess : MonoBehaviour
         if (GridEnabled == false)
         {
             GridEnabled = true;
-           GameObject g = GameObject.FindGameObjectWithTag("GridSpace");
+           GameObject grid = GameObject.FindGameObjectWithTag("GridSpace");
 
         }
         else if (GridEnabled == true)

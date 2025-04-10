@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: f54d1bd14bd3ca042bd867b519fee8cc
+=======
 <<<<<<<< HEAD:Serious Game 2050/Assets/TextMesh Pro.meta
 guid: f54d1bd14bd3ca042bd867b519fee8cc
 ========
 guid: eb839037cd190f64b8356cb12d068b40
 >>>>>>>> Randomizing-Tiles:Serious Game 2050/Assets/Sprites - Copy.meta
+>>>>>>> Randomizing-Tiles
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

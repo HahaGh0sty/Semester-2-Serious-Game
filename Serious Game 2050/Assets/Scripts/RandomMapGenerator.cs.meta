@@ -1,9 +1,35 @@
 fileFormatVersion: 2
-guid: c91b2f124923e5f44a7bfcdc4a350657
+guid: 0e66d1db9c05344178964dd1463faca3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tilemap: {instanceID: 0}
+  - waterTile: {instanceID: 0}
+  - grassTile: {instanceID: 0}
+  - grassTile1: {instanceID: 0}
+  - grassTile2: {instanceID: 0}
+  - grassTile3: {instanceID: 0}
+  - grassTile4: {instanceID: 0}
+  - grassTile5: {instanceID: 0}
+  - forestTile: {instanceID: 0}
+  - grasswaternorthTile: {instanceID: 0}
+  - grasswatereastTile: {instanceID: 0}
+  - grasswatersouthTile: {instanceID: 0}
+  - grasswaterwestTile: {instanceID: 0}
+  - grasswatercornerNWTile: {instanceID: 0}
+  - grasswatercornerNETile: {instanceID: 0}
+  - grasswatercornerSWTile: {instanceID: 0}
+  - grasswatercornerSETile: {instanceID: 0}
+  - grasswatertouchNETile: {instanceID: 0}
+  - grasswatertouchNWTile: {instanceID: 0}
+  - grasswatertouchSETile: {instanceID: 0}
+  - grasswatertouchSWTile: {instanceID: 0}
+  - grasswaterclosenorth: {instanceID: 0}
+  - grasswatercloseeast: {instanceID: 0}
+  - grasswaterclosesouth: {instanceID: 0}
+  - grasswaterclosewest: {instanceID: 0}
+  - grasswaterisland: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
