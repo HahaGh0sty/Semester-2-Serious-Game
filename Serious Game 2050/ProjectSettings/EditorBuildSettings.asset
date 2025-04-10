@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/First Screen.unity
+    guid: d3059fb522ab8a84dbd6eb7b3cf47cf7
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: fb10995b99a1d9945a712932f0153341
   - enabled: 1
     path: Assets/Scenes/Luc's Scene.unity
     guid: be5b221d4b335144989f432b40bffac9
+  - enabled: 1
+    path: Assets/Scenes/Game Loader.unity
+    guid: 32ad36cfb54537448923baf6ea9efe97
   m_configObjects: {}
