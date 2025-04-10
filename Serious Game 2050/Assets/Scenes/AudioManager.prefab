@@ -50,7 +50,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9a4a3ec6d0c1f6a45adf8db4f6d18c7f, type: 3}
   - {fileID: 8300000, guid: 4c95a91572a35b342b93c28003cb054e, type: 3}
   - {fileID: 8300000, guid: 1fc1de142c2b9404ea42287269a93148, type: 3}
-  silenceBetweenSongs: 5
+  - {fileID: 8300000, guid: 2dd87b683df4c3646b3e23773a17338a, type: 3}
+  - {fileID: 8300000, guid: 6732bc0e6c698f84ab592c332f0cc299, type: 3}
+  - {fileID: 8300000, guid: 6d4ebda1692137b4da3587950b2e9124, type: 3}
+  - {fileID: 8300000, guid: 3344f593a0c437e4096dd5782f48b837, type: 3}
+  silenceBetweenSongs: 3
 --- !u!82 &1793851115182748998
 AudioSource:
   m_ObjectHideFlags: 0

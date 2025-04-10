@@ -118,6 +118,8 @@ public class NewMapGenerator : MonoBehaviour
 
         PlaceWaterClusters();
 
+        ExpandWaterByNeighborRule();
+
         PlaceGrassWaterBorders();
 
         PlaceForestClusters();
@@ -216,26 +218,34 @@ public class NewMapGenerator : MonoBehaviour
         new Vector2Int(1, 1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(-1, -1)
         };
 
-        HashSet<Vector2Int> checkedPositions = new HashSet<Vector2Int>();
+        HashSet<Vector2Int> candidatePositions = new HashSet<Vector2Int>();
 
+        // Step 1: Collect unique candidate tiles (grass tiles next to any water)
         foreach (Vector2Int waterPos in waterPositions)
         {
             foreach (Vector2Int dir in directions)
             {
                 Vector2Int neighborPos = waterPos + dir;
-
-                if (!checkedPositions.Contains(neighborPos) && neighborPos.x >= 0 && neighborPos.x < width && neighborPos.y >= 0 && neighborPos.y < height)
+                if (neighborPos.x >= 0 && neighborPos.x < width && neighborPos.y >= 0 && neighborPos.y < height)
                 {
-                    if (System.Array.Exists(allgrassTiles, tile => tile == mapData[neighborPos.x, neighborPos.y]))
+                    TileBase neighborTile = mapData[neighborPos.x, neighborPos.y];
+                    if (System.Array.Exists(allgrassTiles, tile => tile == neighborTile))
                     {
-                        mapData[neighborPos.x, neighborPos.y] = GetCorrectGrassWaterTile(neighborPos.x, neighborPos.y);
+                        candidatePositions.Add(neighborPos);
                     }
-                    checkedPositions.Add(neighborPos);
                 }
             }
         }
+
+        // Step 2: Evaluate and assign the correct border tile based on final map
+        foreach (Vector2Int pos in candidatePositions)
+        {
+            mapData[pos.x, pos.y] = GetCorrectGrassWaterTile(pos.x, pos.y);
+        }
+
         RefreshTilemap();
     }
+
     TileBase GetCorrectGrassWaterTile(int x, int y)
     {
         bool IsWaterLike(TileBase tile) => tile != null && tile == waterTile;
@@ -320,6 +330,49 @@ public class NewMapGenerator : MonoBehaviour
             }
             return waterTile;
         }
+    }
+    void ExpandWaterByNeighborRule()
+    {
+        bool changed;
+
+        do
+        {
+            changed = false;
+
+            List<Vector2Int> toConvert = new List<Vector2Int>();
+
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    Vector2Int pos = new Vector2Int(x, y);
+                    TileBase currentTile = mapData[x, y];
+
+                    if (System.Array.Exists(allgrassTiles, tile => tile == currentTile))
+                    {
+                        int waterCount = 0;
+                        if (x > 0 && mapData[x - 1, y] == waterTile) waterCount++;
+                        if (x < width - 1 && mapData[x + 1, y] == waterTile) waterCount++;
+                        if (y > 0 && mapData[x, y - 1] == waterTile) waterCount++;
+                        if (y < height - 1 && mapData[x, y + 1] == waterTile) waterCount++;
+
+                        if (waterCount >= 3)
+                        {
+                            toConvert.Add(pos);
+                        }
+                    }
+                }
+            }
+
+            // Convert all identified grass tiles to water and record them
+            foreach (Vector2Int pos in toConvert)
+            {
+                mapData[pos.x, pos.y] = waterTile;
+                waterPositions.Add(pos);
+                changed = true;
+            }
+
+        } while (changed); // Keep running until no changes occur
     }
 
     //---------------------------------FOREST------------------------------------------
