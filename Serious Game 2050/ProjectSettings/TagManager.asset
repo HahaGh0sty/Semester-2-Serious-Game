@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GridSpace
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Grass
+    uniqueID: 3232526249
+    locked: 0
+  - name: Water
+    uniqueID: 2801068985
+    locked: 0
+  - name: On Grass
+    uniqueID: 1547273703
+    locked: 0
+  - name: Air
+    uniqueID: 1834575955
+    locked: 0
+  - name: Grid
+    uniqueID: 2816687753
     locked: 0
