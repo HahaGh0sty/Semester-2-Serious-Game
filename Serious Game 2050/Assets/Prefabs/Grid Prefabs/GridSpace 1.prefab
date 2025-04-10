@@ -206,6 +206,7 @@ MonoBehaviour:
   ThisGrid: {fileID: 6392127449164957119}
   SelectedMode: 0
   Selected: 0
+  HoveringOver: 0
   Empty: 0
   s_MouseOverColor: {r: 0, g: 0, b: 0, a: 0}
   s_MouseOverColor2: {r: 0, g: 0, b: 0, a: 0}
