@@ -7,35 +7,28 @@ using UnityEngine.UI;
 public class EnterGridAccess : MonoBehaviour
 {
     [SerializeField] public Button GridAccessButton;
-    [SerializeField] bool GridEnabled = false;
+    [SerializeField] bool BuildModeOn = false;
     [SerializeField] List<GameObject> Grids = new List<GameObject>();
     private object unityGameObjects;
-    public Button btn;
 
     // Start is called before the first frame update
     void Start()
     {
-        Button btn = GridAccessButton.GetComponent<Button>();
-        btn.onClick.AddListener(GridAccess);
+        GridAccessButton.onClick.AddListener(ButtonPressed);
     }
 
-    // Update is called once per frame
-    private void OnMouseDown()
-    {
-    }
-
-    void GridAccess()
+    void ButtonPressed()
     {
         Debug.Log("Button Has been pressed");
-        if (GridEnabled == false)
+        if (BuildModeOn == false)
         {
-            GridEnabled = true;
-           GameObject grid = GameObject.FindGameObjectWithTag("GridSpace");
+            BuildModeOn = true;
+           GameObject g = GameObject.FindGameObjectWithTag("GridSpace");
 
         }
-        else if (GridEnabled == true)
+        else if (BuildModeOn == true)
         {
-            GridEnabled = false;
+            BuildModeOn = false;
         }
     }
 }
