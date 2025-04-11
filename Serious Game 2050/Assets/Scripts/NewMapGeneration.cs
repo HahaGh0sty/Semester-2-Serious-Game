@@ -217,9 +217,11 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
                     placedClusters.Add(newClusterPos);
                     placed = true;
                 }
+
                 attempts--;
             }
         }
+
         RefreshTilemap();
     }
     void RefreshTilemap()
@@ -372,6 +374,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
             }
             return waterTile;
         }
+
     }
     void ExpandWaterByNeighborRule()
     {
@@ -551,6 +554,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         }
         mapData = newMapData;
     }
+
 
     int CountNeighbors(int x, int y, TileBase targetTile)
     {
