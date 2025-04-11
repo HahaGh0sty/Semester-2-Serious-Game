@@ -609,33 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 254864469}
-  allgrassTiles:
-  - {fileID: 11400000, guid: c61456f4e3e4cba4f8b31aab31a48816, type: 2}
-  allwaterTiles:
-  - {fileID: 11400000, guid: e2cc08b8cfcd5a0428ec2ff10c499e08, type: 2}
-  allforestTiles:
-  - {fileID: 11400000, guid: 3dcb9f0e9901acd4a822ef0416fa4b7f, type: 2}
-  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
-  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
-  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
-  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
-  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
-  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
-  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
-  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
-  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
-  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
-  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
-  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
-  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
-  width: 50
-  height: 50
-  initialWaterChance: 0.25
-  initialForestChance: 0.25
-  smoothingIterations: 4
-  waterClusterSize: 4
-  forestClusterSize: 4
 --- !u!483693784 &254864468
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -833,28 +806,29 @@ MonoBehaviour:
   grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
   grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
   grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
-  grasswaterdoubleNorthSE: {fileID: 0}
-  grasswaterdoubleNorthSW: {fileID: 0}
-  grasswaterdoubleSouthNE: {fileID: 0}
-  grasswaterdoubleSouthNW: {fileID: 0}
-  grasswaterdoubleEastNW: {fileID: 0}
-  grasswaterdoubleEastSW: {fileID: 0}
-  grasswaterdoubleWestNE: {fileID: 0}
-  grasswaterdoubleWestSE: {fileID: 0}
+  grasswaterdoubleNorthSE: {fileID: 11400000, guid: d30e045951d36e54eb5dbc884cdba691, type: 2}
+  grasswaterdoubleNorthSW: {fileID: 11400000, guid: 8eb12f30bb4a13449a6c81d8a571bedb, type: 2}
+  grasswaterdoubleSouthNE: {fileID: 11400000, guid: b65bb34c9e2c9224881c79b0fa9ee8f1, type: 2}
+  grasswaterdoubleSouthNW: {fileID: 11400000, guid: c62c3c6d1220a1340abb2a962ffea430, type: 2}
+  grasswaterdoubleEastNW: {fileID: 11400000, guid: 4f4edc3d6ba050046b489df83ce4bb8a, type: 2}
+  grasswaterdoubleEastSW: {fileID: 11400000, guid: a3d3d41c0d6886e438d41473bb2c37e6, type: 2}
+  grasswaterdoubleWestNE: {fileID: 11400000, guid: 4f2fd91b67eb69149a2c9dd9cee61450, type: 2}
+  grasswaterdoubleWestSE: {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
   grasswaterdoubleNESW: {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
   grasswaterdoubleNWSE: {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
-  grasswatercornertouchNETile: {fileID: 0}
-  grasswatercornertouchNWTile: {fileID: 0}
-  grasswatercornertouchSETile: {fileID: 0}
-  grasswatercornertouchSWTile: {fileID: 0}
+  grasswatercornertouchNETile: {fileID: 11400000, guid: 5ab74d99e72211e488e5dd7def8d4ebd, type: 2}
+  grasswatercornertouchNWTile: {fileID: 11400000, guid: fa56f78b6908d6b4b8989ac07fff4b5f, type: 2}
+  grasswatercornertouchSETile: {fileID: 11400000, guid: 4739892b16bbcec4f86209e6056f42cd, type: 2}
+  grasswatercornertouchSWTile: {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   airtile: {fileID: 0}
-  width: 50
-  height: 50
+  width: 100
+  height: 100
   minWaterClusterSize: 5
   maxWaterClusterSize: 15
   minForestClusterSize: 8
   maxForestClusterSize: 20
+  generatedValue: 0
 --- !u!1839735485 &297204661
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1026,6 +1000,156 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &324143228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324143229}
+  - component: {fileID: 324143232}
+  - component: {fileID: 324143231}
+  - component: {fileID: 324143230}
+  m_Layer: 5
+  m_Name: Resume Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &324143229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324143228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770592394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.26391602, y: 367}
+  m_SizeDelta: {x: -1565.0903, y: -986.8154}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &324143230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324143228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
+--- !u!114 &324143231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324143228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: PAUSED
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &324143232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324143228}
+  m_CullTransparentMesh: 1
 --- !u!1001 &344064722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1623,19 +1747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10842b9ff650f0f42acc5f4ed2e649e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
-  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
-  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
-  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
-  gridSize: 10
-  mainCamera: {fileID: 872144681}
 --- !u!1 &693515016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,19 +2013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aacaf35c7626974e8ce54608c5b1f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  - {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  - {fileID: 7221210413464026429, guid: f10195687a932c44cafa20adaa5b7ae1, type: 3}
-  - {fileID: 3975768967192068692, guid: aa20d87262616764880df5621eb1f13b, type: 3}
-  - {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  specialTile: {fileID: 5616800474493439318, guid: 5200aebf17bd3e445a461e688caa1dd0, type: 3}
-  borderTile: {fileID: 9010236440714520412, guid: b15bcbe3cedf765489389396aa6bea64, type: 3}
-  waterTile: {fileID: 8361778105422017747, guid: 3199dc8a684623a4fb4de55fe00ef9e5, type: 3}
-  grassTile: {fileID: 8011847013666923729, guid: f18ef3f917228794d9d4652c18b3f304, type: 3}
-  separatingTile: {fileID: 6525154514620115005, guid: 7c42e5cf11313fd439e44c8d0fcf11cd, type: 3}
-  gridSize: 10
-  mainCamera: {fileID: 872144681}
 --- !u!4 &771626839
 Transform:
   m_ObjectHideFlags: 0
@@ -2040,156 +2138,6 @@ MonoBehaviour:
   minZoom: 2
   maxZoom: 1000
   smoothTime: 0.02
---- !u!1 &879385463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 879385464}
-  - component: {fileID: 879385467}
-  - component: {fileID: 879385466}
-  - component: {fileID: 879385465}
-  m_Layer: 5
-  m_Name: Paused Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &879385464
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879385463}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1770592394}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 215}
-  m_SizeDelta: {x: -2205.0903, y: -1346.8154}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &879385465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879385463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 4, y: -4}
-  m_UseGraphicAlpha: 1
---- !u!114 &879385466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879385463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: PAUSED
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &879385467
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879385463}
-  m_CullTransparentMesh: 1
 --- !u!1 &941787626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,30 +2542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1114197066}
-  allgrassTiles: []
-  allwaterTiles: []
-  allforestTiles: []
-  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
-  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
-  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
-  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
-  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
-  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
-  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
-  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
-  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
-  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
-  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
-  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
-  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
-  width: 50
-  height: 50
-  initialWaterChance: 0.25
-  initialForestChance: 0.25
-  smoothingIterations: 4
-  waterClusterSize: 4
-  forestClusterSize: 4
 --- !u!483693784 &1114197065
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2808,7 +2732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1158663412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2980,9 +2904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9376d4830e941be408c1e02b184b3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisObject: {fileID: 0}
-  GildedBanana: 0
-  energy: 0
 --- !u!212 &1207951888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3196,6 +3117,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1430799605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430799607}
+  - component: {fileID: 1430799606}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1430799606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430799605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c53ab44537964fa6ac8bc42aa9f99a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ah
+  mapgenerator: {fileID: 297204660}
+--- !u!4 &1430799607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430799605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 885.1255, y: 531.7208, z: 5.136988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,8 +3785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
-  gridWidth: 50
-  gridHeight: 50
+  gridWidth: 100
+  gridHeight: 100
 --- !u!114 &1624739870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,7 +4035,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 236133769}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.13711494
+  m_Size: 0.24979354
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4142,7 +4109,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 879385464}
+  - {fileID: 324143229}
   - {fileID: 745718177}
   - {fileID: 521067289}
   - {fileID: 1504335943}
@@ -4451,7 +4418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bf41cab86bbd6428a4ddf09f012129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseHeldDown: 0
 --- !u!4 &1917029210
 Transform:
   m_ObjectHideFlags: 0
@@ -4632,30 +4598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91b2f124923e5f44a7bfcdc4a350657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 2007247137}
-  allgrassTiles: []
-  allwaterTiles: []
-  allforestTiles: []
-  grasswaternorthTile: {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
-  grasswatereastTile: {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
-  grasswatersouthTile: {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
-  grasswaterwestTile: {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
-  grasswatercornerNWTile: {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
-  grasswatercornerNETile: {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
-  grasswatercornerSWTile: {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
-  grasswatercornerSETile: {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
-  grasswatertouchNETile: {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
-  grasswatertouchNWTile: {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
-  grasswatertouchSETile: {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
-  grasswatertouchSWTile: {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
-  grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
-  width: 50
-  height: 50
-  initialWaterChance: 0.25
-  initialForestChance: 0.25
-  smoothingIterations: 4
-  waterClusterSize: 4
-  forestClusterSize: 4
 --- !u!483693784 &2007247136
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5352,3 +5294,4 @@ SceneRoots:
   - {fileID: 1207951889}
   - {fileID: 959543419}
   - {fileID: 1917029210}
+  - {fileID: 1430799607}

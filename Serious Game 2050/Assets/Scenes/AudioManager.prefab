@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6809666651643562733}
-  - component: {fileID: 8536157601780526231}
   - component: {fileID: 1793851115182748998}
+  - component: {fileID: 6312633567253887743}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -33,28 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8536157601780526231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4860771534702402705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3154c779512953a49b49d185cb20481f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Music: {fileID: 1793851115182748998}
-  Songs:
-  - {fileID: 8300000, guid: 9a4a3ec6d0c1f6a45adf8db4f6d18c7f, type: 3}
-  - {fileID: 8300000, guid: 4c95a91572a35b342b93c28003cb054e, type: 3}
-  - {fileID: 8300000, guid: 1fc1de142c2b9404ea42287269a93148, type: 3}
-  - {fileID: 8300000, guid: 2dd87b683df4c3646b3e23773a17338a, type: 3}
-  - {fileID: 8300000, guid: 6732bc0e6c698f84ab592c332f0cc299, type: 3}
-  - {fileID: 8300000, guid: 6d4ebda1692137b4da3587950b2e9124, type: 3}
-  - {fileID: 8300000, guid: 3344f593a0c437e4096dd5782f48b837, type: 3}
-  silenceBetweenSongs: 3
 --- !u!82 &1793851115182748998
 AudioSource:
   m_ObjectHideFlags: 0
@@ -151,3 +129,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6312633567253887743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860771534702402705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11e022b71b35cc4e86f39ebf5d04156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Music: {fileID: 1793851115182748998}
+  Songs:
+  - {fileID: 8300000, guid: 9a4a3ec6d0c1f6a45adf8db4f6d18c7f, type: 3}
+  - {fileID: 8300000, guid: 2dd87b683df4c3646b3e23773a17338a, type: 3}
+  - {fileID: 8300000, guid: 6d4ebda1692137b4da3587950b2e9124, type: 3}
+  - {fileID: 8300000, guid: 3344f593a0c437e4096dd5782f48b837, type: 3}
+  - {fileID: 8300000, guid: 6732bc0e6c698f84ab592c332f0cc299, type: 3}
+  silenceBetweenSongs: 2
