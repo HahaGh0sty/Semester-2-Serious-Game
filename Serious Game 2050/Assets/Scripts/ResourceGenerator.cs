@@ -9,7 +9,11 @@ public class ResourceGenerator : MonoBehaviour
    public int EnergyGet;
    public int WoodGet;
    public int StoneGet;
-   public int WaterGet;
+   public int VisGet;
+   public int OlieGet;
+   public int RuweOlieGet;
+   public int GraanGet;
+   public int coalGet;
    public int VervuilingGet;
 
 
@@ -37,7 +41,10 @@ public class ResourceGenerator : MonoBehaviour
             resourceManager.energy += this.EnergyGet;
             resourceManager.wood += this.WoodGet;
             resourceManager.stone += this.StoneGet;
-            resourceManager.water += this.WaterGet;
+            resourceManager.vis += this.VisGet;
+            resourceManager.coal += this.coalGet;
+            resourceManager.Olie += this.OlieGet;
+            resourceManager.RuweOlie += this.RuweOlieGet;
             resourceManager.vervuiling += this.VervuilingGet;
         }
     }

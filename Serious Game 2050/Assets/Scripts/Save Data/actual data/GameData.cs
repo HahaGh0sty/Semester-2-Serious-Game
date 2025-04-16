@@ -6,12 +6,17 @@ public class GameData
 {
     public int wood;
     public int stone;
+    public int Graan;
     public int energy;
-    public int water;
     public int vervuiling;
     public int GildedBanana;
     public int generatedValue;
+    public int RuweOlie;
+    public int Olie;
+    public int vis;
+    public int coal;
     public List<Vector3> buildingPositions;
+    
     
 
     // Constructor - initializes values when a new game is started
@@ -19,11 +24,15 @@ public class GameData
     {
         this.wood = 0;
         this.stone = 0;
+        this.Graan = 0;
         this.energy = 0;
-        this.water = 0;
         this.vervuiling = 0;
         this.GildedBanana = 0;
         this.generatedValue = 0;
+        this.RuweOlie = 0;
+        this.Olie = 0;
+        this.vis = 0;
+        this.coal = 0;
         this.buildingPositions = new List<Vector3>(); // List to store building positions
     }
 
