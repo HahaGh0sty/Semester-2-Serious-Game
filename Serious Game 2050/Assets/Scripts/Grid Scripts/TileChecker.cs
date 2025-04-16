@@ -104,7 +104,7 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = false;
             s_Renderer.material.color = s_IsGrassTileColor;
             s_IsCurrentOriginalColor = s_IsGrassTileColor;
-            Debug.Log("Grass Tile detected on " + transform.name + "!");
+            //Debug.Log("Grass Tile detected on " + transform.name + "!");
         }
         else if (waterTiles.Contains(tile))
         {
@@ -113,7 +113,7 @@ public class TileChecker : MonoBehaviour
             tileMapForestActive = false;
             s_Renderer.material.color = s_IsWaterTileColor;
             s_IsCurrentOriginalColor = s_IsWaterTileColor;
-            Debug.Log("Water Tile detected on " + transform.name + "!");
+            //Debug.Log("Water Tile detected on " + transform.name + "!");
         }
         else if (forestTiles.Contains(tile))
         {
@@ -122,11 +122,11 @@ public class TileChecker : MonoBehaviour
             tileMapWaterActive = false;
             s_Renderer.material.color = s_IsForestTileColor;
             s_IsCurrentOriginalColor = s_IsForestTileColor;
-            Debug.Log("Forest Tile detected on " + transform.name + "!");
+            //Debug.Log("Forest Tile detected on " + transform.name + "!");
         }
         else if (buildingTiles.Contains(tile))
         {
-
+            return;
         }
     }
 
@@ -171,6 +171,7 @@ public class TileChecker : MonoBehaviour
     {
         if (IsMouseOverUI())
         {
+            HoveringOver = false;
             return;
         }
        
@@ -183,10 +184,6 @@ public class TileChecker : MonoBehaviour
     }
     private void HoverLeaveRenderer()
     {
-        if (IsMouseOverUI())
-        {
-            return;
-        }
         HoveringOver = false;
 
         if (Selected == false)
