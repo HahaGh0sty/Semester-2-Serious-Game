@@ -6,7 +6,6 @@ using System.Collections;
 public class SplashScreenLoader : MonoBehaviour
 {
     [SerializeField] float waitBeforeAllowingInput = 9f;
-    [SerializeField] string sceneToLoad = "Main Menu";
     [SerializeField] GameObject pressAnyKeyText;
     [SerializeField] Image fadeOverlay;
     [SerializeField] float fadeDuration = 1f;

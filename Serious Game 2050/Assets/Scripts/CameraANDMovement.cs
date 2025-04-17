@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.U2D; // Required for PixelPerfectCamera
+using UnityEngine.U2D;
 
 [RequireComponent(typeof(Camera))]
 [RequireComponent(typeof(PixelPerfectCamera))]
@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public float moveSpeed = 20f;
     public float zoomSpeed = 4f;
     public float minZoom = 1f;
-    public float maxZoom = 1000f;
+    public float maxZoom = 100f;
     public float smoothTime = 0.01f;
 
     private Vector3 velocity = Vector3.zero;
@@ -21,17 +21,13 @@ public class CameraController : MonoBehaviour
     {
         mainCamera = GetComponent<Camera>();
         ppc = GetComponent<PixelPerfectCamera>();
+        if (ppc != null) ppc.upscaleRT = false; // Allow zoom
     }
 
     void Update()
     {
-        if (Time.timeScale == 0) return;
-
         float currentMoveSpeed = mainCamera.orthographicSize < 4f ? 7f : moveSpeed;
-        if (isSpeedDoubled)
-        {
-            currentMoveSpeed *= 3f;
-        }
+        if (isSpeedDoubled) currentMoveSpeed *= 3f;
 
         Vector3 targetPosition = transform.position;
 
@@ -41,11 +37,10 @@ public class CameraController : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) targetPosition.x -= currentMoveSpeed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D)) targetPosition.x += currentMoveSpeed * Time.deltaTime;
 
-        // Right-click drag movement
+        // Right-click drag
         if (Input.GetMouseButtonDown(1))
-        {
             lastMousePosition = Input.mousePosition;
-        }
+
         if (Input.GetMouseButton(1))
         {
             Vector3 delta = Input.mousePosition - lastMousePosition;
@@ -53,41 +48,23 @@ public class CameraController : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
-        // Zoom input from scroll and keys
+        // Simplified Zoom (no offset)
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
         float keyboardZoom = 0f;
-
         if (Input.GetKey(KeyCode.LeftShift)) keyboardZoom -= 1f;
         if (Input.GetKey(KeyCode.LeftControl)) keyboardZoom += 1f;
 
-        float combinedZoomInput = scrollInput + keyboardZoom;
-
-        if (combinedZoomInput != 0f)
+        float zoomDelta = scrollInput + keyboardZoom;
+        if (zoomDelta != 0f)
         {
-            Vector3 mouseWorldBeforeZoom = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-
-            float targetZoom = mainCamera.orthographicSize - (combinedZoomInput * zoomSpeed * 10f);
+            float targetZoom = mainCamera.orthographicSize - (zoomDelta * zoomSpeed * 10f);
             mainCamera.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
-
-            Vector3 mouseWorldAfterZoom = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 zoomOffset = mouseWorldBeforeZoom - mouseWorldAfterZoom;
-            targetPosition += zoomOffset;
-
-            // Toggle Pixel Perfect Camera only at native zoom
-            if (ppc != null)
-            {
-                float nativeZoom = ppc.refResolutionY / (2f * (float)ppc.assetsPPU);
-                ppc.enabled = Mathf.Abs(mainCamera.orthographicSize - nativeZoom) < 0.1f;
-            }
         }
 
-        // Smooth movement
+        // Smooth follow
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
-        // Speed toggle with F key
         if (Input.GetKeyDown(KeyCode.F))
-        {
             isSpeedDoubled = !isSpeedDoubled;
-        }
     }
 }
