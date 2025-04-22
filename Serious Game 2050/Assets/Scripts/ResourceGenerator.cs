@@ -15,6 +15,7 @@ public class ResourceGenerator : MonoBehaviour
    public int GraanGet;
    public int coalGet;
    public int VervuilingGet;
+   public int StaalGet;
 
 
     void Start()
@@ -46,6 +47,7 @@ public class ResourceGenerator : MonoBehaviour
             resourceManager.Olie += this.OlieGet;
             resourceManager.RuweOlie += this.RuweOlieGet;
             resourceManager.vervuiling += this.VervuilingGet;
+            resourceManager.staal += this.StaalGet;
         }
     }
 }

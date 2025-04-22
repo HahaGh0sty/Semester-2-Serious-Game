@@ -15,6 +15,7 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     public int Olie;
     public int vis;
     public int coal;
+    public int staal;
 
    
     public void LoadData(GameData data)
@@ -29,6 +30,7 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
       this.RuweOlie = data.RuweOlie;
       this.Graan = data.Graan;
       this.vervuiling = data.vervuiling;
+      this.staal = data.staal;
     }
 
     public void SaveData(ref GameData data)
@@ -43,6 +45,7 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
       data.Graan = this.Graan;
       data.coal = this.coal;
       data.vervuiling = this.vervuiling;
+      data.staal = this.staal;
     }
  
 }

@@ -15,6 +15,7 @@ public class GameData
     public int Olie;
     public int vis;
     public int coal;
+    public int staal;
     public List<Vector3> buildingPositions;
     
     
@@ -33,6 +34,7 @@ public class GameData
         this.Olie = 0;
         this.vis = 0;
         this.coal = 0;
+        this.staal = 0;
         this.buildingPositions = new List<Vector3>(); // List to store building positions
     }
 
