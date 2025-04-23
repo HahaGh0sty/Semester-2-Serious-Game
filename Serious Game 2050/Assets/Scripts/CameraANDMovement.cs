@@ -22,6 +22,9 @@ public class CameraController : MonoBehaviour
         mainCamera = GetComponent<Camera>();
         ppc = GetComponent<PixelPerfectCamera>();
         if (ppc != null) ppc.upscaleRT = false; // Allow zoom
+
+        ppc.refResolutionX = 420;
+        ppc.refResolutionY = ppc.refResolutionX * (9/16);
     }
 
     void Update()
