@@ -6,7 +6,7 @@ public class ToggleBuildModeScript : MonoBehaviour
 {
     [SerializeField] private GameObject thisObject;
     // Start is called before the first frame update
-    public CreateBuildGhost GhostBuild;
+    
     void Start()
     {
         thisObject = transform.gameObject;
@@ -26,3 +26,4 @@ public class ToggleBuildModeScript : MonoBehaviour
         }
     }
 }
+ 

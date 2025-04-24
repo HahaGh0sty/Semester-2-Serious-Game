@@ -9,6 +9,8 @@ TagManager:
   - IsGrassTile
   - IsWaterTile
   - GhostBuilding
+  - Building
+  - MovePoint
   layers:
   - Default
   - TransparentFX

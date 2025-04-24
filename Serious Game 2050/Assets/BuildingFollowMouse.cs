@@ -17,11 +17,6 @@ public class BuildingFollowMouse : MonoBehaviour
 
         // Find the ghost building in the scene by tag
         ghostBuilding = GameObject.FindGameObjectWithTag("GhostBuilding");
-
-        if (ghostBuilding == null)
-        {
-            Debug.LogWarning("No GameObject with tag 'Ghostbuilding' found in the scene!");
-        }
     }
 
     void Update()
@@ -33,12 +28,23 @@ public class BuildingFollowMouse : MonoBehaviour
 
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             ghostBuilding.transform.position = worldPosition;
+ 
+          if (Input.GetMouseButtonDown(0))
+        {
+           Vector3 spawnPosition = ghostBuilding.transform.position;
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(Building, ghostBuilding.transform.position, Quaternion.identity);
-                Destroy(GameObject.FindWithTag("GhostBuilding"));
-            }
+           // Snap to grid (2D: only X and Y)
+            float gridSize = 1f; // Adjust grid size as needed
+            Vector3 snappedPosition = new Vector3(
+            Mathf.Round(spawnPosition.x / gridSize) * gridSize,
+            Mathf.Round(spawnPosition.y / gridSize) * gridSize,
+            spawnPosition.z // Keep the current Z to maintain render order
+             );
+
+            Instantiate(Building, snappedPosition, Quaternion.identity);
+            Destroy(GameObject.FindWithTag("GhostBuilding"));
+        }
+
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -46,4 +52,5 @@ public class BuildingFollowMouse : MonoBehaviour
             }
         }
     }
+    
 }

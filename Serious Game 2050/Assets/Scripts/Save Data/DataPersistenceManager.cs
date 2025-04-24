@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
+
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File Storage Config")]
@@ -13,10 +14,14 @@ public class DataPersistenceManager : MonoBehaviour
     private FileDataHandler dataHandler;
 
     public NewMapGenerator mapgenerator;
-    
-    
 
-    private string tilemapSavePath => Application.persistentDataPath + "/tilemapData.json";
+    [Header("Building Prefabs")]
+    public List<GameObject> buildingPrefabs; // Assign prefabs in Inspector
+
+    private Dictionary<string, GameObject> prefabDictionary;
+
+    [Header("Camera")]
+    public Camera mainCamera;
 
     private void Awake()
     {
@@ -25,6 +30,21 @@ public class DataPersistenceManager : MonoBehaviour
             Debug.LogError("More than one Data Persistence Manager instance found, fix it!");
         }
         instance = this;
+
+        // Build dictionary
+        prefabDictionary = new Dictionary<string, GameObject>();
+        foreach (var prefab in buildingPrefabs)
+        {
+            var id = prefab.GetComponent<BuildingIdentifier>();
+            if (id != null)
+            {
+                prefabDictionary[id.prefabName] = prefab;
+            }
+            else
+            {
+                Debug.LogWarning($"Missing BuildingIdentifier on prefab: {prefab.name}");
+            }
+        }
     }
 
     public void Start()
@@ -43,7 +63,6 @@ public class DataPersistenceManager : MonoBehaviour
         SaveGame();
     }
 
-    // Saves game data and updates building positions in the scene
     public void SaveGame()
     {
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
@@ -51,12 +70,13 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.SaveData(ref gameData);
         }
 
-        SaveBuildingPositions();
+        SaveBuildingData();
+        gameData.SaveCameraPosition(mainCamera);
+
         dataHandler.Save(gameData);
         Debug.Log("Game saved");
     }
 
-    // Loads game data and updates building positions in the scene
     public void LoadGame()
     {
         this.gameData = dataHandler.Load();
@@ -76,7 +96,8 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
 
-        LoadBuildingPositions();
+        LoadBuildingData();
+        gameData.LoadCameraPosition(mainCamera);
     }
 
     private void OnApplicationQuit()
@@ -90,14 +111,34 @@ public class DataPersistenceManager : MonoBehaviour
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
 
-    private void SaveBuildingPositions()
+    private void SaveBuildingData()
     {
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
-        gameData.SaveBuildingPositions(buildings);
+        gameData.SaveBuildingData(buildings);
     }
 
-    private void LoadBuildingPositions()
+    private void LoadBuildingData()
     {
-        gameData.LoadBuildingPositions();
+         // Ensure that the prefab dictionary is populated and we have saved building data
+    if (gameData.savedBuildings != null)
+    {
+        foreach (BuildingData data in gameData.savedBuildings)
+        {
+            if (prefabDictionary.TryGetValue(data.prefabName, out GameObject prefab))
+            {
+                // Instantiate the building prefab at the saved position
+                GameObject.Instantiate(prefab, data.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning($"Prefab not found for: {data.prefabName}. Check the prefab dictionary.");
+            }
+        }
+    }
+    else
+    {
+        Debug.LogError("Saved building data is null. Please check the save process.");
     }
 }
+    }
+

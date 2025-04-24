@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 66617544346792454}
   - component: {fileID: 1735227444850994068}
   - component: {fileID: 4265325316312475364}
+  - component: {fileID: 6062147162598074824}
   m_Layer: 0
   m_Name: Smithy
   m_TagString: Building
@@ -108,3 +109,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6062147162598074824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088089499837019336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c873d3ae7154746048f08dba9b18e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabName: Smithy

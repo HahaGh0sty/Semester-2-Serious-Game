@@ -2,6 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+public class BuildingData
+{
+    public Vector3 position;
+    public string prefabName; // The name of the prefab to instantiate
+
+    public BuildingData(Vector3 pos, string prefab)
+    {
+        position = pos;
+        prefabName = prefab;
+    }
+}
+
+[System.Serializable]
 public class GameData
 {
     public int wood;
@@ -16,11 +29,10 @@ public class GameData
     public int vis;
     public int coal;
     public int staal;
-    public List<Vector3> buildingPositions;
-    
-    
 
-    // Constructor - initializes values when a new game is started
+    public List<BuildingData> savedBuildings; // Stores prefab name and position
+    public Vector3 cameraPosition; // Camera position
+
     public GameData(int generatedValue)
     {
         this.wood = 0;
@@ -35,37 +47,63 @@ public class GameData
         this.vis = 0;
         this.coal = 0;
         this.staal = 0;
-        this.buildingPositions = new List<Vector3>(); // List to store building positions
+        this.savedBuildings = new List<BuildingData>();
+        this.cameraPosition = Vector3.zero;
     }
 
-    // Method to save the building positions (called in DataPersistenceManager)
-    public void SaveBuildingPositions(GameObject[] buildings)
+    // Save buildings: assumes each building has a BuildingIdentifier component with prefab name
+    public void SaveBuildingData(GameObject[] buildings)
     {
-        buildingPositions.Clear(); // Clear existing positions before saving
+        savedBuildings.Clear();
+
         foreach (GameObject building in buildings)
         {
             if (building != null)
             {
-                buildingPositions.Add(building.transform.position); // Add each building's position
+                var identifier = building.GetComponent<BuildingIdentifier>();
+                if (identifier != null)
+                {
+                    savedBuildings.Add(new BuildingData(building.transform.position, identifier.prefabName));
+                }
+                else
+                {
+                    Debug.LogWarning("Missing BuildingIdentifier on building.");
+                }
             }
         }
     }
 
-    // Method to load the building positions and update existing building positions
-    public void LoadBuildingPositions()
+    // Load buildings: assumes a prefab dictionary is passed in with prefab names as keys
+    public void LoadBuildingData(Dictionary<string, GameObject> prefabDict)
     {
-        GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building"); // Find all buildings with the tag "Building"
-        
-        for (int i = 0; i < buildingPositions.Count && i < buildings.Length; i++)
+        foreach (BuildingData data in savedBuildings)
         {
-            if (buildings[i] != null)
+            if (prefabDict.TryGetValue(data.prefabName, out GameObject prefab))
             {
-                buildings[i].transform.position = buildingPositions[i]; // Update the position of the building
+                GameObject.Instantiate(prefab, data.position, Quaternion.identity);
             }
             else
             {
-                Debug.LogWarning("Building not found in scene, skipping position update.");
+                Debug.LogWarning("Prefab not found for: " + data.prefabName);
             }
+        }
+    }
+
+    // Save the current camera position
+    public void SaveCameraPosition(Camera camera)
+    {
+        if (camera != null)
+        {
+            cameraPosition = camera.transform.position;
+        }
+    }
+
+    // Load the saved camera position
+    public void LoadCameraPosition(Camera camera)
+    {
+        if (camera != null)
+        {
+            camera.transform.position = cameraPosition;
         }
     }
 }
