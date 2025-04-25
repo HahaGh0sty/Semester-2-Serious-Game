@@ -19,19 +19,26 @@ public class ResourceGenerator : MonoBehaviour
     public int StaalGet;
 
     void Start()
+{
+    resourceManager = FindObjectOfType<ResourceManager>();
+    StartCoroutine(DelayedOverlapCheck());
+    Level1();
+}
+
+IEnumerator DelayedOverlapCheck()
+{
+    yield return new WaitForSeconds(0.1f); // Give a small delay
+
+    if (IsOverlappingWithBuilding())
     {
-        // Check for overlap with a building
-        if (IsOverlappingWithBuilding())
-        {
-            Destroy(gameObject); // Self-destruct if on same position as a building
-            return;
-        }
-
-        // Find the ResourceManager in the scene
-        resourceManager = FindObjectOfType<ResourceManager>();
-
-        Level1();
+        Debug.Log("Overlapping building found, destroying " + gameObject.name);
+        Destroy(this.gameObject);
     }
+}
+
+
+      
+    
 
     void Level1()
     {
@@ -56,20 +63,41 @@ public class ResourceGenerator : MonoBehaviour
     }
 
     // New function: Check if another object with tag "Building" is on the same position
-   private bool IsOverlappingWithBuilding()
+private bool IsOverlappingWithBuilding()
 {
-    GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
-    float overlapThreshold = 0.9f; // how close is "same spot"
-
-    foreach (GameObject building in buildings)
+    // Ensure the collider is available
+    Collider thisCollider = GetComponent<Collider>();
+    if (thisCollider == null)
     {
-        if (building != null && Vector3.Distance(building.transform.position, transform.position) < overlapThreshold)
+        Debug.LogWarning("No collider found on building " + gameObject.name);
+        return false;
+    }
+
+    // Draw the overlap box in the scene view (for debugging)
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireCube(thisCollider.bounds.center, thisCollider.bounds.size);
+
+    // Check for any colliders in the overlap area
+    Collider[] hits = Physics.OverlapBox(
+        thisCollider.bounds.center,
+        thisCollider.bounds.extents, // This represents half the size
+        transform.rotation // Use the rotation to match the building's actual facing
+    );
+
+    foreach (Collider hit in hits)
+    {
+        // Ensure we ignore the current object and only check for other "Building" objects
+        if (hit.gameObject != this.gameObject && hit.CompareTag("Building"))
         {
-            return true;
+            Debug.Log($"Overlap detected with {hit.gameObject.name}");
+            return true; // There was an overlap with another building
         }
     }
 
     return false;
 }
+
+
+
 
 }
