@@ -748,7 +748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fa9d4cb07654f5fb8999938c91c229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevel: Ian's Scene
 --- !u!4 &1318719105
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,53 +1151,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793533549}
   m_CullTransparentMesh: 1
---- !u!1 &1800673272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1800673274}
-  - component: {fileID: 1800673273}
-  m_Layer: 0
-  m_Name: Datapersistence manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1800673273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800673272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c53ab44537964fa6ac8bc42aa9f99a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: 1 Main Menu
-  mapgeneratorV2: {fileID: 0}
-  tilemap: {fileID: 0}
---- !u!4 &1800673274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800673272}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320.87854, y: 355.44095, z: -2.2439442}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113666511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,5 +1226,4 @@ SceneRoots:
   - {fileID: 249968963}
   - {fileID: 542033406}
   - {fileID: 2113666514}
-  - {fileID: 1800673274}
   - {fileID: 1318719105}
