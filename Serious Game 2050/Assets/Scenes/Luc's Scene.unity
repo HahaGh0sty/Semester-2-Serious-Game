@@ -2423,8 +2423,9 @@ GameObject:
   - component: {fileID: 1430799606}
   - component: {fileID: 1430799608}
   - component: {fileID: 1430799609}
+  - component: {fileID: 1430799610}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Executive Manager Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2523,6 +2524,18 @@ MonoBehaviour:
     icon: {fileID: -5122591975072373668, guid: 5350914a7ba354d25a2a2ae7118438eb, type: 3}
   - resourceName: Vis
     icon: {fileID: -41930074363417204, guid: 2f9fc3e8bedd54beb9a3ef0def20a346, type: 3}
+--- !u!114 &1430799610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430799605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6bdcca68b25486eb1092ee13bb5bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
