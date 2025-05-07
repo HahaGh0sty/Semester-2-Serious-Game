@@ -1,34 +1,84 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class CreateBuildGhost : MonoBehaviour
 {
-    [SerializeField] public GameObject BuildingType;
-    [SerializeField] public GameObject ExistingGhostBuilding;
+    [Header("References")]
+    public GameObject buildingGhostPrefab;
+    public TileBase placedAnimatedTile;
+    public Tilemap targetTilemap;
 
-    public void SpawnObject()
+    private GameObject currentGhost;
+
+    void Update()
     {
-        ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
+        HandleGhostFollowMouse();
 
-        if (ExistingGhostBuilding != null)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (ExistingGhostBuilding != BuildingType)
-            {
-                Destroy(ExistingGhostBuilding);
-                Instantiate(BuildingType);
-                ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
-            }
-            else
-            {
-                return;
-            }
+            PlaceTile();
+        }
+    }
+
+    public void SpawnGhost()
+    {
+        if (currentGhost != null) Destroy(currentGhost);
+
+        currentGhost = Instantiate(buildingGhostPrefab);
+        SetGhostAppearance(currentGhost, 0.5f); // semi-transparent
+    }
+
+    void HandleGhostFollowMouse()
+    {
+        if (currentGhost == null) return;
+
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorld.z = 0;
+
+        Vector3Int cellPos = targetTilemap.WorldToCell(mouseWorld);
+        Vector3 cellCenter = targetTilemap.GetCellCenterWorld(cellPos);
+
+        currentGhost.transform.position = cellCenter;
+    }
+
+    void PlaceTile()
+    {
+        if (currentGhost == null)
+        {
+            Debug.Log("No ghost to place.");
+            return;
         }
 
-        else if (ExistingGhostBuilding == null)
+        if (placedAnimatedTile == null)
         {
-            Instantiate(BuildingType);
+            Debug.LogWarning("PlacedAnimatedTile is not assigned.");
+            return;
         }
-        ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
+
+        if (targetTilemap == null)
+        {
+            Debug.LogWarning("TargetTilemap is not assigned.");
+            return;
+        }
+
+        Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
+        Debug.Log($"Placing tile at cell {cellPos}");
+
+        targetTilemap.SetTile(cellPos, placedAnimatedTile);
+
+        Destroy(currentGhost);
+        currentGhost = null;
+    }
+
+
+    void SetGhostAppearance(GameObject ghost, float alpha)
+    {
+        SpriteRenderer sr = ghost.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            Color c = sr.color;
+            c.a = alpha;
+            sr.color = c;
+        }
     }
 }
