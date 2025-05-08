@@ -63,6 +63,8 @@ MonoBehaviour:
   BuildingIsSelected: 0
   Camera: {fileID: 0}
   SelectGridPlacement: 0
+  Building: {fileID: 5088089499837019336, guid: 3e106477cac2047c2aeea65c2bda5fc1, type: 3}
+  movespeed: 99999
 --- !u!212 &6394791300578404651
 SpriteRenderer:
   m_ObjectHideFlags: 0

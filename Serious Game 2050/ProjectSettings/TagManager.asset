@@ -10,6 +10,7 @@ TagManager:
   - IsWaterTile
   - GhostBuilding
   - Building
+  - MovePoint
   layers:
   - Default
   - TransparentFX
