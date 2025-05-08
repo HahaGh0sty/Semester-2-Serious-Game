@@ -3,19 +3,21 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float moveSpeed = 20f;
-    public float zoomSpeed = 4f;
     public float minZoom = 1f;
-    public float maxZoom = 1000f;
-    public float smoothTime = 0.01f;
+    public float maxZoom = 50f;
+    public float smoothTime = 0.02f;
+    public float[] zoomLevels = { 1f, 5f, 12f, 25f, 50f };
+    private int currentZoomIndex = 2; // Start at zoom level 12
+    private Camera cam;
 
     private Vector3 velocity = Vector3.zero;
-    private Camera cam;
     private bool isSpeedDoubled = false;  // Track if speed is doubled
     private Vector3 lastMousePosition;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+        ApplyZoom();
     }
 
     void Update()
@@ -56,25 +58,6 @@ public class CameraController : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
-        // ** Zooming based on mouse position **
-        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        if (scrollInput != 0)
-        {
-            // Get the mouse position in world space before zooming
-            Vector3 mouseWorldBeforeZoom = cam.ScreenToWorldPoint(Input.mousePosition);
-
-            // Adjust zoom level
-            float targetZoom = cam.orthographicSize - (scrollInput * zoomSpeed * 10f);
-            cam.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
-
-            // Get the mouse position in world space after zooming
-            Vector3 mouseWorldAfterZoom = cam.ScreenToWorldPoint(Input.mousePosition);
-
-            // Calculate the difference and move the camera to keep mouse position fixed
-            Vector3 zoomOffset = mouseWorldBeforeZoom - mouseWorldAfterZoom;
-            targetPosition += zoomOffset;
-        }
-
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
         // Toggle speed when "F" is pressed
@@ -83,5 +66,32 @@ public class CameraController : MonoBehaviour
             isSpeedDoubled = !isSpeedDoubled;
         }
     }
+
+    public void ZoomIn()
+    {
+        Debug.Log("Zoom In button clicked.");
+        if (currentZoomIndex > 0)
+        {
+            currentZoomIndex--;
+            ApplyZoom();
+        }
+    }
+
+    public void ZoomOut()
+    {
+        Debug.Log("Zoom Out button clicked.");
+        if (currentZoomIndex < zoomLevels.Length - 1)
+        {
+            currentZoomIndex++;
+            ApplyZoom();
+        }
+    }
+
+    public void ApplyZoom()
+    {
+        cam.orthographicSize = zoomLevels[currentZoomIndex];
+        Debug.Log("Zoom applied: " + cam.orthographicSize);
+    }
+
 
 }
