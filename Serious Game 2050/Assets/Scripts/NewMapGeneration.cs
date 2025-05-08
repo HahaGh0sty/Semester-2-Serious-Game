@@ -88,7 +88,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
     }
     void Start()
     {
-        grassTile = allgrassTiles[0];
+         grassTile = allgrassTiles[0];
         waterTile = allwaterTiles[0];
 
         // Ensure lists are initialized
@@ -97,11 +97,13 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
         // Assign a default forest tile
         if (allforestTiles.Length > 0)
             forestTile = allforestTiles[0];
+    }
+       
         
-     }
+    
 
-        public void NewMapMake()
-        {
+    public void NewMapMake()
+    {
         if(generatedValue == 0)
         {
          GenerateValueFromTime();
@@ -121,9 +123,9 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
                          now.Minute * 100000 +
                          now.Second * 1000 +
                          now.Millisecond;
-        }
+    }
 
-      public void LoadData(GameData data)
+    public void LoadData(GameData data)
     {
       this.generatedValue = data.generatedValue;
     }
@@ -142,10 +144,7 @@ public class NewMapGenerator : MonoBehaviour, IDataPersistence
 
    public void GenerateMap()
 {
-    if(generatedValue == 0)
-    {
-        NewMapMake();
-    }
+    
     UnityEngine.Random.InitState(this.generatedValue); // Set the seed here
 
     tilemap.ClearAllTiles();

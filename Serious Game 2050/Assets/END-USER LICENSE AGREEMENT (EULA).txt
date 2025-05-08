@@ -1,0 +1,51 @@
+END-USER LICENSE AGREEMENT (EULA)
+Last updated: 17/04/2025
+Please read this End-User License Agreement ("Agreement") carefully before using the Game ("Software") provided by Serious Gamers ("Developer").
+By downloading or using the Software, you agree to be bound by the terms and conditions of this Agreement. If you do not agree, do not install or use the Software. Also, if you are currently in a UAC facility on Mars, please proceed to the nearest decontamination chamber immediately.
+________________________________________
+1. License Grant
+The Developer grants you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the Software solely for your personal, non-commercial use. You may not use the Software to open dimensional gateways, unless you are a certified employee of Next Step Solutions (see Section 9b).
+________________________________________
+2. Restrictions
+You agree not to:
+•	Modify, reverse engineer, or disassemble the Software;
+•	Use the Software to play background audio over loudspeakers during ritual summoning;
+•	Attempt to extract the secret level that suspiciously resembles E1M1 from DOOM. It's not there. Stop looking;
+•	Enter the phrase “IDDQD” more than three times on the main menu;
+•	Collaborate with or impersonate any representative of Next Step Solutions without express written permission and a signed non-existence acknowledgment form.
+________________________________________
+3. Ownership
+The Software is licensed, not sold. All rights, title, and interest in and to the Software (including the experimental file “hellcore_alpha.bak”) remain with the Developer.
+________________________________________
+4. Updates
+The Developer may occasionally provide updates. These updates may include:
+•	Bug fixes,
+•	Quality of life improvements,
+•	New content,
+•	Or unexplained whispers in the menu background, which are probably harmless.
+________________________________________
+5. Termination
+This Agreement is effective until terminated. You may terminate it by uninstalling the Software and burning a sage stick in a counterclockwise motion. The Developer may terminate it if:
+•	You breach any term,
+•	The Software detects unlicensed demon-slaying activity,
+•	Or Next Step Solutions finds you noncompliant to work for them.
+________________________________________
+6. Limitation of Liability
+Under no circumstances shall the Developer be liable for any:
+•	Temporal loops caused by excessive quick-saving,
+•	Sudden onset of Doomguy Syndrome (rapid heartbeat, shotgun obsession, spontaneous grunting),
+•	Corporate surveillance conducted by or on behalf of Next Step Solutions. They see you,
+•	The deletion of System-32 or any other critical files.
+________________________________________
+7. Privacy
+We may collect non-personal data such as device ID, gameplay duration, button mash velocity, and soul resonance. This data may be anonymized, ritualized, and forwarded to Next Step Solutions for “research”.
+________________________________________
+8. Governing Law
+This Agreement is governed by the laws of the Netherlands, except where superseded by Martian federal regulations or directives issued by Next Step Solutions' internal ethics bypass committee.
+________________________________________
+9. Miscellaneous
+•	By accepting this Agreement, you consent to being watched by at least one unseen entity (usually metaphorical).
+•	Next Step Solutions is not responsible for any anomalies resulting from use of this Software, including but not limited to: brainrot, voices in vents, sleep deprivation, or lack of touching grass.
+•	This EULA does not grant you permission to wield the BFG. That license must be obtained separately.
+•	There is no clause 10. Stop scrolling. Go play the game.
+
