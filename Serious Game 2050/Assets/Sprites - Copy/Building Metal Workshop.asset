@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Building Metal Workshop
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -19392813, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: 248990891, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: 160038713, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: -185685600, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: -1480107578, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
+  - {fileID: -897312605, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: -1853731209, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: 1571182210, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: 1241572112, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: 768876596, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: Building Saw Mill
+  m_Name: Building Oil Drill
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1163112086, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
-  - {fileID: -134976004, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
-  - {fileID: -895024289, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
-  - {fileID: -709885876, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
-  - {fileID: -766812134, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: -847625007, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: -847625007, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

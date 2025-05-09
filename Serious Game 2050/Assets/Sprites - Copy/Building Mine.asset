@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Building Mine
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1807676565, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: 1634201997, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: 1219348507, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: -572234919, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
-  - {fileID: 1317031007, guid: 65b1373b4ed65437d856b39033119ef0, type: 3}
+  - {fileID: 956037158, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: 95665740, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: -567914957, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: 1554158955, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  - {fileID: -1879876249, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
