@@ -9,6 +9,12 @@ public class CreateBuildGhost : MonoBehaviour
 
     public void SpawnObject()
     {
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = 10f; // Distance from the camera
+
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
         ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
 
         if (ExistingGhostBuilding != null)
@@ -16,7 +22,7 @@ public class CreateBuildGhost : MonoBehaviour
             if (ExistingGhostBuilding != BuildingType)
             {
                 Destroy(ExistingGhostBuilding);
-                Instantiate(BuildingType);
+                Instantiate(BuildingType, worldPosition, Quaternion.identity);
                 ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
             }
             else
@@ -27,7 +33,8 @@ public class CreateBuildGhost : MonoBehaviour
 
         else if (ExistingGhostBuilding == null)
         {
-            Instantiate(BuildingType);
+
+            Instantiate(BuildingType, worldPosition, Quaternion.identity);
         }
         ExistingGhostBuilding = GameObject.FindWithTag("GhostBuilding");
     }

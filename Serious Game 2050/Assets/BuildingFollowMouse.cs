@@ -7,6 +7,7 @@ public class BuildingFollowMouse : MonoBehaviour
     [SerializeField] public bool BuildingIsSelected;
     [SerializeField] public Camera Camera;
     [SerializeField] public bool SelectGridPlacement;
+    [SerializeField] public bool NotPlacableHere;
     public GameObject Building;
 
     private GameObject ghostBuilding;
@@ -28,13 +29,14 @@ public class BuildingFollowMouse : MonoBehaviour
 
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             ghostBuilding.transform.position = worldPosition;
+
  
-          if (Input.GetMouseButtonDown(0))
+          if (Input.GetMouseButtonDown(0) && NotPlacableHere == false)
         {
            Vector3 spawnPosition = ghostBuilding.transform.position;
 
            // Snap to grid (2D: only X and Y)
-            float gridSize = 1f; // Adjust grid size as needed
+            float gridSize = 1f; // Adjust griyd size as needed
             Vector3 snappedPosition = new Vector3(
             Mathf.Round(spawnPosition.x / gridSize) * gridSize,
             Mathf.Round(spawnPosition.y / gridSize) * gridSize,
@@ -52,5 +54,21 @@ public class BuildingFollowMouse : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
+    }
+
 }
