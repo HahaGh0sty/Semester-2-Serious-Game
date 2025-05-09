@@ -21,7 +21,7 @@ public class wereldvrede : MonoBehaviour
     void Start()
     {
         CreateUI();
-        InvokeRepeating("UpdateUI", 2f, 2f);
+        InvokeRepeating("UpdateUI", 0f, 2f);
     }
 
     
