@@ -7,8 +7,9 @@ public class ResourceGenerator : MonoBehaviour
 {
     private ResourceManager resourceManager;
     public TileBase placedAnimatedTile;
-    public Tilemap targetTilemap;
+    public Tilemap Tilemaptarget;
     private GameObject building;
+    private CreateBuildGhost ghostbuild;
 
     public int MoneyGet;
     public int EnergyGet;
@@ -24,15 +25,19 @@ public class ResourceGenerator : MonoBehaviour
 
     void Start()
     {
+        if (Tilemaptarget == null)
+    {
+        Tilemaptarget = GameObject.Find("Test Tilemap").GetComponent<Tilemap>();
+    }
     building = this.gameObject;
     resourceManager = FindObjectOfType<ResourceManager>();
     StartCoroutine(DelayedOverlapCheck());
     Level1();
 
-    Vector3Int cellPos = targetTilemap.WorldToCell(building.transform.position);
+    Vector3Int cellPos = Tilemaptarget.WorldToCell(building.transform.position);
         Debug.Log($"Placing tile at cell {cellPos}");
 
-        targetTilemap.SetTile(cellPos, placedAnimatedTile);
+        Tilemaptarget.SetTile(cellPos, placedAnimatedTile);
 }
 
 IEnumerator DelayedOverlapCheck()

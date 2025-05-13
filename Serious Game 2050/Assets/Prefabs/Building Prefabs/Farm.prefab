@@ -46,17 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16822e5106e14479fa535f07903c65a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placedAnimatedTile: {fileID: 11400000, guid: 52a00a6aa3a7ab2499f9f71f34156e1f, type: 2}
+  targetTilemap: {fileID: 0}
   MoneyGet: 0
   EnergyGet: 0
   WoodGet: 0
   StoneGet: 0
-  VisGet: 0
-  OlieGet: 0
-  RuweOlieGet: 0
-  GraanGet: 3
-  coalGet: 0
-  VervuilingGet: 0
-  StaalGet: 0
+  FishGet: 0
+  OilGet: 0
+  CrudeOilGet: 0
+  GrainGet: 0
+  CoalGet: 0
+  PolutionGet: 0
+  SteelGet: 0
 --- !u!61 &-5312986373738892127
 BoxCollider2D:
   m_ObjectHideFlags: 0
