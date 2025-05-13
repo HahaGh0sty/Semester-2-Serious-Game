@@ -25,7 +25,7 @@ public class CreateBuildGhost : MonoBehaviour
 
     private void Start()
     {
-        ResourceManager = gameObject.GetComponent<ResourceManager>();
+        ResourceManager = FindObjectOfType<ResourceManager>();
     }
     void Update()
     {
@@ -82,6 +82,17 @@ public class CreateBuildGhost : MonoBehaviour
             Debug.LogWarning("Not enough of a resource to build!");
             return;
         }
+
+        ResourceManager.wood -= RequiredWood;
+        ResourceManager.stone -= RequiredStone;
+        ResourceManager.Graan -= RequiredGrain;
+        ResourceManager.energy -= RequiredEnergy;
+        ResourceManager.GildedBanana -= RequiredGildedBanana;
+        ResourceManager.RuweOlie -= RequiredRawOil;
+        ResourceManager.vis -= RequiredFish;
+        ResourceManager.Olie -= RequiredOil;
+        ResourceManager.staal -= RequiredSteel;
+
         Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
         Debug.Log($"Placing tile at cell {cellPos}");
 
