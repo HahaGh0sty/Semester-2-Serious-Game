@@ -10,6 +10,23 @@ public class CreateBuildGhost : MonoBehaviour
 
     private GameObject currentGhost;
 
+    public ResourceManager ResourceManager;
+    public int RequiredWood;
+    public int RequiredStone;
+    public int RequiredGrain;
+    public int RequiredEnergy;
+    public int RequiredPollution;
+    public int RequiredGildedBanana;
+    public int RequiredRawOil;
+    public int RequiredOil;
+    public int RequiredFish;
+    public int RequiredCoal;
+    public int RequiredSteel;
+
+    private void Start()
+    {
+        ResourceManager = gameObject.GetComponent<ResourceManager>();
+    }
     void Update()
     {
         HandleGhostFollowMouse();
@@ -60,7 +77,11 @@ public class CreateBuildGhost : MonoBehaviour
             Debug.LogWarning("TargetTilemap is not assigned.");
             return;
         }
-
+        if (RequiredWood >= ResourceManager.wood && RequiredStone >= ResourceManager.stone && RequiredEnergy >= ResourceManager.energy && RequiredGildedBanana >= ResourceManager.GildedBanana && RequiredRawOil >= ResourceManager.RuweOlie && RequiredCoal >= ResourceManager.coal && RequiredSteel >= ResourceManager.staal)
+        {
+            Debug.LogWarning("Not enough of a resource to build!");
+            return;
+        }
         Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
         Debug.Log($"Placing tile at cell {cellPos}");
 
