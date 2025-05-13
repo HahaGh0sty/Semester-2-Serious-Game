@@ -8,6 +8,7 @@ public class DataPersistenceManager : MonoBehaviour
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
     public static DataPersistenceManager instance { get; private set; }
+    public TimeManager Time;
 
     private GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
@@ -60,6 +61,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.gameData = new GameData(mapgenerator.generatedValue);
         mapgenerator.NewMapMake();
+        Time.newGame();
         SaveGame();
     }
 
