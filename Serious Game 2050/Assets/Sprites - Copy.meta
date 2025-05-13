@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Serious Game 2050/Assets/Sprites - Copy.meta
+=======
+<<<<<<<< HEAD:Serious Game 2050/Assets/TextMesh Pro.meta
+guid: af69ddb85de305f438ce0442e96cad36
+========
+>>>>>>> Randomizing-Tiles
+guid: eb839037cd190f64b8356cb12d068b40
+>>>>>>>> Randomizing-Tiles:Serious Game 2050/Assets/Sprites - Copy.meta
+folderAsset: yes
+DefaultImporter:
+========
+guid: 91b531d05fcc36645b2877a30515a365
+PrefabImporter:
+>>>>>>>> Grid-Tiles:Serious Game 2050/Assets/StartLocation.prefab.meta
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
