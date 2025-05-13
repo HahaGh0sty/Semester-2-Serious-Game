@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1997076732635548947}
   m_Layer: 0
   m_Name: Smithy
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,16 +100,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyGet: 0
-  EnergyGet: 0
+  EnergyGet: -2
   WoodGet: 0
-  StoneGet: -2
+  StoneGet: -4
   VisGet: 0
   OlieGet: 0
   RuweOlieGet: 0
   GraanGet: 0
-  coalGet: -1
+  coalGet: 0
   VervuilingGet: 2
-  StaalGet: 8
+  StaalGet: 2
 --- !u!114 &-5781141835660884372
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class CameraController : MonoBehaviour
     private bool isSpeedDoubled = false;  // Track if speed is doubled
     private Vector3 lastMousePosition;
 
+    public RenderCameraManager tileLoader; // assign this in the Inspector
+
     void Start()
     {
         cam = GetComponent<Camera>();
@@ -58,6 +60,13 @@ public class CameraController : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
+        // PRELOAD tiles around where we're about to move to
+        if (tileLoader != null)
+        {
+            tileLoader.PreloadTilesAt(targetPosition);
+        }
+
+        // THEN move the camera
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
         // Toggle speed when "F" is pressed

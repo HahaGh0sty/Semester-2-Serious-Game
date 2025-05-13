@@ -24,11 +24,6 @@ public class wereldvrede : MonoBehaviour
         InvokeRepeating("UpdateUI", 0f, 2f);
     }
 
-    
-    
-        
-    
-
     void CreateUI()
     {
         foreach (var iconData in icons)

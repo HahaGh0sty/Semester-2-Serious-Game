@@ -14,7 +14,6 @@ public class CameraZoomButtons : MonoBehaviour
         new Vector2Int(320, 180), // Default
         new Vector2Int(640, 360),
         new Vector2Int(1280, 720),
-        new Vector2Int(1920, 1080)
     };
 
     private int currentZoomIndex = 4; // Start fully zoomed out

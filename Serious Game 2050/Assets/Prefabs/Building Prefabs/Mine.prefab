@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4073067735367622557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.55, y: -3.49, z: -0.71915567}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1834575955
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1374785636, guid: 1d13501ab3f891c42b09c4046f3182fc, type: 3}
+  m_Sprite: {fileID: 956037158, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,15 +100,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyGet: 0
-  EnergyGet: 0
+  EnergyGet: -1
   WoodGet: 0
-  StoneGet: 3
+  StoneGet: 4
   VisGet: 0
   OlieGet: 0
   RuweOlieGet: 0
   GraanGet: 0
-  coalGet: 3
-  VervuilingGet: 0
+  coalGet: 1
+  VervuilingGet: 1
   StaalGet: 0
 --- !u!114 &-5243361111515546350
 MonoBehaviour:

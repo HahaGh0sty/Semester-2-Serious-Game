@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6070136475427439018}
   m_Layer: 0
   m_Name: Oil Drill
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyGet: 0
-  EnergyGet: 0
+  EnergyGet: -1
   WoodGet: 0
   StoneGet: 0
   VisGet: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   RuweOlieGet: 2
   GraanGet: 0
   coalGet: 0
-  VervuilingGet: 0
+  VervuilingGet: 1
   StaalGet: 0
 --- !u!114 &3914757308202966760
 MonoBehaviour:

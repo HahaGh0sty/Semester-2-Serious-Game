@@ -53,7 +53,7 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         Debug.Log(Application.persistentDataPath);
         LoadGame();
-        InvokeRepeating("SaveGame", 30f, 300f);
+        InvokeRepeating("SaveGame", 0f, 300f);
     }
 
     public void NewGame()
