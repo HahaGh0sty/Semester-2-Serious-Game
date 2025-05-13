@@ -37,16 +37,16 @@ public class wereldvrede : MonoBehaviour
     void UpdateUI()
     {
         TryUpdate("gildedbanana", resources.GildedBanana);
-        TryUpdate("energy", resources.energy);
-        TryUpdate("wood", resources.wood);
-        TryUpdate("stone", resources.stone);
-        TryUpdate("vis", resources.vis);
-        TryUpdate("olie", resources.Olie);
-        TryUpdate("ruweolie", resources.RuweOlie);
-        TryUpdate("graan", resources.Graan);
-        TryUpdate("coal", resources.coal);
-        TryUpdate("vervuiling", resources.vervuiling);
-        TryUpdate("staal", resources.staal);
+        TryUpdate("Energy", resources.Energy);
+        TryUpdate("wood", resources.Wood);
+        TryUpdate("stone", resources.Stone);
+        TryUpdate("vis", resources.Fish);
+        TryUpdate("olie", resources.Oil);
+        TryUpdate("ruweolie", resources.CrudeOil);
+        TryUpdate("graan", resources.Grain);
+        TryUpdate("coal", resources.Coal);
+        TryUpdate("vervuiling", resources.Polution);
+        TryUpdate("staal", resources.Steel);
     }
 
     void TryUpdate(string key, int value)
