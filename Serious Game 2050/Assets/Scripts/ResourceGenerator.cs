@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class ResourceGenerator : MonoBehaviour
 {
     private ResourceManager resourceManager;
+    public TileBase placedAnimatedTile;
+    public Tilemap targetTilemap;
+    private GameObject building;
 
     public int MoneyGet;
     public int EnergyGet;
@@ -19,10 +23,16 @@ public class ResourceGenerator : MonoBehaviour
     public int StaalGet;
 
     void Start()
-{
+    {
+    building = this.gameObject;
     resourceManager = FindObjectOfType<ResourceManager>();
     StartCoroutine(DelayedOverlapCheck());
     Level1();
+
+    Vector3Int cellPos = targetTilemap.WorldToCell(building.transform.position);
+        Debug.Log($"Placing tile at cell {cellPos}");
+
+        targetTilemap.SetTile(cellPos, placedAnimatedTile);
 }
 
 IEnumerator DelayedOverlapCheck()

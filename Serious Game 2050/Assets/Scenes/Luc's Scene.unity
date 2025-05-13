@@ -2632,6 +2632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: Save File 1
+  Time: {fileID: 1430799610}
   mapgenerator: {fileID: 297204660}
   buildingPrefabs:
   - {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
@@ -2725,6 +2726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6bdcca68b25486eb1092ee13bb5bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentYear: 0
+  ArcadeMode: 0
 --- !u!1 &1448972937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,6 +3401,7 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 73dcc6ffc6f565d40989d1f623816177, type: 3}
   placedAnimatedTile: {fileID: 11400000, guid: 52de00a6f9aa4f84db53941deed35f35, type: 2}
   targetTilemap: {fileID: 1752198661}
+  Building: {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
 --- !u!114 &1617189966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3463,7 +3467,7 @@ Transform:
   m_GameObject: {fileID: 1624739867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3885,6 +3889,7 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 8cb3d1a489759cb46bf6d04927644d58, type: 3}
   placedAnimatedTile: {fileID: 11400000, guid: 9b85d7539bae4c84e8a32e770fc2b007, type: 2}
   targetTilemap: {fileID: 1752198661}
+  Building: {fileID: 1303222242846693906, guid: 95a64ec3939de744ebc8c553d446884b, type: 3}
 --- !u!114 &1736302415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4587,6 +4592,7 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 3873348527182723689, guid: 88843293c32b3364c9aad8b26e38244c, type: 3}
   placedAnimatedTile: {fileID: 11400000, guid: ff42632d6ab54d749ade81e7618c69d9, type: 2}
   targetTilemap: {fileID: 1752198661}
+  Building: {fileID: 4073067735367622557, guid: 45f0ec7e26eb24bab9bdff8e6ed7035b, type: 3}
 --- !u!114 &2111571862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4717,6 +4723,7 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: cb56f5320ad14a54eadec9779927f06f, type: 3}
   placedAnimatedTile: {fileID: 11400000, guid: 90f0e39c6c3b14f4bbc2686552eebeb5, type: 2}
   targetTilemap: {fileID: 1752198661}
+  Building: {fileID: 7775535677423819814, guid: 7b5f8f55409d744b5bc25e08b37f6fa0, type: 3}
 --- !u!114 &6886083662682429757
 MonoBehaviour:
   m_ObjectHideFlags: 0

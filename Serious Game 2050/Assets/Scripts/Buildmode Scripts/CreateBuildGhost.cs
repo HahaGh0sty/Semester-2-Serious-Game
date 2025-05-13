@@ -5,16 +5,19 @@ public class CreateBuildGhost : MonoBehaviour
 {
     [Header("References")]
     public GameObject buildingGhostPrefab;
-    public TileBase placedAnimatedTile;
+   
+    public GameObject Building;
     public Tilemap targetTilemap;
 
     private GameObject currentGhost;
+    
+    [SerializeField] public bool NotPlacableHere;
 
     void Update()
     {
         HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && NotPlacableHere == false)
         {
             PlaceTile();
         }
@@ -49,25 +52,39 @@ public class CreateBuildGhost : MonoBehaviour
             return;
         }
 
-        if (placedAnimatedTile == null)
-        {
-            Debug.LogWarning("PlacedAnimatedTile is not assigned.");
-            return;
-        }
+        Vector3 spawnPosition = currentGhost.transform.position;
+        // Snap to grid (2D: only X and Y)
+            float gridSize = 1f; // Adjust grid size as needed
+            Vector3 snappedPosition = new Vector3(
+            Mathf.Round(spawnPosition.x / gridSize) * gridSize,
+            Mathf.Round(spawnPosition.y / gridSize) * gridSize,
+            spawnPosition.z // Keep the current Z to maintain render order
+             );
 
-        if (targetTilemap == null)
-        {
-            Debug.LogWarning("TargetTilemap is not assigned.");
-            return;
-        }
-
-        Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
-        Debug.Log($"Placing tile at cell {cellPos}");
-
-        targetTilemap.SetTile(cellPos, placedAnimatedTile);
+            Instantiate(Building, snappedPosition, Quaternion.identity);
 
         Destroy(currentGhost);
         currentGhost = null;
+
+
+           
+            
+    }
+
+     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
     }
 
 
