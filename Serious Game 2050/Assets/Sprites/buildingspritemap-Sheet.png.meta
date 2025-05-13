@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,742 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a18b2cd42f20674a848d5ae90f2461b
+      internalID: 1807676565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5189d25f8e7f7b044bb9759de8dcadf9
+      internalID: -19392813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ac717a7e9f3c64d97be4bf1239b13d
+      internalID: -1400900383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 88
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee6781bd8cac764e9ad58717196c7ea
+      internalID: -1833099645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 77
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d77df190a519014ba37c83ed8e0aec0
+      internalID: 620398215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3632836066e36b54893b5265cf3e8fc8
+      internalID: 1634201997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bdd56d6561b4044b4f15b6a4457763
+      internalID: 248990891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8d40b58bd73834f9b0d03f1f53ea61
+      internalID: -1100659514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 88
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51453a3f75240348a3c5662d979416c
+      internalID: -294955600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 77
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f7f8da81f9bf846bfd2aa0f514fd11
+      internalID: 115578446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671a1c1393f86334eb78e724a7ccb6e1
+      internalID: 1219348507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d3686f6a270544c94fd2765bc6d383
+      internalID: 160038713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb18f1a044f1b24f9395bfc1f510cc3
+      internalID: -1890211614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 88
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb28bf2dc56de0e4ea4b07ee3a926fcb
+      internalID: 1587582415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 77
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef792faff2772d4b9fdd29c0dd0cbfb
+      internalID: -2075080673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8434bb6a40f98554aacb56ca74aaed23
+      internalID: -572234919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3d3cc03568aa3498df15891f2059da
+      internalID: -185685600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91831e5a342a5134e9dd7ab078c78a54
+      internalID: 23828119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 88
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7dfd51a887bbfc4682796012027b445
+      internalID: 1761886173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 77
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66289a31421a6945b37bf6761033517
+      internalID: -307911697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd96e4a281ca9244a8d8b58caa24311
+      internalID: 1317031007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13814d229a5ed254aa7ec8d40d509cad
+      internalID: -1480107578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 71
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fce3bc899b368643925c20e67eb75b3
+      internalID: -1645883138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 88
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52499ee25e45744fbbc1cab56511233
+      internalID: 1692446358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 77
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0173268f4cc081e4791b8f19ec866532
+      internalID: -624242119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 56
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967a08619f43e5145a7ca5fe69d3c75d
+      internalID: 225103571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 57
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d265d2b9fdb3c404db6acee391a5163b
+      internalID: -92859682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 56
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c07e029dc7f5f49963ddc2ba12e620
+      internalID: -1561226409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 57
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66150446645ea9346bcb3cadd0468983
+      internalID: 1990839531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 56
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dd167041c6d494c938657d71a21e90
+      internalID: 687114070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 57
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1c807064fc9f647af9f806f358d140
+      internalID: 1945948499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 56
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9783d67a184be5b41987bf5844bb18e6
+      internalID: -755034555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 57
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbfc6fcf948c5142b1b814e6c78aafe
+      internalID: 165864519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 56
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ad1005f1a2dc04f96c1245cf2c9a6d
+      internalID: -1536925747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buildingspritemap-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 57
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41327c2d908bb3d4fae3a0371002291e
+      internalID: -90586161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +841,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      buildingspritemap-Sheet_0: 1807676565
+      buildingspritemap-Sheet_1: -19392813
+      buildingspritemap-Sheet_10: 1219348507
+      buildingspritemap-Sheet_11: 160038713
+      buildingspritemap-Sheet_12: -1890211614
+      buildingspritemap-Sheet_13: 1587582415
+      buildingspritemap-Sheet_14: -2075080673
+      buildingspritemap-Sheet_15: -572234919
+      buildingspritemap-Sheet_16: -185685600
+      buildingspritemap-Sheet_17: 23828119
+      buildingspritemap-Sheet_18: 1761886173
+      buildingspritemap-Sheet_19: -307911697
+      buildingspritemap-Sheet_2: -1400900383
+      buildingspritemap-Sheet_20: 1317031007
+      buildingspritemap-Sheet_21: -1480107578
+      buildingspritemap-Sheet_22: -1645883138
+      buildingspritemap-Sheet_23: 1692446358
+      buildingspritemap-Sheet_24: -624242119
+      buildingspritemap-Sheet_25: 225103571
+      buildingspritemap-Sheet_26: -92859682
+      buildingspritemap-Sheet_27: -1561226409
+      buildingspritemap-Sheet_28: 1990839531
+      buildingspritemap-Sheet_29: 687114070
+      buildingspritemap-Sheet_3: -1833099645
+      buildingspritemap-Sheet_30: 1945948499
+      buildingspritemap-Sheet_31: -755034555
+      buildingspritemap-Sheet_32: 165864519
+      buildingspritemap-Sheet_33: -1536925747
+      buildingspritemap-Sheet_34: -90586161
+      buildingspritemap-Sheet_4: 620398215
+      buildingspritemap-Sheet_5: 1634201997
+      buildingspritemap-Sheet_6: 248990891
+      buildingspritemap-Sheet_7: -1100659514
+      buildingspritemap-Sheet_8: -294955600
+      buildingspritemap-Sheet_9: 115578446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -29,6 +29,7 @@ public class GameData
     public int vis;
     public int coal;
     public int staal;
+    public int CurrentYear;
 
     public List<BuildingData> savedBuildings; // Stores prefab name and position
     public Vector3 cameraPosition; // Camera position
