@@ -77,29 +77,41 @@ public class CreateBuildGhost : MonoBehaviour
             Debug.LogWarning("TargetTilemap is not assigned.");
             return;
         }
-        if (RequiredWood >= ResourceManager.wood && RequiredStone >= ResourceManager.stone && RequiredEnergy >= ResourceManager.energy && RequiredGildedBanana >= ResourceManager.GildedBanana && RequiredRawOil >= ResourceManager.RuweOlie && RequiredCoal >= ResourceManager.coal && RequiredSteel >= ResourceManager.staal)
+        if (
+            RequiredWood > ResourceManager.wood && 
+            RequiredStone > ResourceManager.stone && 
+            RequiredEnergy > ResourceManager.energy && 
+            RequiredGildedBanana > ResourceManager.GildedBanana && 
+            RequiredRawOil > ResourceManager.RuweOlie && 
+            RequiredCoal > ResourceManager.coal && 
+            RequiredSteel > ResourceManager.staal
+            )
         {
             Debug.LogWarning("Not enough of a resource to build!");
             return;
         }
 
-        ResourceManager.wood -= RequiredWood;
-        ResourceManager.stone -= RequiredStone;
-        ResourceManager.Graan -= RequiredGrain;
-        ResourceManager.energy -= RequiredEnergy;
-        ResourceManager.GildedBanana -= RequiredGildedBanana;
-        ResourceManager.RuweOlie -= RequiredRawOil;
-        ResourceManager.vis -= RequiredFish;
-        ResourceManager.Olie -= RequiredOil;
-        ResourceManager.staal -= RequiredSteel;
+        else
+        {
+            ResourceManager.wood -= RequiredWood;
+            ResourceManager.stone -= RequiredStone;
+            ResourceManager.Graan -= RequiredGrain;
+            ResourceManager.energy -= RequiredEnergy;
+            ResourceManager.GildedBanana -= RequiredGildedBanana;
+            ResourceManager.RuweOlie -= RequiredRawOil;
+            ResourceManager.vis -= RequiredFish;
+            ResourceManager.Olie -= RequiredOil;
+            ResourceManager.staal -= RequiredSteel;
 
-        Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
-        Debug.Log($"Placing tile at cell {cellPos}");
 
-        targetTilemap.SetTile(cellPos, placedAnimatedTile);
+            Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
+            Debug.Log($"Placing tile at cell {cellPos}");
 
-        Destroy(currentGhost);
-        currentGhost = null;
+            targetTilemap.SetTile(cellPos, placedAnimatedTile);
+
+            Destroy(currentGhost);
+            currentGhost = null;
+        }
     }
 
 
