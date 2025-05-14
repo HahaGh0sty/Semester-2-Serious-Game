@@ -2813,23 +2813,23 @@ MonoBehaviour:
   icons:
   - resourceName: GildedBanana
     icon: {fileID: -814834860344888181, guid: 24ba855909f0244abbe00f6c22bee84f, type: 3}
-  - resourceName: Wood
+  - resourceName: wood
     icon: {fileID: 2677826511695133276, guid: d2b119800fd024c36b91aa8566149fd6, type: 3}
-  - resourceName: Stone
+  - resourceName: stone
     icon: {fileID: -4569788075756205092, guid: 442e908c3baa64faeae00ace0359dcc9, type: 3}
-  - resourceName: Coal
+  - resourceName: coal
     icon: {fileID: 2468654485594101722, guid: 56aac85fd4c3745cea27963018a33dca, type: 3}
-  - resourceName: Staal
+  - resourceName: steel
     icon: {fileID: 70578318513727960, guid: 38d30e4deb1164b248099faf1d5d8332, type: 3}
-  - resourceName: RuweOlie
+  - resourceName: crude oil
     icon: {fileID: -5019064866106043162, guid: 9afac586cd2d04208bfc90fe51d2a97d, type: 3}
-  - resourceName: Olie
+  - resourceName: oil
     icon: {fileID: 7034880122133723097, guid: 4d65304e95fdf4a9986a4e14a3021164, type: 3}
-  - resourceName: Graan
+  - resourceName: grain
     icon: {fileID: -1180359801123901151, guid: a5aed561d05604b7d90f10bfa3e9b335, type: 3}
-  - resourceName: Energy
+  - resourceName: energy
     icon: {fileID: -5122591975072373668, guid: 5350914a7ba354d25a2a2ae7118438eb, type: 3}
-  - resourceName: Vis
+  - resourceName: fish
     icon: {fileID: -41930074363417204, guid: 2f9fc3e8bedd54beb9a3ef0def20a346, type: 3}
 --- !u!114 &1430799610
 MonoBehaviour:
