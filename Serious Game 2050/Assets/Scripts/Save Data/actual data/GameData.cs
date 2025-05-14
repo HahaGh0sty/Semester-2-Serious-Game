@@ -17,18 +17,18 @@ public class BuildingData
 [System.Serializable]
 public class GameData
 {
-    public int wood;
-    public int stone;
-    public int Graan;
+    public int Wood;
+    public int Stone;
+    public int Grain;
     public int energy;
-    public int vervuiling;
+    public int Polution;
     public int GildedBanana;
     public int generatedValue;
-    public int RuweOlie;
-    public int Olie;
-    public int vis;
-    public int coal;
-    public int staal;
+    public int CrudeOil;
+    public int Oil;
+    public int Fish;
+    public int Coal;
+    public int Steel;
     public int CurrentYear;
 
     public List<BuildingData> savedBuildings; // Stores prefab name and position
@@ -36,18 +36,18 @@ public class GameData
 
     public GameData(int generatedValue)
     {
-        this.wood = 0;
-        this.stone = 0;
-        this.Graan = 0;
+        this.Wood = 0;
+        this.Stone = 0;
+        this.Grain = 0;
         this.energy = 0;
-        this.vervuiling = 0;
+        this.Polution = 0;
         this.GildedBanana = 0;
         this.generatedValue = 0;
-        this.RuweOlie = 0;
-        this.Olie = 0;
-        this.vis = 0;
-        this.coal = 0;
-        this.staal = 0;
+        this.CrudeOil = 0;
+        this.Oil = 0;
+        this.Fish = 0;
+        this.Coal = 0;
+        this.Steel = 0;
         this.savedBuildings = new List<BuildingData>();
         this.cameraPosition = Vector3.zero;
     }
