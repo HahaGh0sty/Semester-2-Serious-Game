@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: 65a1ac45adbd1574d8c60da6789e7360, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: 1d2c816ceffde0f48abe97d46f7b9e81, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: c92bd2a4ef1d54543a3eefdbbc5122c3, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: 52a00a6aa3a7ab2499f9f71f34156e1f, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: e1bdc9b887d71324bb23e1c5448e3cef, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: ba1331f71244b014f90171c61076ab75, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -3429,7 +3429,7 @@ GameObject:
   - component: {fileID: 1617189965}
   - component: {fileID: 1617189964}
   m_Layer: 5
-  m_Name: BuildUI Button Smithy
+  m_Name: BuildUI Button Metal Workshop
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 73dcc6ffc6f565d40989d1f623816177, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: 52de00a6f9aa4f84db53941deed35f35, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 150
@@ -4022,7 +4022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 8cb3d1a489759cb46bf6d04927644d58, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: 9b85d7539bae4c84e8a32e770fc2b007, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -4785,7 +4785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 3873348527182723689, guid: 88843293c32b3364c9aad8b26e38244c, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: ff42632d6ab54d749ade81e7618c69d9, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 100
@@ -4927,7 +4927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: cb56f5320ad14a54eadec9779927f06f, type: 3}
-  placedAnimatedTile: {fileID: 0}
+  placedAnimatedTile: {fileID: 11400000, guid: 90f0e39c6c3b14f4bbc2686552eebeb5, type: 2}
   targetTilemap: {fileID: 1752198661}
   ResourceManager: {fileID: 0}
   RequiredWood: 0
