@@ -68,7 +68,7 @@ public class ResourceGenerator : MonoBehaviour
                 resourceManager.Polution < resourceLose[(int)ResourceType.Polution]
                )
             {
-                Debug.LogWarning(building + " doesn't have enough resources to function!");
+                Debug.LogWarning("Every " + building + " doesn't have enough resources to function!");
                 return;
             }
 

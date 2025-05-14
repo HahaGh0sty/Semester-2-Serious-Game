@@ -48,17 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placedAnimatedTile: {fileID: 11400000, guid: 90f0e39c6c3b14f4bbc2686552eebeb5, type: 2}
   Tilemaptarget: {fileID: 0}
-  MoneyGet: 0
-  EnergyGet: 0
-  WoodGet: 40
-  StoneGet: 0
-  FishGet: 0
-  OilGet: 0
-  CrudeOilGet: 0
-  GrainGet: 0
-  CoalGet: 0
-  PolutionGet: 0
-  SteelGet: 0
+  resourceLose: 0000008000000080000000800000008000000080000000800000008000000080000000800000008000000080
+  resourceGet: 0000000000000000140000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &-7679983276662587893
 MonoBehaviour:
   m_ObjectHideFlags: 0

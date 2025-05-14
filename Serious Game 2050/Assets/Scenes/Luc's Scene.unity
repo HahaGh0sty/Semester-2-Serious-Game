@@ -2526,7 +2526,7 @@ MonoBehaviour:
   NotPlacableHere: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
-  RequiredStone: 0
+  RequiredStone: 200
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   RequiredOil: 0
   RequiredFish: 0
   RequiredCoal: 0
-  RequiredSteel: 10
+  RequiredSteel: 0
 --- !u!114 &1181733236
 MonoBehaviour:
   m_ObjectHideFlags: 0
