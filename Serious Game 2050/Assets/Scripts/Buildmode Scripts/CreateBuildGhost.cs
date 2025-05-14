@@ -34,7 +34,7 @@ public class CreateBuildGhost : MonoBehaviour
     {
         HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0) && NotPlacableHere == false)
+        if (Input.GetMouseButtonDown(0)) //&& NotPlacableHere == false)
         {
             PlaceTile();
         }
@@ -87,17 +87,17 @@ public class CreateBuildGhost : MonoBehaviour
             ResourceManager.CrudeOil < RequiredRawOil ||
             ResourceManager.Coal < RequiredCoal ||
             ResourceManager.Steel < RequiredSteel
-)
+            )
         {
             Debug.LogWarning("Not enough of a resource to build!");
             return;
         }
 
-        if (NotPlacableHere == true)
-        {
-            Debug.Log("This building isn't placable here!");
-            return;
-        }
+        //if (NotPlacableHere == false)
+        //{
+        //    Debug.Log("This building isn't placable here!");
+        //    return;
+        //}
 
         else
         {
@@ -123,21 +123,21 @@ public class CreateBuildGhost : MonoBehaviour
             currentGhost = null;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Building")
-        {
-            NotPlacableHere = !NotPlacableHere;
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Building")
+    //    {
+    //        NotPlacableHere = !NotPlacableHere;
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Building")
-        {
-            NotPlacableHere = !NotPlacableHere;
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Building")
+    //    {
+    //        NotPlacableHere = !NotPlacableHere;
+    //    }
+    //}
 
     void SetGhostAppearance(GameObject ghost, float alpha)
     {
