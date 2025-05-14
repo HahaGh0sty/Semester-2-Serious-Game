@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9007145961255088441}
+  - component: {fileID: 1824463792599991893}
   - component: {fileID: 5082708121007445962}
   - component: {fileID: 3914757308202966760}
   - component: {fileID: 6070136475427439018}
@@ -34,6 +35,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1824463792599991893
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303222242846693906}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -847625007, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!114 &5082708121007445962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,19 +99,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16822e5106e14479fa535f07903c65a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedAnimatedTile: {fileID: 11400000, guid: 9b85d7539bae4c84e8a32e770fc2b007, type: 2}
-  targetTilemap: {fileID: 0}
   MoneyGet: 0
   EnergyGet: -1
   WoodGet: 0
   StoneGet: 0
-  FishGet: 0
-  OilGet: 0
-  CrudeOilGet: 0
-  GrainGet: 0
-  CoalGet: 0
-  PolutionGet: 0
-  SteelGet: 0
+  VisGet: 0
+  OlieGet: 0
+  RuweOlieGet: 2
+  GraanGet: 0
+  coalGet: 0
+  VervuilingGet: 1
+  StaalGet: 0
 --- !u!114 &3914757308202966760
 MonoBehaviour:
   m_ObjectHideFlags: 0

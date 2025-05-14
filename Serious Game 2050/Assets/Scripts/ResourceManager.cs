@@ -5,47 +5,47 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour, IDataPersistence
 {
 
-     public int Wood;
-    public int Stone;
-    public int Grain;
-    public int Energy;
-    public int Polution;
+     public int wood;
+    public int stone;
+    public int Graan;
+    public int energy;
+    public int vervuiling;
     public int GildedBanana;
-    public int CrudeOil;
-    public int Oil;
-    public int Fish;
-    public int Coal;
-    public int Steel;
+    public int RuweOlie;
+    public int Olie;
+    public int vis;
+    public int coal;
+    public int staal;
 
    
     public void LoadData(GameData data)
     {
       this.GildedBanana = data.GildedBanana;
-      this.Energy = data.energy;
-      this.Wood = data.Wood;
-      this.Stone = data.Stone;
-      this.Fish = data.Fish;
-      this.Coal = data.Coal;
-      this.Oil = data.Oil;
-      this.CrudeOil = data.CrudeOil;
-      this.Grain = data.Grain;
-      this.Polution = data.Polution;
-      this.Steel = data.Steel;
+      this.energy = data.energy;
+      this.wood = data.wood;
+      this.stone = data.stone;
+      this.vis = data.vis;
+      this.coal = data.coal;
+      this.Olie = data.Olie;
+      this.RuweOlie = data.RuweOlie;
+      this.Graan = data.Graan;
+      this.vervuiling = data.vervuiling;
+      this.staal = data.staal;
     }
 
     public void SaveData(ref GameData data)
     {
       data.GildedBanana = this.GildedBanana;
-      data.energy = this.Energy;
-      data.Wood = this.Wood;
-      data.Stone = this.Stone;
-      data.Fish = this.Fish;
-      data.Oil = this.Oil;
-      data.CrudeOil = this.CrudeOil;
-      data.Grain = this.Grain;
-      data.Coal = this.Coal;
-      data.Polution = this.Polution;
-      data.Steel = this.Steel;
+      data.energy = this.energy;
+      data.wood = this.wood;
+      data.stone = this.stone;
+      data.vis = this.vis;
+      data.Olie = this.Olie;
+      data.RuweOlie = this.RuweOlie;
+      data.Graan = this.Graan;
+      data.coal = this.coal;
+      data.vervuiling = this.vervuiling;
+      data.staal = this.staal;
     }
  
 }

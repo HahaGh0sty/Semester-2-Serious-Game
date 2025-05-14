@@ -5,19 +5,33 @@ public class CreateBuildGhost : MonoBehaviour
 {
     [Header("References")]
     public GameObject buildingGhostPrefab;
-   
-    public GameObject Building;
+    public TileBase placedAnimatedTile;
     public Tilemap targetTilemap;
 
     private GameObject currentGhost;
-    
-    [SerializeField] public bool NotPlacableHere;
 
+    public ResourceManager ResourceManager;
+    public int RequiredWood;
+    public int RequiredStone;
+    public int RequiredGrain;
+    public int RequiredEnergy;
+    public int RequiredPollution;
+    public int RequiredGildedBanana;
+    public int RequiredRawOil;
+    public int RequiredOil;
+    public int RequiredFish;
+    public int RequiredCoal;
+    public int RequiredSteel;
+
+    private void Start()
+    {
+        ResourceManager = FindObjectOfType<ResourceManager>();
+    }
     void Update()
     {
         HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0) && NotPlacableHere == false)
+        if (Input.GetMouseButtonDown(0))
         {
             PlaceTile();
         }
@@ -52,38 +66,51 @@ public class CreateBuildGhost : MonoBehaviour
             return;
         }
 
-        Vector3 spawnPosition = currentGhost.transform.position;
-        // Snap to grid (2D: only X and Y)
-            float gridSize = 1f; // Adjust grid size as needed
-            Vector3 snappedPosition = new Vector3(
-            Mathf.Round(spawnPosition.x / gridSize) * gridSize,
-            Mathf.Round(spawnPosition.y / gridSize) * gridSize,
-            spawnPosition.z // Keep the current Z to maintain render order
-             );
-
-            Instantiate(Building, snappedPosition, Quaternion.identity);
-
-        Destroy(currentGhost);
-        currentGhost = null;
-
-
-           
-            
-    }
-
-     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Building")
+        if (placedAnimatedTile == null)
         {
-            NotPlacableHere = !NotPlacableHere;
+            Debug.LogWarning("PlacedAnimatedTile is not assigned.");
+            return;
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Building")
+        if (targetTilemap == null)
         {
-            NotPlacableHere = !NotPlacableHere;
+            Debug.LogWarning("TargetTilemap is not assigned.");
+            return;
+        }
+        if (
+            RequiredWood > ResourceManager.wood && 
+            RequiredStone > ResourceManager.stone && 
+            RequiredEnergy > ResourceManager.energy && 
+            RequiredGildedBanana > ResourceManager.GildedBanana && 
+            RequiredRawOil > ResourceManager.RuweOlie && 
+            RequiredCoal > ResourceManager.coal && 
+            RequiredSteel > ResourceManager.staal
+            )
+        {
+            Debug.LogWarning("Not enough of a resource to build!");
+            return;
+        }
+
+        else
+        {
+            ResourceManager.wood -= RequiredWood;
+            ResourceManager.stone -= RequiredStone;
+            ResourceManager.Graan -= RequiredGrain;
+            ResourceManager.energy -= RequiredEnergy;
+            ResourceManager.GildedBanana -= RequiredGildedBanana;
+            ResourceManager.RuweOlie -= RequiredRawOil;
+            ResourceManager.vis -= RequiredFish;
+            ResourceManager.Olie -= RequiredOil;
+            ResourceManager.staal -= RequiredSteel;
+
+
+            Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
+            Debug.Log($"Placing tile at cell {cellPos}");
+
+            targetTilemap.SetTile(cellPos, placedAnimatedTile);
+
+            Destroy(currentGhost);
+            currentGhost = null;
         }
     }
 
