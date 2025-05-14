@@ -1115,8 +1115,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2127960494686001333}
-  - {fileID: 1617189963}
   - {fileID: 2111571859}
+  - {fileID: 1617189963}
   - {fileID: 1736302412}
   - {fileID: 828680063}
   - {fileID: 1090911319}
@@ -1508,9 +1508,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: 65a1ac45adbd1574d8c60da6789e7360, type: 3}
-  Building: {fileID: 7934095903876407573, guid: e92edc484a1e9d743ba8a6202537d66c, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 0
+  RequiredStone: 0
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 0
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &828680066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2346,9 +2357,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: c92bd2a4ef1d54543a3eefdbbc5122c3, type: 3}
-  Building: {fileID: 803367064514309189, guid: 3689403e745ea8c45aec7b87c18b8076, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 0
+  RequiredStone: 0
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 0
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &1090911322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2495,9 +2517,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: e1bdc9b887d71324bb23e1c5448e3cef, type: 3}
-  Building: {fileID: 2777726022791240621, guid: 37d882edae9b87240a9da1290a91e79f, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 0
+  RequiredStone: 0
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 0
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &1181733236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3490,9 +3523,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 73dcc6ffc6f565d40989d1f623816177, type: 3}
-  Building: {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 150
+  RequiredStone: 50
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 100
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &1617189966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3978,9 +4022,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: 8cb3d1a489759cb46bf6d04927644d58, type: 3}
-  Building: {fileID: 1303222242846693906, guid: 95a64ec3939de744ebc8c553d446884b, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 0
+  RequiredStone: 100
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 200
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 5
 --- !u!114 &1736302415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4636,7 +4691,7 @@ GameObject:
   - component: {fileID: 2111571861}
   - component: {fileID: 2111571860}
   m_Layer: 5
-  m_Name: BuildUI Button MIne
+  m_Name: BuildUI Button Mine
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4730,9 +4785,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 3873348527182723689, guid: 88843293c32b3364c9aad8b26e38244c, type: 3}
-  Building: {fileID: 4073067735367622557, guid: 45f0ec7e26eb24bab9bdff8e6ed7035b, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 100
+  RequiredStone: 0
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 50
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &2111571862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4861,9 +4927,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingGhostPrefab: {fileID: 4428851823332674968, guid: cb56f5320ad14a54eadec9779927f06f, type: 3}
-  Building: {fileID: 7775535677423819814, guid: 7b5f8f55409d744b5bc25e08b37f6fa0, type: 3}
+  placedAnimatedTile: {fileID: 0}
   targetTilemap: {fileID: 1752198661}
-  NotPlacableHere: 0
+  ResourceManager: {fileID: 0}
+  RequiredWood: 0
+  RequiredStone: 100
+  RequiredGrain: 0
+  RequiredEnergy: 0
+  RequiredPollution: 0
+  RequiredGildedBanana: 50
+  RequiredRawOil: 0
+  RequiredOil: 0
+  RequiredFish: 0
+  RequiredCoal: 0
+  RequiredSteel: 0
 --- !u!114 &6886083662682429757
 MonoBehaviour:
   m_ObjectHideFlags: 0
