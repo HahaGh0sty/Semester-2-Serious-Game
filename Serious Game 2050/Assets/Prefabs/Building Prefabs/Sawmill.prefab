@@ -49,8 +49,8 @@ MonoBehaviour:
   placedAnimatedTile: {fileID: 11400000, guid: 90f0e39c6c3b14f4bbc2686552eebeb5, type: 2}
   Tilemaptarget: {fileID: 0}
   MoneyGet: 0
-  EnergyGet: -1
-  WoodGet: 4
+  EnergyGet: 0
+  WoodGet: 40
   StoneGet: 0
   FishGet: 0
   OilGet: 0
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

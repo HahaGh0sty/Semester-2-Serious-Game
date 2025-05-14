@@ -6,8 +6,10 @@ public class CreateBuildGhost : MonoBehaviour
 {
     [Header("References")]
     public GameObject buildingGhostPrefab;
-    public TileBase placedAnimatedTile;
+
+    public GameObject Building;
     public Tilemap targetTilemap;
+    [SerializeField] public bool NotPlacableHere;
 
     private GameObject currentGhost;
 
@@ -32,7 +34,7 @@ public class CreateBuildGhost : MonoBehaviour
     {
         HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && NotPlacableHere == false)
         {
             PlaceTile();
         }
@@ -72,12 +74,6 @@ public class CreateBuildGhost : MonoBehaviour
             return;
         }
 
-        if (placedAnimatedTile == null)
-        {
-            Debug.LogWarning("PlacedAnimatedTile is not assigned.");
-            return;
-        }
-
         if (targetTilemap == null)
         {
             Debug.LogWarning("TargetTilemap is not assigned.");
@@ -97,6 +93,12 @@ public class CreateBuildGhost : MonoBehaviour
             return;
         }
 
+        if (NotPlacableHere == true)
+        {
+            Debug.Log("This building isn't placable here!");
+            return;
+        }
+
         else
         {
             ResourceManager.Wood -= RequiredWood;
@@ -111,15 +113,31 @@ public class CreateBuildGhost : MonoBehaviour
 
 
             Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
+
             Debug.Log($"Placing tile at cell {cellPos}");
 
-            targetTilemap.SetTile(cellPos, placedAnimatedTile);
+
+            Instantiate(Building, cellPos, Quaternion.identity);
 
             Destroy(currentGhost);
             currentGhost = null;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Building")
+        {
+            NotPlacableHere = !NotPlacableHere;
+        }
+    }
 
     void SetGhostAppearance(GameObject ghost, float alpha)
     {

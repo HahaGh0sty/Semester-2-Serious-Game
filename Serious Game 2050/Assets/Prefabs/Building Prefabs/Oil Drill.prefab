@@ -47,14 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placedAnimatedTile: {fileID: 11400000, guid: 9b85d7539bae4c84e8a32e770fc2b007, type: 2}
-  targetTilemap: {fileID: 0}
+  Tilemaptarget: {fileID: 0}
   MoneyGet: 0
-  EnergyGet: -1
+  EnergyGet: -10
   WoodGet: 0
   StoneGet: 0
   FishGet: 0
   OilGet: 0
-  CrudeOilGet: 0
+  CrudeOilGet: 20
   GrainGet: 0
   CoalGet: 0
   PolutionGet: 0
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
