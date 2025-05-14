@@ -9,7 +9,7 @@ public class CreateBuildGhost : MonoBehaviour
 
     public GameObject Building;
     public Tilemap targetTilemap;
-    [SerializeField] public bool NotPlacableHere;
+    [SerializeField] public int collisioncount;
 
     private GameObject currentGhost;
 
@@ -26,17 +26,30 @@ public class CreateBuildGhost : MonoBehaviour
     public int RequiredCoal;
     public int RequiredSteel;
 
+    [SerializeField] public IsFucking IsFucking;
+
     private void Start()
     {
         ResourceManager = FindObjectOfType<ResourceManager>();
     }
     void Update()
     {
-        HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0)) //&& NotPlacableHere == false)
+        HandleGhostFollowMouse();
+        collisioncount = IsFucking.collisioncount;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            PlaceTile();
+            if (0 < collisioncount)
+            {
+                Debug.LogWarning(currentGhost + " cannot be placed, there are " + collisioncount + " buildings touching it!");
+                return;
+            }
+            else
+            {
+                PlaceTile();
+            }
+
         }
     }
 
@@ -50,6 +63,7 @@ public class CreateBuildGhost : MonoBehaviour
         }
 
         currentGhost = Instantiate(buildingGhostPrefab);
+        IsFucking = FindObjectOfType<IsFucking>();
         SetGhostAppearance(currentGhost, 0.5f); // semi-transparent
     }
 

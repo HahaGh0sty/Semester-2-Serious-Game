@@ -17,7 +17,25 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     public int Coal;
     public int Steel;
 
-   
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Wood += 100;
+            Stone += 100;
+            Grain += 100;   
+            Energy += 100;
+            Polution += 100;
+            GildedBanana += 100;
+            CrudeOil += 100;
+            Oil += 100;
+            Fish += 100;
+            Coal += 100;
+            Steel += 100;
+        }
+    }
+
+
     public void LoadData(GameData data)
     {
       this.GildedBanana = data.GildedBanana;

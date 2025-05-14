@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6182652569017721033}
   - component: {fileID: 7954000449330729267}
   - component: {fileID: 133045852777428965}
+  - component: {fileID: 4619055887025129415}
   m_Layer: 5
   m_Name: Oil Refinery Ghost Building
   m_TagString: GhostBuilding
@@ -142,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.76, y: 2.76}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &133045852777428965
 Rigidbody2D:
@@ -171,3 +172,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4619055887025129415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857346762852856354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18207c5cfba080e46bf4ae8e478a9daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotPlacableHere: 0

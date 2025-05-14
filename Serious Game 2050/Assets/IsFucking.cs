@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingFollowMouse : MonoBehaviour
+public class IsFucking : MonoBehaviour
 {
     [SerializeField] public bool NotPlacableHere;
-
+    [SerializeField] public int collisioncount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Building")
         {
-            NotPlacableHere = !NotPlacableHere;
+            collisioncount++;
         }
     }
 
@@ -18,8 +18,7 @@ public class BuildingFollowMouse : MonoBehaviour
     {
         if (collision.gameObject.tag == "Building")
         {
-            NotPlacableHere = !NotPlacableHere;
+            collisioncount--;
         }
     }
-
 }

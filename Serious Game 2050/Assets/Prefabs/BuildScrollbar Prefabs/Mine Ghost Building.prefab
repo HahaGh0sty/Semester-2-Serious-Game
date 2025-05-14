@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9191008412741056543}
   - component: {fileID: 8827340888119673984}
   - component: {fileID: 3212913876131388392}
+  - component: {fileID: -3320128671282511568}
   m_Layer: 5
   m_Name: Mine Ghost Building
   m_TagString: GhostBuilding
@@ -142,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.76, y: 1.76}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!50 &3212913876131388392
 Rigidbody2D:
@@ -171,3 +172,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-3320128671282511568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662979592662316978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18207c5cfba080e46bf4ae8e478a9daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotPlacableHere: 0

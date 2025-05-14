@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placedAnimatedTile: {fileID: 11400000, guid: 1d2c816ceffde0f48abe97d46f7b9e81, type: 2}
   Tilemaptarget: {fileID: 0}
-  resourceLose: 0000008005000000000000800000008000000080000000800000008000000080000000800000008000000080
+  resourceLose: 0000008005000000000000800000008000000080050000000000008000000080000000800000008000000080
   resourceGet: 00000000fbffffff000000000000000000000000fbffffff0500000000000000000000000000000000000000
 --- !u!114 &8072074340106105061
 MonoBehaviour:
@@ -106,5 +106,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 3.8, y: 3.8}
   m_EdgeRadius: 0
