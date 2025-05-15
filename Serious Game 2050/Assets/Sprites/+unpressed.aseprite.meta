@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ccd557fc670b441349f9c8dbf8004d7e
+guid: 7779fa26579f148e79bed1c8792aa8ad
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: GameOverScreen
+  - name: +unpressed
     originalName: 
-    pivot: {x: 0.49999997, y: -0.011494254}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 232
-      height: 348
-    spriteID: 816f73096fa274ca980b647b817bd62f
+      width: 16
+      height: 21
+    spriteID: 64a7f6eaf9d16449aa6248e035ef4af2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1537229286
-    name: GameOverScreen
+    guid: 1280432390
+    name: +unpressed
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GameOverScreen
+    - name: +unpressed
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 4
-        width: 232
-        height: 348
-      spriteId: 816f73096fa274ca980b647b817bd62f
+        x: 0
+        y: 0
+        width: 16
+        height: 21
+      spriteId: 64a7f6eaf9d16449aa6248e035ef4af2
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 240, y: 356}
+  canvasSize: {x: 16, y: 21}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ccd557fc670b441349f9c8dbf8004d7e
+guid: eef758bb585e1459fbe4a79a6c5fc609
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: GameOverScreen
+  - name: mainmenubuttonhover
     originalName: 
-    pivot: {x: 0.49999997, y: -0.011494254}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 232
-      height: 348
-    spriteID: 816f73096fa274ca980b647b817bd62f
+      width: 120
+      height: 40
+    spriteID: f62edf8c2397c48fcadde39342beb703
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1537229286
-    name: GameOverScreen
+    guid: 1585571210
+    name: mainmenubuttonhover
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GameOverScreen
+    - name: mainmenubuttonhover
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 4
-        width: 232
-        height: 348
-      spriteId: 816f73096fa274ca980b647b817bd62f
+        x: 0
+        y: 0
+        width: 120
+        height: 40
+      spriteId: f62edf8c2397c48fcadde39342beb703
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 240, y: 356}
+  canvasSize: {x: 120, y: 40}
