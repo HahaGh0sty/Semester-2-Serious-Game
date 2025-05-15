@@ -21,17 +21,17 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Wood += 100;
-            Stone += 100;
-            Grain += 100;   
-            Energy += 100;
-            Polution += 100;
-            GildedBanana += 100;
-            CrudeOil += 100;
-            Oil += 100;
-            Fish += 100;
-            Coal += 100;
-            Steel += 100;
+            Wood += 500;
+            Stone += 500;
+            Grain += 500;   
+            Energy += 500;
+            Polution += 500;
+            GildedBanana += 500;
+            CrudeOil += 500;
+            Oil += 500;
+            Fish += 500;
+            Coal += 500;
+            Steel += 500;
         }
     }
 

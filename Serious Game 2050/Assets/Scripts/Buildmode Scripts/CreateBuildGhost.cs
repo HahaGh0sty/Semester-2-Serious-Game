@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
 public class CreateBuildGhost : MonoBehaviour
@@ -18,6 +19,8 @@ public class CreateBuildGhost : MonoBehaviour
     [SerializeField] public int GrassCollisionCount;
     [SerializeField] public int ForestCollisionCount;
     [SerializeField] public int WaterCollisionCount;
+
+    public bool IsOddNumberedSize;
 
     private GameObject currentGhost;
 
@@ -47,16 +50,21 @@ public class CreateBuildGhost : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            // Checking all conditions, including water collision count
-            bool hasTooMuchCollision =
-                BuildingCollisionCount > 0 ||
-                GrassCollisionCount > MinimumGrassCount ||
-                ForestCollisionCount > MinimumForestCount ||
-                WaterCollisionCount > MinimumWaterCount;
 
-            if (hasTooMuchCollision)
+            if (EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.LogWarning(currentGhost + " cannot be placed because something is colliding too much!" +
+                return;
+            }
+            // Checking all conditions, including water collision count
+            bool hasEnoughCollisions =
+            BuildingCollisionCount == 0 &&
+            GrassCollisionCount >= MinimumGrassCount &&
+            ForestCollisionCount >= MinimumForestCount &&
+            WaterCollisionCount >= MinimumWaterCount;
+
+            if (!hasEnoughCollisions)
+            {
+                Debug.LogWarning(currentGhost + " cannot be placed because not enough collision points!" +
                     "  BuildingCount: " + BuildingCollisionCount +
                     "  GrassCount: " + GrassCollisionCount + "/" + MinimumGrassCount +
                     "  ForestCount: " + ForestCollisionCount + "/" + MinimumForestCount +

@@ -1532,12 +1532,13 @@ MonoBehaviour:
   Building: {fileID: 7934095903876407573, guid: e92edc484a1e9d743ba8a6202537d66c, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 16
   MinimumForestCount: 0
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 0
@@ -2757,12 +2758,13 @@ MonoBehaviour:
   Building: {fileID: 803367064514309189, guid: 3689403e745ea8c45aec7b87c18b8076, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 16
   MinimumForestCount: 0
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 200
   RequiredStone: 0
@@ -2935,12 +2937,13 @@ MonoBehaviour:
   Building: {fileID: 2777726022791240621, guid: 37d882edae9b87240a9da1290a91e79f, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 1
   MinimumForestCount: 0
-  MinimumWaterCount: 0
+  MinimumWaterCount: 1
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 200
@@ -4317,12 +4320,13 @@ MonoBehaviour:
   Building: {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 50
   RequiredStone: 150
@@ -4420,8 +4424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
-  gridWidth: 50
-  gridHeight: 50
+  gridWidth: 100
+  gridHeight: 100
 --- !u!114 &1624739870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,12 +4781,13 @@ MonoBehaviour:
   Building: {fileID: 1303222242846693906, guid: 95a64ec3939de744ebc8c553d446884b, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 100
@@ -5814,12 +5819,13 @@ MonoBehaviour:
   Building: {fileID: 4073067735367622557, guid: 45f0ec7e26eb24bab9bdff8e6ed7035b, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 0
+  MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 100
   RequiredStone: 0
@@ -5965,11 +5971,12 @@ MonoBehaviour:
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
   MinimumGrassCount: 0
-  MinimumForestCount: 0
+  MinimumForestCount: 4
   MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 100

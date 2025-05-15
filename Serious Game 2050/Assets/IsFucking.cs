@@ -33,6 +33,9 @@ public class IsFucking : MonoBehaviour
         {
             WaterCollisionCount++;
         }
+
+        //note for later : Danny don't be a fucking dumbass and just make a seperage GameObject Under the current GhostBuilding with different Colliders so you can seperate them easily
+        // - Danny
     }
 
     private void OnTriggerExit2D(Collider2D collision)
