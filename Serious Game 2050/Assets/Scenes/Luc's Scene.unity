@@ -813,8 +813,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 75}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: -0.3, y: 1}
 --- !u!114 &429798502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,10 +889,10 @@ MonoBehaviour:
   BuildingCollisionCount: 0
   MinimumGrassCount: 0
   MinimumForestCount: 0
-  MinimumWaterCount: 0
+  MinimumWaterCount: 1
   GrassCollisionCount: 0
   ForestCollisionCount: 0
-  WaterCollisionCount: 1
+  WaterCollisionCount: 0
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 150

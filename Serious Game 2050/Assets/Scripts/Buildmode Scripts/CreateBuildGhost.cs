@@ -71,7 +71,6 @@ public class CreateBuildGhost : MonoBehaviour
                     "  WaterCount: " + WaterCollisionCount + "/" + MinimumWaterCount);
                 return;
             }
-
             // Place the tile if no collisions
             PlaceTile();
         }
