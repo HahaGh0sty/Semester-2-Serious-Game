@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class TimeManager : MonoBehaviour, IDataPersistence
 
     public int CurrentYear;
     public bool ArcadeMode;
+
+    public float CurrentGameTime { get; internal set; }
+
     // Start is called before the first frame update
     public void newGame()
     {
@@ -47,5 +51,10 @@ public class TimeManager : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData data)
     {
         data.CurrentYear = this.CurrentYear;
+    }
+
+    internal float GetTimePerDay()
+    {
+        throw new NotImplementedException();
     }
 }
