@@ -16,10 +16,10 @@ public class TileChecker : MonoBehaviour
     private HashSet<TileBase> buildingTilesSet;
     private Vector3Int lastCheckedPosition;
 
-    public bool tileMapGrassActive = false;
-    public bool tileMapForestActive = false;
-    public bool tileMapWaterActive = false;
-    public bool tileMapBuildingActive = false;
+    //public bool tileMapGrassActive = false;
+    //public bool tileMapForestActive = false;
+    //public bool tileMapWaterActive = false;
+    //public bool tileMapBuildingActive = false;
 
 
     [SerializeField] private GameObject ThisGrid;
@@ -78,18 +78,18 @@ public class TileChecker : MonoBehaviour
             lastCheckedPosition = currentCell;
             CheckTile(currentCell);
         }
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
-        {
-            if (SelectedMode == false)
-            {
-                SelectedMode = true;
-                SwitchSelectedState();
-            }
-            else if (SelectedMode == true)
-            {
-                SelectedMode = false;
-            }
-        }
+        //if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
+        //{
+        //    if (SelectedMode == false)
+        //    {
+        //        SelectedMode = true;
+        //        SwitchSelectedState();
+        //    }
+        //    else if (SelectedMode == true)
+        //    {
+        //        SelectedMode = false;
+        //    }
+        //}
     }
 
     void CheckTile(Vector3Int cellPosition)
@@ -99,105 +99,100 @@ public class TileChecker : MonoBehaviour
 
         if (grassTiles.Contains(tile))
         {
-            tileMapGrassActive = true;
-            tileMapForestActive = false;
-            tileMapWaterActive = false;
+            gameObject.tag = "IsGrassTile";
             s_Renderer.material.color = s_IsGrassTileColor;
             s_IsCurrentOriginalColor = s_IsGrassTileColor;
             //Debug.Log("Grass Tile detected on " + transform.name + "!");
         }
         else if (waterTiles.Contains(tile))
         {
-            tileMapWaterActive = true;
-            tileMapGrassActive = false;
-            tileMapForestActive = false;
+            gameObject.tag = "IsWaterTile";
             s_Renderer.material.color = s_IsWaterTileColor;
             s_IsCurrentOriginalColor = s_IsWaterTileColor;
             //Debug.Log("Water Tile detected on " + transform.name + "!");
         }
         else if (forestTiles.Contains(tile))
         {
-            tileMapForestActive = true;
-            tileMapGrassActive = false;
-            tileMapWaterActive = false;
+            gameObject.tag = "IsForestTile";
             s_Renderer.material.color = s_IsForestTileColor;
             s_IsCurrentOriginalColor = s_IsForestTileColor;
             //Debug.Log("Forest Tile detected on " + transform.name + "!");
         }
         else if (buildingTiles.Contains(tile))
         {
-            
+
         }
     }
+}
 
     //GridSelect script merge//
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "GhostBuilding")
-        {
-            HoverEnterRenderer();
-            //Debug.Log(transform + " is colliding with a GhostBuilding");
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.tag == "GhostBuilding")
+    //    {
+    //        HoverEnterRenderer();
+    //        //Debug.Log(transform + " is colliding with a GhostBuilding");
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "GhostBuilding")
-        {
-            HoverLeaveRenderer();
-            //Debug.Log(transform + " is no longer colliding with a GhostBuilding");
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.gameObject.tag == "GhostBuilding")
+    //    {
+    //        HoverLeaveRenderer();
+    //        //Debug.Log(transform + " is no longer colliding with a GhostBuilding");
+    //    }
+    //}
 
 
-    private void SwitchSelectedState()
-    {
-        if (!SelectedMode)
-        {
-            return;
-        }
-        if (HoveringOver)
-        {
-            Selected = !Selected;
-        }
-    }
-    private bool IsMouseOverUI()
-    {
-        return EventSystem.current.IsPointerOverGameObject();
-    }
+//    private void SwitchSelectedState()
+//    {
+//        if (!SelectedMode)
+//        {
+//            return;
+//        }
+//        if (HoveringOver)
+//        {
+//            Selected = !Selected;
+//        }
+//    }
+//    private bool IsMouseOverUI()
+//    {
+//        return EventSystem.current.IsPointerOverGameObject();
+//    }
 
-    private void HoverEnterRenderer()
-    {
-        if (IsMouseOverUI())
-        {
-            return;
-        }
+//    private void HoverEnterRenderer()
+//    {
+//        if (IsMouseOverUI())
+//        {
+//            return;
+//        }
        
-        HoveringOver = true; 
-        if (Selected == true)
-        {
-            return;
-        }
-        s_Renderer.material.color = s_MouseOverColor2;
-    }
-    private void HoverLeaveRenderer()
-    {
-        if (IsMouseOverUI())
-        {
-            return;
-        }
-        HoveringOver = false;
+//        HoveringOver = true; 
+//        if (Selected == true)
+//        {
+//            return;
+//        }
+//        s_Renderer.material.color = s_MouseOverColor2;
+//    }
+//    private void HoverLeaveRenderer()
+//    {
+//        if (IsMouseOverUI())
+//        {
+//            return;
+//        }
+//        HoveringOver = false;
 
-        if (Selected == false)
-        {
-            s_Renderer.material.color = s_IsCurrentOriginalColor;
-        }
+//        if (Selected == false)
+//        {
+//            s_Renderer.material.color = s_IsCurrentOriginalColor;
+//        }
 
-        if (Selected == true)
-        {
-            s_Renderer.material.color = s_MouseOverColor;
-        }
-    }
+//        if (Selected == true)
+//        {
+//            s_Renderer.material.color = s_MouseOverColor;
+//        }
+//    }
 
-}
+//}

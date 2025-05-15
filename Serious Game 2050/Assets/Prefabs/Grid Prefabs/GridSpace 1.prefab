@@ -183,10 +183,6 @@ MonoBehaviour:
   forestTiles:
   - {fileID: 11400000, guid: 86318d763881c3747bb158d380fc4752, type: 2}
   buildingTiles: []
-  tileMapGrassActive: 0
-  tileMapForestActive: 0
-  tileMapWaterActive: 0
-  tileMapBuildingActive: 0
   ThisGrid: {fileID: 6392127449164957119}
   SelectedMode: 0
   Selected: 0

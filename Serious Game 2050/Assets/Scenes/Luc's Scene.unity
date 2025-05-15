@@ -1531,7 +1531,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 857346762852856354, guid: 65a1ac45adbd1574d8c60da6789e7360, type: 3}
   Building: {fileID: 7934095903876407573, guid: e92edc484a1e9d743ba8a6202537d66c, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 0
@@ -2750,7 +2756,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 1287975020891920262, guid: c92bd2a4ef1d54543a3eefdbbc5122c3, type: 3}
   Building: {fileID: 803367064514309189, guid: 3689403e745ea8c45aec7b87c18b8076, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 200
   RequiredStone: 0
@@ -2922,7 +2934,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 3649586718046808678, guid: e1bdc9b887d71324bb23e1c5448e3cef, type: 3}
   Building: {fileID: 2777726022791240621, guid: 37d882edae9b87240a9da1290a91e79f, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 200
@@ -4298,7 +4316,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 8404802336595068717, guid: 73dcc6ffc6f565d40989d1f623816177, type: 3}
   Building: {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 50
   RequiredStone: 150
@@ -4396,8 +4420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
-  gridWidth: 0
-  gridHeight: 0
+  gridWidth: 50
+  gridHeight: 50
 --- !u!114 &1624739870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4752,7 +4776,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 2727499540382952041, guid: 8cb3d1a489759cb46bf6d04927644d58, type: 3}
   Building: {fileID: 1303222242846693906, guid: 95a64ec3939de744ebc8c553d446884b, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 100
@@ -5783,7 +5813,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 4662979592662316978, guid: 88843293c32b3364c9aad8b26e38244c, type: 3}
   Building: {fileID: 4073067735367622557, guid: 45f0ec7e26eb24bab9bdff8e6ed7035b, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 100
   RequiredStone: 0
@@ -5927,7 +5963,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 5944091124675143630, guid: cb56f5320ad14a54eadec9779927f06f, type: 3}
   Building: {fileID: 7775535677423819814, guid: 7b5f8f55409d744b5bc25e08b37f6fa0, type: 3}
   targetTilemap: {fileID: 1752198661}
-  collisioncount: 0
+  BuildingCollisionCount: 0
+  MinimumGrassCount: 0
+  MinimumForestCount: 0
+  MinimumWaterCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 100

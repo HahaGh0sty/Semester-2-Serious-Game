@@ -9,7 +9,15 @@ public class CreateBuildGhost : MonoBehaviour
 
     public GameObject Building;
     public Tilemap targetTilemap;
-    [SerializeField] public int collisioncount;
+    [SerializeField] public int BuildingCollisionCount;
+
+    [SerializeField] public int MinimumGrassCount;
+    [SerializeField] public int MinimumForestCount;
+    [SerializeField] public int MinimumWaterCount;
+
+    [SerializeField] public int GrassCollisionCount;
+    [SerializeField] public int ForestCollisionCount;
+    [SerializeField] public int WaterCollisionCount;
 
     private GameObject currentGhost;
 
@@ -36,20 +44,28 @@ public class CreateBuildGhost : MonoBehaviour
     {
 
         HandleGhostFollowMouse();
-        collisioncount = IsFucking.collisioncount;
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (0 < collisioncount)
+            // Checking all conditions, including water collision count
+            bool hasTooMuchCollision =
+                BuildingCollisionCount > 0 ||
+                GrassCollisionCount > MinimumGrassCount ||
+                ForestCollisionCount > MinimumForestCount ||
+                WaterCollisionCount > MinimumWaterCount;
+
+            if (hasTooMuchCollision)
             {
-                Debug.LogWarning(currentGhost + " cannot be placed, there are " + collisioncount + " buildings touching it!");
+                Debug.LogWarning(currentGhost + " cannot be placed because something is colliding too much!" +
+                    "  BuildingCount: " + BuildingCollisionCount +
+                    "  GrassCount: " + GrassCollisionCount + "/" + MinimumGrassCount +
+                    "  ForestCount: " + ForestCollisionCount + "/" + MinimumForestCount +
+                    "  WaterCount: " + WaterCollisionCount + "/" + MinimumWaterCount);
                 return;
             }
-            else
-            {
-                PlaceTile();
-            }
 
+            // Place the tile if no collisions
+            PlaceTile();
         }
     }
 
@@ -70,6 +86,11 @@ public class CreateBuildGhost : MonoBehaviour
     void HandleGhostFollowMouse()
     {
         if (currentGhost == null) return;
+
+        BuildingCollisionCount = IsFucking.BuildingCollisionCount;
+        GrassCollisionCount = IsFucking.GrassCollisionCount;
+        ForestCollisionCount = IsFucking.ForestCollisionCount;
+        WaterCollisionCount = IsFucking.WaterCollisionCount;
 
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0;
