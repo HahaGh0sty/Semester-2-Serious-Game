@@ -56,9 +56,9 @@ MonoBehaviour:
   FishGet: 0
   OilGet: 0
   CrudeOilGet: 0
-  GrainGet: 0
+  GrainGet: 3
   CoalGet: 0
-  PolutionGet: 0
+  PolutionGet: -1
   SteelGet: 0
 --- !u!61 &-5312986373738892127
 BoxCollider2D:

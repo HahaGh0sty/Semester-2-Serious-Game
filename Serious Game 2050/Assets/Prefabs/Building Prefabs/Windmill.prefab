@@ -58,7 +58,7 @@ MonoBehaviour:
   CrudeOilGet: 0
   GrainGet: 0
   CoalGet: 0
-  PolutionGet: 0
+  PolutionGet: -1
   SteelGet: 0
 --- !u!114 &-3813804225018659604
 MonoBehaviour:

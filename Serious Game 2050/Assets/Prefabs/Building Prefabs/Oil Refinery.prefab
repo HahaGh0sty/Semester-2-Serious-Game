@@ -54,11 +54,11 @@ MonoBehaviour:
   WoodGet: 0
   StoneGet: 0
   FishGet: 0
-  OilGet: 0
-  CrudeOilGet: 0
+  OilGet: 1
+  CrudeOilGet: -2
   GrainGet: 0
   CoalGet: 0
-  PolutionGet: 0
+  PolutionGet: 2
   SteelGet: 0
 --- !u!114 &8072074340106105061
 MonoBehaviour:
