@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         }
          if(timer.CurrentYear >= 2050)
         {
-            gameover();
+            //gameover();
        }
     }
 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8485181426118678988}
   - component: {fileID: 8072074340106105061}
   - component: {fileID: -4730238818616553291}
-  - component: {fileID: 2877573211369812406}
   m_Layer: 0
   m_Name: Oil Refinery
   m_TagString: Building
@@ -49,17 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placedAnimatedTile: {fileID: 11400000, guid: 1d2c816ceffde0f48abe97d46f7b9e81, type: 2}
   Tilemaptarget: {fileID: 0}
-  MoneyGet: 0
-  EnergyGet: -1
-  WoodGet: 0
-  StoneGet: 0
-  FishGet: 0
-  OilGet: 1
-  CrudeOilGet: -2
-  GrainGet: 0
-  CoalGet: 0
-  PolutionGet: 2
-  SteelGet: 0
+  resourceLose: 0000008005000000000000800000008000000080050000000000008000000080000000800000008000000080
+  resourceGet: 00000000fbffffff000000000000000000000000fbffffff0500000000000000000000000000000000000000
 --- !u!114 &8072074340106105061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +92,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -118,99 +108,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!82 &2877573211369812406
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7934095903876407573}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4725456803869693929, guid: b54e1b08031614f46be88038339cdc11, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 33dbe6dc4c1c02e499808e038e32199f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 0
-  MaxDistance: 3.3
-  Pan2D: 0
-  rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4

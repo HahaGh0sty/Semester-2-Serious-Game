@@ -9,51 +9,42 @@ public class ResourceGenerator : MonoBehaviour
     public TileBase placedAnimatedTile;
     public Tilemap Tilemaptarget;
     private GameObject building;
-    private CreateBuildGhost ghostbuild;
 
-    public int MoneyGet;
-    public int EnergyGet;
-    public int WoodGet;
-    public int StoneGet;
-    public int FishGet;
-    public int OilGet;
-    public int CrudeOilGet;
-    public int GrainGet;
-    public int CoalGet;
-    public int PolutionGet;
-    public int SteelGet;
+    public enum ResourceType
+    {
+        Money,
+        Energy,
+        Wood,
+        Stone,
+        Fish,
+        Oil,
+        CrudeOil,
+        Grain,
+        Coal,
+        Polution,
+        Steel,
+        Count
+    }
+
+    [HideInInspector] public int[] resourceLose = new int[(int)ResourceType.Count];
+    [HideInInspector] public int[] resourceGet = new int[(int)ResourceType.Count];
 
     void Start()
     {
         if (Tilemaptarget == null)
-    {
-        Tilemaptarget = GameObject.Find("Test Tilemap").GetComponent<Tilemap>();
-    }
-    building = this.gameObject;
-    resourceManager = FindObjectOfType<ResourceManager>();
-    StartCoroutine(DelayedOverlapCheck());
-    Level1();
+        {
+            Tilemaptarget = GameObject.Find("Test Tilemap").GetComponent<Tilemap>();
+        }
 
-    Vector3Int cellPos = Tilemaptarget.WorldToCell(building.transform.position);
+        building = this.gameObject;
+        resourceManager = FindObjectOfType<ResourceManager>();
+        Level1();
+
+        Vector3Int cellPos = Tilemaptarget.WorldToCell(building.transform.position);
         Debug.Log($"Placing tile at cell {cellPos}");
 
         Tilemaptarget.SetTile(cellPos, placedAnimatedTile);
-}
-
-IEnumerator DelayedOverlapCheck()
-{
-    yield return new WaitForSeconds(0.1f); // Give a small delay
-
-    if (IsOverlappingWithBuilding())
-    {
-        Debug.Log("Overlapping building found, destroying " + gameObject.name);
-        Destroy(this.gameObject);
     }
-}
-
-
-      
-    
 
     void Level1()
     {
@@ -64,55 +55,68 @@ IEnumerator DelayedOverlapCheck()
     {
         if (resourceManager != null)
         {
-            resourceManager.GildedBanana += this.MoneyGet;
-            resourceManager.Energy += this.EnergyGet;
-            resourceManager.Wood += this.WoodGet;
-            resourceManager.Stone += this.StoneGet;
-            resourceManager.Fish += this.FishGet;
-            resourceManager.Coal += this.CoalGet;
-            resourceManager.Oil += this.OilGet;
-            resourceManager.CrudeOil += this.CrudeOilGet;
-            resourceManager.Polution += this.PolutionGet;
-            resourceManager.Steel += this.SteelGet;
+            if (
+                resourceManager.GildedBanana < resourceLose[(int)ResourceType.Money] ||
+                resourceManager.Energy < resourceLose[(int)ResourceType.Energy] ||
+                resourceManager.Wood < resourceLose[(int)ResourceType.Wood] ||
+                resourceManager.Stone < resourceLose[(int)ResourceType.Stone] ||
+                resourceManager.Fish < resourceLose[(int)ResourceType.Fish] ||
+                resourceManager.Coal < resourceLose[(int)ResourceType.Coal] ||
+                resourceManager.Oil < resourceLose[(int)ResourceType.Oil] ||
+                resourceManager.CrudeOil < resourceLose[(int)ResourceType.CrudeOil] ||
+                resourceManager.Steel < resourceLose[(int)ResourceType.Steel] ||
+                resourceManager.Polution < resourceLose[(int)ResourceType.Polution]
+               )
+            {
+                Debug.LogWarning("Every " + building + " doesn't have enough resources to function!");
+                return;
+            }
+
+            resourceManager.GildedBanana += resourceGet[(int)ResourceType.Money];
+            resourceManager.Energy += resourceGet[(int)ResourceType.Energy];
+            resourceManager.Wood += resourceGet[(int)ResourceType.Wood];
+            resourceManager.Stone += resourceGet[(int)ResourceType.Stone];
+            resourceManager.Fish += resourceGet[(int)ResourceType.Fish];
+            resourceManager.Coal += resourceGet[(int)ResourceType.Coal];
+            resourceManager.Oil += resourceGet[(int)ResourceType.Oil];
+            resourceManager.CrudeOil += resourceGet[(int)ResourceType.CrudeOil];
+            resourceManager.Polution += resourceGet[(int)ResourceType.Polution];
+            resourceManager.Steel += resourceGet[(int)ResourceType.Steel];
         }
     }
-
-    // New function: Check if another object with tag "Building" is on the same position
-private bool IsOverlappingWithBuilding()
-{
-    // Ensure the collider is available
-    Collider thisCollider = GetComponent<Collider>();
-    if (thisCollider == null)
-    {
-        Debug.LogWarning("No collider found on building " + gameObject.name);
-        return false;
-    }
-
-    // Draw the overlap box in the scene view (for debugging)
-    Gizmos.color = Color.red;
-    Gizmos.DrawWireCube(thisCollider.bounds.center, thisCollider.bounds.size);
-
-    // Check for any colliders in the overlap area
-    Collider[] hits = Physics.OverlapBox(
-        thisCollider.bounds.center,
-        thisCollider.bounds.extents, // This represents half the size
-        transform.rotation // Use the rotation to match the building's actual facing
-    );
-
-    foreach (Collider hit in hits)
-    {
-        // Ensure we ignore the current object and only check for other "Building" objects
-        if (hit.gameObject != this.gameObject && hit.CompareTag("Building"))
-        {
-            Debug.Log($"Overlap detected with {hit.gameObject.name}");
-            return true; // There was an overlap with another building
-        }
-    }
-
-    return false;
 }
 
+// New function: Check if another object with tag "Building" is on the same position
+//private bool IsOverlappingWithBuilding()
+//{
+//    // Ensure the Collider2D is available
+//    Collider2D thisCollider2D = GetComponent<Collider2D>();
+//    if (thisCollider2D == null)
+//    {
+//        Debug.LogWarning("No Collider2D found on building " + gameObject.name);
+//        return false;
+//    }
 
+//    // Draw the overlap box in the scene view (for debugging)
+//    Gizmos.color = Color.red;
+//    Gizmos.DrawWireCube(thisCollider2D.bounds.center, thisCollider2D.bounds.size);
 
+//    // Check for any Collider2Ds in the overlap area
+//    Collider2D[] hits = Physics.OverlapBox(
+//        thisCollider2D.bounds.center,
+//        thisCollider2D.bounds.extents, // This represents half the size
+//        transform.rotation // Use the rotation to match the building's actual facing
+//    );
 
-}
+//    foreach (Collider2D hit in hits)
+//    {
+//        // Ensure we ignore the current object and only check for other "Building" objects
+//        if (hit.gameObject != this.gameObject && hit.CompareTag("Building"))
+//        {
+//            Debug.Log($"Overlap detected with {hit.gameObject.name}");
+//            return true; // There was an overlap with another building
+//        }
+//    }
+
+//    return false;
+//}
