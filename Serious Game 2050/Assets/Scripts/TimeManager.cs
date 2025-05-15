@@ -33,10 +33,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void Update()
     {
-        //if(CurrentYear = 2050)
-       // {
-            //gameover();
-       // }
+       
     }
     public void LoadData(GameData data)
     {
