@@ -1664,6 +1664,12 @@ MonoBehaviour:
   - 3
   - 4
   - 5
+  zPositions:
+  - -5
+  - -10
+  - -15
+  - -20
+  - -25
   tileLoader: {fileID: 0}
 --- !u!1 &943308375
 GameObject:
@@ -2105,7 +2111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e295236b6b475b4d8350c07f6ac635f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   PauseMenuUI: {fileID: 1770592393}
+  GameoverUI: {fileID: 0}
 --- !u!1 &1065651983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,6 +2665,12 @@ MonoBehaviour:
   - 3
   - 4
   - 5
+  zPositions:
+  - -5
+  - -10
+  - -15
+  - -20
+  - -25
   tileLoader: {fileID: 1928301483}
 --- !u!114 &1211271282
 MonoBehaviour:

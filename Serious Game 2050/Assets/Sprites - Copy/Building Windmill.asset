@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Building Windmill
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
-  - {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
-  - {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
-  - {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
-  - {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
+  - {fileID: -1054588639, guid: 859fea03e5da558409a12edacc1d2851, type: 3}
+  - {fileID: -1348193876, guid: 859fea03e5da558409a12edacc1d2851, type: 3}
+  - {fileID: 1093242681, guid: 859fea03e5da558409a12edacc1d2851, type: 3}
+  - {fileID: 1216391191, guid: 859fea03e5da558409a12edacc1d2851, type: 3}
+  - {fileID: 1754088377, guid: 859fea03e5da558409a12edacc1d2851, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
