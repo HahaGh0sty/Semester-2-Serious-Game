@@ -448,8 +448,8 @@ MonoBehaviour:
   grasswatercornertouchSWTile: {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   airtile: {fileID: 0}
-  width: 100
-  height: 100
+  width: 200
+  height: 200
   minWaterClusterSize: 5
   maxWaterClusterSize: 15
   minForestClusterSize: 8
@@ -895,7 +895,7 @@ MonoBehaviour:
   WaterCollisionCount: 0
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
-  RequiredWood: 150
+  RequiredWood: 100
   RequiredStone: 20
   RequiredGrain: 30
   RequiredEnergy: 0
@@ -1710,12 +1710,12 @@ MonoBehaviour:
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
-  RequiredStone: 0
-  RequiredGrain: 0
+  RequiredStone: 100
+  RequiredGrain: 50
   RequiredEnergy: 0
   RequiredPollution: 0
   RequiredGildedBanana: 0
-  RequiredRawOil: 0
+  RequiredRawOil: 20
   RequiredOil: 0
   RequiredFish: 0
   RequiredCoal: 0
@@ -2142,7 +2142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -905, y: -420}
+  m_AnchoredPosition: {x: -890, y: -390}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943308377
@@ -2725,7 +2725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -905, y: -495}
+  m_AnchoredPosition: {x: -890, y: -465}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065651985
@@ -2951,7 +2951,7 @@ MonoBehaviour:
   RequiredOil: 0
   RequiredFish: 0
   RequiredCoal: 0
-  RequiredSteel: 10
+  RequiredSteel: 0
   IsFucking: {fileID: 0}
 --- !u!114 &1090911322
 MonoBehaviour:
@@ -3112,16 +3112,16 @@ MonoBehaviour:
   Building: {fileID: 2777726022791240621, guid: 37d882edae9b87240a9da1290a91e79f, type: 3}
   targetTilemap: {fileID: 1752198661}
   BuildingCollisionCount: 0
-  MinimumGrassCount: 1
+  MinimumGrassCount: 2
   MinimumForestCount: 0
-  MinimumWaterCount: 1
+  MinimumWaterCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
-  RequiredWood: 0
-  RequiredStone: 200
+  RequiredWood: 10
+  RequiredStone: 50
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
@@ -3208,7 +3208,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.87329817, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4607,8 +4607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
-  gridWidth: 100
-  gridHeight: 100
+  gridWidth: 200
+  gridHeight: 200
 --- !u!114 &1624739870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4976,7 +4976,7 @@ MonoBehaviour:
   RequiredWood: 0
   RequiredStone: 100
   RequiredGrain: 0
-  RequiredEnergy: 0
+  RequiredEnergy: 50
   RequiredPollution: 0
   RequiredGildedBanana: 200
   RequiredRawOil: 0
@@ -6163,7 +6163,7 @@ MonoBehaviour:
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
-  RequiredStone: 100
+  RequiredStone: 0
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0

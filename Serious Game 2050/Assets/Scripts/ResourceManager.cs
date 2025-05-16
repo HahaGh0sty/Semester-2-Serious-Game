@@ -33,6 +33,11 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
             Coal += 500;
             Steel += 500;
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GildedBanana += 500;
+        }
     }
 
 
