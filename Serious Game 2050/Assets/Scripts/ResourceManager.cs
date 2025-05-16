@@ -16,27 +16,40 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     public int Fish;
     public int Coal;
     public int Steel;
-
+    private void Start()
+    {
+        Wood += 500;
+        Stone += 200;
+        Grain += 200;
+        Energy += 200;
+        Polution += 200;
+        GildedBanana += 200;
+        CrudeOil += 200;
+        Oil += 200;
+        Fish += 200;
+        Coal += 200;
+        Steel += 200;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Wood += 500;
-            Stone += 500;
-            Grain += 500;   
-            Energy += 500;
-            Polution += 500;
-            GildedBanana += 500;
-            CrudeOil += 500;
-            Oil += 500;
-            Fish += 500;
-            Coal += 500;
-            Steel += 500;
+            Wood += 200;
+            Stone += 200;
+            Grain += 200;   
+            Energy += 200;
+            Polution += 200;
+            GildedBanana += 200;
+            CrudeOil += 200;
+            Oil += 200;
+            Fish += 200;
+            Coal += 200;
+            Steel += 200;
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            GildedBanana += 500;
+            GildedBanana += 200;
         }
     }
 

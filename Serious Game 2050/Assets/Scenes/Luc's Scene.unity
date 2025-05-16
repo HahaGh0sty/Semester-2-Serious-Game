@@ -889,8 +889,8 @@ MonoBehaviour:
   grasswatercornertouchSWTile: {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
   grasswaterisland: {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
   airtile: {fileID: 0}
-  width: 200
-  height: 200
+  width: 150
+  height: 150
   minWaterClusterSize: 5
   maxWaterClusterSize: 15
   minForestClusterSize: 8
@@ -5351,8 +5351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
-  gridWidth: 200
-  gridHeight: 200
+  gridWidth: 150
+  gridHeight: 150
 --- !u!114 &1624739870
 MonoBehaviour:
   m_ObjectHideFlags: 0
