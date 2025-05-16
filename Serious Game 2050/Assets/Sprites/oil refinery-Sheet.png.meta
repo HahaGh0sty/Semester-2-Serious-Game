@@ -121,7 +121,7 @@ TextureImporter:
       name: oil refinery-Sheet_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 66
         y: 0
         width: 64
         height: 64
@@ -142,9 +142,9 @@ TextureImporter:
       name: oil refinery-Sheet_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 132
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,7 +163,7 @@ TextureImporter:
       name: oil refinery-Sheet_3
       rect:
         serializedVersion: 2
-        x: 200
+        x: 198
         y: 0
         width: 64
         height: 64
@@ -184,9 +184,9 @@ TextureImporter:
       name: oil refinery-Sheet_4
       rect:
         serializedVersion: 2
-        x: 267
+        x: 264
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
