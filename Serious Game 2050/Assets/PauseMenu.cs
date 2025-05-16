@@ -9,7 +9,10 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    public TimeManager timer;
+
     public GameObject PauseMenuUI;
+    public GameObject GameoverUI;
 
 
     void Update()
@@ -25,6 +28,16 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+         if(timer.CurrentYear >= 2050)
+        {
+            //gameover();
+       }
+    }
+
+    public void gameover()
+    {
+        GameoverUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void Resume ()

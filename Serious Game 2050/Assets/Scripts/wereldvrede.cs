@@ -21,7 +21,7 @@ public class wereldvrede : MonoBehaviour
     void Start()
     {
         CreateUI();
-        InvokeRepeating("UpdateUI", 0f, 2f);
+        InvokeRepeating("UpdateUI", 0f, 0.1f);
     }
 
     void CreateUI()
@@ -37,16 +37,16 @@ public class wereldvrede : MonoBehaviour
     void UpdateUI()
     {
         TryUpdate("gildedbanana", resources.GildedBanana);
-        TryUpdate("Energy", resources.Energy);
+        TryUpdate("energy", resources.Energy);
         TryUpdate("wood", resources.Wood);
         TryUpdate("stone", resources.Stone);
-        TryUpdate("vis", resources.Fish);
-        TryUpdate("olie", resources.Oil);
-        TryUpdate("ruweolie", resources.CrudeOil);
-        TryUpdate("graan", resources.Grain);
+        TryUpdate("fish", resources.Fish);
+        TryUpdate("oil", resources.Oil);
+        TryUpdate("crude oil", resources.CrudeOil);
+        TryUpdate("grain", resources.Grain);
         TryUpdate("coal", resources.Coal);
-        TryUpdate("vervuiling", resources.Polution);
-        TryUpdate("staal", resources.Steel);
+        TryUpdate("polution", resources.Polution);
+        TryUpdate("steel", resources.Steel);
     }
 
     void TryUpdate(string key, int value)

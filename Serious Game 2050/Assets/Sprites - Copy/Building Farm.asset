@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Building Farm
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1008396522, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: -1008396522, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: -1008396522, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: -1008396522, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: -1008396522, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
+  - {fileID: 26968930, guid: 7b34a151b98e2ff4fb1f859342ee8db0, type: 3}
+  - {fileID: 832724831, guid: 7b34a151b98e2ff4fb1f859342ee8db0, type: 3}
+  - {fileID: -748269046, guid: 7b34a151b98e2ff4fb1f859342ee8db0, type: 3}
+  - {fileID: 433872704, guid: 7b34a151b98e2ff4fb1f859342ee8db0, type: 3}
+  - {fileID: -1618777921, guid: 7b34a151b98e2ff4fb1f859342ee8db0, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

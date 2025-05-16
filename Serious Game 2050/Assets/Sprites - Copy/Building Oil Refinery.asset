@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Building Oil Refinery
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1651664327, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: 1651664327, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: 1651664327, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: 1651664327, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
-  - {fileID: 1651664327, guid: 67f10503957ea4b5ab052f627eb429fe, type: 3}
+  - {fileID: 185595132, guid: 551ba022dcb0e6f4e8ecc812745c6154, type: 3}
+  - {fileID: -16689194, guid: 551ba022dcb0e6f4e8ecc812745c6154, type: 3}
+  - {fileID: 1286980424, guid: 551ba022dcb0e6f4e8ecc812745c6154, type: 3}
+  - {fileID: -1528088616, guid: 551ba022dcb0e6f4e8ecc812745c6154, type: 3}
+  - {fileID: 1436241569, guid: 551ba022dcb0e6f4e8ecc812745c6154, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

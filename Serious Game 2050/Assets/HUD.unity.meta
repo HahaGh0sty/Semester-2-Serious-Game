@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Serious Game 2050/Assets/HUD.unity.meta
 guid: dd7ed38db7e58a046bf0fda296078f73
+========
+guid: a6375362345f04013b764594357c664f
+>>>>>>>> AlphaBuild-(hopefully):Serious Game 2050/Assets/Scenes/Basic Main menu.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
