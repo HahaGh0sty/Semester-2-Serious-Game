@@ -1,0 +1,503 @@
+[33mcommit 7ac90445d2fea9ad88615fdbcfdef6649a3dfd3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmerge-conflict-solver[m[33m, [m[1;31morigin/merge-conflict-solver[m[33m)[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Thu May 15 10:00:43 2025 +0200
+
+    UI Changes - Hud implemented
+
+[33mcommit 123cf30669d88ddb99f257232d3e15b335a7dbdd[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Mon May 19 09:49:20 2025 +0200
+
+    iets
+
+[33mcommit 74a8e2a0032a54f27753efb378f26846a66a236b[m
+Merge: 1d0d1c2 0ba3c6b
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Mon May 19 09:34:02 2025 +0200
+
+    Merge branch 'Hud-tests' into merge-conflict-solver
+
+[33mcommit 1d0d1c228e4a31d2c745a4975802e44a74cbd662[m[33m ([m[1;31morigin/AlphaBuild-(hopefully)[m[33m)[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Fri May 16 14:27:17 2025 +0200
+
+    update for testig alpha
+
+[33mcommit feaca2bd44ad61aa9e31fc7b9011670124eaef50[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 16 14:24:05 2025 +0200
+
+    ag
+
+[33mcommit 5ecac97cae9eceb74101b30d1bd4ca284e71521a[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 16 14:23:45 2025 +0200
+
+    ah
+
+[33mcommit c401871bb1ca4295179534d2ac9e4d78289e8d12[m
+Merge: 1f449f8 cd3ec1e
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 16 13:58:25 2025 +0200
+
+    Merge branch 'AlphaBuild-(hopefully)' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into AlphaBuild-(hopefully)
+
+[33mcommit 1f449f808021c678ce5d6753e66a4384e843a63e[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 16 13:58:16 2025 +0200
+
+    build
+
+[33mcommit cd3ec1e558b6ce3376c754a9336c03faa1d08b11[m
+Merge: a6debf9 d0223e3
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Fri May 16 13:40:21 2025 +0200
+
+    Merge branch 'AlphaBuild-(hopefully)' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into AlphaBuild-(hopefully)
+
+[33mcommit a6debf92b1f34263eea3cd20d415b2b1a5f27b36[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Fri May 16 13:40:08 2025 +0200
+
+    Added the game over screen
+
+[33mcommit 0ba3c6bc9eaff06c1f6415683bc13d77e0fc3df8[m[33m ([m[1;31morigin/Hud-tests[m[33m, [m[1;32mHud-tests[m[33m)[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Fri May 16 13:27:56 2025 +0200
+
+    Update Luc's Scene.unity
+
+[33mcommit d0223e3d3840639a2fd8e39ddf70023e4ae228ef[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 16 13:26:25 2025 +0200
+
+    g
+
+[33mcommit d6f2491b9bfe48de0b24fae2196cd0b4f6ae5ad8[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Thu May 15 15:31:30 2025 +0200
+
+    visboot update
+    
+    Nummer van WaterCollisionCount naar MinimumWaterCount geswitched
+    collider aangepast zodat het past in een 1x1
+
+[33mcommit 2872564555a25a838d22255cf795f2c5a13d95e0[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Thu May 15 15:11:47 2025 +0200
+
+    Update FarmBuilding Tag
+    
+    Luc did a dumb and forgor to put a building tag on the farm
+
+[33mcommit 4b357579fa2cf39eb3a123a96d99e816920566d0[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 14:56:12 2025 +0200
+
+    Update Luc's Scene.unity
+
+[33mcommit 16b30920922343b41eee45c38a33c2f76a62bb5f[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 14:54:30 2025 +0200
+
+    merge fixes
+
+[33mcommit a328b02a1148135c5d2dfa9731fb55a7f02e8f93[m
+Merge: 7b9f11a 6833181
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 13:23:51 2025 +0200
+
+    Merge remote-tracking branch 'origin/BobTheBuildUi' into AlphaBuild-(hopefully)
+
+[33mcommit 7b9f11a94529862ede091df9184018191e209642[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 13:20:09 2025 +0200
+
+    nu echt de laatste
+
+[33mcommit aa44a7bdca76ef6db6fc7172b29d9ccac1829b4a[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 13:13:53 2025 +0200
+
+    Pre merge last updates
+
+[33mcommit 683318134d562bff5393597bfb48ae4189ac93f3[m[33m ([m[1;31morigin/BobTheBuildUi[m[33m)[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Thu May 15 13:11:38 2025 +0200
+
+    Final changes 4 merge
+    
+    - alle building prefabs iets kleiner gemaakt voor de GhostWindmill
+    - GhostBuildings checken nu of ze *alle* grid criterea voltooien
+    - kan niet meer achter UI geklikt worden
+    - Y key geeft nu 500 van alles in plaats van 100
+    
+    Note voor Luc, double check de BuildUI Button [Building]. daar staat de minimum aantal grids waar de Ghostbuilding over heen moet hoveren en de minimum resources die het nodig heeft.
+    
+    De windmolen is fucky met zijn colliders btw it sucks
+
+[33mcommit 7fe8435779862ca8c668dfc16c0c3b9140d62bb4[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Thu May 15 10:43:01 2025 +0200
+
+    Buildings now check if placed on correct tiles or not
+
+[33mcommit 2794845a5a462387be7fc45bbd7416a941dbff0b[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Thu May 15 10:00:43 2025 +0200
+
+    UI Changes - Hud implemented
+
+[33mcommit d87825d1aaaa73c951d03600763123e2b38a15a8[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 15 08:58:28 2025 +0200
+
+    iets
+
+[33mcommit 14e329d6b8b27f0d46bc7e50039c89bc57ea0e39[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 23:41:19 2025 +0200
+
+    late night update and i want to dieeeeeeeeeeeeeeeeeeeeeeeeee
+    
+    - BuildUI scrollbar naar beneden van het scherm gezet
+    - druk op " Y " om 100 van elke resource te krijgen
+    - je kan geen gebouwen meer op elkaar stacken
+
+[33mcommit 7b7bdc87b72e0adafb0cfac7ee656dcdb1260c7d[m
+Merge: 54e621f c2e5746
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Wed May 14 17:06:33 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit 53284ec86fc5a4b59ff193850332c9acd8f66669[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 16:49:11 2025 +0200
+
+    RESOURCE USAGE+GAIN WERKT FINALLY AHHHHHHHH
+
+[33mcommit 54e621fa1b8e4e616431494893f156732c84632c[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Wed May 14 16:40:57 2025 +0200
+
+    geluid bij gebouwtjes
+
+[33mcommit 5a831143bc3655f0f2a3b8c5bfc68e0bb3740af0[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 16:32:29 2025 +0200
+
+    update be4 bluescreen
+
+[33mcommit 410234d1ba13903b8a8451afbd008ae42ff0b697[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 15:38:30 2025 +0200
+
+    push update before i lose everything again ;-;
+
+[33mcommit 97f49fe01a69488e7a94c6e2400b0f134ae7d2da[m
+Merge: 0ca6db9 c2e5746
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:37:27 2025 +0200
+
+    Merge branch 'SavesplzWork' into BobTheBuildUi
+
+[33mcommit 0ca6db9eed25509396d55b39550e26478fee6a8e[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:36:44 2025 +0200
+
+    oh fuck update again
+
+[33mcommit c2e574673909fb37dc53a8cae4b4655ee5bf98a1[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed May 14 14:36:02 2025 +0200
+
+    added a game over screen that pops up when time goes over 2025
+
+[33mcommit 2822fbb1898415fed8f1587cb4911b31cbbc809c[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:35:58 2025 +0200
+
+    update to switch to savesplzwork and I'm too scared to bluescreen
+
+[33mcommit a19d709fc31fca22f8fc69db30f27bc583942fe6[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:06:08 2025 +0200
+
+    Reapply "Merge branch 'SavesplzWork' into BobTheBuildUi"
+    
+    This reverts commit 78e3f10b984ed3366f1816a856c9111a6834ca36.
+
+[33mcommit 78e3f10b984ed3366f1816a856c9111a6834ca36[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:05:21 2025 +0200
+
+    Revert "Merge branch 'SavesplzWork' into BobTheBuildUi"
+    
+    This reverts commit 2db940de9694391d014b6a873cea4c3cc9bddc38, reversing
+    changes made to 13b5474b4e597485b9026756d709a130f5f9a7de.
+
+[33mcommit 2db940de9694391d014b6a873cea4c3cc9bddc38[m
+Merge: 13b5474 43ab089
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:04:22 2025 +0200
+
+    Merge branch 'SavesplzWork' into BobTheBuildUi
+
+[33mcommit 13b5474b4e597485b9026756d709a130f5f9a7de[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Wed May 14 14:03:38 2025 +0200
+
+    update push for merge with savesplzwork
+
+[33mcommit 43ab089aa5a99394b4972f16c301f6bce79c3bbb[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed May 14 14:00:50 2025 +0200
+
+    sprites yay
+
+[33mcommit 8a971f83f34fe29a88c9bca9f8531740cc31bfe4[m
+Merge: 224afb7 8f8957d
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed May 14 13:44:34 2025 +0200
+
+    Merge branch 'Sprites&Textures' into SavesplzWork
+
+[33mcommit 224afb7f34c453f56332d20737ee99d81979c489[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed May 14 13:35:41 2025 +0200
+
+    changed resource names to make sure the resource display doesn't break
+
+[33mcommit 1027a7675a151f8b60653fbd1d86fde17eca5745[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Tue May 13 13:27:47 2025 +0200
+
+    STILL NOT WORKING GODDAMIT
+
+[33mcommit a53381fef438b03791c2fce41d0dfb5f48fc629a[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Tue May 13 13:15:22 2025 +0200
+
+    iets
+
+[33mcommit 796605f0cac4e6999ef4557aac621bdc53f20a63[m
+Author: DannyChao06 <dannychao03@gmail.com>
+Date:   Tue May 13 13:04:26 2025 +0200
+
+    testing the Resource Manager with new resource use script
+
+[33mcommit c07bced811ed7f886e85bcb5d19094a36ea5959e[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Tue May 13 12:29:50 2025 +0200
+
+    Merge branch 'SavesplzWork' into Hud-tests
+
+[33mcommit fbe4e1c8b8f33f299e369d135ace490022bfeb09[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 12:11:29 2025 +0200
+
+    IT PLACES EVERYTHING CORRECTLY AND IT SAVES TOO
+
+[33mcommit 1f9530afd761541a192110879e19b64693b8ac41[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 11:43:06 2025 +0200
+
+    updated resource names and removed sprite renderer
+
+[33mcommit 1b33d0501b269e0406b3eb1d32bf121da16ad744[m
+Merge: 4826e8a df82003
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 11:01:56 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit 4826e8a244eeaaa8d81751b70cfcaf0193b30c7d[m
+Merge: dd546ff 9073bf3
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 11:01:39 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit df820032d2a399ef98b372839eef10b1859ef8c7[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Tue May 13 11:01:26 2025 +0200
+
+    New Buildings
+
+[33mcommit dd546ff288cac96f0a1f19d87f949e4f7b2eac98[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 11:00:51 2025 +0200
+
+    changed building spawning to now work with a tilemap, we gud bois
+
+[33mcommit 9073bf3343d02794a1a0d3f0361c1203811aa2ce[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Tue May 13 10:17:37 2025 +0200
+
+    New Buildings
+
+[33mcommit fb6443f6e893f82361fb379e9ba032be51aa57ed[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Tue May 13 09:59:00 2025 +0200
+
+    Create .vsconfig
+
+[33mcommit c48930b199c6d17ac672c8f3bf0392d9ff181d07[m
+Author: HugoSchiereck <h.schiereck@draads.nl>
+Date:   Tue May 13 09:58:07 2025 +0200
+
+    Topbar hud tests
+
+[33mcommit f6c6559d840a59f97ae4921c99b6c09336238914[m
+Merge: 7bb7f88 57fc6e1
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Tue May 13 09:22:06 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit 7bb7f88891dd35396624a925d66b1bc62b99efd1[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Tue May 13 09:22:04 2025 +0200
+
+    iets
+
+[33mcommit 57fc6e1f422f1c7e4431e28d2b07a05904e17469[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue May 13 08:42:45 2025 +0200
+
+    time manager is working
+
+[33mcommit 8f8957db58f4e017497f1a794b4e8edc8e554c5a[m
+Author: bougienl <izasuleiman@gmail.com>
+Date:   Mon May 12 09:28:07 2025 +0200
+
+    update met png's
+
+[33mcommit ea29c4666ff98b5dfa1cff3eb34dc7fa0bbeb077[m
+Merge: 71e9f22 91e489b
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 9 16:11:46 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit 71e9f22614de535663ab5cf227a83eff18a69f75[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 9 16:11:28 2025 +0200
+
+    iets
+
+[33mcommit 91e489b19d5c5a1dfa3779556c605dfaefb1a967[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Fri May 9 16:05:30 2025 +0200
+
+    time manager has some shits now
+
+[33mcommit a65f6ec13bf5c35ebdaae62761720a5b287b1aa0[m
+Author: bougienl <izasuleiman@gmail.com>
+Date:   Fri May 9 15:50:16 2025 +0200
+
+    Tijd voor vrijmibo
+
+[33mcommit cafc32d4f63ba263650cc1f644584c363f39432d[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Fri May 9 15:29:18 2025 +0200
+
+    Buildings Plaatsen
+
+[33mcommit 15aa17a7a423b40101e644533b219ab9dfa317cb[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Thu May 8 23:46:14 2025 +0200
+
+    iets
+
+[33mcommit a9e545ac30493c47b6e183a3608aee313f52c913[m
+Merge: 2d2a420 89cdd9b
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Wed May 7 17:06:56 2025 +0200
+
+    Merge branch 'SavesplzWork' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into SavesplzWork
+
+[33mcommit 2d2a4205b7f2e9f98fdd0f8b604b1f21fd47b66e[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Wed May 7 17:06:52 2025 +0200
+
+    Fucking working baby
+
+[33mcommit 89cdd9b8f838eabec607f44f7ae584bc7feb3554[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed May 7 15:26:44 2025 +0200
+
+    added time manager, made a toggle for arcade mode, changed resource text to update every 2 seconds not every frame
+
+[33mcommit be5821c61fb17caf6700cdf18e119556bc7f72c7[m[33m ([m[1;31morigin/Saves[m[33m)[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Fri Apr 25 13:47:52 2025 +0200
+
+    working sorta...
+
+[33mcommit 9f0d23922c3fd3a1e35bad7c65679c7a8a1a3e82[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Thu Apr 24 23:43:53 2025 +0200
+
+    buildings staan goed op grid, worden gesaved, camera wordt gesaved, alleen nog kleine bug dat buildings zichzelf destroyen als je ze plaatst, wordt morgen gefixt i promise
+
+[33mcommit 1fc818f6825aee8c67f837ed04704cdd89024c24[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Thu Apr 24 14:51:09 2025 +0200
+
+    BUILDINGS ARE FUCKING PLACEABLE LES GOOOOOOOO
+
+[33mcommit 19d0713b039827d475baf2f077dfb2203c93853f[m
+Author: bougienl <izasuleiman@gmail.com>
+Date:   Wed Apr 23 11:34:33 2025 +0200
+
+    update
+
+[33mcommit 718450c3243fb4a23c530c97fe6872f9df867abe[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Tue Apr 22 10:00:07 2025 +0200
+
+    made some more building prefabs
+
+[33mcommit 70b3ed27ca623e69e7adeaf2b7b353659ffbc4dc[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed Apr 16 20:19:04 2025 +0200
+
+    small changes, mostly added reosurces and merged with sprites
+
+[33mcommit 6dfe0e7ff06ec8b1ee34c2c77f63bba65c5b03f5[m
+Merge: 1514816 51fdf87
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Wed Apr 16 14:07:24 2025 +0200
+
+    Merge branch 'Sprites&Textures' into Saves
+
+[33mcommit 1514816ab73c60154954e71b3dad335329da0700[m
+Merge: 34c2567 8dda198
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Mon Apr 14 11:57:49 2025 +0200
+
+    Merge branch 'branch-for-merging-buildui-with-saves' of https://github.com/HahaGh0sty/Semester-2-Serious-Game into branch-for-merging-buildui-with-saves
+
+[33mcommit 34c256707336f17bf43ec497c607148fdadd10d4[m
+Merge: 3a21e5a cfbbea9
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Mon Apr 14 11:57:33 2025 +0200
+
+    Merge branch 'saves' into branch-for-merging-buildui-with-saves
+
+[33mcommit 8dda198e1ebf4257d726198eb105483e541db807[m
+Author: Luc-v-O <luc@vanogtrop-deruiter.nl>
+Date:   Mon Apr 14 11:57:31 2025 +0200
+
+    optimalisatie
+
+[33mcommit cfbbea9e7ec1bb64409608e0367d97b41aca19b4[m
+Author: HahaGh0sty <ianvdwerf@hotmail.com>
+Date:   Mon Apr 14 11:45:18 2025 +0200
+
+    mostly got rid of warnings, also map generation works completely
+
+[33mcommit 3a21e5a6e124bf6082ed80b4a3e3584ae2fbdcab[m
+Author: Luc-v-O <luc@vanogtrop-der
