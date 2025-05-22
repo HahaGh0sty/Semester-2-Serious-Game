@@ -143,9 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Music: {fileID: 1793851115182748998}
   Songs:
-  - {fileID: 8300000, guid: 9a4a3ec6d0c1f6a45adf8db4f6d18c7f, type: 3}
-  - {fileID: 8300000, guid: 2dd87b683df4c3646b3e23773a17338a, type: 3}
-  - {fileID: 8300000, guid: 6d4ebda1692137b4da3587950b2e9124, type: 3}
-  - {fileID: 8300000, guid: 3344f593a0c437e4096dd5782f48b837, type: 3}
-  - {fileID: 8300000, guid: 6732bc0e6c698f84ab592c332f0cc299, type: 3}
-  silenceBetweenSongs: 2
+  - {fileID: 8300000, guid: bfe4e635d5e327441b4b43a3508291a5, type: 3}
+  - {fileID: 8300000, guid: ced07e8893fce9d45b2caf75932eccb4, type: 3}
+  - {fileID: 8300000, guid: eadf39e3783af6c4c9dc80028346251c, type: 3}
+  - {fileID: 8300000, guid: d17174be2147f6141bbd7b9a9e9c61f0, type: 3}
+  silenceBetweenSongs: 5
