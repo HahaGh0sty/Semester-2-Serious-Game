@@ -115,11 +115,7 @@ public class CameraController : MonoBehaviour
     public void ApplyZoom()
     {
         cam.orthographicSize = zoomLevels[currentZoomIndex];
-        cam.transform.position = new Vector3(
-            cam.transform.position.x,
-            cam.transform.position.y,
-            GetZFromOrthoSize(cam.orthographicSize) // Calculate Z based on zoom
-        );
+
 
         Debug.Log($"Zoom applied: {cam.orthographicSize}, Z: {cam.transform.position.z}");
     }
