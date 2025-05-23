@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     bool isPlayingPlaylist = false;
     bool skipRequested = false;
+    bool isMusicMuted = false;
 
     void Awake()
     {
@@ -39,7 +40,18 @@ public class AudioManager : MonoBehaviour
         {
             skipRequested = true;
         }
+        if (Input.GetKeyDown(KeyCode.M)) // ADD
+        {
+            ToggleMusicMute(); // ADD
+        }
     }
+
+    void ToggleMusicMute() // ADD
+    {
+        isMusicMuted = !isMusicMuted;
+        Music.mute = isMusicMuted;
+    }
+
 
     public void StartPlaylist()
     {

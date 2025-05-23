@@ -147,4 +147,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ced07e8893fce9d45b2caf75932eccb4, type: 3}
   - {fileID: 8300000, guid: eadf39e3783af6c4c9dc80028346251c, type: 3}
   - {fileID: 8300000, guid: d17174be2147f6141bbd7b9a9e9c61f0, type: 3}
+  - {fileID: 8300000, guid: 254cc96dd37bbaf449a8f159e724b811, type: 3}
+  - {fileID: 8300000, guid: 939d2565690827b49a519f7d3eb58576, type: 3}
+  - {fileID: 8300000, guid: db6ce69b3f2e5054c9526bf1e1da12e3, type: 3}
   silenceBetweenSongs: 5
