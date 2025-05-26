@@ -47,6 +47,21 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
             Steel += 200;
         }
 
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Wood = 0;
+            Stone = 0;
+            Grain = 0;
+            Energy = 0;
+            Polution = 0;
+            GildedBanana =  0;
+            CrudeOil = 0;
+            Oil = 0;
+            Fish = 0;
+            Coal = 0;
+            Steel = 0;
+        }
+
         if (Input.GetKeyDown(KeyCode.G))
         {
             GildedBanana += 200;
