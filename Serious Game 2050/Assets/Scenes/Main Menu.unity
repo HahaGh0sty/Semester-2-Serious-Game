@@ -4691,8 +4691,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "COST OF BUILDINGS\n\nSAWMILL = \nMINE = \nOIL DRILL = \nOIL REFINARY =
-    \nFARM = \nBOAT = \nWINDMILL = \nWATERWHEEL = "
+  m_text: "COSTS TO BUILD\n\nSAWMILL = 20 GILDED BANANAS\nMINE = 50 WOOD\nSMITHING
+    WORKSHOP = 10 ENERGY + 20 STONE\nOIL DRILL = 50 ENERGY + 100 STONE + 20 WOOD
+    + 50 METAL\nOIL REFINARY = 100 ENERGY + 300 STONE + 75 METAL + 20 CRUDE OIL\nFARM
+    = 50 WOOD\nBOAT = 40 WOOD + 20 WHEAT\nWINDMILL = \nWATERWHEEL = "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0e629b14eed6a945991b0bcb109c256, type: 2}
   m_sharedMaterial: {fileID: -3854408124272494452, guid: c0e629b14eed6a945991b0bcb109c256, type: 2}
@@ -4719,8 +4721,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4784,7 +4786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &947718792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4844,8 +4846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 496, y: -166.99951}
-  m_SizeDelta: {x: -195.155, y: -866.001}
+  m_AnchoredPosition: {x: 465.06653, y: -166.99951}
+  m_SizeDelta: {x: -133.2881, y: -866.001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951821051
 MonoBehaviour:
@@ -4867,8 +4869,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PRODUCTS OF BUILDINGS\n\nSAWMILL = \nMINE = \nOIL DRILL = \nOIL REFINARY
-    = \nFARM = \nBOAT = \nWINDMILL = \nWATERWHEEL = "
+  m_text: 'PRODUCTS OF BUILDINGS
+
+
+    SAWMILL = +10 WOOD
+
+    MINE = +10 STONE
+
+    SMITHING
+    WORKSHOP = +3 METAL, -5 STONE
+
+    OIL DRILL = 3 CRUDE OIL, -5 ENERGY
+
+    OIL
+    REFINARY = 3 OIL, -5 CRUDE OIL, - 10 ENERGY
+
+    FARM = +7 WHEAT
+
+    BOAT =
+    +10 FISH, -3 WHEAT
+
+    WINDMILL = +5 ENERGY
+
+    WATERWHEEL = +5 ENERGY'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0e629b14eed6a945991b0bcb109c256, type: 2}
   m_sharedMaterial: {fileID: -3854408124272494452, guid: c0e629b14eed6a945991b0bcb109c256, type: 2}
@@ -4895,8 +4918,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
