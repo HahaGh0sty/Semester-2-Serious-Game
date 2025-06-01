@@ -28,10 +28,10 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-         if(timer.CurrentYear >= 2050)
+        if (timer.CurrentYear >= 2050)
         {
             //gameover();
-       }
+        }
     }
 
     public void gameover()
@@ -40,14 +40,14 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void Resume ()
+    public void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    void Pause ()
+    void Pause()
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -64,5 +64,17 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("QUIT!");
         Application.Quit();
+    }
+
+    public void Menuknop()
+    {
+        if (GameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 }
