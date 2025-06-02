@@ -10,12 +10,16 @@ public class CreateBuildGhost : MonoBehaviour
 
     public GameObject Building;
     public Tilemap targetTilemap;
-    [SerializeField] public int BuildingCollisionCount;
 
     [SerializeField] public int MinimumGrassCount;
     [SerializeField] public int MinimumForestCount;
     [SerializeField] public int MinimumWaterCount;
 
+    [SerializeField] public int MaximumGrassCount;
+    [SerializeField] public int MaximumForestCount;
+    [SerializeField] public int MaximumWaterCount;
+
+    [SerializeField] public int BuildingCollisionCount;
     [SerializeField] public int GrassCollisionCount;
     [SerializeField] public int ForestCollisionCount;
     [SerializeField] public int WaterCollisionCount;
@@ -67,13 +71,18 @@ public class CreateBuildGhost : MonoBehaviour
             ForestCollisionCount >= MinimumForestCount &&
             WaterCollisionCount >= MinimumWaterCount;
 
-            if (!hasEnoughCollisions)
+            bool hasTooManyCollisions =
+            MaximumGrassCount >= GrassCollisionCount &&
+            MaximumForestCount >= ForestCollisionCount &&
+            MaximumWaterCount >=  WaterCollisionCount;
+
+            if (!hasEnoughCollisions || !hasTooManyCollisions)
             {
-                Debug.LogWarning(currentGhost + " cannot be placed because not enough collision points!" +
-                    "  BuildingCount: " + BuildingCollisionCount +
-                    "  GrassCount: " + GrassCollisionCount + "/" + MinimumGrassCount +
-                    "  ForestCount: " + ForestCollisionCount + "/" + MinimumForestCount +
-                    "  WaterCount: " + WaterCollisionCount + "/" + MinimumWaterCount);
+                Debug.LogWarning(currentGhost + " cannot be placed because not enough or too many collision points!" +
+                    "  BuildingCount: " + BuildingCollisionCount + "!" +
+                    "  GrassCount: " + GrassCollisionCount + "/ min " + MinimumGrassCount + "/max " + MaximumGrassCount +
+                    "  ForestCount: " + ForestCollisionCount + "/min " + MinimumForestCount + "/max " + MaximumForestCount +
+                    "  WaterCount: " + WaterCollisionCount + "/min " + MinimumWaterCount + "/max " + MaximumWaterCount);
                 IsFucking.GhostBuildingSprite.material.color = NotPleacableHere;
                 return;
             }
@@ -165,7 +174,7 @@ public class CreateBuildGhost : MonoBehaviour
 
             Vector3Int cellPos = targetTilemap.WorldToCell(currentGhost.transform.position);
 
-            Debug.Log($"Placing tile at cell {cellPos}");
+            Debug.Log($"Placing " + Building + " at cell {cellPos}");
 
 
             Instantiate(Building, cellPos, Quaternion.identity);

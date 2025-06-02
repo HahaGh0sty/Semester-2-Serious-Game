@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &651488916547285108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5367618808213197915}
+  - component: {fileID: 6663786971059910938}
+  - component: {fileID: 205787018704122936}
+  m_Layer: 0
+  m_Name: Single Tile Checker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5367618808213197915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651488916547285108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.346, y: 0.288, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6663786971059910938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651488916547285108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc33c84ab4eea045bf53c2a2f8f56a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
+  grassTiles:
+  - {fileID: 11400000, guid: 2a0eb203dbdcfd847baacd6429146ac1, type: 2}
+  - {fileID: 11400000, guid: 543cc200301f67548a272687cfd94783, type: 2}
+  - {fileID: 11400000, guid: 9aabe0993cad5264bbb0ac03cbb09e1a, type: 2}
+  - {fileID: 11400000, guid: 491d28a8c08f6af4abbc4e7a18aff508, type: 2}
+  - {fileID: 11400000, guid: 873f0c35921b46d43907ac95b8b51920, type: 2}
+  waterTiles:
+  - {fileID: 11400000, guid: 6ea25c03ba06de6489d07c268aef0154, type: 2}
+  - {fileID: 11400000, guid: b2ed7998434fd7543a4ae8df1a5c40bc, type: 2}
+  - {fileID: 11400000, guid: 129b8c8dacfb73b429253d010874d27f, type: 2}
+  - {fileID: 11400000, guid: 949ea0f5e311fc54eb27e93422c32b0f, type: 2}
+  - {fileID: 11400000, guid: 38ba71b2dc0d2d64fbb413dd22219b6d, type: 2}
+  - {fileID: 11400000, guid: 049c998326193b74ab052ea7b940a2a6, type: 2}
+  - {fileID: 11400000, guid: 86aafa0954f977f4eb2d9890c347877d, type: 2}
+  - {fileID: 11400000, guid: 68f511bb3ab022e4fb39b765e2a25b68, type: 2}
+  - {fileID: 11400000, guid: dc4567acb5dd23941afef1468b52fe70, type: 2}
+  - {fileID: 11400000, guid: df3889c1ed6e4f04e84e48f1408c4fee, type: 2}
+  - {fileID: 11400000, guid: 61fe9c8ada24cfd499be45b562060868, type: 2}
+  - {fileID: 11400000, guid: 452cb2c1f39f76449b0c706cd44da2fb, type: 2}
+  - {fileID: 11400000, guid: 036669adbf024c04eb3a9083702ffaa2, type: 2}
+  - {fileID: 11400000, guid: d244ddb17231a7b40a2594d97d6b6ecb, type: 2}
+  - {fileID: 11400000, guid: 4739892b16bbcec4f86209e6056f42cd, type: 2}
+  - {fileID: 11400000, guid: fa56f78b6908d6b4b8989ac07fff4b5f, type: 2}
+  - {fileID: 11400000, guid: 5ab74d99e72211e488e5dd7def8d4ebd, type: 2}
+  - {fileID: 11400000, guid: 86f3fa1702d57e24989b51e1f676bd8a, type: 2}
+  - {fileID: 11400000, guid: e03fd5b027e662e44a49883f0dd36706, type: 2}
+  - {fileID: 11400000, guid: e2fb433a67d41f041a80edc088207139, type: 2}
+  - {fileID: 11400000, guid: 4f2fd91b67eb69149a2c9dd9cee61450, type: 2}
+  - {fileID: 11400000, guid: c62c3c6d1220a1340abb2a962ffea430, type: 2}
+  - {fileID: 11400000, guid: b65bb34c9e2c9224881c79b0fa9ee8f1, type: 2}
+  - {fileID: 11400000, guid: 4f4edc3d6ba050046b489df83ce4bb8a, type: 2}
+  - {fileID: 11400000, guid: a3d3d41c0d6886e438d41473bb2c37e6, type: 2}
+  - {fileID: 11400000, guid: 8eb12f30bb4a13449a6c81d8a571bedb, type: 2}
+  - {fileID: 11400000, guid: d30e045951d36e54eb5dbc884cdba691, type: 2}
+  - {fileID: 11400000, guid: 3a4a4a81a3769c8458449bf1e08f533b, type: 2}
+  - {fileID: 11400000, guid: 34c05a3059812254387f939ead27344f, type: 2}
+  forestTiles:
+  - {fileID: 11400000, guid: 86318d763881c3747bb158d380fc4752, type: 2}
+  buildingTiles: []
+  SelectedMode: 0
+  Selected: 0
+  HoveringOver: 0
+  Empty: 0
+--- !u!61 &205787018704122936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651488916547285108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0

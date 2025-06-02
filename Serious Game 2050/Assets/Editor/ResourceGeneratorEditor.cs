@@ -14,17 +14,17 @@ public class ResourceGeneratorEditor : Editor
     public override void OnInspectorGUI()
     {
         // Draw default inspector except arrays
-        DrawDefaultInspectorExcept("resourceLose", "resourceGet");
+        DrawDefaultInspectorExcept("resourceRequired", "resourceAddSubtract");
 
         ResourceGenerator generator = (ResourceGenerator)target;
 
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Resource Lose", EditorStyles.boldLabel);
-        DrawResourceArray(generator.resourceLose, ref generator.resourceLose);
+        EditorGUILayout.LabelField("Resource Required", EditorStyles.boldLabel);
+        DrawResourceArray(generator.resourceRequired, ref generator.resourceRequired);
 
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Resource Get", EditorStyles.boldLabel);
-        DrawResourceArray(generator.resourceGet, ref generator.resourceGet);
+        EditorGUILayout.LabelField("Resource Add Subtract", EditorStyles.boldLabel);
+        DrawResourceArray(generator.resourceAddSubtract, ref generator.resourceAddSubtract);
 
         // Apply changes
         if (GUI.changed)
