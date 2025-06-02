@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bae8d88a31588649b9367ecf1c0e4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor_normal: {fileID: 2800000, guid: 794f76ccc202f19459bd862e8741a522, type: 3}
+  cursor_normal: {fileID: 2800000, guid: cb13bc521e9f70b4b94d1eb1a69747e7, type: 3}
   normalCursorHotSpot: {x: 0, y: 0}
   cursor_OnButton: {fileID: 2800000, guid: 488ff8b0f597b8644aa843ab436a901a, type: 3}
-  onButtonCursorHotSpot: {x: 0, y: 0}
+  onButtonCursorHotSpot: {x: 0, y: 10}
