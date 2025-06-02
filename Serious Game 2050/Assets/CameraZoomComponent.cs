@@ -28,6 +28,19 @@ public class CameraZoomButtons : MonoBehaviour
         ApplyZoom();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            ZoomIn();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            ZoomOut();
+        }
+    }
+
     public void ZoomIn()
     {
         Debug.Log("Zoom In");
