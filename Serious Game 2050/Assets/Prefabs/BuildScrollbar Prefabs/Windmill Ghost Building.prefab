@@ -95,7 +95,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -18881815, guid: 118c60d1ffbc244a3903761cc5e8f6db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  GhostBuildingSprite: {fileID: 0}
 --- !u!60 &8453243440574399917
 PolygonCollider2D:
   m_ObjectHideFlags: 0

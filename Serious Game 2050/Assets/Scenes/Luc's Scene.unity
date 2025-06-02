@@ -1821,6 +1821,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 100
@@ -4154,6 +4156,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -5898,6 +5902,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 200
@@ -6466,6 +6472,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 10
@@ -8762,6 +8770,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 50
@@ -9672,6 +9682,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
@@ -11410,6 +11422,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 100
@@ -11798,6 +11812,8 @@ MonoBehaviour:
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
+  PlaceableHere: {r: 0, g: 0, b: 0, a: 0}
+  NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0

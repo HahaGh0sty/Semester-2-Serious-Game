@@ -47,7 +47,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5944091124675143630}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!212 &6774475902018934735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1163112086, guid: d9a26de8698c34805ad5e51eaef40210, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,3 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NotPlacableHere: 0
+  BuildingCollisionCount: 0
+  GrassCollisionCount: 0
+  ForestCollisionCount: 0
+  WaterCollisionCount: 0
+  BaseColor: {r: 0, g: 0, b: 0, a: 0}
+  GhostBuildingSprite: {fileID: 0}

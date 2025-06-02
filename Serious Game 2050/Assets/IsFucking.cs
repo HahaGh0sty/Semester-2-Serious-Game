@@ -10,8 +10,16 @@ public class IsFucking : MonoBehaviour
     [SerializeField] public int ForestCollisionCount = 0;
     [SerializeField] public int WaterCollisionCount = 0;
 
+    [SerializeField] Color BaseColor;
+    [SerializeField] public SpriteRenderer GhostBuildingSprite;
 
 
+    private void Start()
+    {
+        BaseColor = new Color(1, 1, 1, 1);
+        GhostBuildingSprite = GetComponent<SpriteRenderer>();
+        GhostBuildingSprite.color = BaseColor;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Building")

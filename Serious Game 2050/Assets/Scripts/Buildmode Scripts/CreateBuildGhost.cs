@@ -20,6 +20,9 @@ public class CreateBuildGhost : MonoBehaviour
     [SerializeField] public int ForestCollisionCount;
     [SerializeField] public int WaterCollisionCount;
 
+    [SerializeField] Color PlaceableHere;
+    [SerializeField] Color NotPleacableHere;
+
     public bool IsOddNumberedSize;
 
     private GameObject currentGhost;
@@ -42,13 +45,15 @@ public class CreateBuildGhost : MonoBehaviour
     private void Start()
     {
         ResourceManager = FindObjectOfType<ResourceManager>();
+        PlaceableHere = new Color(0.5f, 1f, 0.4f, 0.9f);
+        NotPleacableHere = new Color(1, 0.5f, 0.5f, 0.9f);
     }
     void Update()
     {
 
         HandleGhostFollowMouse();
 
-        if (Input.GetMouseButtonDown(0))
+        if (currentGhost != null)
         {
 
             if (EventSystem.current.IsPointerOverGameObject())
@@ -69,10 +74,14 @@ public class CreateBuildGhost : MonoBehaviour
                     "  GrassCount: " + GrassCollisionCount + "/" + MinimumGrassCount +
                     "  ForestCount: " + ForestCollisionCount + "/" + MinimumForestCount +
                     "  WaterCount: " + WaterCollisionCount + "/" + MinimumWaterCount);
+                IsFucking.GhostBuildingSprite.material.color = NotPleacableHere;
                 return;
             }
-            // Place the tile if no collisions
-            PlaceTile();
+
+            IsFucking.GhostBuildingSprite.material.color = PlaceableHere;
+            if (Input.GetMouseButtonDown(0))
+
+                PlaceTile();
         }
     }
 
