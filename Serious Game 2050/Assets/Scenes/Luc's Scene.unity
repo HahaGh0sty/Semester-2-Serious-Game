@@ -2585,7 +2585,7 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: cb13bc521e9f70b4b94d1eb1a69747e7, type: 3}
     - target: {fileID: 2517365071868795474, guid: 318426365e479e9439812164c1a628cf, type: 3}
       propertyPath: onButtonCursorHotSpot.x
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3916012108579475678, guid: 318426365e479e9439812164c1a628cf, type: 3}
       propertyPath: m_Name
