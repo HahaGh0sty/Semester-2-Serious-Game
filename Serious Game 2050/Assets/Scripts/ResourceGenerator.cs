@@ -26,8 +26,8 @@ public class ResourceGenerator : MonoBehaviour
         Count
     }
 
-    [HideInInspector] public int[] resourceLose = new int[(int)ResourceType.Count];
-    [HideInInspector] public int[] resourceGet = new int[(int)ResourceType.Count];
+    [HideInInspector] public int[] resourceRequired = new int[(int)ResourceType.Count];
+    [HideInInspector] public int[] resourceAddSubtract = new int[(int)ResourceType.Count];
 
     void Start()
     {
@@ -41,7 +41,7 @@ public class ResourceGenerator : MonoBehaviour
         Level1();
 
         Vector3Int cellPos = Tilemaptarget.WorldToCell(building.transform.position);
-        Debug.Log($"Placing tile at cell {cellPos}");
+        Debug.Log($"Placing " + building + " at cell {cellPos}");
 
         Tilemaptarget.SetTile(cellPos, placedAnimatedTile);
     }
@@ -56,67 +56,32 @@ public class ResourceGenerator : MonoBehaviour
         if (resourceManager != null)
         {
             if (
-                resourceManager.GildedBanana < resourceLose[(int)ResourceType.Money] ||
-                resourceManager.Energy < resourceLose[(int)ResourceType.Energy] ||
-                resourceManager.Wood < resourceLose[(int)ResourceType.Wood] ||
-                resourceManager.Stone < resourceLose[(int)ResourceType.Stone] ||
-                resourceManager.Fish < resourceLose[(int)ResourceType.Fish] ||
-                resourceManager.Coal < resourceLose[(int)ResourceType.Coal] ||
-                resourceManager.Oil < resourceLose[(int)ResourceType.Oil] ||
-                resourceManager.CrudeOil < resourceLose[(int)ResourceType.CrudeOil] ||
-                resourceManager.Steel < resourceLose[(int)ResourceType.Steel] ||
-                resourceManager.Polution < resourceLose[(int)ResourceType.Polution]
+                resourceManager.GildedBanana < resourceRequired[(int)ResourceType.Money] ||
+                resourceManager.Energy < resourceRequired[(int)ResourceType.Energy] ||
+                resourceManager.Wood < resourceRequired[(int)ResourceType.Wood] ||
+                resourceManager.Stone < resourceRequired[(int)ResourceType.Stone] ||
+                resourceManager.Fish < resourceRequired[(int)ResourceType.Fish] ||
+                resourceManager.Coal < resourceRequired[(int)ResourceType.Coal] ||
+                resourceManager.Oil < resourceRequired[(int)ResourceType.Oil] ||
+                resourceManager.CrudeOil < resourceRequired[(int)ResourceType.CrudeOil] ||
+                resourceManager.Steel < resourceRequired[(int)ResourceType.Steel] ||
+                resourceManager.Polution < resourceRequired[(int)ResourceType.Polution]
                )
             {
                 Debug.LogWarning("Every " + building + " doesn't have enough resources to function!");
                 return;
             }
 
-            resourceManager.GildedBanana += resourceGet[(int)ResourceType.Money];
-            resourceManager.Energy += resourceGet[(int)ResourceType.Energy];
-            resourceManager.Wood += resourceGet[(int)ResourceType.Wood];
-            resourceManager.Stone += resourceGet[(int)ResourceType.Stone];
-            resourceManager.Fish += resourceGet[(int)ResourceType.Fish];
-            resourceManager.Coal += resourceGet[(int)ResourceType.Coal];
-            resourceManager.Oil += resourceGet[(int)ResourceType.Oil];
-            resourceManager.CrudeOil += resourceGet[(int)ResourceType.CrudeOil];
-            resourceManager.Polution += resourceGet[(int)ResourceType.Polution];
-            resourceManager.Steel += resourceGet[(int)ResourceType.Steel];
+            resourceManager.GildedBanana += resourceAddSubtract[(int)ResourceType.Money];
+            resourceManager.Energy += resourceAddSubtract[(int)ResourceType.Energy];
+            resourceManager.Wood += resourceAddSubtract[(int)ResourceType.Wood];
+            resourceManager.Stone += resourceAddSubtract[(int)ResourceType.Stone];
+            resourceManager.Fish += resourceAddSubtract[(int)ResourceType.Fish];
+            resourceManager.Coal += resourceAddSubtract[(int)ResourceType.Coal];
+            resourceManager.Oil += resourceAddSubtract[(int)ResourceType.Oil];
+            resourceManager.CrudeOil += resourceAddSubtract[(int)ResourceType.CrudeOil];
+            resourceManager.Polution += resourceAddSubtract[(int)ResourceType.Polution];
+            resourceManager.Steel += resourceAddSubtract[(int)ResourceType.Steel];
         }
     }
 }
-
-// New function: Check if another object with tag "Building" is on the same position
-//private bool IsOverlappingWithBuilding()
-//{
-//    // Ensure the Collider2D is available
-//    Collider2D thisCollider2D = GetComponent<Collider2D>();
-//    if (thisCollider2D == null)
-//    {
-//        Debug.LogWarning("No Collider2D found on building " + gameObject.name);
-//        return false;
-//    }
-
-//    // Draw the overlap box in the scene view (for debugging)
-//    Gizmos.color = Color.red;
-//    Gizmos.DrawWireCube(thisCollider2D.bounds.center, thisCollider2D.bounds.size);
-
-//    // Check for any Collider2Ds in the overlap area
-//    Collider2D[] hits = Physics.OverlapBox(
-//        thisCollider2D.bounds.center,
-//        thisCollider2D.bounds.extents, // This represents half the size
-//        transform.rotation // Use the rotation to match the building's actual facing
-//    );
-
-//    foreach (Collider2D hit in hits)
-//    {
-//        // Ensure we ignore the current object and only check for other "Building" objects
-//        if (hit.gameObject != this.gameObject && hit.CompareTag("Building"))
-//        {
-//            Debug.Log($"Overlap detected with {hit.gameObject.name}");
-//            return true; // There was an overlap with another building
-//        }
-//    }
-
-//    return false;
-//}

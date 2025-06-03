@@ -1814,10 +1814,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 2756745468169273991, guid: 9c3a69e93dd9e6c4d857813558e472ed, type: 3}
   Building: {fileID: 8874244317324497248, guid: 122125dd9b897d049b77b9f590019901, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 0
   MinimumForestCount: 0
   MinimumWaterCount: 1
+  MaximumGrassCount: 0
+  MaximumForestCount: 0
+  MaximumWaterCount: 1
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -4153,10 +4156,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 857346762852856354, guid: 65a1ac45adbd1574d8c60da6789e7360, type: 3}
   Building: {fileID: 7934095903876407573, guid: e92edc484a1e9d743ba8a6202537d66c, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 16
   MinimumForestCount: 0
   MinimumWaterCount: 0
+  MaximumGrassCount: 16
+  MaximumForestCount: 0
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -5899,10 +5905,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 1287975020891920262, guid: c92bd2a4ef1d54543a3eefdbbc5122c3, type: 3}
   Building: {fileID: 1510955030701849155, guid: 52c750f47cd69b7448a6d20bf3387609, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 16
   MinimumForestCount: 0
   MinimumWaterCount: 0
+  MaximumGrassCount: 16
+  MaximumForestCount: 0
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -6469,10 +6478,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 3649586718046808678, guid: e1bdc9b887d71324bb23e1c5448e3cef, type: 3}
   Building: {fileID: 2777726022791240621, guid: 37d882edae9b87240a9da1290a91e79f, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
-  MinimumGrassCount: 2
+  MinimumGrassCount: 1
   MinimumForestCount: 0
-  MinimumWaterCount: 0
+  MinimumWaterCount: 1
+  MaximumGrassCount: 5
+  MaximumForestCount: 2
+  MaximumWaterCount: 5
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -8767,10 +8779,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 8404802336595068717, guid: 73dcc6ffc6f565d40989d1f623816177, type: 3}
   Building: {fileID: 3990882505236119657, guid: c8190afdf13a2ba4cabb042927ae7fac, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
+  MaximumGrassCount: 4
+  MaximumForestCount: 0
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -8890,7 +8905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1624739868
 Transform:
   m_ObjectHideFlags: 0
@@ -9679,10 +9694,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 2727499540382952041, guid: 8cb3d1a489759cb46bf6d04927644d58, type: 3}
   Building: {fileID: 1303222242846693906, guid: 95a64ec3939de744ebc8c553d446884b, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
+  MaximumGrassCount: 4
+  MaximumForestCount: 0
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -10204,18 +10222,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1624739870}
-        m_TargetAssemblyTypeName: ToggleBuildModeScript, Assembly-CSharp
-        m_MethodName: whenBuildButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1947052186}
         m_TargetAssemblyTypeName: ToggleBuildModeScript, Assembly-CSharp
         m_MethodName: whenBuildButtonClicked
@@ -11419,10 +11425,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 4662979592662316978, guid: 88843293c32b3364c9aad8b26e38244c, type: 3}
   Building: {fileID: 4073067735367622557, guid: 45f0ec7e26eb24bab9bdff8e6ed7035b, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 4
   MinimumForestCount: 0
   MinimumWaterCount: 0
+  MaximumGrassCount: 4
+  MaximumForestCount: 0
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -11716,6 +11725,67 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1001 &2119708153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828196339148258322, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_Name
+      value: GridSpace 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392127449164957119, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45f0a02af39d31f4684b27fe4bb28c9a, type: 3}
 --- !u!114 &472481323025441689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11809,10 +11879,13 @@ MonoBehaviour:
   buildingGhostPrefab: {fileID: 5944091124675143630, guid: cb56f5320ad14a54eadec9779927f06f, type: 3}
   Building: {fileID: 7775535677423819814, guid: 7b5f8f55409d744b5bc25e08b37f6fa0, type: 3}
   targetTilemap: {fileID: 1752198661}
-  BuildingCollisionCount: 0
   MinimumGrassCount: 0
-  MinimumForestCount: 4
+  MinimumForestCount: 2
   MinimumWaterCount: 0
+  MaximumGrassCount: 4
+  MaximumForestCount: 4
+  MaximumWaterCount: 0
+  BuildingCollisionCount: 0
   GrassCollisionCount: 0
   ForestCollisionCount: 0
   WaterCollisionCount: 0
@@ -11933,6 +12006,67 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1001 &7772255518529806333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 651488916547285108, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_Name
+      value: Single Tile Checker
+      objectReference: {fileID: 0}
+    - target: {fileID: 651488916547285108, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.346
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.288
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367618808213197915, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da72788764e54c44d93cd34a93db32f7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -11947,3 +12081,5 @@ SceneRoots:
   - {fileID: 1430799607}
   - {fileID: 1703327937}
   - {fileID: 532018629}
+  - {fileID: 2119708153}
+  - {fileID: 7772255518529806333}

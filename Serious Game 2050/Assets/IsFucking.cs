@@ -26,25 +26,26 @@ public class IsFucking : MonoBehaviour
         {
             BuildingCollisionCount++;
         }
-
-        if (collision.gameObject.tag == "IsGrassTile")
-        {
-            GrassCollisionCount++;
-        }
-
-        if (collision.gameObject.tag == "IsForestTile")
-        {
-            ForestCollisionCount++;
-        }
-
-        if (collision.gameObject.tag == "IsWaterTile")
-        {
-            WaterCollisionCount++;
-        }
-
-        //note for later : Danny don't be a fucking dumbass and just make a seperage GameObject Under the current GhostBuilding with different Colliders so you can seperate them easily
-        // - Danny
     }
+
+    //        if (collision.gameObject.tag == "IsGrassTile")
+    //        {
+    //            GrassCollisionCount++;
+    //        }
+
+    //        if (collision.gameObject.tag == "IsForestTile")
+    //        {
+    //            ForestCollisionCount++;
+    //        }
+
+    //        if (collision.gameObject.tag == "IsWaterTile")
+    //        {
+    //            WaterCollisionCount++;
+    //        }
+
+    //        //note for later : Danny don't be a fucking dumbass and just make a seperage GameObject Under the current GhostBuilding with different Colliders so you can seperate them easily
+    //        // - Danny
+    //    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -52,21 +53,60 @@ public class IsFucking : MonoBehaviour
         {
             BuildingCollisionCount--;
         }
-
-        if (collision.gameObject.tag == "IsGrassTile")
-        {
-            GrassCollisionCount--;
-        }
-
-        if (collision.gameObject.tag == "IsForestTile")
-        {
-            ForestCollisionCount--;
-        }
-
-        if (collision.gameObject.tag == "IsWaterTile")
-        {
-            WaterCollisionCount--;
-        }
     }
+
+    //        if (collision.gameObject.tag == "IsGrassTile")
+    //        {
+    //            GrassCollisionCount--;
+    //        }
+
+        //        if (collision.gameObject.tag == "IsForestTile")
+        //        {
+        //            ForestCollisionCount--;
+        //        }
+
+        //        if (collision.gameObject.tag == "IsWaterTile")
+        //        {
+        //            WaterCollisionCount--;
+        //        }
+        //    }
+
+    public void AddGrassTileCount()
+    {
+        GrassCollisionCount++;
+    }
+     
+    public void AddWaterTileCount()
+    {
+        WaterCollisionCount++;
+    }
+    public void AddForestTileCount()
+    {
+        ForestCollisionCount++;
+    }
+    //public void AddBuildingTileCount()
+    //{
+    //    BuildingCollisionCount++;
+    //}
+
+    public void RemoveGrassTileCount()
+    {
+        GrassCollisionCount--;
+    }
+     
+    public void RemoveWaterTileCount()
+    {
+        WaterCollisionCount--;
+    }
+
+    public void RemoveForestTilecount()
+    {
+        ForestCollisionCount--;
+    }
+
+    //public void RemoveBuildingTileCount()
+    //{
+    //    BuildingCollisionCount--;
+    //}
 }
 
