@@ -9,10 +9,14 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+     public static bool ShopIsOpen = false;
+
     public TimeManager timer;
 
     public GameObject PauseMenuUI;
     public GameObject GameoverUI;
+    public GameObject ShopMenuUI;
+
 
 
     void Update()
@@ -30,7 +34,19 @@ public class PauseMenu : MonoBehaviour
         }
         if (timer.CurrentYear >= 2050)
         {
-            //gameover();
+            gameover();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (ShopIsOpen)
+            {
+                CloseShop();
+            }
+            else
+            {
+                OpenShop();
+            }
         }
     }
 
@@ -76,5 +92,16 @@ public class PauseMenu : MonoBehaviour
         {
             Pause();
         }
+    }
+    void OpenShop()
+    {
+        ShopMenuUI.SetActive(true);
+        ShopIsOpen = true;
+    }
+
+    public void CloseShop()
+    {
+        ShopMenuUI.SetActive(false);
+        ShopIsOpen = false;
     }
 }
