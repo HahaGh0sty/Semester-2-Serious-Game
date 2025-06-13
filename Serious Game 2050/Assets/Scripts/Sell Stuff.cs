@@ -5,7 +5,7 @@ using UnityEngine;
 public class SellStuff : MonoBehaviour
 
 {
-    private ResourceManager resourceManager;
+    public ResourceManager resourceManager;
     public int WoodSell;
     public int StoneSell;
     public int GrainSell;
@@ -25,7 +25,9 @@ public class SellStuff : MonoBehaviour
     public int CoalPrice;
     public int SteelPrice;
      //all for selling resources
-    void SellWood()
+
+    
+    public void SellWood()
 {
     int amountToSell = Mathf.Min(100, resourceManager.Wood);
     if (amountToSell > 0)
@@ -36,7 +38,7 @@ public class SellStuff : MonoBehaviour
     }
 }
 
-void SellStone()
+public void SellStone()
 {
     int amountToSell = Mathf.Min(100, resourceManager.Stone);
     if (amountToSell > 0)
@@ -47,7 +49,7 @@ void SellStone()
     }
 }
 
-void SellGrain()
+public void SellGrain()
 {
     int amountToSell = Mathf.Min(100, resourceManager.Grain);
     if (amountToSell > 0)
@@ -91,7 +93,7 @@ void SellOil()
     }
 }
 
-void SellFish()
+public void SellFish()
 {
     int amountToSell = Mathf.Min(100, resourceManager.Fish);
     if (amountToSell > 0)
@@ -102,7 +104,7 @@ void SellFish()
     }
 }
 
-void SellCoal()
+public void SellCoal()
 {
     int amountToSell = Mathf.Min(100, resourceManager.Coal);
     if (amountToSell > 0)
@@ -111,10 +113,10 @@ void SellCoal()
         CoalSell += amountToSell;
         resourceManager.GildedBanana += amountToSell * CoalPrice;
     }
-
+}
     // all for buying resources
 
-     void BuyWood()
+public void BuyWood()
 {
     int maxAffordable = resourceManager.GildedBanana / WoodPrice;
     int amountToBuy = Mathf.Min(100, maxAffordable);
@@ -126,7 +128,7 @@ void SellCoal()
     }
 }
 
-void BuyStone()
+public void BuyStone()
 {
     int maxAffordable = resourceManager.GildedBanana / StonePrice;
     int amountToBuy = Mathf.Min(100, maxAffordable);
@@ -138,7 +140,7 @@ void BuyStone()
     }
 }
 
-void BuyGrain()
+public void BuyGrain()
 {
     int maxAffordable = resourceManager.GildedBanana / GrainPrice;
     int amountToBuy = Mathf.Min(100, maxAffordable);
@@ -223,5 +225,5 @@ void BuySteel()
 }
 
 }
-}
+
 
