@@ -4841,7 +4841,7 @@ MonoBehaviour:
   ResourceManager: {fileID: 0}
   RequiredWood: 0
   RequiredStone: 100
-  RequiredGrain: 50
+  RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
   RequiredGildedBanana: 0
@@ -7342,7 +7342,7 @@ MonoBehaviour:
   NotPleacableHere: {r: 0, g: 0, b: 0, a: 0}
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
-  RequiredWood: 200
+  RequiredWood: 300
   RequiredStone: 0
   RequiredGrain: 0
   RequiredEnergy: 0
@@ -7925,7 +7925,7 @@ MonoBehaviour:
   RequiredOil: 0
   RequiredFish: 0
   RequiredCoal: 0
-  RequiredSteel: 0
+  RequiredSteel: 100
   IsFucking: {fileID: 0}
 --- !u!114 &1181733236
 MonoBehaviour:
@@ -10402,8 +10402,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608421135}
   m_HandleRect: {fileID: 1608421134}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.34548756
+  m_Value: 0.000000077945245
+  m_Size: 0.3454875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10996,11 +10996,11 @@ MonoBehaviour:
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 50
-  RequiredStone: 150
+  RequiredStone: 50
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
-  RequiredGildedBanana: 100
+  RequiredGildedBanana: 300
   RequiredRawOil: 0
   RequiredOil: 0
   RequiredFish: 0
@@ -12049,7 +12049,7 @@ MonoBehaviour:
   RequiredGrain: 0
   RequiredEnergy: 50
   RequiredPollution: 0
-  RequiredGildedBanana: 200
+  RequiredGildedBanana: 600
   RequiredRawOil: 0
   RequiredOil: 0
   RequiredFish: 0
@@ -14275,7 +14275,7 @@ MonoBehaviour:
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
-  RequiredGildedBanana: 50
+  RequiredGildedBanana: 150
   RequiredRawOil: 0
   RequiredOil: 0
   RequiredFish: 0
@@ -14725,11 +14725,11 @@ MonoBehaviour:
   IsOddNumberedSize: 0
   ResourceManager: {fileID: 0}
   RequiredWood: 0
-  RequiredStone: 0
+  RequiredStone: 100
   RequiredGrain: 0
   RequiredEnergy: 0
   RequiredPollution: 0
-  RequiredGildedBanana: 50
+  RequiredGildedBanana: 150
   RequiredRawOil: 0
   RequiredOil: 0
   RequiredFish: 0

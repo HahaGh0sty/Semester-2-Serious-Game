@@ -25,15 +25,15 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     private void Start()
     {
         Wood += 500;
-        Stone += 200;
-        Grain += 200;
-        Energy += 200;
+        Stone += 0;
+        Grain += 0;
+        Energy += 0;
         GildedBanana += 200;
-        CrudeOil += 200;
-        Oil += 200;
-        Fish += 200;
-        Coal += 200;
-        Steel += 200;
+        CrudeOil += 0;
+        Oil += 0;
+        Fish += 0;
+        Coal += 0;
+        Steel += 0;
 
         slider.minValue = 0;
         slider.maxValue = 100;
@@ -41,29 +41,28 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Wood += 200;
-            Stone += 200;
-            Grain += 200;   
-            Energy += 200;
-            GildedBanana += 200;
-            CrudeOil += 200;
-            Oil += 200;
-            Fish += 200;
-            Coal += 200;
-            Steel += 200;
-
-        }
+        //if (Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    Wood += 200;
+        //    Stone += 200;
+        //    Grain += 200;   
+        //    Energy += 200;
+        //    GildedBanana += 200;
+        //    CrudeOil += 200;
+        //    Oil += 200;
+        //    Fish += 200;
+        //    Coal += 200;
+        //    Steel += 200;
+        //}
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Wood = 0;
+            Wood = 500;
             Stone = 0;
             Grain = 0;
             Energy = 0;
             Polution = 0;
-            GildedBanana =  0;
+            GildedBanana = 200;
             CrudeOil = 0;
             Oil = 0;
             Fish = 0;
@@ -71,15 +70,15 @@ public class ResourceManager : MonoBehaviour, IDataPersistence
             Steel = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            GildedBanana += 200;
-        }
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    GildedBanana += 200;
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-          Polution += 10;
-        }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //  Polution += 10;
+        //}
         Polution = Mathf.Clamp(Polution, 0, 100);
         slider.value = Polution;
         
